@@ -51,6 +51,10 @@ Thaumcraft tweaks for tweakers.
 ## Recipes
 - 
 
+## Feature Requests
+- Don't know what all this does, but E2E:E dev requested these mixins be included
+  - https://github.com/Krutoy242/Enigmatica2Expert-Extended/blob/master/scripts/mixin/thaumcraft.zs
+
 ## Stuff I have no idea what ThaumTweaks is doing
 - RechargeHelperMixin - No fucking clue what it is trying to do
 - BlockRechargePedestal - again, no fucking clue
