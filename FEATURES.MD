@@ -72,12 +72,14 @@ Thaumcraft tweaks for tweakers.
 ## Feature Requests
 - Don't know what all this does, but E2E:E dev requested these mixins be included
   - https://github.com/Krutoy242/Enigmatica2Expert-Extended/blob/master/scripts/mixin/thaumcraft.zs
-
 - Config to disable stack aspect generation from recipes (cancel `ThaumcraftCraftingManager#generateTagsFromRecipes()`)
 - Config to modify golem material stats
 - Config to allow celestial notes to be collected in other dimensions
 - Config to buff Vis Generator storage, generation, and output
 - config to increase Porus Stone drop chances
+- Ancient Curiosity / Arcane Curiosity -> Pechs
+- Eldritch Curiosity -> Eldritch Guardians
+- Twisted Curiosity -> Giant Taint Seeds
 
 ## Stuff I have no idea what ThaumTweaks is doing
 - RechargeHelperMixin - No fucking clue what it is trying to do
