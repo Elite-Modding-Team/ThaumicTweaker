@@ -6,6 +6,8 @@ Thaumcraft tweaks for tweakers.
 - Primordial Creator - (Wuss Mode) Primoridal Siphon that does not require a rift to create Primordial Pearls (from Minor Integrations and Additions)
 - Void Creator - (Wuss Mode) Void Siphon that does not require a rift to create Void Seeds (from Minor Integrations and Additions)
 
+## Crafts
+
 ## Entity (DONE)
 - Pech Trades - support for adding/removing Pech Trades
 
@@ -40,20 +42,42 @@ Thaumcraft tweaks for tweakers.
 - Void Robes grant a flat damage and magic resistance
 - Void Robes grant a configurable vis discount (head = 8, rest = 7)
 
-### Mixins Blocks
-### Mixins Entities
+### Mixins Blocks (DONE)
+- Essentia Jars can be named at an Anvil
+- No fucking clue what ThaumTweaks does to the TileInfusionMatrix with MatrixMixin
+- Increase rare earth drop chance from ores
+- Pedestals have comparator output values
+- Research Table can search and pull items from nearby inventories
+- Modify Void Siphon required rift power
+- Modify Void Siphon rift shrink chance
+- Smeltery automation with hoppers (might be better to add to Thaumcraft Fix)
+
+### Mixins Entities (DONE)
+- Add/Remove Pech Trades
+- Add curiosity drops to golems (what the fuck?)
+- Add curiosity drops to taint seeds
+
 ### Mixins Events
-### Mixins Golems
-### Mixins Items
+### Mixins Golems (DONE)
+- Golems can activate infusion altar
+- Buff Golem material values
+- Golems have a copy of the placing player's research knowledge
+
+### Mixins Items (DONE)
 - Primal Crusher repairs significantly faster
 - Primal Crusher has Refining II included by default
-
-## Recipes
-- 
+- Sanity Soap spawns a curio after being used (fucking why?)
+- Increase the amount of vis restored by the Vis Amulet
 
 ## Feature Requests
 - Don't know what all this does, but E2E:E dev requested these mixins be included
   - https://github.com/Krutoy242/Enigmatica2Expert-Extended/blob/master/scripts/mixin/thaumcraft.zs
+
+- Config to disable stack aspect generation from recipes (cancel `ThaumcraftCraftingManager#generateTagsFromRecipes()`)
+- Config to modify golem material stats
+- Config to allow celestial notes to be collected in other dimensions
+- Config to buff Vis Generator storage, generation, and output
+- config to increase Porus Stone drop chances
 
 ## Stuff I have no idea what ThaumTweaks is doing
 - RechargeHelperMixin - No fucking clue what it is trying to do
