@@ -80,6 +80,7 @@ Thaumcraft tweaks for tweakers.
 - Ancient Curiosity / Arcane Curiosity -> Pechs
 - Eldritch Curiosity -> Eldritch Guardians
 - Twisted Curiosity -> Giant Taint Seeds
+- Add CrT/GS method for native cluster mining drops (`Utils.addSpecialMiningResult()`)
 
 ## Stuff I have no idea what ThaumTweaks is doing
 - RechargeHelperMixin - No fucking clue what it is trying to do
