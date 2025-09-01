@@ -1,0 +1,15 @@
+
+
+
+
+# GroovyScript
+# -- PECH TRADES
+groovyscript.wiki.congregamystica.pech_trades.title=Thaumcraft Pech Trades
+groovyscript.wiki.congregamystica.pech_trades.description=Pech Trades are a trading mechanic added by Thaumcraft. Pech trades involve giving a Pech an item and randomly generating a selection of loot based on the value of the item traded. Due to a limitation in Thaumcraft, Pechs must have at least one registered trade for each trade level (1 - 5). Congrega Mystica automatically re-populates any missing trades with scrap items.
+groovyscript.wiki.congregamystica.pech_trades.addTrade=Adds a Pech Trade in the format `pechType`, `tradeLevel`, `stack`. Parameter `pechType` can be 'MINER', 'MAGE', 'ARCHER', or 'COMMON'. Parameter `tradeLevel` must be a value between 1 and 5
+groovyscript.wiki.congregamystica.pech_trades.removeTrade=Removes any trades belonging to the Pech variant that match the given item.  Read the tweaker description before using this method
+groovyscript.wiki.congregamystica.pech_trades.removeAllTrades1=Removes all trades registered to this Pech variant. Acceptable values are 'MINER', 'MAGE', 'ARCHER', or 'COMMON'. Read the tweaker description before using this method
+groovyscript.wiki.congregamystica.pech_trades.removeAllTrades2=Removes all registered Pech trades. Read the tweaker description before using this method
+groovyscript.wiki.congregamystica.pech_trades.pechType.value=The Pech variant
+groovyscript.wiki.congregamystica.pech_trades.tradeItem.value=The item that will be traded
+groovyscript.wiki.congregamystica.pech_trades.tradeLevel.value=The trade level value
