@@ -7,9 +7,12 @@ import net.minecraftforge.common.config.Config;
 //TODO: Remove before release
 // @Config(modid = ThaumicTweaker.MOD_ID)
 public class ConfigHandlerTT {
+    @Config.Name("Golem Tweaks")
     public static GolemTweaksCategory golem_tweaks = new GolemTweaksCategory();
-
-    public static MIscTweaksCategory misc_tweaks = new MIscTweaksCategory();
+    @Config.Name("Miscellaneous Tweaks")
+    public static MiscTweaksCategory misc_tweaks = new MiscTweaksCategory();
+    @Config.Name("Vis Generator Tweaks")
+    public static VisGeneratorCategory vis_generator = new VisGeneratorCategory();
 
     public static class GolemTweaksCategory {
         @Config.Name("Material: Greatwood")
@@ -26,7 +29,7 @@ public class ConfigHandlerTT {
         public GolemMaterialCategory matVoid = new GolemMaterialCategory(20, 6, 4, "thaumcraft:plate:3");
     }
 
-    public static class MIscTweaksCategory {
+    public static class MiscTweaksCategory {
         @Config.RequiresMcRestart
         @Config.Name("Disable Crafting Recipe Aspects")
         @Config.Comment("Disables Thaumcraft's dynamic aspect generation from crafting recipes.")
@@ -41,6 +44,20 @@ public class ConfigHandlerTT {
         @Config.Name("Disable Infusion Recipe Aspects")
         @Config.Comment("Disables Thaumcraft's dynamic aspect generation from infusion recipes.")
         public boolean disableRecipeAspectsInfusion = false;
+    }
+
+    public static class VisGeneratorCategory {
+        @Config.RequiresMcRestart
+        @Config.RangeInt(min = 1, max = 10000000)
+        @Config.Name("RF Capacity")
+        @Config.Comment("The maximum amount of RF the Vis Capacitor can hold. This value also controls the amount of RF generated per point of Vis.")
+        public int capacity = 1000;
+
+        @Config.RequiresMcRestart
+        @Config.RangeInt(min = 1, max = 10000000)
+        @Config.Name("Max RF Extraction")
+        @Config.Comment("The maximum amount of RF that can be extracted from the Vis Capacitor per tick.")
+        public int maxExtract = 20;
     }
 
     static {
