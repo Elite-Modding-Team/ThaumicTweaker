@@ -7,6 +7,11 @@ Thaumcraft tweaks for tweakers.
 - Void Creator - (Wuss Mode) Void Siphon that does not require a rift to create Void Seeds (from Minor Integrations and Additions)
 
 ## Crafts
+ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduce the cost of the craft but others actually increase the cost. Who fucking knows...
+- Apprentice Ring - Add new apprentice ring recipe
+- Purifying Bath Salts - Reduce aspect crafting cost
+- Sanitizing Soap - Reduce aspect crafting cost
+
 
 ## Entity (DONE)
 - Pech Trades - support for adding/removing Pech Trades

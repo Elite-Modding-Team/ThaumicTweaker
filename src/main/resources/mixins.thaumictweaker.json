@@ -9,7 +9,8 @@
     "GolemMaterialMixin" ,
     "ScanSkyMixin" ,
     "ThaumcraftCraftingManagerMixin" ,
-    "TileVisGeneratorMixin"
+    "TileVisGeneratorMixin" ,
+    "TileVoidSiphonMixin"
   ] ,
   "server": [] ,
   "client": []

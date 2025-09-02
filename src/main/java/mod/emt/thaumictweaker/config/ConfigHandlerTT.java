@@ -13,6 +13,8 @@ public class ConfigHandlerTT {
     public static MiscTweaksCategory misc_tweaks = new MiscTweaksCategory();
     @Config.Name("Vis Generator Tweaks")
     public static VisGeneratorCategory vis_generator = new VisGeneratorCategory();
+    @Config.Name("Void Siphon Tweaks")
+    public static VoidSiphonCategory void_siphon = new VoidSiphonCategory();
 
     public static class GolemTweaksCategory {
         @Config.Name("Material: Greatwood")
@@ -51,17 +53,22 @@ public class ConfigHandlerTT {
     }
 
     public static class VisGeneratorCategory {
-        @Config.RequiresMcRestart
         @Config.RangeInt(min = 1, max = 10000000)
         @Config.Name("RF Capacity")
         @Config.Comment("The maximum amount of RF the Vis Capacitor can hold. This value also controls the amount of RF generated per point of Vis.")
         public int capacity = 1000;
 
-        @Config.RequiresMcRestart
         @Config.RangeInt(min = 1, max = 10000000)
         @Config.Name("Max RF Extraction")
         @Config.Comment("The maximum amount of RF that can be extracted from the Vis Capacitor per tick.")
         public int maxExtract = 20;
+    }
+
+    public static class VoidSiphonCategory {
+        @Config.RangeInt(min = 1, max = 100000)
+        @Config.Name("Rift Power Required")
+        @Config.Comment("Modifies the amount of rift power required to generate a Void Seed. Smaller values will increase the speed Void Seeds are created.")
+        public int progressRequired = 2000;
     }
 
     static {

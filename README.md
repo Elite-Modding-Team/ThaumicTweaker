@@ -12,4 +12,5 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Pech Trade Tweaks:** Add and remove Pech trades using CraftTweaker or GroovyScript
 - **Sky Scan Tweak:** Allow Thaumometer sky scanning from non-overworld dimensions
 - **Special Mining Result Tweaks:** Add and remove special mining drops using CraftTweaker or GroovyScript
-- **Vis Generator Tweaks:** Change the amount of RF generated per point of Vis and the generator RF output per tick
+- **Vis Generator Tweaks:** Change the amount of RF generated per point of Vis and the RF output per tick
+- **Void Siphon Tweaks:** Increase Void Seed creation speed
