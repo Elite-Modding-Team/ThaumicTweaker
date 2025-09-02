@@ -44,6 +44,10 @@ public class ConfigHandlerTT {
         @Config.Name("Disable Infusion Recipe Aspects")
         @Config.Comment("Disables Thaumcraft's dynamic aspect generation from infusion recipes.")
         public boolean disableRecipeAspectsInfusion = false;
+
+        @Config.Name("Sky Scan Dimensions")
+        @Config.Comment("")
+        public int[] skyDimensions = new int[] {};
     }
 
     public static class VisGeneratorCategory {
