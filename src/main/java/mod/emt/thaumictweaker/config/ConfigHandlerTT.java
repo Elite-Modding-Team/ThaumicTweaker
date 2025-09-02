@@ -9,6 +9,8 @@ import net.minecraftforge.common.config.Config;
 public class ConfigHandlerTT {
     public static GolemTweaksCategory golem_tweaks = new GolemTweaksCategory();
 
+    public static MIscTweaksCategory misc_tweaks = new MIscTweaksCategory();
+
     public static class GolemTweaksCategory {
         @Config.Name("Material: Greatwood")
         public GolemMaterialCategory matWood = new GolemMaterialCategory(6, 2, 1, "thaumcraft:plank_greatwood");
@@ -22,6 +24,23 @@ public class ConfigHandlerTT {
         public GolemMaterialCategory matThaumium = new GolemMaterialCategory(24, 10, 4, "thaumcraft:plate:2");
         @Config.Name("Material: Void Metal")
         public GolemMaterialCategory matVoid = new GolemMaterialCategory(20, 6, 4, "thaumcraft:plate:3");
+    }
+
+    public static class MIscTweaksCategory {
+        @Config.RequiresMcRestart
+        @Config.Name("Disable Crafting Recipe Aspects")
+        @Config.Comment("Disables Thaumcraft's dynamic aspect generation from crafting recipes.")
+        public boolean disableRecipeAspectsCrafting = false;
+
+        @Config.RequiresMcRestart
+        @Config.Name("Disable Crucible Recipe Aspects")
+        @Config.Comment("Disables Thaumcraft's dynamic aspect generation from crucible recipes.")
+        public boolean disableRecipeAspectsCrucible = false;
+
+        @Config.RequiresMcRestart
+        @Config.Name("Disable Infusion Recipe Aspects")
+        @Config.Comment("Disables Thaumcraft's dynamic aspect generation from infusion recipes.")
+        public boolean disableRecipeAspectsInfusion = false;
     }
 
     static {

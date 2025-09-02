@@ -1,13 +1,14 @@
 {
-	"package": "mod.emt.thaumictweaker.mixins",
-	"required": true,
-	"refmap": "mixins.thaumictweaker.refmap.json",
-	"target": "@env(DEFAULT)",
-	"minVersion": "0.8.5",
-	"compatibilityLevel": "JAVA_8",
-	"mixins": [
-		"GolemMaterialMixin"
-	],
-	"server": [],
-	"client": []
+  "package": "mod.emt.thaumictweaker.mixins" ,
+  "required": true ,
+  "refmap": "mixins.thaumictweaker.refmap.json" ,
+  "target": "@env(DEFAULT)" ,
+  "minVersion": "0.8.5" ,
+  "compatibilityLevel": "JAVA_8" ,
+  "mixins": [
+    "GolemMaterialMixin" ,
+    "ThaumcraftCraftingManagerMixin"
+  ] ,
+  "server": [] ,
+  "client": []
 }
