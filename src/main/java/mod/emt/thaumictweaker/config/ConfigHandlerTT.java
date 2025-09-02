@@ -46,7 +46,7 @@ public class ConfigHandlerTT {
         public boolean disableRecipeAspectsInfusion = false;
 
         @Config.Name("Sky Scan Dimensions")
-        @Config.Comment("")
+        @Config.Comment("A list of dimension ids where the Thaumometer can be used to scan the sky to obtain research notes.")
         public int[] skyDimensions = new int[] {};
     }
 
