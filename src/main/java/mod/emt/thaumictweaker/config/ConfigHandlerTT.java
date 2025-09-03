@@ -187,7 +187,12 @@ public class ConfigHandlerTT {
         @Config.RequiresMcRestart
         @Config.Name("Primordial Pearl Creation")
         @Config.Comment("Enables an infusion recipe to create 1 durability Primordial Pearls from void seeds.")
-        public boolean wussModePrimordialPearlRecipe = false;
+        public boolean wussModePrimordialPearlCreationRecipe = false;
+
+        @Config.RequiresMcRestart
+        @Config.Name("Primordial Pearl Growing")
+        @Config.Comment("Enables an infusion enchantment recipe that can increase Primordial Pearl durability.")
+        public boolean wussModePrimordialPearlGrowingRecipe = false;
 
         @Config.RequiresMcRestart
         @Config.Name("Sanitizing Soap Recipe")

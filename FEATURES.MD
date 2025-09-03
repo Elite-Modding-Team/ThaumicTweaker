@@ -7,8 +7,6 @@ Thaumcraft tweaks for tweakers.
 ## Crafts
 ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduce the cost of the craft but others actually increase the cost. Who fucking knows...
 - Apprentice Ring - Add new apprentice ring recipe
-- Purifying Bath Salts - Reduce aspect crafting cost
-- Sanitizing Soap - Reduce aspect crafting cost
 
 ### Items (DONE)
 - Filter Item - Used with arcane crafter

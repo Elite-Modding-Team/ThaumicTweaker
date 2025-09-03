@@ -119,9 +119,9 @@ public class RecipeRegistry {
         }
 
         //Wuss Mode: Primordial Pearl
-        if(ConfigHandlerTT.wuss_mode.wussModePrimordialPearlRecipe) {
-            ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicTweaker.MOD_ID, "primordial_pearl"), new InfusionRecipe(
-                    "TT_PRIMORDIAL_PEARL",
+        if(ConfigHandlerTT.wuss_mode.wussModePrimordialPearlCreationRecipe) {
+            ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicTweaker.MOD_ID, "primordial_pearl_creation"), new InfusionRecipe(
+                    "VOIDSIPHON",
                     new ItemStack(ItemsTC.primordialPearl, 1, 7),
                     2,
                     new AspectList().add(Aspect.AIR, 50).add(Aspect.EARTH, 50).add(Aspect.ENTROPY, 50).add(Aspect.FIRE, 50).add(Aspect.ORDER, 50).add(Aspect.WATER, 50),
@@ -134,6 +134,25 @@ public class RecipeRegistry {
                     ThaumcraftApiHelper.makeCrystal(Aspect.ORDER, 1),
                     ThaumcraftApiHelper.makeCrystal(Aspect.WATER, 1)
             ));
+        }
+
+        if(ConfigHandlerTT.wuss_mode.wussModePrimordialPearlGrowingRecipe) {
+            for(int i = 0; i < 7; i++) {
+                ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicTweaker.MOD_ID, "primordial_pearl_growth"), new InfusionRecipe(
+                        "VOIDSIPHON",
+                        new ItemStack(ItemsTC.primordialPearl, 1, i),
+                        2,
+                        new AspectList().add(Aspect.AIR, 50).add(Aspect.EARTH, 50).add(Aspect.ENTROPY, 50).add(Aspect.FIRE, 50).add(Aspect.ORDER, 50).add(Aspect.WATER, 50),
+                        Ingredient.fromStacks(new ItemStack(ItemsTC.primordialPearl, 1, i + 1)),
+                        Ingredient.fromItem(ItemsTC.salisMundus),
+                        ThaumcraftApiHelper.makeCrystal(Aspect.AIR, 1),
+                        ThaumcraftApiHelper.makeCrystal(Aspect.EARTH, 1),
+                        ThaumcraftApiHelper.makeCrystal(Aspect.ENTROPY, 1),
+                        ThaumcraftApiHelper.makeCrystal(Aspect.FIRE, 1),
+                        ThaumcraftApiHelper.makeCrystal(Aspect.ORDER, 1),
+                        ThaumcraftApiHelper.makeCrystal(Aspect.WATER, 1)
+                ));
+            }
         }
 
     }

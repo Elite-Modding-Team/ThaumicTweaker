@@ -36,7 +36,9 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 - **Arcane Bore Recipe:** Makes the Arcane Bore recipe cheaper
 - **Bath Salts Recipe:** Makes the Bath Salts recipe cheaper
-- **Primordial Pearl Creation:** New Infusion recipe that creates a 1 durabillity Primordial Pearl
+- **Primordial Pearl Recipes:**
+  - New Infusion recipe that creates a 1 durability Primordial Pearl
+  - New Infusion recipe that increases Primordial Pearl durability
 - **Sanitizing Soap Recipe:** Makes the Sanitizing Soap recipe cheaper
 - **Void Siphon:** Void siphon no longer requires a nearby rift and will slowly accumulate progress over time
 - **Workbench Charger Recipe:** Makes the Workbench Charger recipe cheaper
