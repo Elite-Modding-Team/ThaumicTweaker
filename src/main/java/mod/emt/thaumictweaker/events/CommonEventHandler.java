@@ -15,7 +15,7 @@ import thaumcraft.common.entities.monster.EntityEldritchGuardian;
 import thaumcraft.common.entities.monster.tainted.EntityTaintSeedPrime;
 
 @Mod.EventBusSubscriber(modid = ThaumicTweaker.MOD_ID)
-public class LivingDropsEventTT {
+public class CommonEventHandler {
 
     // Drops are added through an event because they don't have proper loot tables setup.
     @SubscribeEvent(priority = EventPriority.LOWEST)
