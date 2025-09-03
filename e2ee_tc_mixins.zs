@@ -63,16 +63,6 @@ zenClass MixinEntityPech {
     }
 }
 
-#mixin {targets: "thaumcraft.common.tiles.crafting.TileThaumatoriumTop"}
-zenClass MixinTileThaumatoriumTop {
-    #mixin Inject {method: "func_191420_l", at: {value: "HEAD"}, cancellable: true}
-    function avoidNPE(cir as CallbackInfoReturnable) as void {
-        if (isNull(this0.thaumatorium)) {
-            cir.setReturnValue(true);
-        }
-    }
-}
-
 #mixin {targets: "thaumcraft.common.tiles.devices.TileLampFertility"}
 zenClass MixinTileLampFertility {
     #mixin ModifyConstant {method: "updateAnimals", constant: {intValue: 5}}
