@@ -14,11 +14,11 @@ public class ItemCutlistRobeArmorMixin {
     @ModifyReturnValue(method = "getVisDiscount", at = @At("RETURN"))
     private int modifyVisDiscountMixin(int original, @Local(argsOnly = true) ItemStack stack) {
         if(stack.getItem() == ItemsTC.crimsonRobeHelm) {
-            return ConfigHandlerTT.cult_robes_tweaks.visDiscountHelm;
+            return ConfigHandlerTT.cult_robes.visDiscountHelm;
         } else if(stack.getItem() == ItemsTC.crimsonRobeChest) {
-            return ConfigHandlerTT.cult_robes_tweaks.visDiscountChest;
+            return ConfigHandlerTT.cult_robes.visDiscountChest;
         } else if(stack.getItem() == ItemsTC.crimsonRobeLegs) {
-            return ConfigHandlerTT.cult_robes_tweaks.visDiscountLeggings;
+            return ConfigHandlerTT.cult_robes.visDiscountLeggings;
         }
         return original;
     }

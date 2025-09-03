@@ -7,9 +7,13 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 ## Tweaks
 **NOTE:** All tweaks are disabled by default or use Thaumcraft default values. 
+- **Cult Robes Tweaks:** Change the Vis reduction on each piece of the cultist robes
 - **Disable Recipe Aspects:** Disable Thaumcraft's item aspect calculation based on the item's crafting recipe
 - **Golem Material Tweaks:** Change golem material stats such as armor, health, damage, and crafting material
 - **Pech Trade Tweaks:** Add and remove Pech trades using CraftTweaker or GroovyScript
+- **Primal Crusher Tweaks:**
+  - Modify Primal Crusher Refining infusion enchantment level
+  - Make Primal Crusher Unbreakable
 - **Sky Scan Tweak:** Allow Thaumometer sky scanning from non-overworld dimensions
 - **Special Mining Result Tweaks:** Add and remove special mining drops using CraftTweaker or GroovyScript
 - **Vis Generator Tweaks:** Change the amount of RF generated per point of Vis and the RF output per tick

@@ -8,11 +8,13 @@ import net.minecraftforge.common.config.Config;
 // @Config(modid = ThaumicTweaker.MOD_ID)
 public class ConfigHandlerTT {
     @Config.Name("Crimson Cult Robes Tweaks")
-    public static CrimsonCultRobesCategory cult_robes_tweaks = new CrimsonCultRobesCategory();
+    public static CrimsonCultRobesCategory cult_robes = new CrimsonCultRobesCategory();
     @Config.Name("Golem Tweaks")
     public static GolemTweaksCategory golem_tweaks = new GolemTweaksCategory();
     @Config.Name("Miscellaneous Tweaks")
     public static MiscTweaksCategory misc_tweaks = new MiscTweaksCategory();
+    @Config.Name("Primal Crusher Tweaks")
+    public static PrimalCrusherCategory primal_crusher = new PrimalCrusherCategory();
     @Config.Name("Vis Generator Tweaks")
     public static VisGeneratorCategory vis_generator = new VisGeneratorCategory();
     @Config.Name("Void Siphon Tweaks")
@@ -69,6 +71,19 @@ public class ConfigHandlerTT {
         @Config.Name("Sky Scan Dimensions")
         @Config.Comment("A list of dimension ids where the Thaumometer can be used to scan the sky to obtain research notes.")
         public int[] skyDimensions = new int[] {};
+    }
+
+    public static class PrimalCrusherCategory {
+        @Config.RequiresMcRestart
+        @Config.Name("Set Unbreakable")
+        @Config.Comment("Makes the Primal Crusher unbreakable.")
+        public boolean unbreakable = false;
+
+        @Config.RequiresMcRestart
+        @Config.RangeInt(min = 1, max = 4)
+        @Config.Name("Refining Level")
+        @Config.Comment("The Refining infusion enchantment level added to the Primal Crusher by default")
+        public int refiningLevel = 1;
     }
 
     public static class VisGeneratorCategory {

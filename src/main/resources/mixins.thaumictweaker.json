@@ -9,6 +9,7 @@
     "ContainerResearchTableMixin" ,
     "GolemMaterialMixin" ,
     "ItemCutlistRobeArmorMixin" ,
+    "ItemPrimalCrusherMixin" ,
     "ScanSkyMixin" ,
     "ThaumcraftCraftingManagerMixin" ,
     "TileVisGeneratorMixin" ,
