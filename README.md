@@ -5,8 +5,17 @@
 
 Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
-## Tweaks
-**NOTE:** All tweaks are disabled by default or use Thaumcraft default values. 
+---
+
+## Tweaks (Default - ENABLED)
+**NOTE:** All tweaks listed in this category are enabled by default. 
+
+
+
+---
+
+## Tweaks (Default - DISABLED)
+**NOTE:** All tweaks listed in this category are disabled by default or use Thaumcraft default values. 
 
 - **Alchemical Brass**: Change the alchemical brass recipe to require copper instead of iron.
 - **Apprentice's Ring Structure Loot:** Allow the Apprentice's Ring to be rarely found in some vanilla structure chests
@@ -31,8 +40,10 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Void Siphon Tweaks:** Increase Void Seed creation speed
 - **Void Thaumaturge Robes Tweaks:** Change the Vis reduction amount on each piece of armor
 
-## Wuss Mode Tweaks
-**NOTE:** All tweaks are disabled by default or use Thaumcraft default values. Wuss Mode Tweaks are designed to reduce the cost of certain recipes or allow players to bypass certain mechanics.
+---
+
+## Wuss Mode Tweaks (Default - DISABLED)
+**NOTE:** All tweaks listed in this category are disabled by default or use Thaumcraft default values. Wuss Mode Tweaks are designed to reduce the cost of certain recipes or allow players to bypass certain mechanics.
 
 - **Arcane Bore Recipe:** Makes the Arcane Bore recipe cheaper
 - **Bath Salts Recipe:** Makes the Bath Salts recipe cheaper
