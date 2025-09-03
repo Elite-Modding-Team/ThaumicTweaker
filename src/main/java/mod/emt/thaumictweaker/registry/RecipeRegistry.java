@@ -53,7 +53,7 @@ public class RecipeRegistry {
                     "TT_PRIMORDIAL_PEARL",
                     new ItemStack(ItemsTC.primordialPearl, 1, 7),
                     2,
-                    new AspectList().add(Aspect.AIR, 50).add(Aspect.EARTH, 50).add(Aspect.ENTROPY, 50).add(Aspect.FIRE, 50).add(Aspect.ORDER, 50).add(Aspect.WATER, 50).add(Aspect.FLUX, 50),
+                    new AspectList().add(Aspect.AIR, 50).add(Aspect.EARTH, 50).add(Aspect.ENTROPY, 50).add(Aspect.FIRE, 50).add(Aspect.ORDER, 50).add(Aspect.WATER, 50),
                     Ingredient.fromItem(ItemsTC.voidSeed),
                     Ingredient.fromItem(ItemsTC.salisMundus),
                     ThaumcraftApiHelper.makeCrystal(Aspect.AIR, 1),
@@ -61,8 +61,7 @@ public class RecipeRegistry {
                     ThaumcraftApiHelper.makeCrystal(Aspect.ENTROPY, 1),
                     ThaumcraftApiHelper.makeCrystal(Aspect.FIRE, 1),
                     ThaumcraftApiHelper.makeCrystal(Aspect.ORDER, 1),
-                    ThaumcraftApiHelper.makeCrystal(Aspect.WATER, 1),
-                    ThaumcraftApiHelper.makeCrystal(Aspect.FLUX, 1)
+                    ThaumcraftApiHelper.makeCrystal(Aspect.WATER, 1)
             ));
         }
 
