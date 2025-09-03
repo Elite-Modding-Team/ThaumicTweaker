@@ -7,14 +7,14 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 ---
 
-## Tweaks (Default - ENABLED)
+## Tweaks (Default: Enabled)
 **NOTE:** All tweaks listed in this category are enabled by default. 
 
 
 
 ---
 
-## Tweaks (Default - DISABLED)
+## Tweaks (Default: Disabled)
 **NOTE:** All tweaks listed in this category are disabled by default or use Thaumcraft default values. 
 
 - **Alchemical Brass**: Change the alchemical brass recipe to require copper instead of iron.
@@ -42,7 +42,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 ---
 
-## Wuss Mode Tweaks (Default - DISABLED)
+## Wuss Mode Tweaks (Default: Disabled)
 **NOTE:** All tweaks listed in this category are disabled by default or use Thaumcraft default values. Wuss Mode Tweaks are designed to reduce the cost of certain recipes or allow players to bypass certain mechanics.
 
 - **Arcane Bore Recipe:** Makes the Arcane Bore recipe cheaper
