@@ -6,7 +6,7 @@
 Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 ## Tweaks
-**NOTE:** All tweaks are disabled by default. 
+**NOTE:** All tweaks are disabled by default or use Thaumcraft default values. 
 - **Disable Recipe Aspects:** Disable Thaumcraft's item aspect calculation based on the item's crafting recipe
 - **Golem Material Tweaks:** Change golem material stats such as armor, health, damage, and crafting material
 - **Pech Trade Tweaks:** Add and remove Pech trades using CraftTweaker or GroovyScript
@@ -14,3 +14,6 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Special Mining Result Tweaks:** Add and remove special mining drops using CraftTweaker or GroovyScript
 - **Vis Generator Tweaks:** Change the amount of RF generated per point of Vis and the RF output per tick
 - **Void Siphon Tweaks:** Increase Void Seed creation speed
+
+## Wuss Mode Tweaks
+Tweaks that may be Wuss Mode specific or just reduce the cost of certain recipes.

@@ -7,6 +7,8 @@ import net.minecraftforge.common.config.Config;
 //TODO: Remove before release
 // @Config(modid = ThaumicTweaker.MOD_ID)
 public class ConfigHandlerTT {
+    @Config.Name("Crimson Cult Robes Tweaks")
+    public static CrimsonCultRobesCategory cult_robes_tweaks = new CrimsonCultRobesCategory();
     @Config.Name("Golem Tweaks")
     public static GolemTweaksCategory golem_tweaks = new GolemTweaksCategory();
     @Config.Name("Miscellaneous Tweaks")
@@ -15,6 +17,23 @@ public class ConfigHandlerTT {
     public static VisGeneratorCategory vis_generator = new VisGeneratorCategory();
     @Config.Name("Void Siphon Tweaks")
     public static VoidSiphonCategory void_siphon = new VoidSiphonCategory();
+
+    public static class CrimsonCultRobesCategory {
+        @Config.RangeInt(min = 0, max = 100)
+        @Config.Name("Helm Vis Discount")
+        @Config.Comment("The Vis discount granted when wearing the Crimson Cult Hood.")
+        public int visDiscountHelm = 1;
+
+        @Config.RangeInt(min = 0, max = 100)
+        @Config.Name("Robes Vis Discount")
+        @Config.Comment("The Vis discount granted when wearing the Crimson Cult Robes.")
+        public int visDiscountChest = 1;
+
+        @Config.RangeInt(min = 0, max = 100)
+        @Config.Name("Leggings Vis Discount")
+        @Config.Comment("The Vis discount granted when wearing the Crimson Cult Leggings.")
+        public int visDiscountLeggings = 1;
+    }
 
     public static class GolemTweaksCategory {
         @Config.Name("Material: Greatwood")

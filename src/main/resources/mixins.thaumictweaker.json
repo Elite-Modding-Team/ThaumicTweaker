@@ -6,7 +6,9 @@
   "minVersion": "0.8.5" ,
   "compatibilityLevel": "JAVA_8" ,
   "mixins": [
+    "ContainerResearchTableMixin" ,
     "GolemMaterialMixin" ,
+    "ItemCutlistRobeArmorMixin" ,
     "ScanSkyMixin" ,
     "ThaumcraftCraftingManagerMixin" ,
     "TileVisGeneratorMixin" ,
