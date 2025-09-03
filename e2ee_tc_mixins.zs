@@ -15,32 +15,6 @@ import native.thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
 import native.thaumcraft.common.lib.utils.Utils;
 
 /*
-Disable ItemStack aspect generation from recipes
-*/
-#mixin {targets: "thaumcraft.common.lib.crafting.ThaumcraftCraftingManager"}
-zenClass MixinThaumcraftCraftingManager {
-    #mixin Static
-    #mixin Inject {method: "generateTagsFromRecipes", at: {value: "HEAD"}, cancellable: true}
-    function skipGenerateAspectsFromRecipes(stack as ItemStack, history as ArrayList, cir as CallbackInfoReturnable) as void {
-        cir.cancel();
-    }
-}
-
-/*
-Buff golem stats
-*/
-#mixin {targets: "thaumcraft.api.golems.parts.GolemMaterial"}
-zenClass MixinGolemMaterial {
-    #mixin Static
-    #mixin Inject {method: "register", at: {value: "HEAD"}}
-    function buffStats(material as GolemMaterial, ci as CallbackInfo) as void {
-        material.healthMod = material.healthMod * 20;
-        material.armor = material.armor * material.armor / 2 + material.armor;
-        material.damage = material.damage * material.damage / 2 + material.damage;
-    }
-}
-
-/*
 Buff [Porous Stone] output
 Before this change, [Porous Stone] dropped something not [Gravel] with 7% chance. Each `Fortune` level increased this chance for about 1%.
 Now, base chance is 20% and each `Fortune` level increasing it for about 20%.
@@ -120,47 +94,6 @@ zenClass MixinTileMirrorEssentia {
     #mixin ModifyConstant {method: "checkInstability", constant: {intValue: 100}}
     function speedUpFluxSelfCleansing(value as int) as int {
         return 5;
-    }
-}
-
-/*
-Buff Vis Generator RF storage, generation, and output
-*/
-#mixin {targets: "thaumcraft.common.tiles.devices.TileVisGenerator"}
-zenClass MixinTileVisGenerator {
-    #mixin Static
-    #mixin ModifyConstant {method: "<init>", constant: [{intValue: 1000}, {intValue: 20}]}
-    function buffEnergyHandler(value as int) as int {
-        return value * 10;
-    }
-
-    #mixin ModifyConstant {method: "func_73660_a", constant: {intValue: 20}}
-    function increaseOutputSpeed(value as int) as int {
-        return value * 10;
-    }
-
-    #mixin ModifyConstant {method: "recharge", constant: {floatValue: 1000}}
-    function increaseConversationRatio(value as float) as float {
-        return value * 10;
-    }
-}
-
-/*
-Allow Celestial Notes being possible to get in dimension 3 (skyblock in E2EE)
-*/
-#mixin {targets: "thaumcraft.common.lib.research.ScanSky"}
-zenClass MixinScanSky {
-    #mixin Redirect
-    #{
-    #   method: "checkThing",
-    #   at: {
-    #       value: "INVOKE",
-    #       target: "Lnet/minecraft/world/WorldProvider;func_186058_p()Lnet/minecraft/world/DimensionType;"
-    #   }
-    #}
-    function allowDimension3(provider as WorldProvider) as DimensionType {
-        if (provider.getDimension() == 3) return DimensionType.OVERWORLD;
-        return provider.getDimensionType();
     }
 }
 

@@ -13,9 +13,6 @@ ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduc
 - Sanitizing Soap - Reduce aspect crafting cost
 
 
-## Entity (DONE)
-- Pech Trades - support for adding/removing Pech Trades
-
 ### Items (DONE)
 - Filter Item - Used with arcane crafter
 - Armor Materials
@@ -31,7 +28,6 @@ ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduc
 ## Features
 ### Mixins Armor (DONE)
 - Primal Crusher mines a 5x5 area
-- Cultist Armor has a configurable vis discount (boots = 3, chest = 6, rest = 4)
 - Fortress armor grants knockback resistance (chest = 0.4, rest = 0.3)
 - Fortress armor set bonus (Strength modifier configurable)
 - Fortress armor has additional armor, armor toughness, and magic damage protection
@@ -65,22 +61,14 @@ ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduc
 ### Mixins Events
 ### Mixins Golems (DONE)
 - Golems can activate infusion altar
-- Buff Golem material values
 - Golems have a copy of the placing player's research knowledge
 
 ### Mixins Items (DONE)
-- Primal Crusher repairs significantly faster
-- Primal Crusher has Refining II included by default
-- Sanity Soap spawns a curio after being used (fucking why?)
 - Increase the amount of vis restored by the Vis Amulet
 
 ## Feature Requests
 - Don't know what all this does, but E2E:E dev requested these mixins be included
   - https://github.com/Krutoy242/Enigmatica2Expert-Extended/blob/master/scripts/mixin/thaumcraft.zs
-- Config to disable stack aspect generation from recipes (cancel `ThaumcraftCraftingManager#generateTagsFromRecipes()`)
-- Config to modify golem material stats
-- Config to allow celestial notes to be collected in other dimensions
-- Config to buff Vis Generator storage, generation, and output
 - config to increase Porus Stone drop chances
 - Ancient Curiosity / Arcane Curiosity -> Pechs
 - Eldritch Curiosity -> Eldritch Guardians
