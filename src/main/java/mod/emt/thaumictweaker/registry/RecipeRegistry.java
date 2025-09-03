@@ -59,7 +59,7 @@ public class RecipeRegistry {
         }
 
         //Wuss Mode: Bath Salts
-        if(ConfigHandlerTT.wuss_mode.wussModeArcaneBoreRecipe) {
+        if(ConfigHandlerTT.wuss_mode.wussModeBathSaltsRecipe) {
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("thaumcraft:BathSalts"), new CrucibleRecipe(
                     "BATHSALTS",
                     new ItemStack(ItemsTC.bathSalts),
@@ -69,7 +69,7 @@ public class RecipeRegistry {
         }
 
         //Wuss Mode: Sanitizing Soap
-        if(ConfigHandlerTT.wuss_mode.wussModeArcaneBoreRecipe) {
+        if(ConfigHandlerTT.wuss_mode.wussModeSanitizingSoapRecipe) {
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("thaumcraft:SaneSoap"), new CrucibleRecipe(
                     "SANESOAP",
                     new ItemStack(ItemsTC.sanitySoap),
