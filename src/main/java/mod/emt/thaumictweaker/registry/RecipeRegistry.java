@@ -14,6 +14,7 @@ import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.ThaumcraftApiHelper;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
+import thaumcraft.api.blocks.BlocksTC;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.items.ItemsTC;
 import thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
@@ -44,6 +45,23 @@ public class RecipeRegistry {
                     Ingredient.fromItem(ItemsTC.voidShovel),
                     Ingredient.fromItem(ItemsTC.elementalPick),
                     Ingredient.fromItem(ItemsTC.elementalShovel)
+            ));
+        }
+
+        //Wuss Mode: Arcane Bore Recipe
+        if(ConfigHandlerTT.wuss_mode.wussModeArcaneBoreRecipe) {
+            ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("thaumcraft:ArcaneBore"), new InfusionRecipe(
+                    "ARCANEBORE",
+                    new ItemStack(ItemsTC.turretPlacer, 1, 2),
+                    2,
+                    new AspectList().add(Aspect.ENERGY, 25).add(Aspect.EARTH, 25).add(Aspect.MECHANISM, 50).add(Aspect.VOID, 25).add(Aspect.MOTION, 25),
+                    Ingredient.fromItem(ItemsTC.turretPlacer),
+                    new ItemStack(BlocksTC.plankGreatwood),
+                    new ItemStack(BlocksTC.plankGreatwood),
+                    Ingredient.fromItem(ItemsTC.mechanismSimple),
+                    "plateBrass",
+                    Ingredient.fromItem(ItemsTC.thaumiumPick),
+                    Ingredient.fromItem(ItemsTC.morphicResonator)
             ));
         }
 

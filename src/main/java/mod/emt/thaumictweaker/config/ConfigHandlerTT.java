@@ -124,6 +124,11 @@ public class ConfigHandlerTT {
 
     public static class WussModeCategory {
         @Config.RequiresMcRestart
+        @Config.Name("Arcane Bore Recipe")
+        @Config.Comment("Makes the Arcane Bore recipe cheaper.")
+        public boolean wussModeArcaneBoreRecipe = false;
+
+        @Config.RequiresMcRestart
         @Config.Name("Primordial Pearl Recipe")
         @Config.Comment("Enables an infusion recipe to craft primordial pearls from void seeds.")
         public boolean wussModePrimordialPearlRecipe = false;
