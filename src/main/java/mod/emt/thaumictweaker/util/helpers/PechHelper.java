@@ -26,14 +26,17 @@ public class PechHelper {
                 new ItemStack(BlocksTC.saplingGreatwood),
                 new ItemStack(Items.EXPERIENCE_BOTTLE),
                 new ItemStack(ItemsTC.thaumiumPick),
-                new ItemStack(BlocksTC.saplingSilverwood)
+                new ItemStack(BlocksTC.saplingSilverwood),
+                new ItemStack(ItemsTC.curio, 1, 2),
+                new ItemStack(ItemsTC.curio, 1, 1)
         ));
         put(EnumPechType.MAGE, Lists.newArrayList(
                 ThaumcraftApiHelper.makeCrystal(Aspect.ENTROPY),
                 ThaumcraftApiHelper.makeCrystal(Aspect.FLUX),
                 new ItemStack(Items.EXPERIENCE_BOTTLE),
                 new ItemStack(ItemsTC.clothChest),
-                new ItemStack(ItemsTC.pechWand)
+                new ItemStack(ItemsTC.pechWand),
+                new ItemStack(ItemsTC.curio, 1, 0)
         ));
         put(EnumPechType.ARCHER, Lists.newArrayList(
                 new ItemStack(BlocksTC.candles.get(EnumDyeColor.byDyeDamage(0))),

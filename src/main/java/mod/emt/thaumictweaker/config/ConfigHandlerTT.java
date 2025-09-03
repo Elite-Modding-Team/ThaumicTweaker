@@ -9,6 +9,8 @@ import net.minecraftforge.common.config.Config;
 public class ConfigHandlerTT {
     @Config.Name("Crimson Cult Robes Tweaks")
     public static CrimsonCultRobesCategory cult_robes = new CrimsonCultRobesCategory();
+    @Config.Name("Curiosity Tweaks")
+    public static CuriosityTweaksCategory curiosity_tweaks = new CuriosityTweaksCategory();
     @Config.Name("Golem Tweaks")
     public static GolemTweaksCategory golem_tweaks = new GolemTweaksCategory();
     @Config.Name("Miscellaneous Tweaks")
@@ -35,6 +37,18 @@ public class ConfigHandlerTT {
         @Config.Name("Leggings Vis Discount")
         @Config.Comment("The Vis discount granted when wearing the Crimson Cult Leggings.")
         public int visDiscountLeggings = 1;
+    }
+
+    public static class CuriosityTweaksCategory {
+        @Config.RangeDouble(min = 0.0D, max = 1.0D)
+        @Config.Name("Eldritch Guardian Curiosity Chance")
+        @Config.Comment("The chance for the Giant Taint Seed to drop an Eldritch Curiosity.")
+        public double curioDropEldritchGuardian = 0.0D;
+
+        @Config.RangeDouble(min = 0.0D, max = 1.0D)
+        @Config.Name("Giant Taint Seed Curiosity Chance")
+        @Config.Comment("The chance for the Giant Taint Seed to drop a Twisted Curiosity.")
+        public double curioDropGiantTaintSeed = 0.0D;
     }
 
     public static class GolemTweaksCategory {

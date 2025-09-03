@@ -8,6 +8,10 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 ## Tweaks
 **NOTE:** All tweaks are disabled by default or use Thaumcraft default values. 
 - **Cult Robes Tweaks:** Change the Vis reduction on each piece of the cultist robes
+- **Curiosity Tweaks:**
+  - Ancient Curiosity, Arcane Curiosity, and Preserved Curiosity from Pech trades
+  - Eldritch Curiosity from Eldritch Guardians
+  - Twisted Curiosity from Giant Taint Seeds
 - **Disable Recipe Aspects:** Disable Thaumcraft's item aspect calculation based on the item's crafting recipe
 - **Golem Material Tweaks:** Change golem material stats such as armor, health, damage, and crafting material
 - **Pech Trade Tweaks:** Add and remove Pech trades using CraftTweaker or GroovyScript

@@ -55,8 +55,6 @@ ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduc
 
 ### Mixins Entities (DONE)
 - Add/Remove Pech Trades
-- Add curiosity drops to golems (what the fuck?)
-- Add curiosity drops to taint seeds
 
 ### Mixins Events
 ### Mixins Golems (DONE)
@@ -70,9 +68,6 @@ ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduc
 - Don't know what all this does, but E2E:E dev requested these mixins be included
   - https://github.com/Krutoy242/Enigmatica2Expert-Extended/blob/master/scripts/mixin/thaumcraft.zs
 - config to increase Porus Stone drop chances
-- Ancient Curiosity / Arcane Curiosity -> Pechs
-- Eldritch Curiosity -> Eldritch Guardians
-- Twisted Curiosity -> Giant Taint Seeds
 - Add CrT/GS method for native cluster mining drops (`Utils.addSpecialMiningResult()`)
 
 ## Stuff I have no idea what ThaumTweaks is doing
