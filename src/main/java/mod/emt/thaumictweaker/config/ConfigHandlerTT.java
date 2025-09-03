@@ -19,6 +19,8 @@ public class ConfigHandlerTT {
     public static PrimalCrusherCategory primal_crusher = new PrimalCrusherCategory();
     @Config.Name("Vis Generator Tweaks")
     public static VisGeneratorCategory vis_generator = new VisGeneratorCategory();
+    @Config.Name("Void Thaumaturge Robes Tweaks")
+    public static VoidRobesCategory void_robes = new VoidRobesCategory();
     @Config.Name("Void Siphon Tweaks")
     public static VoidSiphonCategory void_siphon = new VoidSiphonCategory();
     @Config.Name("Wuss Mode Tweaks")
@@ -113,6 +115,23 @@ public class ConfigHandlerTT {
         @Config.Name("Max RF Extraction")
         @Config.Comment("The maximum amount of RF that can be extracted from the Vis Capacitor per tick.")
         public int maxExtract = 20;
+    }
+
+    public static class VoidRobesCategory {
+        @Config.RangeInt(min = 0, max = 100)
+        @Config.Name("Helm Vis Discount")
+        @Config.Comment("The Vis discount granted when wearing the Void Thaumaturge Hood.")
+        public int visDiscountHelm = 5;
+
+        @Config.RangeInt(min = 0, max = 100)
+        @Config.Name("Robes Vis Discount")
+        @Config.Comment("The Vis discount granted when wearing the Void Thaumaturge Robes.")
+        public int visDiscountChest = 5;
+
+        @Config.RangeInt(min = 0, max = 100)
+        @Config.Name("Leggings Vis Discount")
+        @Config.Comment("The Vis discount granted when wearing the Void Thaumaturge Leggings.")
+        public int visDiscountLeggings = 5;
     }
 
     public static class VoidSiphonCategory {

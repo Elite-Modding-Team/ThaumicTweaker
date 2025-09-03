@@ -7,7 +7,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 ## Tweaks
 **NOTE:** All tweaks are disabled by default or use Thaumcraft default values. 
-- **Cult Robes Tweaks:** Change the Vis reduction on each piece of the cultist robes
+- **Cult Robes Tweaks:** Change the Vis reduction amount on each piece of armor
 - **Curiosity Tweaks:**
   - Ancient Curiosity, Arcane Curiosity, and Preserved Curiosity from Pech trades
   - Eldritch Curiosity from Eldritch Guardians
@@ -22,8 +22,11 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Special Mining Result Tweaks:** Add and remove special mining drops using CraftTweaker or GroovyScript
 - **Vis Generator Tweaks:** Change the amount of RF generated per point of Vis and the RF output per tick
 - **Void Siphon Tweaks:** Increase Void Seed creation speed
+- **Void Thaumaturge Robes Tweaks:** Change the Vis reduction amount on each piece of armor
 - **Wuss Mode Tweaks: Does not require Wuss Mode to be enabled to access these**
   - Primordial Pearl Infusion recipe
 
 ## Wuss Mode Tweaks
-Tweaks that may be Wuss Mode specific or just reduce the cost of certain recipes.
+**NOTE:** All tweaks are disabled by default or use Thaumcraft default values. Wuss Mode Tweaks are designed to reduce the cost of certain recipes or allow players to bypass certain mechanics.
+- **Primordial Pearl Creation:** New Infusion recipe that creates a 1 durabillity Primordial Pearl
+- **Void Siphon:** Void siphon no longer requires a nearby rift and will slowly accumulate progress over time

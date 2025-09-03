@@ -39,7 +39,6 @@ ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduc
   - Legs - drains stored vis to cleanse Poison, Wither or Flux Taint
 - Void Robes grant knockback resistance (all = 0.25)
 - Void Robes grant a flat damage and magic resistance
-- Void Robes grant a configurable vis discount (head = 8, rest = 7)
 
 ### Mixins Blocks (DONE)
 - No fucking clue what ThaumTweaks does to the TileInfusionMatrix with MatrixMixin

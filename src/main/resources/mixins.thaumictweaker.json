@@ -10,6 +10,7 @@
     "GolemMaterialMixin" ,
     "ItemCutlistRobeArmorMixin" ,
     "ItemPrimalCrusherMixin" ,
+    "ItemVoidRobeArmorMixin" ,
     "ScanSkyMixin" ,
     "ThaumcraftCraftingManagerMixin" ,
     "TileVisGeneratorMixin" ,
