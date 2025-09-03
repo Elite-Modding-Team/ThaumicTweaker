@@ -11,6 +11,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import thaumcraft.api.ThaumcraftApi;
+import thaumcraft.api.ThaumcraftApiHelper;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.InfusionRecipe;
@@ -43,6 +44,24 @@ public class RecipeRegistry {
                     Ingredient.fromItem(ItemsTC.voidShovel),
                     Ingredient.fromItem(ItemsTC.elementalPick),
                     Ingredient.fromItem(ItemsTC.elementalShovel)
+            ));
+        }
+
+        //Wuss Mode: Primordial Pearl Recipe
+        if(ConfigHandlerTT.wuss_mode.wussModePrimordialPearlRecipe) {
+            ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicTweaker.MOD_ID, "primordial_pearl"), new InfusionRecipe(
+                    "TT_PRIMORDIAL_PEARL",
+                    new ItemStack(ItemsTC.primordialPearl, 1, 7),
+                    2,
+                    new AspectList().add(Aspect.AIR, 50).add(Aspect.EARTH, 50).add(Aspect.ENTROPY, 50).add(Aspect.FIRE, 50).add(Aspect.ORDER, 50).add(Aspect.WATER, 50).add(Aspect.FLUX, 50),
+                    Ingredient.fromItem(ItemsTC.voidSeed),
+                    ThaumcraftApiHelper.makeCrystal(Aspect.AIR, 1),
+                    ThaumcraftApiHelper.makeCrystal(Aspect.EARTH, 1),
+                    ThaumcraftApiHelper.makeCrystal(Aspect.ENTROPY, 1),
+                    ThaumcraftApiHelper.makeCrystal(Aspect.FIRE, 1),
+                    ThaumcraftApiHelper.makeCrystal(Aspect.ORDER, 1),
+                    ThaumcraftApiHelper.makeCrystal(Aspect.WATER, 1),
+                    ThaumcraftApiHelper.makeCrystal(Aspect.FLUX, 1)
             ));
         }
 

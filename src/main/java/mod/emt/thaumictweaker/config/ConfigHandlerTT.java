@@ -21,6 +21,9 @@ public class ConfigHandlerTT {
     public static VisGeneratorCategory vis_generator = new VisGeneratorCategory();
     @Config.Name("Void Siphon Tweaks")
     public static VoidSiphonCategory void_siphon = new VoidSiphonCategory();
+    @Config.Name("Wuss Mode Tweaks")
+    @Config.Comment("For those that want an easier time. NOTE: Wuss Mode does not need to be enabled for these tweaks to work.")
+    public static WussModeCategory wuss_mode = new WussModeCategory();
 
     public static class CrimsonCultRobesCategory {
         @Config.RangeInt(min = 0, max = 100)
@@ -117,6 +120,13 @@ public class ConfigHandlerTT {
         @Config.Name("Rift Power Required")
         @Config.Comment("Modifies the amount of rift power required to generate a Void Seed. Smaller values will increase the speed Void Seeds are created.")
         public int progressRequired = 2000;
+    }
+
+    public static class WussModeCategory {
+        @Config.RequiresMcRestart
+        @Config.Name("Wuss Mode: Primordial Pearl Recipe")
+        @Config.Comment("Enables an infusion recipe to craft primordial pearls from void seeds.")
+        public boolean wussModePrimordialPearlRecipe = false;
     }
 
     static {

@@ -22,6 +22,8 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Special Mining Result Tweaks:** Add and remove special mining drops using CraftTweaker or GroovyScript
 - **Vis Generator Tweaks:** Change the amount of RF generated per point of Vis and the RF output per tick
 - **Void Siphon Tweaks:** Increase Void Seed creation speed
+- **Wuss Mode Tweaks: Does not require Wuss Mode to be enabled to access these**
+  - Primordial Pearl Infusion recipe
 
 ## Wuss Mode Tweaks
 Tweaks that may be Wuss Mode specific or just reduce the cost of certain recipes.
