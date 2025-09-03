@@ -138,7 +138,7 @@ public class RecipeRegistry {
 
         if(ConfigHandlerTT.wuss_mode.wussModePrimordialPearlGrowingRecipe) {
             for(int i = 0; i < 7; i++) {
-                ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicTweaker.MOD_ID, "primordial_pearl_growth"), new InfusionRecipe(
+                ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicTweaker.MOD_ID, "primordial_pearl_growth_" + i), new InfusionRecipe(
                         "VOIDSIPHON",
                         new ItemStack(ItemsTC.primordialPearl, 1, i),
                         2,
