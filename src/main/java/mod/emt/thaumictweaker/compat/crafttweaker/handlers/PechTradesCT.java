@@ -8,6 +8,7 @@ import crafttweaker.api.minecraft.CraftTweakerMC;
 import mod.emt.thaumictweaker.ThaumicTweaker;
 import mod.emt.thaumictweaker.util.helpers.PechHelper;
 import mod.emt.thaumictweaker.util.misc.EnumPechType;
+import net.minecraft.item.ItemStack;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
@@ -27,6 +28,16 @@ public class PechTradesCT {
         } catch (IllegalArgumentException e) {
             CraftTweakerAPI.logError("Invalid Pech type: " + pechType + ". Values can only be 'MINER', 'MAGE', or 'ARCHER'");
         }
+    }
+
+    @ZenMethod
+    public static void addValuedItem(IItemStack item, int value) {
+        ItemStack stack = CraftTweakerMC.getItemStack(item);
+        if(value <= 0) {
+            CraftTweakerAPI.logError("Item value must be greater than 0");
+            throw new IllegalArgumentException("Item value must be greater than 0");
+        }
+        PechHelper.addValuedItem(stack, value);
     }
 
     @ZenMethod

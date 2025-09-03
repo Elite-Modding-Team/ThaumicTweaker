@@ -14,7 +14,6 @@ public class TileThaumatoriumTopMixin {
 
     @Shadow public TileThaumatorium thaumatorium;
 
-
     /**
      * @author Invadermonky
      * @reason Fixes a NullPointerException crash when the {@link TileThaumatoriumTop#isEmpty()} method is called

@@ -42,6 +42,16 @@ public class PechTrades extends VirtualizedRegistry<PechTrade> {
         recipeBuilder().setPechType(pechType).setTradeLevel(tradeLevel).setTradeItem(tradeItem).register();
     }
 
+    //TODO: language file descriptions
+    @MethodDescription(
+            type = MethodDescription.Type.ADDITION,
+            example = @Example("item('minecraft:ender_pearl'), 15")
+    )
+    public void addValuedItem(ItemStack stack, int value) {
+        //TODO: Error checking
+        PechHelper.addValuedItem(stack, value);
+    }
+
     @MethodDescription(
             type = MethodDescription.Type.REMOVAL,
             example = {

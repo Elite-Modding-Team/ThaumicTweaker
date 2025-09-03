@@ -50,19 +50,6 @@ zenClass MixinBlockFluidDeath {
     }
 }
 
-#mixin {targets: "thaumcraft.common.entities.monster.EntityPech"}
-zenClass MixinEntityPech {
-    #mixin ModifyConstant {method: "getValue", constant: {intValue: 32}}
-    function buffMaxDesireBuyValue0(value as int) as int {
-        return 256;
-    }
-
-    #mixin ModifyConstant {method: "getValue", constant: {intValue: 2}}
-    function buffMaxDesireBuyValue1(value as int) as int {
-        return 4;
-    }
-}
-
 #mixin {targets: "thaumcraft.common.tiles.devices.TileLampFertility"}
 zenClass MixinTileLampFertility {
     #mixin ModifyConstant {method: "updateAnimals", constant: {intValue: 5}}

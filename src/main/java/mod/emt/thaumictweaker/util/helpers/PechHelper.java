@@ -6,6 +6,7 @@ import mod.emt.thaumictweaker.util.misc.EnumPechType;
 import mod.emt.thaumictweaker.util.misc.PechTrade;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.math.MathHelper;
@@ -54,6 +55,8 @@ public class PechHelper {
         ));
     }});
 
+    //TODO: Add addValuedItem method to CrT and GroovyScript
+
     public static void addPechTrade(EnumPechType pechType, int trustLevel, ItemStack stack) {
         ArrayList<List> trades = getPechTrades(pechType);
         if(trades == null) {
@@ -66,6 +69,13 @@ public class PechHelper {
 
     public static void addPechTrade(PechTrade trade) {
         addPechTrade(trade.pechType, trade.tradeLevel, trade.tradeStack);
+    }
+
+    public static void addValuedItem(ItemStack stack, int value) {
+        if(!stack.isEmpty() && stack.getItem() != Items.AIR && value > 0) {
+            value = MathHelper.clamp(value, 1, 500);
+            EntityPech.valuedItems.put(Item.getIdFromItem(stack.getItem()), value);
+        }
     }
 
     public static void removePechTrade(EnumPechType pechType, Ingredient ingredient) {

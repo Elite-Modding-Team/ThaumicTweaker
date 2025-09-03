@@ -15,6 +15,8 @@ public class ConfigHandlerTT {
     public static GolemTweaksCategory golem_tweaks = new GolemTweaksCategory();
     @Config.Name("Miscellaneous Tweaks")
     public static MiscTweaksCategory misc_tweaks = new MiscTweaksCategory();
+    @Config.Name("Pech Tweaks")
+    public static PechCategory pech_tweaks = new PechCategory();
     @Config.Name("Primal Crusher Tweaks")
     public static PrimalCrusherCategory primal_crusher = new PrimalCrusherCategory();
     @Config.Name("Vis Generator Tweaks")
@@ -90,6 +92,18 @@ public class ConfigHandlerTT {
         @Config.Name("Sky Scan Dimensions")
         @Config.Comment("A list of dimension ids where the Thaumometer can be used to scan the sky to obtain research notes.")
         public int[] skyDimensions = new int[] {};
+    }
+
+    public static class PechCategory {
+        @Config.RangeInt(min = 1, max = 100)
+        @Config.Name("Item Value Divisor")
+        @Config.Comment("")
+        public int itemValueDivisor = 2;
+
+        @Config.RangeInt(min = 1, max = 500)
+        @Config.Name("Max Trade Value")
+        @Config.Comment("The maximum trade value any item can have when offered to a Pech trader.")
+        public int maxTradeValue = 32;
     }
 
     public static class PrimalCrusherCategory {

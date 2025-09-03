@@ -14,7 +14,10 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
   - Twisted Curiosity from Giant Taint Seeds
 - **Disable Recipe Aspects:** Disable Thaumcraft's item aspect calculation based on the item's crafting recipe
 - **Golem Material Tweaks:** Change golem material stats such as armor, health, damage, and crafting material
-- **Pech Trade Tweaks:** Add and remove Pech trades using CraftTweaker or GroovyScript
+- **Pech Trade Tweaks:** 
+  - Add and remove Pech trades using CraftTweaker or GroovyScript
+  - Add Pech valued items using CraftTweaker or GroovyScript
+  - Change Pech item value calculation
 - **Primal Crusher Tweaks:**
   - Modify Primal Crusher Refining infusion enchantment level
   - Make Primal Crusher Unbreakable
