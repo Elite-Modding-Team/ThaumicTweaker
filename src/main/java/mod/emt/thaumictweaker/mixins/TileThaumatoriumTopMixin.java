@@ -19,7 +19,7 @@ public class TileThaumatoriumTopMixin {
      * @reason Fixes a NullPointerException crash when the {@link TileThaumatoriumTop#isEmpty()} method is called
      *         prior to {@link TileThaumatoriumTop#thaumatorium} being initialized.
      */
-    @Inject(method = "isEmpty", at = @At("HEAD"), cancellable = true, remap = true)
+    @Inject(method = "isEmpty", at = @At("HEAD"), cancellable = true)
     private void fixNPECrashMixin(CallbackInfoReturnable<Boolean> cir) {
         if(this.thaumatorium == null) {
             cir.setReturnValue(false);

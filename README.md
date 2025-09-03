@@ -21,6 +21,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Primal Crusher Tweaks:**
   - Modify Primal Crusher Refining infusion enchantment level
   - Make Primal Crusher Unbreakable
+- **Research Table Tweak:** Research table can use and consume items from nearby inventories for research
 - **Sky Scan Tweak:** Allow Thaumometer sky scanning from non-overworld dimensions
 - **Special Mining Result Tweaks:** Add and remove special mining drops using CraftTweaker or GroovyScript
 - **Vis Generator Tweaks:** Change the amount of RF generated per point of Vis and the RF output per tick

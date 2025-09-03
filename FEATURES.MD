@@ -10,7 +10,6 @@ ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduc
 - Purifying Bath Salts - Reduce aspect crafting cost
 - Sanitizing Soap - Reduce aspect crafting cost
 
-
 ### Items (DONE)
 - Filter Item - Used with arcane crafter
 - Armor Materials
@@ -43,7 +42,6 @@ ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduc
 ### Mixins Blocks (DONE)
 - No fucking clue what ThaumTweaks does to the TileInfusionMatrix with MatrixMixin
 - Pedestals have comparator output values
-- Research Table can search and pull items from nearby inventories
 
 ### Mixins Events
 ### Mixins Golems (DONE)

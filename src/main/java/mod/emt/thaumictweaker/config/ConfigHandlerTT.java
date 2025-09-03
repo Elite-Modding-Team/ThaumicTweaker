@@ -89,6 +89,10 @@ public class ConfigHandlerTT {
         @Config.Comment("Disables Thaumcraft's dynamic aspect generation from infusion recipes.")
         public boolean disableRecipeAspectsInfusion = false;
 
+        @Config.Name("Research Table Item Pulling")
+        @Config.Comment("Allows the Research Table to use and consume items from nearby inventories for research. Table will search up to 3 blocks away from the Research Table.")
+        public boolean researchTablePulling = false;
+
         @Config.Name("Sky Scan Dimensions")
         @Config.Comment("A list of dimension ids where the Thaumometer can be used to scan the sky to obtain research notes.")
         public int[] skyDimensions = new int[] {};

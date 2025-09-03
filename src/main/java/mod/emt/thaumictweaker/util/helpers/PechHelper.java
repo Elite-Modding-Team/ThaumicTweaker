@@ -55,8 +55,6 @@ public class PechHelper {
         ));
     }});
 
-    //TODO: Add addValuedItem method to CrT and GroovyScript
-
     public static void addPechTrade(EnumPechType pechType, int trustLevel, ItemStack stack) {
         ArrayList<List> trades = getPechTrades(pechType);
         if(trades == null) {
