@@ -26,10 +26,12 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Vis Generator Tweaks:** Change the amount of RF generated per point of Vis and the RF output per tick
 - **Void Siphon Tweaks:** Increase Void Seed creation speed
 - **Void Thaumaturge Robes Tweaks:** Change the Vis reduction amount on each piece of armor
-- **Wuss Mode Tweaks: Does not require Wuss Mode to be enabled to access these**
-  - Primordial Pearl Infusion recipe
 
 ## Wuss Mode Tweaks
 **NOTE:** All tweaks are disabled by default or use Thaumcraft default values. Wuss Mode Tweaks are designed to reduce the cost of certain recipes or allow players to bypass certain mechanics.
+
+- **Arcane Bore Recipe:** Makes the Arcane Bore recipe cheaper
+- **Bath Salts Recipe:** Makes the Bath Salts recipe cheaper
 - **Primordial Pearl Creation:** New Infusion recipe that creates a 1 durabillity Primordial Pearl
+- **Sanitizing Soap Recipe:** Makes the Sanitizing Soap recipe cheaper
 - **Void Siphon:** Void siphon no longer requires a nearby rift and will slowly accumulate progress over time

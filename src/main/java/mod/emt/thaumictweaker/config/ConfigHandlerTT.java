@@ -49,12 +49,12 @@ public class ConfigHandlerTT {
     public static class CuriosityTweaksCategory {
         @Config.RangeDouble(min = 0.0D, max = 1.0D)
         @Config.Name("Eldritch Guardian Curiosity Chance")
-        @Config.Comment("The chance for the Giant Taint Seed to drop an Eldritch Curiosity.")
+        @Config.Comment("The chance for an Eldritch Guardian to drop an Eldritch Curiosity.")
         public double curioDropEldritchGuardian = 0.0D;
 
         @Config.RangeDouble(min = 0.0D, max = 1.0D)
         @Config.Name("Giant Taint Seed Curiosity Chance")
-        @Config.Comment("The chance for the Giant Taint Seed to drop a Twisted Curiosity.")
+        @Config.Comment("The chance for a Giant Taint Seed to drop a Twisted Curiosity.")
         public double curioDropGiantTaintSeed = 0.0D;
     }
 
@@ -162,9 +162,19 @@ public class ConfigHandlerTT {
         public boolean wussModeArcaneBoreRecipe = false;
 
         @Config.RequiresMcRestart
-        @Config.Name("Primordial Pearl Recipe")
-        @Config.Comment("Enables an infusion recipe to craft primordial pearls from void seeds.")
+        @Config.Name("Bath Salts Recipe")
+        @Config.Comment("Makes the Bath Salts recipe cheaper.")
+        public boolean wussModeBathSaltsRecipe = false;
+
+        @Config.RequiresMcRestart
+        @Config.Name("Primordial Pearl Creation")
+        @Config.Comment("Enables an infusion recipe to create 1 durability Primordial Pearls from void seeds.")
         public boolean wussModePrimordialPearlRecipe = false;
+
+        @Config.RequiresMcRestart
+        @Config.Name("Sanitizing Soap Recipe")
+        @Config.Comment("Makes the Sanitizing Soap recipe cheaper.")
+        public boolean wussModeSanitizingSoapRecipe = false;
 
         @Config.Name("Void Siphon Wuss Mode")
         @Config.Comment("The Void Siphon no longer needs nearby rifts to create void seeds. It will passively accumulate progress over time.")
