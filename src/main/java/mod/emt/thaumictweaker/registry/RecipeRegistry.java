@@ -17,6 +17,7 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.blocks.BlocksTC;
 import thaumcraft.api.crafting.CrucibleRecipe;
 import thaumcraft.api.crafting.InfusionRecipe;
+import thaumcraft.api.crafting.ShapedArcaneRecipe;
 import thaumcraft.api.items.ItemsTC;
 import thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
 
@@ -24,8 +25,26 @@ import thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
 public class RecipeRegistry {
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        registerArcaneRecipes();
         registerCrucibleRecipes();
         registerInfusionRecipes();
+    }
+
+    private static void registerArcaneRecipes() {
+        //Wuss Mode: Workbench Charger
+        if(ConfigHandlerTT.wuss_mode.wussModeWorkbenchChargerRecipe) {
+            ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("thaumcraft:workbenchcharger"), new ShapedArcaneRecipe(
+                    new ResourceLocation(""),
+                    "WORKBENCHCHARGER",
+                    150,
+                    new AspectList().add(Aspect.AIR, 2).add(Aspect.ORDER, 2),
+                    new ItemStack(BlocksTC.arcaneWorkbenchCharger),
+                    " R ", "W W", "I I",
+                    'I', "ingotIron",
+                    'R', new ItemStack(ItemsTC.visResonator),
+                    'W', new ItemStack(BlocksTC.plankGreatwood)
+            ));
+        }
     }
 
     private static void registerCrucibleRecipes() {

@@ -179,6 +179,11 @@ public class ConfigHandlerTT {
         @Config.Name("Void Siphon Wuss Mode")
         @Config.Comment("The Void Siphon no longer needs nearby rifts to create void seeds. It will passively accumulate progress over time.")
         public boolean wussModeVoidSiphon = false;
+
+        @Config.RequiresMcRestart
+        @Config.Name("Workbench Charger Recipe")
+        @Config.Comment("Makes the Workbench Charger recipe cheaper.")
+        public boolean wussModeWorkbenchChargerRecipe = false;
     }
 
     static {
