@@ -17,7 +17,8 @@ groovyscript.wiki.thaumictweaker.pech_trades.tradeLevel.value=The trade level va
 # -- SPECIAL MINING RESULTS
 groovyscript.wiki.thaumictweaker.special_mining_result.title=Special Mining Results
 groovyscript.wiki.thaumictweaker.special_mining_result.description=Special Mining Results are special drops obtained when mining ores with tools with the Refining infusion enchantment.
-groovyscript.wiki.thaumictweaker.special_mining_result.add=Adds a special mining restult in the format `harvestDrop`, `resultStack`, `chance`
+groovyscript.wiki.thaumictweaker.special_mining_result.add=Adds a special mining result in the format `harvestDrop`, `resultStack`, `chance`
+groovyscript.wiki.thaumictweaker.pech_trades.addValuedItem=Adds a valued item for Pech Trading in the format `item`, `itemValue`. Valued items DO NOT support item metadata or tag data
 groovyscript.wiki.thaumictweaker.special_mining_result.removeByHarvestDrop=Removes a special mining result that matches the dropped item
 groovyscript.wiki.thaumictweaker.special_mining_result.removeByOutput=Removes a special mining result that matches the output result item
 groovyscript.wiki.thaumictweaker.special_mining_result.harvestDrop.value=The item dropped during the block harvest

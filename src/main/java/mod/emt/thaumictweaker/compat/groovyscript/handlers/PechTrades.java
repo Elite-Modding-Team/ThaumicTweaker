@@ -42,13 +42,17 @@ public class PechTrades extends VirtualizedRegistry<PechTrade> {
         recipeBuilder().setPechType(pechType).setTradeLevel(tradeLevel).setTradeItem(tradeItem).register();
     }
 
-    //TODO: language file descriptions
     @MethodDescription(
             type = MethodDescription.Type.ADDITION,
             example = @Example("item('minecraft:ender_pearl'), 15")
     )
     public void addValuedItem(ItemStack stack, int value) {
-        //TODO: Error checking
+        GroovyLog.Msg msg = GroovyLog.msg("Failed to add Pech Trade valued item.");
+        msg.add(stack.isEmpty(), "Valued item cannot be empty");
+        msg.add(value <= 0, "Item must be greater than 0");
+        if(msg.postIfNotEmpty()) {
+            return;
+        }
         PechHelper.addValuedItem(stack, value);
     }
 
