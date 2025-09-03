@@ -124,9 +124,13 @@ public class ConfigHandlerTT {
 
     public static class WussModeCategory {
         @Config.RequiresMcRestart
-        @Config.Name("Wuss Mode: Primordial Pearl Recipe")
+        @Config.Name("Primordial Pearl Recipe")
         @Config.Comment("Enables an infusion recipe to craft primordial pearls from void seeds.")
         public boolean wussModePrimordialPearlRecipe = false;
+
+        @Config.Name("Void Siphon Wuss Mode")
+        @Config.Comment("The Void Siphon no longer needs nearby rifts to create void seeds. It will passively accumulate progress over time.")
+        public boolean wussModeVoidSiphon = false;
     }
 
     static {

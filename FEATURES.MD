@@ -3,8 +3,6 @@ Thaumcraft tweaks for tweakers.
 
 ## Blocks
 - Arcane Crafter - 
-- Primordial Creator - (Wuss Mode) Primoridal Siphon that does not require a rift to create Primordial Pearls (from Minor Integrations and Additions)
-- Void Creator - (Wuss Mode) Void Siphon that does not require a rift to create Void Seeds (from Minor Integrations and Additions)
 
 ## Crafts
 ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduce the cost of the craft but others actually increase the cost. Who fucking knows...
@@ -44,17 +42,9 @@ ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduc
 - Void Robes grant a configurable vis discount (head = 8, rest = 7)
 
 ### Mixins Blocks (DONE)
-- Essentia Jars can be named at an Anvil
 - No fucking clue what ThaumTweaks does to the TileInfusionMatrix with MatrixMixin
-- Increase rare earth drop chance from ores
 - Pedestals have comparator output values
 - Research Table can search and pull items from nearby inventories
-- Modify Void Siphon required rift power
-- Modify Void Siphon rift shrink chance
-- Smeltery automation with hoppers (might be better to add to Thaumcraft Fix)
-
-### Mixins Entities (DONE)
-- Add/Remove Pech Trades
 
 ### Mixins Events
 ### Mixins Golems (DONE)
@@ -68,7 +58,6 @@ ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduc
 - Don't know what all this does, but E2E:E dev requested these mixins be included
   - https://github.com/Krutoy242/Enigmatica2Expert-Extended/blob/master/scripts/mixin/thaumcraft.zs
 - config to increase Porus Stone drop chances
-- Add CrT/GS method for native cluster mining drops (`Utils.addSpecialMiningResult()`)
 
 ## Stuff I have no idea what ThaumTweaks is doing
 - RechargeHelperMixin - No fucking clue what it is trying to do
