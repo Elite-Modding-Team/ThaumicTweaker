@@ -48,6 +48,16 @@ public class RecipeRegistry {
     }
 
     private static void registerCrucibleRecipes() {
+        //Alchemical Brass with Copper
+        if(ConfigHandlerTT.misc_tweaks.alchemicalBrassCopperRecipe) {
+            ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("thaumcraft:brassingot"), new CrucibleRecipe(
+                    "METALLURGY@1",
+                    new ItemStack(ItemsTC.ingots, 1, 2),
+                    "ingotCopper",
+                    new AspectList().add(Aspect.TOOL, 5)
+            ));
+        }
+
         //Wuss Mode: Bath Salts
         if(ConfigHandlerTT.wuss_mode.wussModeArcaneBoreRecipe) {
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("thaumcraft:BathSalts"), new CrucibleRecipe(

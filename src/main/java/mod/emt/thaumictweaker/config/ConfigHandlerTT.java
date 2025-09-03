@@ -75,6 +75,11 @@ public class ConfigHandlerTT {
 
     public static class MiscTweaksCategory {
         @Config.RequiresMcRestart
+        @Config.Name("Alchemical Brass Requires Copper")
+        @Config.Comment("Enables alchemical brass ingots to require copper instead of iron to create.")
+        public boolean alchemicalBrassCopperRecipe = false;
+
+        @Config.RequiresMcRestart
         @Config.Name("Disable Crafting Recipe Aspects")
         @Config.Comment("Disables Thaumcraft's dynamic aspect generation from crafting recipes.")
         public boolean disableRecipeAspectsCrafting = false;
