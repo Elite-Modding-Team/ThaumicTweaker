@@ -7,6 +7,8 @@ import net.minecraftforge.common.config.Config;
 //TODO: Remove before release
 // @Config(modid = ThaumicTweaker.MOD_ID)
 public class ConfigHandlerTT {
+    @Config.Name("Apprentice's Ring Tweaks")
+    public static ApprenticesRingCategory apprentices_ring = new ApprenticesRingCategory();
     @Config.Name("Crimson Cult Robes Tweaks")
     public static CrimsonCultRobesCategory cult_robes = new CrimsonCultRobesCategory();
     @Config.Name("Curiosity Tweaks")
@@ -28,6 +30,13 @@ public class ConfigHandlerTT {
     @Config.Name("Wuss Mode Tweaks")
     @Config.Comment("For those that want an easier time. NOTE: Wuss Mode does not need to be enabled for these tweaks to work.")
     public static WussModeCategory wuss_mode = new WussModeCategory();
+
+    public static class ApprenticesRingCategory {
+        @Config.RequiresMcRestart
+        @Config.Name("Apprentice's Ring Structure Loot")
+        @Config.Comment("Allows the Apprentice's Ring to be rarely found in some vanilla structure chests.")
+        public boolean apprenticesRingStructureLoot = false;
+    }
 
     public static class CrimsonCultRobesCategory {
         @Config.RangeInt(min = 0, max = 100)

@@ -9,6 +9,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 **NOTE:** All tweaks are disabled by default or use Thaumcraft default values. 
 
 - **Alchemical Brass**: Change the alchemical brass recipe to require copper instead of iron.
+- **Apprentice's Ring Structure Loot:** Allow the Apprentice's Ring to be rarely found in some vanilla structure chests
 - **Cult Robes Tweaks:** Change the Vis reduction amount on each piece of armor
 - **Curiosity Tweaks:**
   - Ancient Curiosity, Arcane Curiosity, and Preserved Curiosity from Pech trades
