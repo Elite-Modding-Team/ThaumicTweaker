@@ -6,6 +6,12 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.storage.loot.LootEntryItem;
+import net.minecraft.world.storage.loot.LootPool;
+import net.minecraft.world.storage.loot.LootTableList;
+import net.minecraft.world.storage.loot.conditions.LootCondition;
+import net.minecraft.world.storage.loot.functions.LootFunction;
+import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
@@ -32,6 +38,23 @@ public class CommonEventHandler {
         if (!entity.world.isRemote && entity.getRNG().nextDouble() <= ConfigHandlerTT.curiosity_tweaks.curioDropGiantTaintSeed
                 && entity instanceof EntityTaintSeedPrime && entity.getAttackingEntity() instanceof EntityPlayer) {
             event.getDrops().add(new EntityItem(entity.world, entity.posX, entity.posY, entity.posZ, new ItemStack(ItemsTC.curio, 1, 5)));
+        }
+    }
+
+    @SubscribeEvent
+    public static void onLootTableLoad(LootTableLoadEvent event) {
+        //Adds Apprentice's Ring to vanilla structure chests
+        if(ConfigHandlerTT.apprentices_ring.apprenticesRingStructureLoot) {
+            if (event.getName().equals(LootTableList.CHESTS_DESERT_PYRAMID) || event.getName().equals(LootTableList.CHESTS_SIMPLE_DUNGEON)) {
+                LootPool main = event.getTable().getPool("main");
+                main.addEntry(new LootEntryItem(new ItemStack(ItemsTC.baubles, 1, 3).getItem(), 4, 0, new LootFunction[0], new LootCondition[0], "loottable:apprentices_ring"));
+            }
+
+            if (event.getName().equals(LootTableList.CHESTS_JUNGLE_TEMPLE) || event.getName().equals(LootTableList.CHESTS_STRONGHOLD_CROSSING) ||
+                    event.getName().equals(LootTableList.CHESTS_STRONGHOLD_CORRIDOR)) {
+                LootPool main = event.getTable().getPool("main");
+                main.addEntry(new LootEntryItem(new ItemStack(ItemsTC.baubles, 1, 3).getItem(), 2, 0, new LootFunction[0], new LootCondition[0], "loottable:apprentices_ring"));
+            }
         }
     }
 }
