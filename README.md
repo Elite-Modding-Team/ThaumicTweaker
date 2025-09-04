@@ -10,11 +10,12 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 ## Tweaks (Default: Enabled)
 **NOTE:** All tweaks listed in this category are enabled by default. 
 
-- **Focus Effect Tweaks:** 
+- **Focus Effect:** 
   - Revamps the cast sounds of certain focus effects to provide better variety
   - Adds impact sounds to various focus effects that lack any
   - Makes several focus mediums play additional cast sounds to differentiate them
-- **Eldritch Crab Tweaks:** Rotates dead Eldritch Crabs all the way to match the death animations of spiders
+- **Eldritch Crab:** Rotates dead Eldritch Crabs all the way to match the death animations of spiders, silverfish and endermites
+- **Research Table:** Fixes shift-click inventory interaction for paper and scribing tools
 
 ---
 

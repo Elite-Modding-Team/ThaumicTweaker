@@ -71,7 +71,7 @@ public abstract class ContainerResearchTableMixin extends Container {
     /**
      * @author Invadermonky
      * @reason Fixes the original implementation of the {@link ContainerResearchTable#transferStackInSlot(EntityPlayer, int)}
-     *         method. The unaltered method attempted to insert items into the clicked slot index instead of attempted to insert
+     *         method. The unaltered method attempted to insert items into the clicked slot index instead of attempting to insert
      *         the clicked item into the Research Table slots.
      */
     @Redirect(

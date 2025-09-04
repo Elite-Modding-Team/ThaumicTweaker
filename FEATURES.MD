@@ -5,8 +5,6 @@ Thaumcraft tweaks for tweakers.
 - Arcane Crafter - 
 
 ## Containers
-- ContainerResearchTable
-  - Fix shift-clicking items into slots
 - ContainerArcaneBore
   - Shift gui down to match vanilla chest
 - ContainerPech
