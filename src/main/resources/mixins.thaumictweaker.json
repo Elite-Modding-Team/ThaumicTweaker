@@ -23,6 +23,7 @@
     "focus.FocusMediumSpellbatMixin" ,
     "items.ItemCutlistRobeArmorMixin" ,
     "items.ItemPrimalCrusherMixin" ,
+    "items.ItemThaumometerMixin",
     "items.ItemVoidRobeArmorMixin" ,
     "misc.GolemMaterialMixin" ,
     "misc.ScanSkyMixin" ,
@@ -32,5 +33,7 @@
     "tiles.TileVoidSiphonMixin"
   ] ,
   "server": [] ,
-  "client": []
+  "client": [
+    "entities.client.RenderEldritchCrabMixin"
+  ]
 }
