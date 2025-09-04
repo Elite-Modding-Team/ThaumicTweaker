@@ -9,6 +9,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 ## Fixes
 - **Flux Pollution Crash:** Fixes a client-side crash that occurs with large flux pollution values
+- **Primal Crusher:** Fixes Primal Crusher re-equipping while repairing
 - **Research Table:** Fixes shift-click inventory interaction for paper and scribing tools
 - **Thaumatorium Crash:** Fixes a crash with some item insertion/extraction methods
 
@@ -72,8 +73,8 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 ---
 
-## Wuss Mode Tweaks (Default: Disabled)
-**NOTE:** All tweaks listed in this category are disabled by default or use Thaumcraft default values. Wuss Mode Tweaks are designed to reduce the cost of certain recipes or allow players to bypass certain mechanics.
+## Wuss Mode Tweaks
+**NOTE:** All tweaks listed in this category are disabled by default. Wuss Mode Tweaks are designed to reduce the cost of certain recipes or allow players to bypass certain mechanics.
 
 - **Arcane Bore Recipe:** Makes the Arcane Bore recipe cheaper
 - **Bath Salts Recipe:** Makes the Bath Salts recipe cheaper
