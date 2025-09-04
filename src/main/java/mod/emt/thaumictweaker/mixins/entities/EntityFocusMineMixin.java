@@ -1,5 +1,6 @@
 package mod.emt.thaumictweaker.mixins.entities;
 
+import mod.emt.thaumictweaker.config.ConfigHandlerTT;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
@@ -29,15 +30,17 @@ public abstract class EntityFocusMineMixin extends EntityThrowable {
     @Inject(method = "onUpdate", at = @At(value = "HEAD"))
     public void onUpdateSounds(CallbackInfo ci) {
         try {
-            //Plays when the focus mine despawns.
-            if (this.ticksExisted > 1200 || (!this.world.isRemote && this.getThrower() == null)) {
-                this.playSound(SoundsTC.craftfail, 1.0F, 1.0F + (rand.nextFloat() * 0.5F));
-            }
+            if(ConfigHandlerTT.spell_effects.focusEffects) {
+                //Plays when the focus mine despawns.
+                if (this.ticksExisted > 1200 || (!this.world.isRemote && this.getThrower() == null)) {
+                    this.playSound(SoundsTC.craftfail, 1.0F, 1.0F + (rand.nextFloat() * 0.5F));
+                }
 
-            //Plays when the focus mine is ready and armed.
-            if (this.isEntityAlive()) {
-                if (this.counter == 1 && this.effects == null) {
-                    this.playSound(SoundsTC.hhoff, 1.0F, 1.0F + (rand.nextFloat() * 0.5F));
+                //Plays when the focus mine is ready and armed.
+                if (this.isEntityAlive()) {
+                    if (this.counter == 1 && this.effects == null) {
+                        this.playSound(SoundsTC.hhoff, 1.0F, 1.0F + (rand.nextFloat() * 0.5F));
+                    }
                 }
             }
         } catch (Exception ignored) {
@@ -48,7 +51,7 @@ public abstract class EntityFocusMineMixin extends EntityThrowable {
     protected void onImpactSound(final RayTraceResult mop, CallbackInfo ci) {
         try {
             //Plays when the focus mine is setting itself up.
-            if (this.counter > 0) {
+            if (ConfigHandlerTT.spell_effects.focusEffects && this.counter > 0) {
                 this.playSound(SoundsTC.ticks, 1.0F, 1.0F + (rand.nextFloat() * 0.5F));
             }
         } catch (Exception ignored) {

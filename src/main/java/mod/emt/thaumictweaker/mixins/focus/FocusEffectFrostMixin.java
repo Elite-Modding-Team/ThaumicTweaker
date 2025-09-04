@@ -1,5 +1,6 @@
 package mod.emt.thaumictweaker.mixins.focus;
 
+import mod.emt.thaumictweaker.config.ConfigHandlerTT;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.util.SoundCategory;
@@ -20,7 +21,8 @@ public abstract class FocusEffectFrostMixin extends FocusEffect {
     @Override
     public void onCast(final Entity caster) {
         try {
-            caster.world.playSound(null, caster.getPosition().up(), SoundsTC.ice, SoundCategory.PLAYERS, 0.6F, 1.0F + (float) (caster.world.rand.nextGaussian() * 0.05F));
+            if(ConfigHandlerTT.spell_effects.focusEffects)
+                caster.world.playSound(null, caster.getPosition().up(), SoundsTC.ice, SoundCategory.PLAYERS, 0.6F, 1.0F + (float) (caster.world.rand.nextGaussian() * 0.05F));
         } catch (Exception ignored) {
         }
     }
@@ -28,7 +30,8 @@ public abstract class FocusEffectFrostMixin extends FocusEffect {
     @Inject(method = "execute", at = @At(value = "RETURN"), remap = false)
     public void frostFocusImpactSound(RayTraceResult target, Trajectory trajectory, float finalPower, int num, CallbackInfoReturnable<Boolean> cir) {
         try {
-            this.getPackage().world.playSound(null, target.hitVec.x, target.hitVec.y, target.hitVec.z, SoundEvents.BLOCK_GLASS_BREAK, SoundCategory.PLAYERS, 0.55F, 0.86F + (float) (this.getPackage().getCaster().world.rand.nextGaussian() * 0.05F));
+            if(ConfigHandlerTT.spell_effects.focusEffects)
+                this.getPackage().world.playSound(null, target.hitVec.x, target.hitVec.y, target.hitVec.z, SoundEvents.BLOCK_GLASS_BREAK, SoundCategory.PLAYERS, 0.55F, 0.86F + (float) (this.getPackage().getCaster().world.rand.nextGaussian() * 0.05F));
         } catch (Exception ignored) {
         }
     }

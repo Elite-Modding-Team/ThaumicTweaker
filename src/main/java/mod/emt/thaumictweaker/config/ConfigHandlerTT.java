@@ -13,6 +13,8 @@ public class ConfigHandlerTT {
     public static CrimsonCultRobesCategory cult_robes = new CrimsonCultRobesCategory();
     @Config.Name("Curiosity Tweaks")
     public static CuriosityTweaksCategory curiosity_tweaks = new CuriosityTweaksCategory();
+    @Config.Name("Eldritch Crab Tweaks")
+    public static EldritchCrabCategory eldritch_crab = new EldritchCrabCategory();
     @Config.Name("Golem Tweaks")
     public static GolemTweaksCategory golem_tweaks = new GolemTweaksCategory();
     @Config.Name("Miscellaneous Tweaks")
@@ -21,6 +23,8 @@ public class ConfigHandlerTT {
     public static PechCategory pech_tweaks = new PechCategory();
     @Config.Name("Primal Crusher Tweaks")
     public static PrimalCrusherCategory primal_crusher = new PrimalCrusherCategory();
+    @Config.Name("Spell Effect Tweaks")
+    public static SpellEffectsCategory spell_effects = new SpellEffectsCategory();
     @Config.Name("Vis Generator Tweaks")
     public static VisGeneratorCategory vis_generator = new VisGeneratorCategory();
     @Config.Name("Void Thaumaturge Robes Tweaks")
@@ -65,6 +69,12 @@ public class ConfigHandlerTT {
         @Config.Name("Giant Taint Seed Curiosity Chance")
         @Config.Comment("The chance for a Giant Taint Seed to drop a Twisted Curiosity.")
         public double curioDropGiantTaintSeed = 0.0D;
+    }
+
+    public static class EldritchCrabCategory {
+        @Config.Name("Full Death Rotation")
+        @Config.Comment("Makes Eldritch Crabs fully rotate on death to match the death animations of spiders, silverfish and endermites.")
+        public boolean fullDeathRotation = true;
     }
 
     public static class GolemTweaksCategory {
@@ -135,6 +145,12 @@ public class ConfigHandlerTT {
         @Config.Name("Refining Level")
         @Config.Comment("The Refining infusion enchantment level added to the Primal Crusher by default")
         public int refiningLevel = 1;
+    }
+
+    public static class SpellEffectsCategory {
+        @Config.Name("Focus Effects")
+        @Config.Comment("Revamps the spell cast sounds of certain focus effects for better variety.")
+        public boolean focusEffects = true;
     }
 
     public static class VisGeneratorCategory {

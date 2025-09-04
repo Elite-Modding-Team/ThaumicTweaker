@@ -1,8 +1,10 @@
 package mod.emt.thaumictweaker.mixins.entities.client;
 
+import mod.emt.thaumictweaker.config.ConfigHandlerTT;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import thaumcraft.client.renderers.entity.mob.RenderEldritchCrab;
 import thaumcraft.common.entities.monster.EntityEldritchCrab;
@@ -16,8 +18,8 @@ public abstract class RenderEldritchCrabMixin extends RenderLiving<EntityEldritc
 
     //Makes eldritch crabs rotate all the way during death like spiders, this would make more sense visually.
     @Override
-    public float getDeathMaxRotation(EntityEldritchCrab entity) {
-        return 180.0F;
+    public float getDeathMaxRotation(@NotNull EntityEldritchCrab entity) {
+        return ConfigHandlerTT.eldritch_crab.fullDeathRotation ? 180.0F : super.getDeathMaxRotation(entity);
     }
 
 }
