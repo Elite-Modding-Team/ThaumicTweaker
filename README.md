@@ -12,8 +12,26 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 - **Focus Effect:** 
   - Revamps the cast sounds of certain focus effects to provide better variety
+    - Break
+    - Earth
+    - Exchange
+    - Frost
+    - Heal
+    - Rift
   - Adds impact sounds to various focus effects that lack any
+    - Break
+    - Earth
+    - Exchange
+    - Fire
+    - Flux
+    - Frost
+    - Heal
+    - Rift
   - Makes several focus mediums play additional cast sounds to differentiate them
+    - Bolt
+    - Cloud
+    - Mine
+    - Spellbat
 - **Eldritch Crab:** Rotates dead Eldritch Crabs all the way to match the death animations of spiders, silverfish and endermites
 - **Research Table:** Fixes shift-click inventory interaction for paper and scribing tools
 
@@ -30,20 +48,6 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
   - Eldritch Curiosity from Eldritch Guardians
   - Twisted Curiosity from Giant Taint Seeds
 - **Disable Recipe Aspects:** Disable Thaumcraft's item aspect calculation based on the item's crafting recipe
-- **Eldritch Crab Rotation:** Enable dying Eldritch Crabs to rotate all the way like spiders
-- **Focus Tweaks:**
-  - Bolt Focus Medium: Cast Sound Overhaul
-  - Break Focus Effect: Cast + Impact Sound Overhaul
-  - Cloud Focus Medium: Cast Sound Overhaul
-  - Earth Focus Effect: Cast + Impact Sound Overhaul
-  - Exchange Focus Effect: Cast + Impact Sound Overhaul
-  - Fire Focus Effect: Impact Sound Overhaul
-  - Flux Focus Effect: Impact Sound Overhaul
-  - Frost Focus Effect: Cast + Impact Sound Overhaul
-  - Heal Focus Effect: Cast + Impact Sound Overhaul
-  - Mine Focus Medium: Cast + Entity Sound Overhaul
-  - Rift Focus Effect: Cast + Impact Sound Overhaul
-  - Spellbat Focus Medium: Cast Sound Overhaul
 - **Golem Material Tweaks:** Change golem material stats such as armor, health, damage, and crafting material
 - **No Thaumometer Bobbing:** Disable Thaumometer bobbing when scanning
 - **Pech Trade Tweaks:** 
