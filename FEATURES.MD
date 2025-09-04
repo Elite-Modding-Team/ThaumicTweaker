@@ -4,9 +4,17 @@ Thaumcraft tweaks for tweakers.
 ## Blocks
 - Arcane Crafter - 
 
-## Crafts
-ThaumTweaks has a bunch of pretty random recipe changes. Some of them just reduce the cost of the craft but others actually increase the cost. Who fucking knows...
-- Apprentice Ring - Add new apprentice ring recipe
+## Containers
+- ContainerResearchTable
+  - Fix shift-clicking items into slots
+- ContainerArcaneBore
+  - Shift gui down to match vanilla chest
+- ContainerPech
+  - Shift gui down to match vanilla chest
+- ContainerTurretAdvanced
+  - Shift gui down to match vanilla chest
+- ContainerTurretBasic
+  - Shift gui down to match vanilla chest
 
 ### Items (DONE)
 - Filter Item - Used with arcane crafter
