@@ -36,7 +36,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
   - Flux Focus Effect: Impact Sound Overhaul
   - Frost Focus Effect: Cast + Impact Sound Overhaul
   - Heal Focus Effect: Cast + Impact Sound Overhaul
-  - Mine Focus Medium: Cast Sound Overhaul
+  - Mine Focus Medium: Cast + Entity Sound Overhaul
   - Rift Focus Effect: Cast + Impact Sound Overhaul
   - Spellbat Focus Medium: Cast Sound Overhaul
 - **Golem Material Tweaks:** Change golem material stats such as armor, health, damage, and crafting material
