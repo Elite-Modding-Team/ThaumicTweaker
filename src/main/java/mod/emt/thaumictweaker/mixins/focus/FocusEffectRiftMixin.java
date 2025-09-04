@@ -21,7 +21,7 @@ public abstract class FocusEffectRiftMixin extends FocusEffect {
     @Override
     public void onCast(final Entity caster) {
         try {
-            if(ConfigHandlerTT.spell_effects.focusEffects)
+            if(ConfigHandlerTT.misc_tweaks.enableFocusEffects)
                 caster.world.playSound(null, caster.getPosition().up(), SoundsTC.craftstart, SoundCategory.PLAYERS, 0.65F, 1.4F + (float) (caster.world.rand.nextGaussian() * 0.1F));
         } catch (Exception ignored) {
         }
@@ -30,7 +30,7 @@ public abstract class FocusEffectRiftMixin extends FocusEffect {
     @Inject(method = "execute", at = @At(value = "RETURN"), remap = false)
     public void riftFocusImpactSound(RayTraceResult target, Trajectory trajectory, float finalPower, int num, CallbackInfoReturnable<Boolean> cir) {
         try {
-            if(ConfigHandlerTT.spell_effects.focusEffects)
+            if(ConfigHandlerTT.misc_tweaks.enableFocusEffects)
                 this.getPackage().world.playSound(null, target.hitVec.x, target.hitVec.y, target.hitVec.z, SoundEvents.ENTITY_ILLAGER_MIRROR_MOVE, SoundCategory.PLAYERS, 0.75F, 1.25F + (float) (this.getPackage().getCaster().world.rand.nextGaussian() * 0.05F));
         } catch (Exception ignored) {
         }

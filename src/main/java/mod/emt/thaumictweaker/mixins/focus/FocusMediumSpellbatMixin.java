@@ -18,7 +18,7 @@ public abstract class FocusMediumSpellbatMixin extends FocusMedium {
     @Inject(method = "execute", at = @At(value = "RETURN"), remap = false)
     public void spellbatFocusSound(Trajectory trajectory, CallbackInfoReturnable<Boolean> cir) {
         try {
-            if(ConfigHandlerTT.spell_effects.focusEffects)
+            if(ConfigHandlerTT.misc_tweaks.enableFocusEffects)
                 this.getPackage().world.playSound(null, this.getPackage().getCaster().getPosition().up(), SoundEvents.ENTITY_WITHER_SHOOT, SoundCategory.PLAYERS, 0.45F, 1.0F + (float) (this.getPackage().getCaster().world.rand.nextGaussian() * 0.05F));
         } catch (Exception ignored) {
         }

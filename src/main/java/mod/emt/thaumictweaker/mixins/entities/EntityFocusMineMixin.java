@@ -30,7 +30,7 @@ public abstract class EntityFocusMineMixin extends EntityThrowable {
     @Inject(method = "onUpdate", at = @At(value = "HEAD"))
     public void onUpdateSounds(CallbackInfo ci) {
         try {
-            if(ConfigHandlerTT.spell_effects.focusEffects) {
+            if(ConfigHandlerTT.misc_tweaks.enableFocusEffects) {
                 //Plays when the focus mine despawns.
                 if (this.ticksExisted > 1200 || (!this.world.isRemote && this.getThrower() == null)) {
                     this.playSound(SoundsTC.craftfail, 1.0F, 1.0F + (rand.nextFloat() * 0.5F));
@@ -51,7 +51,7 @@ public abstract class EntityFocusMineMixin extends EntityThrowable {
     protected void onImpactSound(final RayTraceResult mop, CallbackInfo ci) {
         try {
             //Plays when the focus mine is setting itself up.
-            if (ConfigHandlerTT.spell_effects.focusEffects && this.counter > 0) {
+            if (ConfigHandlerTT.misc_tweaks.enableFocusEffects && this.counter > 0) {
                 this.playSound(SoundsTC.ticks, 1.0F, 1.0F + (rand.nextFloat() * 0.5F));
             }
         } catch (Exception ignored) {

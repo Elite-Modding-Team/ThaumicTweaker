@@ -18,7 +18,7 @@ public abstract class FocusMediumMineMixin extends FocusMedium {
     @Inject(method = "execute", at = @At(value = "RETURN"), remap = false)
     public void mineFocusSound(Trajectory trajectory, CallbackInfoReturnable<Boolean> cir) {
         try {
-            if(ConfigHandlerTT.spell_effects.focusEffects)
+            if(ConfigHandlerTT.misc_tweaks.enableFocusEffects)
                 this.getPackage().world.playSound(null, this.getPackage().getCaster().getPosition().up(), SoundsTC.upgrade, SoundCategory.PLAYERS, 0.6F, 1.0F + (float) (this.getPackage().getCaster().world.rand.nextGaussian() * 0.05F));
         } catch (Exception ignored) {
         }

@@ -21,7 +21,7 @@ public abstract class FocusEffectEarthMixin extends FocusEffect {
     @Override
     public void onCast(final Entity caster) {
         try {
-            if(ConfigHandlerTT.spell_effects.focusEffects)
+            if(ConfigHandlerTT.misc_tweaks.enableFocusEffects)
                 caster.world.playSound(null, caster.getPosition().up(), SoundsTC.grind, SoundCategory.PLAYERS, 1.0F, 0.7F + (float) (caster.world.rand.nextGaussian() * 0.05F));
         } catch (Exception ignored) {
         }
@@ -30,7 +30,7 @@ public abstract class FocusEffectEarthMixin extends FocusEffect {
     @Inject(method = "execute", at = @At(value = "RETURN"), remap = false)
     public void earthFocusImpactSound(RayTraceResult target, Trajectory trajectory, float finalPower, int num, CallbackInfoReturnable<Boolean> cir) {
         try {
-            if(ConfigHandlerTT.spell_effects.focusEffects)
+            if(ConfigHandlerTT.misc_tweaks.enableFocusEffects)
                 this.getPackage().world.playSound(null, target.hitVec.x, target.hitVec.y, target.hitVec.z, SoundEvents.ENTITY_FIREWORK_LARGE_BLAST, SoundCategory.PLAYERS, 0.55F, 0.7F + (float) (this.getPackage().getCaster().world.rand.nextGaussian() * 0.05F));
         } catch (Exception ignored) {
         }

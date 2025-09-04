@@ -19,7 +19,7 @@ public abstract class RenderEldritchCrabMixin extends RenderLiving<EntityEldritc
     //Makes eldritch crabs rotate all the way during death like spiders, this would make more sense visually.
     @Override
     public float getDeathMaxRotation(@NotNull EntityEldritchCrab entity) {
-        return ConfigHandlerTT.eldritch_crab.fullDeathRotation ? 180.0F : super.getDeathMaxRotation(entity);
+        return ConfigHandlerTT.misc_tweaks.eldritchCrabFullDeathRotation ? 180.0F : super.getDeathMaxRotation(entity);
     }
 
 }
