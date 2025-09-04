@@ -21,6 +21,8 @@ public class ConfigHandlerTT {
     public static PechCategory pech_tweaks = new PechCategory();
     @Config.Name("Primal Crusher Tweaks")
     public static PrimalCrusherCategory primal_crusher = new PrimalCrusherCategory();
+    @Config.Name("Reseearch Table Tweaks")
+    public static ResearchTableCategory research_table = new ResearchTableCategory();
     @Config.Name("Vis Generator Tweaks")
     public static VisGeneratorCategory vis_generator = new VisGeneratorCategory();
     @Config.Name("Void Thaumaturge Robes Tweaks")
@@ -111,10 +113,6 @@ public class ConfigHandlerTT {
         @Config.Comment("Revamps the spell cast sounds of certain focus effects for better variety.")
         public boolean enableFocusEffects = true;
 
-        @Config.Name("Research Table Item Pulling")
-        @Config.Comment("Allows the Research Table to use and consume items from nearby inventories for research. Table will search up to 3 blocks away from the Research Table.")
-        public boolean researchTablePulling = false;
-
         @Config.Name("Sky Scan Dimensions")
         @Config.Comment("A list of dimension ids where the Thaumometer can be used to scan the sky to obtain research notes.")
         public int[] skyDimensions = new int[] {};
@@ -143,6 +141,16 @@ public class ConfigHandlerTT {
         @Config.Name("Refining Level")
         @Config.Comment("The Refining infusion enchantment level added to the Primal Crusher by default")
         public int refiningLevel = 1;
+    }
+
+    public static class ResearchTableCategory {
+        @Config.Name("Research Item Pulling")
+        @Config.Comment("Allows the Research Table to use and consume items from nearby inventories for research. Table will search up to 3 blocks away from the Research Table for inventories.")
+        public boolean researchTablePulling = false;
+
+        @Config.Name("Shift Click Fix")
+        @Config.Comment("Shift + left-clicking an item will now correctly insert the item into the valid Research Table slot. This only applies to Scribing Tools and paper.")
+        public boolean shiftClickFix = true;
     }
 
     public static class VisGeneratorCategory {
