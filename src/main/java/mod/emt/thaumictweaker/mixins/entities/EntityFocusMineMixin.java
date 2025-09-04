@@ -1,6 +1,5 @@
-package mod.emt.thaumictweaker.mixins;
+package mod.emt.thaumictweaker.mixins.entities;
 
-import mod.emt.thaumictweaker.config.ConfigHandlerTT;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;

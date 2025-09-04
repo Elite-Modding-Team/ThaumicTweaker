@@ -1,6 +1,5 @@
-package mod.emt.thaumictweaker.mixins;
+package mod.emt.thaumictweaker.mixins.focus;
 
-import mod.emt.thaumictweaker.config.ConfigHandlerTT;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.util.SoundCategory;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,4 +1,4 @@
-package mod.emt.thaumictweaker.mixins;
+package mod.emt.thaumictweaker.mixins.containers;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;

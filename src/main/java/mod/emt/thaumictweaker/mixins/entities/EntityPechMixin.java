@@ -1,4 +1,4 @@
-package mod.emt.thaumictweaker.mixins;
+package mod.emt.thaumictweaker.mixins.entities;
 
 import mod.emt.thaumictweaker.config.ConfigHandlerTT;
 import org.spongepowered.asm.mixin.Mixin;

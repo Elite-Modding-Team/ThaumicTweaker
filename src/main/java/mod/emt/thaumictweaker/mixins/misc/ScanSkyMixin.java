@@ -1,4 +1,4 @@
-package mod.emt.thaumictweaker.mixins;
+package mod.emt.thaumictweaker.mixins.misc;
 
 import mod.emt.thaumictweaker.config.ConfigHandlerTT;
 import net.minecraft.world.DimensionType;

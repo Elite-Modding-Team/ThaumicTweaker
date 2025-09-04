@@ -1,4 +1,4 @@
-package mod.emt.thaumictweaker.mixins;
+package mod.emt.thaumictweaker.mixins.items;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import mod.emt.thaumictweaker.config.ConfigHandlerTT;
