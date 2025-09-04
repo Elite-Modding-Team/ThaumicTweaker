@@ -147,10 +147,6 @@ public class ConfigHandlerTT {
         @Config.Name("Research Item Pulling")
         @Config.Comment("Allows the Research Table to use and consume items from nearby inventories for research. Table will search up to 3 blocks away from the Research Table for inventories.")
         public boolean researchTablePulling = false;
-
-        @Config.Name("Shift Click Fix")
-        @Config.Comment("Shift + left-clicking an item will now correctly insert the item into the valid Research Table slot. This only applies to Scribing Tools and paper.")
-        public boolean shiftClickFix = true;
     }
 
     public static class VisGeneratorCategory {

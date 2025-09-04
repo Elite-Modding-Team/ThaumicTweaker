@@ -73,31 +73,3 @@ zenClass MixinTileMirrorEssentia {
         return 5;
     }
 }
-
-/*
-#mixin {targets: "thaumcraft.common.lib.events.ToolEvents"}
-zenClass MixinToolEvents {
-    #mixin Static
-    #mixin Overwrite
-    function doRefining(event as HarvestDropsEvent, heldItem as ItemStack) as void {
-        val level = EnumInfusionEnchantment.getInfusionEnchantmentLevel(heldItem, EnumInfusionEnchantment.REFINING);
-        val chance = 0.5f * level;
-        var b = false;
-
-        for i, is in event.drops {        
-            val cluster = Utils.findSpecialMiningResult(is, chance, event.world.rand);
-            if (!is.isItemEqual(cluster)) {
-                if (level >= 3 && event.world.rand.nextFloat() > 1.0f / (level - 1)) {
-                    cluster.count = cluster.count * 2;
-                }
-                (event.drops as ItemStack[])[i] = cluster;
-                b = true;
-            }
-        }
-
-        if (b) {
-            event.world.playSound(null, event.getPos(), SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.PLAYERS, 0.2F, 0.7F + event.world.rand.nextFloat() * 0.2F);
-        }
-    }
-}
-*/

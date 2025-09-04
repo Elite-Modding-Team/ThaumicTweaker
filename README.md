@@ -7,19 +7,25 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 ---
 
-## Tweaks (Default: Enabled)
+## Fixes
+- **Flux Pollution Crash:** Fixes a client-side crash that occurs with large flux pollution values
+- **Research Table:** Fixes shift-click inventory interaction for paper and scribing tools
+- **Thaumatorium Crash:** Fixes a crash with some item insertion/extraction methods
+
+---
+
+## Enhancements
 **NOTE:** All tweaks listed in this category are enabled by default. 
 
-- **Focus Effect:** 
+- **Focus Effects:** 
   - Revamps the cast sounds of certain focus effects to provide better variety
   - Adds impact sounds to various focus effects that lack any
   - Makes several focus mediums play additional cast sounds to differentiate them
 - **Eldritch Crab:** Rotates dead Eldritch Crabs all the way to match the death animations of spiders, silverfish and endermites
-- **Research Table:** Fixes shift-click inventory interaction for paper and scribing tools
 
 ---
 
-## Tweaks (Default: Disabled)
+## Tweaks
 **NOTE:** All tweaks listed in this category are disabled by default or use Thaumcraft default values. 
 
 - **Alchemical Brass**: Change the alchemical brass recipe to require copper instead of iron.

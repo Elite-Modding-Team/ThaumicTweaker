@@ -10,8 +10,6 @@ import thaumcraft.common.tiles.crafting.TileThaumatoriumTop;
 
 @Mixin(value = TileThaumatoriumTop.class, remap = false)
 public class TileThaumatoriumTopMixin {
-    //TODO: Move this fix into ThaumcraftFix at some point in the future.
-
     @Shadow public TileThaumatorium thaumatorium;
 
     /**
@@ -21,6 +19,7 @@ public class TileThaumatoriumTopMixin {
      */
     @Inject(method = "isEmpty", at = @At("HEAD"), cancellable = true)
     private void fixNPECrashMixin(CallbackInfoReturnable<Boolean> cir) {
+        //TODO: Move this fix into ThaumcraftFix at some point in the future.
         if(this.thaumatorium == null) {
             cir.setReturnValue(false);
         }
