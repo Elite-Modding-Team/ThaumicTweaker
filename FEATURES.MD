@@ -1,9 +1,6 @@
 # Thaumic Tweaker Features
 Thaumcraft tweaks for tweakers.
 
-## Blocks
-- Arcane Crafter - 
-
 ## Containers
 - ContainerArcaneBore
   - Shift gui down to match vanilla chest
@@ -15,7 +12,6 @@ Thaumcraft tweaks for tweakers.
   - Shift gui down to match vanilla chest
 
 ### Items (DONE)
-- Filter Item - Used with arcane crafter
 - Armor Materials
   - Thaumium - +1 defence, +4 toughness, 2x durability
   - Fortress - +1 armor, +3 toughness, Strength II, +100% knockback resistance, better damage reduction ratio, 3x durability
@@ -28,7 +24,6 @@ Thaumcraft tweaks for tweakers.
 
 ## Features
 ### Mixins Armor (DONE)
-- Primal Crusher mines a 5x5 area
 - Fortress armor grants knockback resistance (chest = 0.4, rest = 0.3)
 - Fortress armor set bonus (Strength modifier configurable)
 - Fortress armor has additional armor, armor toughness, and magic damage protection
@@ -44,22 +39,13 @@ Thaumcraft tweaks for tweakers.
 - Void Robes grant a flat damage and magic resistance
 
 ### Mixins Blocks (DONE)
-- No fucking clue what ThaumTweaks does to the TileInfusionMatrix with MatrixMixin
 - Pedestals have comparator output values
 
-### Mixins Events
 ### Mixins Golems (DONE)
 - Golems can activate infusion altar
 - Golems have a copy of the placing player's research knowledge
 
-### Mixins Items (DONE)
-- Increase the amount of vis restored by the Vis Amulet
-
 ## Feature Requests
 - Don't know what all this does, but E2E:E dev requested these mixins be included
   - https://github.com/Krutoy242/Enigmatica2Expert-Extended/blob/master/scripts/mixin/thaumcraft.zs
-
-## Stuff I have no idea what ThaumTweaks is doing
-- RechargeHelperMixin - No fucking clue what it is trying to do
-- BlockRechargePedestal - again, no fucking clue
-- 
+- Runic Shielding Overhaul?
