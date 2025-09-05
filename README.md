@@ -10,6 +10,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 ## Fixes
 - Fixes Boots of the Traveler and Cloud Ring screen shake and damage sound when taking zero fall damage
 - Fixes FXPollution packet causing a client-side crash when handling large values
+- Fixes Pech trading GUI hovered item tooltip issue (made glowing items turn black)
 - Fixes Primal Crusher re-equipping when repairing
 - Fixes Research Table shift-click interaction for Paper and Scribing Tools
 - Fixes Thaumatorium causing a crash when interacting with some item insertion/extraction methods
