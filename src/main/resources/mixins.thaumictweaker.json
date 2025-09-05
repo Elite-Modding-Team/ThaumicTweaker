@@ -30,6 +30,8 @@
     "misc.PacketFXPolluteMixin" ,
     "misc.ScanSkyMixin" ,
     "misc.ThaumcraftCraftingManagerMixin" ,
+    "tiles.TileMirrorEssentiaMixin" ,
+    "tiles.TileMirrorMixin" ,
     "tiles.TileThaumatoriumTopMixin" ,
     "tiles.TileVisGeneratorMixin" ,
     "tiles.TileVoidSiphonMixin"

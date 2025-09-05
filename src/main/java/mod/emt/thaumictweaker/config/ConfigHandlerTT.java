@@ -13,6 +13,8 @@ public class ConfigHandlerTT {
     public static CrimsonCultRobesCategory cult_robes = new CrimsonCultRobesCategory();
     @Config.Name("Curiosity Tweaks")
     public static CuriosityTweaksCategory curiosity_tweaks = new CuriosityTweaksCategory();
+    @Config.Name("Flux Pollution Tweaks")
+    public static FluxPollutionCategory flux_pollution = new FluxPollutionCategory();
     @Config.Name("Golem Tweaks")
     public static GolemTweaksCategory golem_tweaks = new GolemTweaksCategory();
     @Config.Name("Miscellaneous Tweaks")
@@ -69,6 +71,24 @@ public class ConfigHandlerTT {
         @Config.Name("Giant Taint Seed Curiosity Chance")
         @Config.Comment("The chance for a Giant Taint Seed to drop a Twisted Curiosity.")
         public double curioDropGiantTaintSeed = 0.0D;
+    }
+
+    public static class FluxPollutionCategory {
+        @Config.RangeInt(min = 1, max = 10000)
+        @Config.Name("Lamp of Fertility Instability Decay Rate")
+        @Config.Comment("The time, in ticks, between each instability decay operation of the Lamp of Fertility. Smaller values will result in less flux.")
+        public int fertilityLampInstabilityDecay = 5;
+
+        @Config.RangeInt(min = 1, max = 10000)
+        @Config.Name("Essentia Mirror Instability Decay Rate")
+        @Config.Comment("The time, in ticks, between each instability decay operation of the Essentia Mirror. Smaller values will result in less flux.")
+        public int essentiaMirrorInstabilityDecay = 100;
+
+        @Config.RangeInt(min = 1, max = 10000)
+        @Config.Name("Mirror Instability Decay Rate")
+        @Config.Comment("The time, in ticks, between each instability decay operation of the Mirror. Smaller values will result in less flux.")
+        public int mirrorInstabilityDecay = 100;
+
     }
 
     public static class GolemTweaksCategory {

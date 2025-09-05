@@ -36,19 +36,3 @@ zenClass MixinTileLampFertility {
         return 1;
     }
 }
-
-#mixin {targets: "thaumcraft.common.tiles.devices.TileMirror"}
-zenClass MixinTileMirror {
-    #mixin ModifyConstant {method: "checkInstability", constant: {intValue: 100}}
-    function speedUpFluxSelfCleansing(value as int) as int {
-        return 5;
-    }
-}
-
-#mixin {targets: "thaumcraft.common.tiles.devices.TileMirrorEssentia"}
-zenClass MixinTileMirrorEssentia {
-    #mixin ModifyConstant {method: "checkInstability", constant: {intValue: 100}}
-    function speedUpFluxSelfCleansing(value as int) as int {
-        return 5;
-    }
-}
