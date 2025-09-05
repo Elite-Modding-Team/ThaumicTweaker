@@ -11,6 +11,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Flux Pollution Crash:** Fixes a client-side crash that occurs with large flux pollution values
 - **Primal Crusher:** Fixes Primal Crusher re-equipping while repairing
 - **Research Table:** Fixes shift-click inventory interaction for paper and scribing tools
+- **Screen Shake:** Fixes damage sound and screen shake caused by Boots of the Traveller and Cloudstepper Ring when taking zero fall damage
 - **Thaumatorium Crash:** Fixes a crash with some item insertion/extraction methods
 
 ---
