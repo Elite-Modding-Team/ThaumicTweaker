@@ -14,6 +14,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - Fixed Primal Crusher re-equipping when repairing
 - Fixed Research Table shift-click interaction for Paper and Scribing Tools
 - Fixed Thaumatorium causing a crash when interacting with some item insertion/extraction methods
+- Fixed Thaumometer displaying particles when stored in first hotbar slot
 
 ---
 
