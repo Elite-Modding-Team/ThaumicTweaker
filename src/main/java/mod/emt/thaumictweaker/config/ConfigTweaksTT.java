@@ -5,12 +5,10 @@ import mod.emt.thaumictweaker.config.generics.GolemMaterialCategory;
 import net.minecraftforge.common.config.Config;
 
 @Config.LangKey("config." + ThaumicTweaker.MOD_ID + ":tweaks")
-/* TODO: Remove before release
 @Config(
         modid = ThaumicTweaker.MOD_ID,
-        name = ThaumicTweaker.MOD_ID + "/" + ThaumicTweaker.MOD_ID + " - Tweaks"
+        name = ThaumicTweaker.MOD_ID + "/" + ThaumicTweaker.MOD_NAME + " - Tweaks"
 )
- */
 public class ConfigTweaksTT {
     @Config.Name("Apprentice's Ring Tweaks")
     public static ApprenticesRingCategory apprentices_ring = new ApprenticesRingCategory();

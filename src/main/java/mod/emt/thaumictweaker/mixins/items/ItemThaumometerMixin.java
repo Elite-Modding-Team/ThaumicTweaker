@@ -1,5 +1,6 @@
 package mod.emt.thaumictweaker.mixins.items;
 
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -20,8 +21,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
-import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import thaumcraft.api.research.ScanningManager;
 import thaumcraft.client.fx.FXDispatcher;
 import thaumcraft.client.lib.events.RenderEventHandler;

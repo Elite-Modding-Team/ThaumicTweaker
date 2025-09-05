@@ -4,30 +4,28 @@ import mod.emt.thaumictweaker.ThaumicTweaker;
 import net.minecraftforge.common.config.Config;
 
 @Config.LangKey("config." + ThaumicTweaker.MOD_ID + ":wuss_mode")
-/* TODO: Remove before release
 @Config(
         modid = ThaumicTweaker.MOD_ID,
-        name = ThaumicTweaker.MOD_ID + "/" + ThaumicTweaker.MOD_ID + " - Wuss Mode"
+        name = ThaumicTweaker.MOD_ID + "/" + ThaumicTweaker.MOD_NAME + " - Wuss Mode"
 )
- */
 public class ConfigWussModeTT {
     @Config.RequiresMcRestart
-    @Config.Name("Cheaper Arcane Bore Recipe")
+    @Config.Name("Cheaper Arcane Bore")
     @Config.Comment("Makes the Arcane Bore recipe cheaper.")
     public static boolean cheaperArcaneBore = false;
 
     @Config.RequiresMcRestart
-    @Config.Name("Cheaper Bath Salts Recipe")
+    @Config.Name("Cheaper Bath Salts")
     @Config.Comment("Makes the Bath Salts recipe cheaper.")
     public static boolean cheaperBathSalts = false;
 
     @Config.RequiresMcRestart
-    @Config.Name("Cheaper Sanitizing Soap Recipe")
+    @Config.Name("Cheaper Sanitizing Soap")
     @Config.Comment("Makes the Sanitizing Soap recipe cheaper.")
     public static boolean cheaperSanitizingSoap = false;
 
     @Config.RequiresMcRestart
-    @Config.Name("Cheaper Workbench Charger Recipe")
+    @Config.Name("Cheaper Workbench Charger")
     @Config.Comment("Makes the Workbench Charger recipe cheaper.")
     public static boolean cheaperWorkbenchCharger = false;
 

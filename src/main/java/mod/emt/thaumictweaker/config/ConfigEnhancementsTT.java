@@ -4,12 +4,10 @@ import mod.emt.thaumictweaker.ThaumicTweaker;
 import net.minecraftforge.common.config.Config;
 
 @Config.LangKey("config." + ThaumicTweaker.MOD_ID + ":enhancements")
-/* TODO: Remove before release
 @Config(
         modid = ThaumicTweaker.MOD_ID,
-        name = ThaumicTweaker.MOD_ID + "/" + ThaumicTweaker.MOD_ID + " - Enhancements"
+        name = ThaumicTweaker.MOD_ID + "/" + ThaumicTweaker.MOD_NAME + " - Enhancements"
 )
- */
 public class ConfigEnhancementsTT {
     @Config.Name("Adjust Arcane Bore Gui")
     @Config.Comment("Adjusts the Arcane Bore Gui position to match other inventories.")

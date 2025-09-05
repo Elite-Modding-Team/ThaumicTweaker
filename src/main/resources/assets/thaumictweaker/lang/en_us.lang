@@ -1,7 +1,7 @@
 
 # Config
-config.thaumictweaker:enhancments=Enhancments
-config.thaumictweaker:enhancments.tooltip=Configuration for enhancments added by Thaumic Tweaker. These are enabled by default
+config.thaumictweaker:enhancements=Enhancements
+config.thaumictweaker:enhancements.tooltip=Configuration for enhancements added by Thaumic Tweaker. These are enabled by default
 config.thaumictweaker:tweaks=Tweaks
 config.thaumictweaker:tweaks.tooltip=Configuration for tweaks added by Thaumic Tweaker. These are disabled by default.
 config.thaumictweaker:wuss_mode=Wuss Mode
