@@ -61,6 +61,10 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
   - Add and remove Pech trades using CraftTweaker or GroovyScript
   - Add Pech valued items using CraftTweaker or GroovyScript
   - Change Pech item value calculation
+- **Porous Stone Tweaks:**
+  - Add or remove Porous Stone special item drops using CraftTweaker or GroovyScript
+  - Change the chance special items will drop when harvesting Porous Stone
+  - Increase the number of special items that drop when harvesting Porous Stone
 - **Primal Crusher Tweaks:**
   - Modify Primal Crusher Refining infusion enchantment level
   - Make Primal Crusher Unbreakable

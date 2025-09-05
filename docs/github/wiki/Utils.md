@@ -11,6 +11,7 @@ import mods.thaumictweaker.Utils
 ---
 
 ## Infusion Enchantments
+### CraftTweaker
 > [!NOTE]
 > CraftTweaker Only
 
@@ -53,3 +54,32 @@ recipes.addShapeless(Utils.addInfusionEnchantment(<minecraft:iron_pickaxe>, REFI
 |    LAMPLIGHT     |     axe, pickaxe, shovel     |     1     | When breaking a block, places an invisible and intangible source of light if the light level is below 10.                                                            |
 |    VOIDFLAME     |            weapon            |     4     | (Requires Thaumic Wonders Unofficial) Gives weapons the ability to apply a true damage dot that reduces healing received by 50%. Higher ranks increase dot duration. |
 
+---
+
+## Vis Container Items
+Small helper methods useful for returning Vis Crystals and filled Essentia Phials without having to mess around with tag data.
+
+### CraftTweaker
+> [!IMPORTANT]
+> CraftTweaker methods will only be registered if [ModTweaker](https://www.curseforge.com/minecraft/mc-mods/modtweaker) is installed.
+```zenscript
+//Returns a Vis Crystal of the specific aspect type and amount
+//mods.thaumictweaker.Utils.getVisCrystal(CTAspectStack aspectStack);
+var crystal1 = mods.thaumictweaker.Utils.getVisCrystal(<aspect:ignis>);
+var crystal2 = mods.thaumictweaker.Utils.getVisCrystal(<aspect:ignis> * 100);
+
+//Returns a Phial filled with the specified aspect
+//mods.thaumictweaker.Utils.getAspectPhial(CTAspectStack aspectStack);
+var phial = mods.thaumictweaker.Utils.getAspectPhial(<aspect:ignis>);
+```
+### GroovyScript
+```groovy
+//Returns a Vis Crystal of the specific aspect type and amount
+//mods.thaumictweaker.Utils.getVisCrystal(AspectStack aspectStack);
+var crystal1 = mods.thaumictweaker.Utils.getVisCrystal(aspect('ignis'))
+var crystal2 = mods.thaumictweaker.Utils.getVisCrystal(aspect('ignis') * 100)
+
+//Returns a Phial filled with the specified aspect
+//mods.thaumictweaker.Utils.getAspectPhial(AspectStack aspectStack);
+var phial = mods.thaumictweaker.Utils.getAspectPhial(aspect('ignis'))
+```

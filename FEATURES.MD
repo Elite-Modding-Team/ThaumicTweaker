@@ -58,7 +58,6 @@ Thaumcraft tweaks for tweakers.
 ## Feature Requests
 - Don't know what all this does, but E2E:E dev requested these mixins be included
   - https://github.com/Krutoy242/Enigmatica2Expert-Extended/blob/master/scripts/mixin/thaumcraft.zs
-- config to increase Porus Stone drop chances
 
 ## Stuff I have no idea what ThaumTweaks is doing
 - RechargeHelperMixin - No fucking clue what it is trying to do

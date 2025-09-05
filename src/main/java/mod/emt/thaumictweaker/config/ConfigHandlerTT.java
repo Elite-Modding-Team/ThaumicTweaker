@@ -19,6 +19,8 @@ public class ConfigHandlerTT {
     public static MiscTweaksCategory misc_tweaks = new MiscTweaksCategory();
     @Config.Name("Pech Tweaks")
     public static PechCategory pech_tweaks = new PechCategory();
+    @Config.Name("Porous Stone Tweaks")
+    public static PorousStoneCategory porous_stone = new PorousStoneCategory();
     @Config.Name("Primal Crusher Tweaks")
     public static PrimalCrusherCategory primal_crusher = new PrimalCrusherCategory();
     @Config.Name("Reseearch Table Tweaks")
@@ -128,6 +130,23 @@ public class ConfigHandlerTT {
         @Config.Name("Max Trade Value")
         @Config.Comment("The maximum trade value any item can have when offered to a Pech trader.")
         public int maxTradeValue = 32;
+    }
+
+    public static class PorousStoneCategory {
+        @Config.RequiresMcRestart
+        @Config.Name("Enable Porous Stone Tweaks")
+        @Config.Comment("Enable Porous Stone drop tweaks. CraftTweaker and GroovyScript methods require this option set to true.")
+        public boolean enablePorousStoneTweaks = true;
+
+        @Config.RangeInt(min = 1, max = 100)
+        @Config.Name("Gravel Drop Modifier")
+        @Config.Comment("The chance that gravel will drop when harvesting porous stone. Special item drops have a ((1 + fortune) / gravelModifier) percent chance of occurring.")
+        public int gravelDropModifier = 15;
+
+        @Config.RangeInt(min = 1, max = 100)
+        @Config.Name("Special Item Drops")
+        @Config.Comment("The number of items dropped when a special item drop occurs.")
+        public int specialItemDrops = 1;
     }
 
     public static class PrimalCrusherCategory {

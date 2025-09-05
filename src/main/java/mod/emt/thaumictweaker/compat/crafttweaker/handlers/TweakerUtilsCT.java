@@ -1,15 +1,20 @@
 package mod.emt.thaumictweaker.compat.crafttweaker.handlers;
 
+import com.blamejared.compat.thaumcraft.handlers.aspects.CTAspectStack;
 import crafttweaker.CraftTweakerAPI;
 import crafttweaker.annotations.ZenRegister;
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.minecraft.CraftTweakerMC;
 import mod.emt.thaumictweaker.ThaumicTweaker;
+import mod.emt.thaumictweaker.util.helpers.AspectContainerHelper;
+import mod.emt.thaumictweaker.util.libs.ModIds;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.Optional;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 import thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
 
+@SuppressWarnings("unused")
 @ZenRegister
 @ZenClass("mods." + ThaumicTweaker.MOD_ID + ".Utils")
 public class TweakerUtilsCT {
@@ -35,4 +40,21 @@ public class TweakerUtilsCT {
         }
     }
 
+    @Optional.Method(modid = ModIds.ConstIds.modtweaker)
+    @ZenMethod
+    public static IItemStack getVisCrystal(CTAspectStack aspect) {
+        if(aspect.getAmount() <= 0) {
+            CraftTweakerAPI.logError("Aspect amount must be greater than 0");
+            throw new IllegalArgumentException("Aspect amount must be greater than 0");
+        }
+        ItemStack crystalStack = AspectContainerHelper.createAspectCrystal(aspect.getInternal().getInternal(), aspect.getAmount());
+        return CraftTweakerMC.getIItemStack(crystalStack);
+    }
+
+    @Optional.Method(modid = ModIds.ConstIds.modtweaker)
+    @ZenMethod
+    public static IItemStack getAspectPhial(CTAspectStack aspect) {
+        ItemStack phialStack = AspectContainerHelper.createAspectPhial(aspect.getInternal().getInternal());
+        return CraftTweakerMC.getIItemStack(phialStack);
+    }
 }

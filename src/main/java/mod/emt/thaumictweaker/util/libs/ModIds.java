@@ -4,8 +4,10 @@ import mod.emt.thaumictweaker.util.helpers.ModHelper;
 
 import javax.annotation.Nullable;
 
+@SuppressWarnings("unused")
 public enum ModIds {
     crafttweaker(ConstIds.crafttweaker),
+    modtweaker(ConstIds.modtweaker),
     thaumcraft_fix(ConstIds.thaumcraft_fix),
     thaumic_augmentation(ConstIds.thaumic_augmentation),
     thaumic_wonders(ConstIds.thaumic_wonders, ConstVersions.thaumic_wonders, true, false)
@@ -38,6 +40,7 @@ public enum ModIds {
 
     public static class ConstIds {
         public static final String crafttweaker = "crafttweaker";
+        public static final String modtweaker = "modtweaker";
         public static final String thaumcraft = "thaumcraft";
         public static final String thaumcraft_fix = "thaumcraftfix";
         public static final String thaumic_augmentation = "thaumicaugmentation";

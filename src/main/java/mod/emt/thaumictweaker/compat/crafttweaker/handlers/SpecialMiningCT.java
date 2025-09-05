@@ -9,6 +9,7 @@ import mod.emt.thaumictweaker.util.helpers.SpecialMiningHelper;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
+@SuppressWarnings("unused")
 @ZenRegister
 @ZenClass("mods." + ThaumicTweaker.MOD_ID + ".SpecialMiningResult")
 public class SpecialMiningCT {

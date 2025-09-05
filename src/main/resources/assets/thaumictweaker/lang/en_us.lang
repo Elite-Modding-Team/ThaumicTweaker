@@ -14,6 +14,13 @@ groovyscript.wiki.thaumictweaker.pech_trades.pechType.value=The Pech variant
 groovyscript.wiki.thaumictweaker.pech_trades.tradeItem.value=The item that will be traded
 groovyscript.wiki.thaumictweaker.pech_trades.tradeLevel.value=The trade level value
 
+# -- POROUS STONE DROPS
+groovyscript.wiki.thaumictweaker.porous_stone.title=Porous Stone Special Drops
+groovyscript.wiki.thaumictweaker.porous_stone.description=Add or remove non-gravel Porous Stone special item drops
+groovyscript.wiki.thaumictweaker.porous_stone.addDrop=Adds a Porous Stone drop in the format `drop`, `weight`
+groovyscript.wiki.thaumictweaker.porous_stone.removeDrop=Removes any drop that matches the IIngredient
+groovyscript.wiki.thaumictweaker.porous_stone.streamDrops=Streams all Porous Stone special item drops
+
 # -- SPECIAL MINING RESULTS
 groovyscript.wiki.thaumictweaker.special_mining_result.title=Special Mining Results
 groovyscript.wiki.thaumictweaker.special_mining_result.description=Special Mining Results are special drops obtained when mining ores with tools with the Refining infusion enchantment.
@@ -24,3 +31,9 @@ groovyscript.wiki.thaumictweaker.special_mining_result.removeByOutput=Removes a 
 groovyscript.wiki.thaumictweaker.special_mining_result.harvestDrop.value=The item dropped during the block harvest
 groovyscript.wiki.thaumictweaker.special_mining_result.result.value=The result stack if the special harvest is a success
 groovyscript.wiki.thaumictweaker.special_mining_result.chance.value=The chance this harvest drop will occur
+
+# -- UTILS
+groovyscript.wiki.thaumictweaker.utils.title=Thaumic Tweaker Utils
+groovyscript.wiki.thaumictweaker.utils.description=Several utility methods used to make handling some Thaumcraft stuff easier
+groovyscript.wiki.thaumictweaker.utils.getVisCrystal=Returns a Vis crystal with the specified AspectStack
+groovyscript.wiki.thaumictweaker.utils.getAspectPhial=Returns a Essentia Phial filled with the specified aspect
