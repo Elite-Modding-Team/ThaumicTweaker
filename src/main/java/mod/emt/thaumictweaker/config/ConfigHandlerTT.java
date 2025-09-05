@@ -75,11 +75,6 @@ public class ConfigHandlerTT {
 
     public static class FluxPollutionCategory {
         @Config.RangeInt(min = 1, max = 10000)
-        @Config.Name("Lamp of Fertility Instability Decay Rate")
-        @Config.Comment("The time, in ticks, between each instability decay operation of the Lamp of Fertility. Smaller values will result in less flux.")
-        public int fertilityLampInstabilityDecay = 5;
-
-        @Config.RangeInt(min = 1, max = 10000)
         @Config.Name("Essentia Mirror Instability Decay Rate")
         @Config.Comment("The time, in ticks, between each instability decay operation of the Essentia Mirror. Smaller values will result in less flux.")
         public int essentiaMirrorInstabilityDecay = 100;
@@ -249,6 +244,10 @@ public class ConfigHandlerTT {
         @Config.Name("Sanitizing Soap Recipe")
         @Config.Comment("Makes the Sanitizing Soap recipe cheaper.")
         public boolean wussModeSanitizingSoapRecipe = false;
+
+        @Config.Name("Prevent Eldritch Guardian Warp Gain")
+        @Config.Comment("Prevents the player from gaining warp whenever an Eldritch Guardian spawns nearby in line of sight.")
+        public boolean wussModeStopEldritchGuardianWarpGain = false;
 
         @Config.Name("Void Siphon Wuss Mode")
         @Config.Comment("The Void Siphon no longer needs nearby rifts to create void seeds. It will passively accumulate progress over time.")

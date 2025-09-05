@@ -68,6 +68,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 - **Arcane Bore Recipe:** Makes the Arcane Bore recipe cheaper
 - **Bath Salts Recipe:** Makes the Bath Salts recipe cheaper
+- **Eldritch Guardian:** Removes the warp gain when Eldritch Guardians spawn in line of sight of the player
 - **Primordial Pearl Recipes:**
   - New Infusion recipe that creates a 1 durability Primordial Pearl
   - New Infusion recipe that increases Primordial Pearl durability
