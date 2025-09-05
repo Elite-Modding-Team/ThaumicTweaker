@@ -20,7 +20,6 @@ public class PacketFXPolluteMixin {
      */
     @Inject(method = "<init>(Lnet/minecraft/util/math/BlockPos;F)V", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/math/BlockPos;getX()I"))
     private void clampAmountMixin(BlockPos pos, float amt, CallbackInfo ci, @Local(argsOnly = true) LocalFloatRef ref) {
-        //TODO: Move this fix into ThaumcraftFix at some point in the future.
         ref.set(MathHelper.clamp(ref.get(), Byte.MIN_VALUE, Byte.MAX_VALUE));
     }
 }

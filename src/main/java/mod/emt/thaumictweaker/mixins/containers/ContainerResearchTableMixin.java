@@ -84,7 +84,6 @@ public abstract class ContainerResearchTableMixin extends Container {
             remap = true
     )
     private boolean isItemValidForSlotMixin(TileResearchTable instance, int slotIndex, ItemStack stack) {
-        //TODO: Move this fix into ThaumcraftFix at some point in the future.
         return this.tileEntity.isItemValidForSlot(0, stack) || this.tileEntity.isItemValidForSlot(1, stack);
     }
 }

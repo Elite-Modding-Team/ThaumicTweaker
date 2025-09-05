@@ -19,7 +19,6 @@ public class TileThaumatoriumTopMixin {
      */
     @Inject(method = "isEmpty", at = @At("HEAD"), cancellable = true)
     private void fixNPECrashMixin(CallbackInfoReturnable<Boolean> cir) {
-        //TODO: Move this fix into ThaumcraftFix at some point in the future.
         if(this.thaumatorium == null) {
             cir.setReturnValue(false);
         }
