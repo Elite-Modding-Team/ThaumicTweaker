@@ -20,7 +20,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import mod.emt.thaumictweaker.config.ConfigEnhancementsTT;
 import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import thaumcraft.api.research.ScanningManager;
 import thaumcraft.client.fx.FXDispatcher;
@@ -102,13 +101,11 @@ public class ItemThaumometerMixin extends Item {
 
     @Inject(method = "onUpdate", at = @At("HEAD"), cancellable = true)
     public void onUpdateInject(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected, CallbackInfo ci) {
-        if ((isSelected || (!ConfigEnhancementsTT.improveThaumometerScanParticles && itemSlot == 0))
-        		&& !world.isRemote && entity.ticksExisted % 20 == 0 && entity instanceof EntityPlayerMP) {
+        if ((isSelected && !world.isRemote && entity.ticksExisted % 20 == 0 && entity instanceof EntityPlayerMP) {
             this.updateAura(stack, world, (EntityPlayerMP) entity);
         }
 
-        if ((isSelected || (!ConfigEnhancementsTT.improveThaumometerScanParticles && itemSlot == 0))
-        		&& isSelected && world.isRemote && entity.ticksExisted % 5 == 0 && entity instanceof EntityPlayer) {
+        if (isSelected && world.isRemote && entity.ticksExisted % 5 == 0 && entity instanceof EntityPlayer) {
             Entity target = EntityUtils.getPointedEntity(world, entity, 1.0, 16.0, 5.0F, true);
 
             if (target != null && ScanningManager.isThingStillScannable((EntityPlayer) entity, target)) {
