@@ -19,6 +19,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import mod.emt.thaumictweaker.config.ConfigEnhancementsTT;
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import thaumcraft.api.research.ScanningManager;
 import thaumcraft.client.fx.FXDispatcher;
 import thaumcraft.client.lib.events.RenderEventHandler;
@@ -50,13 +53,25 @@ public class ItemThaumometerMixin extends Item {
     @Inject(method = "onItemRightClick", at = @At("HEAD"), cancellable = true)
     public void onItemRightClickInject(World world, EntityPlayer p, EnumHand hand, CallbackInfoReturnable<ActionResult<ItemStack>> cir) {
         ItemStack stack = p.getHeldItem(hand);
-        p.setActiveHand(hand);
-        cir.setReturnValue(new ActionResult<>(EnumActionResult.PASS, stack));
+
+        if (!ConfigTweaksTT.misc_tweaks.legacyThaumometerScanning) {
+            if (world.isRemote) {
+                this.drawFX(world, p);
+                p.world.playSound(p.posX, p.posY, p.posZ, SoundsTC.scan, SoundCategory.PLAYERS, 1.0F, 1.0F, false);
+            } else {
+                this.doScan(world, p);
+            }
+
+            cir.setReturnValue(new ActionResult<>(EnumActionResult.FAIL, stack));
+        } else {
+            p.setActiveHand(hand);
+            cir.setReturnValue(new ActionResult<>(EnumActionResult.PASS, stack));
+        }
     }
 
     @Override
     public void onUsingTick(ItemStack stack, EntityLivingBase p, int count) {
-        if (!(p instanceof EntityPlayer)) return;
+        if (!(p instanceof EntityPlayer) || !ConfigTweaksTT.misc_tweaks.legacyThaumometerScanning) return;
         if (p.world.isRemote) {
             if (count <= 1) {
                 p.stopActiveHand();
@@ -87,11 +102,13 @@ public class ItemThaumometerMixin extends Item {
 
     @Inject(method = "onUpdate", at = @At("HEAD"), cancellable = true)
     public void onUpdateInject(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected, CallbackInfo ci) {
-        if (isSelected && !world.isRemote && entity.ticksExisted % 20 == 0 && entity instanceof EntityPlayerMP) {
+        if ((isSelected || (!ConfigEnhancementsTT.improveThaumometerScanParticles && itemSlot == 0))
+        		&& !world.isRemote && entity.ticksExisted % 20 == 0 && entity instanceof EntityPlayerMP) {
             this.updateAura(stack, world, (EntityPlayerMP) entity);
         }
 
-        if (isSelected && world.isRemote && entity.ticksExisted % 5 == 0 && entity instanceof EntityPlayer) {
+        if ((isSelected || (!ConfigEnhancementsTT.improveThaumometerScanParticles && itemSlot == 0))
+        		&& isSelected && world.isRemote && entity.ticksExisted % 5 == 0 && entity instanceof EntityPlayer) {
             Entity target = EntityUtils.getPointedEntity(world, entity, 1.0, 16.0, 5.0F, true);
 
             if (target != null && ScanningManager.isThingStillScannable((EntityPlayer) entity, target)) {
