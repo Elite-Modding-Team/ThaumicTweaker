@@ -20,32 +20,14 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 **NOTE:** All tweaks listed in this category are enabled by default. 
 
 - **Focus Effects:** 
-  - Revamps the cast sounds of certain focus effects to provide better variety
-    - Break
-    - Earth
-    - Exchange
-    - Frost
-    - Heal
-    - Rift
-  - Adds impact sounds to various focus effects that lack any
-    - Break
-    - Earth
-    - Exchange
-    - Fire
-    - Flux
-    - Frost
-    - Heal
-    - Rift
-  - Makes several focus mediums play additional cast sounds to differentiate them
-    - Bolt
-    - Cloud
-    - Mine
-    - Spellbat
+  - Revamps the cast sounds of certain focus effects to provide better variety (Break, Earth, Exchange, Frost, Heal, Rift)
+  - Adds impact sounds to various focus effects that lack any (Break, Earth, Exchange, Fire, Flux , Frost, Heal, Rift)
+  - Makes several focus mediums play additional cast sounds to differentiate them (Bolt, Cloud, Mine, Spellbat)
 - **Eldritch Crab:** Rotates dead Eldritch Crabs all the way to match the death animations of spiders, silverfish and endermites
 
 ---
 
-## Tweaks
+## General Tweaks
 **NOTE:** All tweaks listed in this category are disabled by default or use Thaumcraft default values. 
 
 - **Alchemical Brass**: Change the alchemical brass recipe to require copper instead of iron.
