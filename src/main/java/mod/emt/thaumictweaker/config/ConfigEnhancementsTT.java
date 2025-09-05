@@ -30,8 +30,4 @@ public class ConfigEnhancementsTT {
     @Config.Name("Eldritch Crab Full Death Rotation")
     @Config.Comment("Makes Eldritch Crabs fully rotate on death to match the death animations of spiders, silverfish and endermites.")
     public static boolean eldritchCrabFullDeathRotation = true;
-
-    @Config.Name("Improve Thaumometer Scan Particles")
-    @Config.Comment("Only shows scan particles on blocks while the Thaumometer is being held.")
-    public static boolean improveThaumometerScanParticles = true;
 }
