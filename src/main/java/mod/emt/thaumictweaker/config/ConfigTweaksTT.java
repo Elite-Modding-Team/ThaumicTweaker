@@ -128,6 +128,11 @@ public class ConfigTweaksTT {
         @Config.Comment("Disables Thaumcraft's dynamic aspect generation from infusion recipes.")
         public boolean disableRecipeAspectsInfusion = false;
 
+        @Config.RequiresMcRestart
+        @Config.Name("Legacy Thaumometer Scanning")
+        @Config.Comment("Restores the original scanning functionality from 1.7.10.")
+        public boolean legacyThaumometerScanning = false;
+
         @Config.Name("Sky Scan Dimensions")
         @Config.Comment("A list of dimension ids where the Thaumometer can be used to scan the sky to obtain research notes.")
         public int[] skyDimensions = new int[] {};
