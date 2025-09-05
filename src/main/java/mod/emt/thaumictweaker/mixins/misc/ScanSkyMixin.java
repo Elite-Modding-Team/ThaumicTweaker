@@ -1,6 +1,6 @@
 package mod.emt.thaumictweaker.mixins.misc;
 
-import mod.emt.thaumictweaker.config.ConfigHandlerTT;
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.WorldProvider;
 import org.spongepowered.asm.mixin.Mixin;
@@ -19,7 +19,7 @@ public class ScanSkyMixin {
             )
     )
     private DimensionType validSkyDimensionMixin(WorldProvider provider) {
-        for(int dimId : ConfigHandlerTT.misc_tweaks.skyDimensions) {
+        for(int dimId : ConfigTweaksTT.misc_tweaks.skyDimensions) {
             if(dimId == provider.getDimension()) {
                 return DimensionType.OVERWORLD;
             }

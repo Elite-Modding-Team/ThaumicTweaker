@@ -2,7 +2,7 @@ package mod.emt.thaumictweaker.events;
 
 import baubles.api.BaublesApi;
 import mod.emt.thaumictweaker.ThaumicTweaker;
-import mod.emt.thaumictweaker.config.ConfigHandlerTT;
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
@@ -33,13 +33,13 @@ public class CommonEventHandler {
         EntityLivingBase entity = event.getEntityLiving();
 
         //Eldritch Guardian - Eldritch Curiosity
-        if (!entity.world.isRemote && entity.getRNG().nextDouble() <= ConfigHandlerTT.curiosity_tweaks.curioDropEldritchGuardian
+        if (!entity.world.isRemote && entity.getRNG().nextDouble() <= ConfigTweaksTT.curiosity_tweaks.curioDropEldritchGuardian
                 && entity instanceof EntityEldritchGuardian && entity.getAttackingEntity() instanceof EntityPlayer) {
             event.getDrops().add(new EntityItem(entity.world, entity.posX, entity.posY, entity.posZ, new ItemStack(ItemsTC.curio, 1, 3)));
         }
 
         //Giant Taint Seed - Twisted Curiosity
-        if (!entity.world.isRemote && entity.getRNG().nextDouble() <= ConfigHandlerTT.curiosity_tweaks.curioDropGiantTaintSeed
+        if (!entity.world.isRemote && entity.getRNG().nextDouble() <= ConfigTweaksTT.curiosity_tweaks.curioDropGiantTaintSeed
                 && entity instanceof EntityTaintSeedPrime && entity.getAttackingEntity() instanceof EntityPlayer) {
             event.getDrops().add(new EntityItem(entity.world, entity.posX, entity.posY, entity.posZ, new ItemStack(ItemsTC.curio, 1, 5)));
         }
@@ -67,7 +67,7 @@ public class CommonEventHandler {
     @SubscribeEvent
     public static void onLootTableLoad(LootTableLoadEvent event) {
         //Adds Apprentice's Ring to vanilla structure chests
-        if(ConfigHandlerTT.apprentices_ring.apprenticesRingStructureLoot) {
+        if(ConfigTweaksTT.apprentices_ring.enableStructureLoot) {
             if (event.getName().equals(LootTableList.CHESTS_DESERT_PYRAMID) || event.getName().equals(LootTableList.CHESTS_SIMPLE_DUNGEON)) {
                 LootPool main = event.getTable().getPool("main");
                 main.addEntry(new LootEntryItem(new ItemStack(ItemsTC.baubles, 1, 3).getItem(), 4, 0, new LootFunction[0], new LootCondition[0], "loottable:apprentices_ring"));

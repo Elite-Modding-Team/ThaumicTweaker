@@ -6,22 +6,18 @@ import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import thaumcraft.api.items.ItemsTC;
-import thaumcraft.common.items.armor.ItemVoidRobeArmor;
+import thaumcraft.common.items.baubles.ItemBaubles;
 
-@Mixin(value = ItemVoidRobeArmor.class, remap = false)
-public class ItemVoidRobeArmorMixin {
+@Mixin(value = ItemBaubles.class, remap = false)
+public class ItemBaublesMixin {
     @ModifyReturnValue(
             method = "getVisDiscount",
             at = @At("RETURN")
     )
     private int modifyVisDiscountMixin(int original, @Local(argsOnly = true) ItemStack stack) {
-        if(stack.getItem() == ItemsTC.voidRobeHelm) {
-            return ConfigTweaksTT.void_robes.visDiscountHelm;
-        } else if(stack.getItem() == ItemsTC.voidRobeChest) {
-            return ConfigTweaksTT.void_robes.visDiscountChest;
-        } else if(stack.getItem() == ItemsTC.voidRobeLegs) {
-            return ConfigTweaksTT.void_robes.visDiscountLeggings;
+        //If Apprentice's Ring
+        if(stack.getItemDamage() == 3) {
+            return ConfigTweaksTT.apprentices_ring.visDiscount;
         }
         return original;
     }

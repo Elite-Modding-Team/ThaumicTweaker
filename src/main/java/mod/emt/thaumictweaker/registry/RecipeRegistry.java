@@ -1,7 +1,8 @@
 package mod.emt.thaumictweaker.registry;
 
 import mod.emt.thaumictweaker.ThaumicTweaker;
-import mod.emt.thaumictweaker.config.ConfigHandlerTT;
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
+import mod.emt.thaumictweaker.config.ConfigWussModeTT;
 import mod.emt.thaumictweaker.util.helpers.ItemHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -32,7 +33,7 @@ public class RecipeRegistry {
 
     private static void registerArcaneRecipes() {
         //Wuss Mode: Workbench Charger
-        if(ConfigHandlerTT.wuss_mode.wussModeWorkbenchChargerRecipe) {
+        if(ConfigWussModeTT.cheaperWorkbenchCharger) {
             ThaumcraftApi.addArcaneCraftingRecipe(new ResourceLocation("thaumcraft:workbenchcharger"), new ShapedArcaneRecipe(
                     new ResourceLocation(""),
                     "WORKBENCHCHARGER",
@@ -49,7 +50,7 @@ public class RecipeRegistry {
 
     private static void registerCrucibleRecipes() {
         //Alchemical Brass with Copper
-        if(ConfigHandlerTT.misc_tweaks.alchemicalBrassCopperRecipe) {
+        if(ConfigTweaksTT.misc_tweaks.alchemicalBrassCopperRecipe) {
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("thaumcraft:brassingot"), new CrucibleRecipe(
                     "METALLURGY@1",
                     new ItemStack(ItemsTC.ingots, 1, 2),
@@ -59,7 +60,7 @@ public class RecipeRegistry {
         }
 
         //Wuss Mode: Bath Salts
-        if(ConfigHandlerTT.wuss_mode.wussModeBathSaltsRecipe) {
+        if(ConfigWussModeTT.cheaperBathSalts) {
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("thaumcraft:BathSalts"), new CrucibleRecipe(
                     "BATHSALTS",
                     new ItemStack(ItemsTC.bathSalts),
@@ -69,7 +70,7 @@ public class RecipeRegistry {
         }
 
         //Wuss Mode: Sanitizing Soap
-        if(ConfigHandlerTT.wuss_mode.wussModeSanitizingSoapRecipe) {
+        if(ConfigWussModeTT.cheaperSanitizingSoap) {
             ThaumcraftApi.addCrucibleRecipe(new ResourceLocation("thaumcraft:SaneSoap"), new CrucibleRecipe(
                     "SANESOAP",
                     new ItemStack(ItemsTC.sanitySoap),
@@ -81,11 +82,11 @@ public class RecipeRegistry {
 
     private static void registerInfusionRecipes() {
         //Primal Crusher recipe should only be overwritten if the item is modified
-        if(ConfigHandlerTT.primal_crusher.unbreakable || ConfigHandlerTT.primal_crusher.refiningLevel > 1) {
+        if(ConfigTweaksTT.primal_crusher.unbreakable || ConfigTweaksTT.primal_crusher.refiningLevel > 1) {
             ItemStack crusherStack = new ItemStack(ItemsTC.primalCrusher);
             EnumInfusionEnchantment.addInfusionEnchantment(crusherStack, EnumInfusionEnchantment.DESTRUCTIVE, 1);
-            EnumInfusionEnchantment.addInfusionEnchantment(crusherStack, EnumInfusionEnchantment.REFINING, ConfigHandlerTT.primal_crusher.refiningLevel);
-            if(ConfigHandlerTT.primal_crusher.unbreakable) {
+            EnumInfusionEnchantment.addInfusionEnchantment(crusherStack, EnumInfusionEnchantment.REFINING, ConfigTweaksTT.primal_crusher.refiningLevel);
+            if(ConfigTweaksTT.primal_crusher.unbreakable) {
                 ItemHelper.setUnbreakable(crusherStack);
             }
             ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("thaumcraft:PrimalCrusher"), new InfusionRecipe(
@@ -102,7 +103,7 @@ public class RecipeRegistry {
         }
 
         //Wuss Mode: Arcane Bore
-        if(ConfigHandlerTT.wuss_mode.wussModeArcaneBoreRecipe) {
+        if(ConfigWussModeTT.cheaperArcaneBore) {
             ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation("thaumcraft:ArcaneBore"), new InfusionRecipe(
                     "ARCANEBORE",
                     new ItemStack(ItemsTC.turretPlacer, 1, 2),
@@ -119,7 +120,7 @@ public class RecipeRegistry {
         }
 
         //Wuss Mode: Primordial Pearl
-        if(ConfigHandlerTT.wuss_mode.wussModePrimordialPearlCreationRecipe) {
+        if(ConfigWussModeTT.primordialPearlCreationRecipe) {
             ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicTweaker.MOD_ID, "primordial_pearl_creation"), new InfusionRecipe(
                     "VOIDSIPHON",
                     new ItemStack(ItemsTC.primordialPearl, 1, 7),
@@ -136,7 +137,7 @@ public class RecipeRegistry {
             ));
         }
 
-        if(ConfigHandlerTT.wuss_mode.wussModePrimordialPearlGrowingRecipe) {
+        if(ConfigWussModeTT.primordialPearlGrowingRecipe) {
             for(int i = 0; i < 7; i++) {
                 ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicTweaker.MOD_ID, "primordial_pearl_growth_" + i), new InfusionRecipe(
                         "VOIDSIPHON",

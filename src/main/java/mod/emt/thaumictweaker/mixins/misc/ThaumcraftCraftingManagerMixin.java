@@ -1,6 +1,6 @@
 package mod.emt.thaumictweaker.mixins.misc;
 
-import mod.emt.thaumictweaker.config.ConfigHandlerTT;
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,19 +15,19 @@ import java.util.ArrayList;
 public class ThaumcraftCraftingManagerMixin {
     @Inject(method = "generateTagsFromCrucibleRecipes", at = @At("HEAD"), cancellable = true)
     private static void generateTagsFromCrucibleRecipesMixin(ItemStack stack, ArrayList<String> history, CallbackInfoReturnable<AspectList> cir) {
-        if(ConfigHandlerTT.misc_tweaks.disableRecipeAspectsCrucible)
+        if(ConfigTweaksTT.misc_tweaks.disableRecipeAspectsCrucible)
             cir.cancel();
     }
 
     @Inject(method = "generateTagsFromInfusionRecipes", at = @At("HEAD"), cancellable = true)
     private static void generateTagsFromInfusionRecipesMixin(ItemStack stack, ArrayList<String> history, CallbackInfoReturnable<AspectList> cir) {
-        if(ConfigHandlerTT.misc_tweaks.disableRecipeAspectsInfusion)
+        if(ConfigTweaksTT.misc_tweaks.disableRecipeAspectsInfusion)
             cir.cancel();
     }
 
     @Inject(method = "generateTagsFromRecipes", at = @At("HEAD"), cancellable = true)
     private static void generateTagsFromCraftingRecipesMixin(ItemStack stack, ArrayList<String> history, CallbackInfoReturnable<AspectList> cir) {
-        if(ConfigHandlerTT.misc_tweaks.disableRecipeAspectsCrafting)
+        if(ConfigTweaksTT.misc_tweaks.disableRecipeAspectsCrafting)
             cir.cancel();
     }
 

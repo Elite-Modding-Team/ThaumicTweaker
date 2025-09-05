@@ -23,6 +23,7 @@
     "focus.FocusMediumCloudMixin" ,
     "focus.FocusMediumMineMixin" ,
     "focus.FocusMediumSpellbatMixin" ,
+    "items.ItemBaublesMixin" ,
     "items.ItemCutlistRobeArmorMixin" ,
     "items.ItemPrimalCrusherMixin" ,
     "items.ItemThaumometerMixin" ,

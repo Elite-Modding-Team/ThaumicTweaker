@@ -2,7 +2,7 @@ package mod.emt.thaumictweaker.mixins.items;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import mod.emt.thaumictweaker.config.ConfigHandlerTT;
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -14,11 +14,11 @@ public class ItemCutlistRobeArmorMixin {
     @ModifyReturnValue(method = "getVisDiscount", at = @At("RETURN"))
     private int modifyVisDiscountMixin(int original, @Local(argsOnly = true) ItemStack stack) {
         if(stack.getItem() == ItemsTC.crimsonRobeHelm) {
-            return ConfigHandlerTT.cult_robes.visDiscountHelm;
+            return ConfigTweaksTT.cult_robes.visDiscountHelm;
         } else if(stack.getItem() == ItemsTC.crimsonRobeChest) {
-            return ConfigHandlerTT.cult_robes.visDiscountChest;
+            return ConfigTweaksTT.cult_robes.visDiscountChest;
         } else if(stack.getItem() == ItemsTC.crimsonRobeLegs) {
-            return ConfigHandlerTT.cult_robes.visDiscountLeggings;
+            return ConfigTweaksTT.cult_robes.visDiscountLeggings;
         }
         return original;
     }

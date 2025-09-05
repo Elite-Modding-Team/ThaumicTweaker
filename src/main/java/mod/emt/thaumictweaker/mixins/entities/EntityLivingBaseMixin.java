@@ -1,4 +1,4 @@
-package mod.emt.thaumictweaker.mixins.entities.vanilla;
+package mod.emt.thaumictweaker.mixins.entities;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;

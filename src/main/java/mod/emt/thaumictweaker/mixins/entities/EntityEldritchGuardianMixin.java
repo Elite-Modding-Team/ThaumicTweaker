@@ -1,6 +1,6 @@
 package mod.emt.thaumictweaker.mixins.entities;
 
-import mod.emt.thaumictweaker.config.ConfigHandlerTT;
+import mod.emt.thaumictweaker.config.ConfigWussModeTT;
 import net.minecraft.entity.player.EntityPlayer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -19,7 +19,7 @@ public class EntityEldritchGuardianMixin {
             )
     )
     private void preventWarpGainMixin(IInternalMethodHandler instance, EntityPlayer player, int amount, IPlayerWarp.EnumWarpType enumWarpType) {
-        if (!ConfigHandlerTT.wuss_mode.wussModeStopEldritchGuardianWarpGain) {
+        if (!ConfigWussModeTT.preventEldritchGuardianWarpGain) {
             instance.addWarpToPlayer(player, amount, enumWarpType);
         }
     }

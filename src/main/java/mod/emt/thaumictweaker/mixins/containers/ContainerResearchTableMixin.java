@@ -2,7 +2,7 @@ package mod.emt.thaumictweaker.mixins.containers;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import mod.emt.thaumictweaker.config.ConfigHandlerTT;
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import mod.emt.thaumictweaker.util.helpers.InventoryHelper;
 import mod.emt.thaumictweaker.util.helpers.LogHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -34,7 +34,7 @@ public abstract class ContainerResearchTableMixin extends Container {
             remap = true
     )
     private boolean isItemInNearbyInventories(boolean original, @Local(ordinal = 0) TheorycraftCard card, @Local(ordinal = 0)ItemStack stack) {
-        if(!original && ConfigHandlerTT.research_table.researchTablePulling) {
+        if(!original && ConfigTweaksTT.research_table.researchTablePulling) {
             ItemStack invStack = InventoryHelper.pullFromNearbyInventories(this.tileEntity.getWorld(), this.tileEntity.getPos(), 3, stack, true, true);
             return invStack.getCount() == stack.getCount();
         }
@@ -56,7 +56,7 @@ public abstract class ContainerResearchTableMixin extends Container {
     )
     private boolean consumeFromNearbyInventories(boolean original, @Local(ordinal = 0) TheorycraftCard card, @Local(ordinal = 1) int index) {
         try {
-            if (!original && ConfigHandlerTT.research_table.researchTablePulling) {
+            if (!original && ConfigTweaksTT.research_table.researchTablePulling) {
                 ItemStack stack = card.getRequiredItems()[index];
                 ItemStack extracted = InventoryHelper.pullFromNearbyInventories(this.tileEntity.getWorld(), this.tileEntity.getPos(), 3, stack, true, false);
                 return stack.getCount() == extracted.getCount();

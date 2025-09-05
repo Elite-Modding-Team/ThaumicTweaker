@@ -1,7 +1,7 @@
 package mod.emt.thaumictweaker.mixins.items;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import mod.emt.thaumictweaker.config.ConfigHandlerTT;
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import mod.emt.thaumictweaker.util.helpers.ItemHelper;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -35,7 +35,7 @@ public abstract class ItemPrimalCrusherMixin extends ItemTool {
             remap = true
     )
     private void modifyRefiningLevelMixin(ItemStack stack, EnumInfusionEnchantment infusionEnchant, int level) {
-        EnumInfusionEnchantment.addInfusionEnchantment(stack, infusionEnchant, ConfigHandlerTT.primal_crusher.refiningLevel);
+        EnumInfusionEnchantment.addInfusionEnchantment(stack, infusionEnchant, ConfigTweaksTT.primal_crusher.refiningLevel);
     }
 
     @Inject(
@@ -49,14 +49,14 @@ public abstract class ItemPrimalCrusherMixin extends ItemTool {
             remap = true
     )
     private void setUnbreakableMixin(CreativeTabs tab, NonNullList<ItemStack> items, CallbackInfo ci, @Local(ordinal = 0) ItemStack stack) {
-        if(ConfigHandlerTT.primal_crusher.unbreakable) {
+        if(ConfigTweaksTT.primal_crusher.unbreakable) {
             ItemHelper.setUnbreakable(stack);
         }
     }
 
     @Override
     public void setDamage(ItemStack stack, int damage) {
-        if(ConfigHandlerTT.primal_crusher.unbreakable) {
+        if(ConfigTweaksTT.primal_crusher.unbreakable) {
             return;
         }
         super.setDamage(stack, damage);

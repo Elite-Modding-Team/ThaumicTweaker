@@ -1,6 +1,6 @@
 package mod.emt.thaumictweaker.mixins.misc;
 
-import mod.emt.thaumictweaker.config.ConfigHandlerTT;
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import org.spongepowered.asm.mixin.Mixin;
@@ -23,10 +23,10 @@ public class GolemMaterialMixin {
     private static GolemMaterial golemMaterialWoodMixin(String key, String[] research, ResourceLocation texture, int itemColor, int hp, int armor, int damage, ItemStack compb, ItemStack compm, EnumGolemTrait[] tags) {
         return new GolemMaterial(
                 key, research, texture, itemColor,
-                ConfigHandlerTT.golem_tweaks.matWood.statHealth,
-                ConfigHandlerTT.golem_tweaks.matWood.statArmor,
-                ConfigHandlerTT.golem_tweaks.matWood.statDamage,
-                ConfigHandlerTT.golem_tweaks.matWood.getMaterialStack(),
+                ConfigTweaksTT.golem_tweaks.matWood.statHealth,
+                ConfigTweaksTT.golem_tweaks.matWood.statArmor,
+                ConfigTweaksTT.golem_tweaks.matWood.statDamage,
+                ConfigTweaksTT.golem_tweaks.matWood.getMaterialStack(),
                 compm, tags);
     }
 
@@ -41,10 +41,10 @@ public class GolemMaterialMixin {
     private static GolemMaterial golemMaterialIronMixin(String key, String[] research, ResourceLocation texture, int itemColor, int hp, int armor, int damage, ItemStack compb, ItemStack compm, EnumGolemTrait[] tags) {
         return new GolemMaterial(
                 key, research, texture, itemColor,
-                ConfigHandlerTT.golem_tweaks.matIron.statHealth,
-                ConfigHandlerTT.golem_tweaks.matIron.statArmor,
-                ConfigHandlerTT.golem_tweaks.matIron.statDamage,
-                ConfigHandlerTT.golem_tweaks.matIron.getMaterialStack(),
+                ConfigTweaksTT.golem_tweaks.matIron.statHealth,
+                ConfigTweaksTT.golem_tweaks.matIron.statArmor,
+                ConfigTweaksTT.golem_tweaks.matIron.statDamage,
+                ConfigTweaksTT.golem_tweaks.matIron.getMaterialStack(),
                 compm, tags);
     }
 
@@ -59,10 +59,10 @@ public class GolemMaterialMixin {
     private static GolemMaterial golemMaterialClayMixin(String key, String[] research, ResourceLocation texture, int itemColor, int hp, int armor, int damage, ItemStack compb, ItemStack compm, EnumGolemTrait[] tags) {
         return new GolemMaterial(
                 key, research, texture, itemColor,
-                ConfigHandlerTT.golem_tweaks.matClay.statHealth,
-                ConfigHandlerTT.golem_tweaks.matClay.statArmor,
-                ConfigHandlerTT.golem_tweaks.matClay.statDamage,
-                ConfigHandlerTT.golem_tweaks.matClay.getMaterialStack(),
+                ConfigTweaksTT.golem_tweaks.matClay.statHealth,
+                ConfigTweaksTT.golem_tweaks.matClay.statArmor,
+                ConfigTweaksTT.golem_tweaks.matClay.statDamage,
+                ConfigTweaksTT.golem_tweaks.matClay.getMaterialStack(),
                 compm, tags);
     }
 
@@ -77,10 +77,10 @@ public class GolemMaterialMixin {
     private static GolemMaterial golemMaterialBrassMixin(String key, String[] research, ResourceLocation texture, int itemColor, int hp, int armor, int damage, ItemStack compb, ItemStack compm, EnumGolemTrait[] tags) {
         return new GolemMaterial(
                 key, research, texture, itemColor,
-                ConfigHandlerTT.golem_tweaks.matBrass.statHealth,
-                ConfigHandlerTT.golem_tweaks.matBrass.statArmor,
-                ConfigHandlerTT.golem_tweaks.matBrass.statDamage,
-                ConfigHandlerTT.golem_tweaks.matBrass.getMaterialStack(),
+                ConfigTweaksTT.golem_tweaks.matBrass.statHealth,
+                ConfigTweaksTT.golem_tweaks.matBrass.statArmor,
+                ConfigTweaksTT.golem_tweaks.matBrass.statDamage,
+                ConfigTweaksTT.golem_tweaks.matBrass.getMaterialStack(),
                 compm, tags);
     }
 
@@ -95,10 +95,10 @@ public class GolemMaterialMixin {
     private static GolemMaterial golemMaterialThaumiumMixin(String key, String[] research, ResourceLocation texture, int itemColor, int hp, int armor, int damage, ItemStack compb, ItemStack compm, EnumGolemTrait[] tags) {
         return new GolemMaterial(
                 key, research, texture, itemColor,
-                ConfigHandlerTT.golem_tweaks.matThaumium.statHealth,
-                ConfigHandlerTT.golem_tweaks.matThaumium.statArmor,
-                ConfigHandlerTT.golem_tweaks.matThaumium.statDamage,
-                ConfigHandlerTT.golem_tweaks.matThaumium.getMaterialStack(),
+                ConfigTweaksTT.golem_tweaks.matThaumium.statHealth,
+                ConfigTweaksTT.golem_tweaks.matThaumium.statArmor,
+                ConfigTweaksTT.golem_tweaks.matThaumium.statDamage,
+                ConfigTweaksTT.golem_tweaks.matThaumium.getMaterialStack(),
                 compm, tags);
     }
 
@@ -113,10 +113,10 @@ public class GolemMaterialMixin {
     private static GolemMaterial golemMaterialVoidMixin(String key, String[] research, ResourceLocation texture, int itemColor, int hp, int armor, int damage, ItemStack compb, ItemStack compm, EnumGolemTrait[] tags) {
         return new GolemMaterial(
                 key, research, texture, itemColor,
-                ConfigHandlerTT.golem_tweaks.matVoid.statHealth,
-                ConfigHandlerTT.golem_tweaks.matVoid.statArmor,
-                ConfigHandlerTT.golem_tweaks.matVoid.statDamage,
-                ConfigHandlerTT.golem_tweaks.matVoid.getMaterialStack(),
+                ConfigTweaksTT.golem_tweaks.matVoid.statHealth,
+                ConfigTweaksTT.golem_tweaks.matVoid.statArmor,
+                ConfigTweaksTT.golem_tweaks.matVoid.statDamage,
+                ConfigTweaksTT.golem_tweaks.matVoid.getMaterialStack(),
                 compm, tags);
     }
 

@@ -1,12 +1,17 @@
 package mod.emt.thaumictweaker.config;
 
-import com.cleanroommc.configanytime.ConfigAnytime;
+import mod.emt.thaumictweaker.ThaumicTweaker;
 import mod.emt.thaumictweaker.config.generics.GolemMaterialCategory;
 import net.minecraftforge.common.config.Config;
 
-//TODO: Remove before release
-// @Config(modid = ThaumicTweaker.MOD_ID)
-public class ConfigHandlerTT {
+@Config.LangKey("config." + ThaumicTweaker.MOD_ID + ":tweaks")
+/* TODO: Remove before release
+@Config(
+        modid = ThaumicTweaker.MOD_ID,
+        name = ThaumicTweaker.MOD_ID + "/" + ThaumicTweaker.MOD_ID + " - Tweaks"
+)
+ */
+public class ConfigTweaksTT {
     @Config.Name("Apprentice's Ring Tweaks")
     public static ApprenticesRingCategory apprentices_ring = new ApprenticesRingCategory();
     @Config.Name("Crimson Cult Robes Tweaks")
@@ -33,15 +38,17 @@ public class ConfigHandlerTT {
     public static VoidRobesCategory void_robes = new VoidRobesCategory();
     @Config.Name("Void Siphon Tweaks")
     public static VoidSiphonCategory void_siphon = new VoidSiphonCategory();
-    @Config.Name("Wuss Mode Tweaks")
-    @Config.Comment("For those that want an easier time. NOTE: Wuss Mode does not need to be enabled for these tweaks to work.")
-    public static WussModeCategory wuss_mode = new WussModeCategory();
 
     public static class ApprenticesRingCategory {
         @Config.RequiresMcRestart
         @Config.Name("Apprentice's Ring Structure Loot")
         @Config.Comment("Allows the Apprentice's Ring to be rarely found in some vanilla structure chests.")
-        public boolean apprenticesRingStructureLoot = false;
+        public boolean enableStructureLoot = false;
+
+        @Config.RangeInt(min = 1, max = 100)
+        @Config.Name("Apprentice's Ring Vis Discount")
+        @Config.Comment("The Vis discount granted by the Apprentice's Ring.")
+        public int visDiscount = 5;
     }
 
     public static class CrimsonCultRobesCategory {
@@ -83,7 +90,6 @@ public class ConfigHandlerTT {
         @Config.Name("Mirror Instability Decay Rate")
         @Config.Comment("The time, in ticks, between each instability decay operation of the Mirror. Smaller values will result in less flux.")
         public int mirrorInstabilityDecay = 100;
-
     }
 
     public static class GolemTweaksCategory {
@@ -121,14 +127,6 @@ public class ConfigHandlerTT {
         @Config.Name("Disable Infusion Recipe Aspects")
         @Config.Comment("Disables Thaumcraft's dynamic aspect generation from infusion recipes.")
         public boolean disableRecipeAspectsInfusion = false;
-
-        @Config.Name("Eldritch Crab Full Death Rotation")
-        @Config.Comment("Makes Eldritch Crabs fully rotate on death to match the death animations of spiders, silverfish and endermites.")
-        public boolean eldritchCrabFullDeathRotation = true;
-
-        @Config.Name("Enable Focus Effects")
-        @Config.Comment("Revamps the spell cast sounds of certain focus effects for better variety.")
-        public boolean enableFocusEffects = true;
 
         @Config.Name("Sky Scan Dimensions")
         @Config.Comment("A list of dimension ids where the Thaumometer can be used to scan the sky to obtain research notes.")
@@ -219,47 +217,16 @@ public class ConfigHandlerTT {
         public int progressRequired = 2000;
     }
 
-    public static class WussModeCategory {
-        @Config.RequiresMcRestart
-        @Config.Name("Arcane Bore Recipe")
-        @Config.Comment("Makes the Arcane Bore recipe cheaper.")
-        public boolean wussModeArcaneBoreRecipe = false;
 
-        @Config.RequiresMcRestart
-        @Config.Name("Bath Salts Recipe")
-        @Config.Comment("Makes the Bath Salts recipe cheaper.")
-        public boolean wussModeBathSaltsRecipe = false;
 
-        @Config.RequiresMcRestart
-        @Config.Name("Primordial Pearl Creation")
-        @Config.Comment("Enables an infusion recipe to create 1 durability Primordial Pearls from void seeds.")
-        public boolean wussModePrimordialPearlCreationRecipe = false;
 
-        @Config.RequiresMcRestart
-        @Config.Name("Primordial Pearl Growing")
-        @Config.Comment("Enables an infusion enchantment recipe that can increase Primordial Pearl durability.")
-        public boolean wussModePrimordialPearlGrowingRecipe = false;
 
-        @Config.RequiresMcRestart
-        @Config.Name("Sanitizing Soap Recipe")
-        @Config.Comment("Makes the Sanitizing Soap recipe cheaper.")
-        public boolean wussModeSanitizingSoapRecipe = false;
 
-        @Config.Name("Prevent Eldritch Guardian Warp Gain")
-        @Config.Comment("Prevents the player from gaining warp whenever an Eldritch Guardian spawns nearby in line of sight.")
-        public boolean wussModeStopEldritchGuardianWarpGain = false;
 
-        @Config.Name("Void Siphon Wuss Mode")
-        @Config.Comment("The Void Siphon no longer needs nearby rifts to create void seeds. It will passively accumulate progress over time.")
-        public boolean wussModeVoidSiphon = false;
 
-        @Config.RequiresMcRestart
-        @Config.Name("Workbench Charger Recipe")
-        @Config.Comment("Makes the Workbench Charger recipe cheaper.")
-        public boolean wussModeWorkbenchChargerRecipe = false;
-    }
 
-    static {
-        ConfigAnytime.register(ConfigHandlerTT.class);
-    }
+
+
+
+
 }

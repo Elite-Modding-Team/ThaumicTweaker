@@ -1,5 +1,11 @@
 
-
+# Config
+config.thaumictweaker:enhancments=Enhancments
+config.thaumictweaker:enhancments.tooltip=Configuration for enhancments added by Thaumic Tweaker. These are enabled by default
+config.thaumictweaker:tweaks=Tweaks
+config.thaumictweaker:tweaks.tooltip=Configuration for tweaks added by Thaumic Tweaker. These are disabled by default.
+config.thaumictweaker:wuss_mode=Wuss Mode
+config.thaumictweaker:wuss_mode.tooltip=Configuration options for difficulty changes added by Thaumic Tweaker. These are disabled by default and do not require Wuss Mode to be active.
 
 
 # GroovyScript

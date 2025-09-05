@@ -1,6 +1,6 @@
 package mod.emt.thaumictweaker.mixins.tiles;
 
-import mod.emt.thaumictweaker.config.ConfigHandlerTT;
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
@@ -10,6 +10,6 @@ import thaumcraft.common.tiles.devices.TileMirrorEssentia;
 public class TileMirrorEssentiaMixin {
     @ModifyConstant(method = "checkInstability", constant = @Constant(intValue = 100))
     private int modifyInstabilityDecay(int constant) {
-        return ConfigHandlerTT.flux_pollution.essentiaMirrorInstabilityDecay;
+        return ConfigTweaksTT.flux_pollution.essentiaMirrorInstabilityDecay;
     }
 }

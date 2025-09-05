@@ -6,7 +6,7 @@
   "minVersion": "0.8.5" ,
   "compatibilityLevel": "JAVA_8" ,
   "mixins": [
-    "EntityLivingBaseMixin"
+    "entities.EntityLivingBaseMixin"
   ] ,
   "server": [] ,
   "client": []
