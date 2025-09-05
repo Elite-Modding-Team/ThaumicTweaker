@@ -101,7 +101,7 @@ public class ItemThaumometerMixin extends Item {
 
     @Inject(method = "onUpdate", at = @At("HEAD"), cancellable = true)
     public void onUpdateInject(ItemStack stack, World world, Entity entity, int itemSlot, boolean isSelected, CallbackInfo ci) {
-        if ((isSelected && !world.isRemote && entity.ticksExisted % 20 == 0 && entity instanceof EntityPlayerMP) {
+        if (isSelected && !world.isRemote && entity.ticksExisted % 20 == 0 && entity instanceof EntityPlayerMP) {
             this.updateAura(stack, world, (EntityPlayerMP) entity);
         }
 
