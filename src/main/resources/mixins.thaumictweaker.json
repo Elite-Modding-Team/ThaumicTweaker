@@ -40,10 +40,10 @@
   ] ,
   "server": [] ,
   "client": [
-    "containers.GuiArcaneBoreMixin" ,
-    "containers.GuiPechMixin" ,
-    "containers.GuiTurretAdvancedMixin" ,
-    "containers.GuiTurretBasicMixin" ,
-    "entities.client.RenderEldritchCrabMixin"
+    "client.entity.RenderEldritchCrabMixin" ,
+    "client.gui.GuiArcaneBoreMixin" ,
+    "client.gui.GuiPechMixin" ,
+    "client.gui.GuiTurretAdvancedMixin" ,
+    "client.gui.GuiTurretBasicMixin"
   ]
 }

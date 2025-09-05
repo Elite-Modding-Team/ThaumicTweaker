@@ -1,4 +1,4 @@
-package mod.emt.thaumictweaker.mixins.containers;
+package mod.emt.thaumictweaker.mixins.client.gui;
 
 import mod.emt.thaumictweaker.config.ConfigEnhancementsTT;
 import net.minecraft.client.gui.inventory.GuiContainer;

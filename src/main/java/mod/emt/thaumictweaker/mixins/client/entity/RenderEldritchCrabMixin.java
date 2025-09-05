@@ -1,4 +1,4 @@
-package mod.emt.thaumictweaker.mixins.entities.client;
+package mod.emt.thaumictweaker.mixins.client.entity;
 
 import mod.emt.thaumictweaker.config.ConfigEnhancementsTT;
 import net.minecraft.client.model.ModelBase;
