@@ -1,16 +1,6 @@
 # Thaumic Tweaker Features
 Thaumcraft tweaks for tweakers.
 
-## Containers
-- ContainerArcaneBore
-  - Shift gui down to match vanilla chest
-- ContainerPech
-  - Shift gui down to match vanilla chest
-- ContainerTurretAdvanced
-  - Shift gui down to match vanilla chest
-- ContainerTurretBasic
-  - Shift gui down to match vanilla chest
-
 ### Items (DONE)
 - Armor Materials
   - Thaumium - +1 defence, +4 toughness, 2x durability

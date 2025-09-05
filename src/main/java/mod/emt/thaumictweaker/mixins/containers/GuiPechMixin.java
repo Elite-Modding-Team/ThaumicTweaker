@@ -1,27 +1,28 @@
 package mod.emt.thaumictweaker.mixins.containers;
 
+import mod.emt.thaumictweaker.config.ConfigEnhancementsTT;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.inventory.Container;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.Constant;
+import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import org.spongepowered.asm.mixin.injection.Redirect;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import thaumcraft.client.gui.GuiPech;
-import thaumcraft.common.entities.monster.EntityPech;
 
 @SideOnly(Side.CLIENT)
 @Mixin(GuiPech.class)
 public abstract class GuiPechMixin extends GuiContainer {
     public GuiPechMixin(Container inventorySlotsIn) {
         super(inventorySlotsIn);
+    }
+
+    @ModifyConstant(method = "<init>", constant = @Constant(intValue = 232))
+    private int textureYSizeMixin(int constant) {
+        return ConfigEnhancementsTT.adjustPechGui ? 166 : constant;
     }
 
     /**
