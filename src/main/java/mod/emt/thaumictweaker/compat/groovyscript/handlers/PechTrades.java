@@ -98,7 +98,7 @@ public class PechTrades extends VirtualizedRegistry<PechTrade> {
         private String pechType;
         @Property(comp = @Comp(gte = 1, lte = 5), defaultValue = "1")
         private int tradeLevel;
-        @Property
+        @Property(defaultValue = "ItemStack.EMPTY")
         private ItemStack tradeItem;
 
         public RecipeBuilder() {
