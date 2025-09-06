@@ -11,6 +11,7 @@ import mod.emt.thaumictweaker.util.misc.MiningResult;
 import net.minecraft.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
+@SuppressWarnings("unused")
 @RegistryDescription(
         linkGenerator = ThaumicTweaker.MOD_ID,
         reloadability = RegistryDescription.Reloadability.FLAWED
@@ -34,45 +35,32 @@ public class SpecialMiningResult extends VirtualizedRegistry<MiningResult> {
                 .register();
     }
 
-    @MethodDescription(
-            type = MethodDescription.Type.REMOVAL,
-            example = @Example("ore('oreIron')")
-    )
+    @MethodDescription(type = MethodDescription.Type.REMOVAL, example = @Example("ore('oreIron')"))
     public void removeByHarvestDrop(IIngredient harvestDrop) {
         SpecialMiningHelper.removeSpecialMiningResultByInput(harvestDrop.toMcIngredient());
     }
 
-    @MethodDescription(
-            type = MethodDescription.Type.REMOVAL,
-            example = @Example("item('thuamcraft:cluster:0')"),
-            priority = 1001
-    )
+    @MethodDescription(type = MethodDescription.Type.REMOVAL, example = @Example("item('thuamcraft:cluster:0')"), priority = 1001)
     public void removeByOutput(IIngredient output) {
         SpecialMiningHelper.removeSpecialMiningResultByOutput(output.toMcIngredient());
     }
 
-    @MethodDescription(
-            type = MethodDescription.Type.REMOVAL
-    )
+    @MethodDescription(type = MethodDescription.Type.REMOVAL, priority = 2000)
     public void removeAll() {
         SpecialMiningHelper.removeAllSpecialMiningResults();
     }
 
-    @RecipeBuilderDescription(
-            example = {
-                    @Example(".setHarvested(item('minecraft:iron_ore')).setResult(item('thaumcraft:cluster:0')).setChance(1.0)")
-            }
-    )
+    @RecipeBuilderDescription(example = @Example(".setHarvested(item('minecraft:iron_ore')).setResult(item('thaumcraft:cluster:0')).setChance(1.0)"))
     public RecipeBuilder recipeBuilder() {
         return new RecipeBuilder();
     }
 
     public static class RecipeBuilder extends AbstractRecipeBuilder<MiningResult> {
-        @Property
+        @Property(defaultValue = "IIngredient.EMPTY")
         private IIngredient harvestDrop;
-        @Property
+        @Property(defaultValue = "ItemStack.EMPTY")
         private ItemStack result;
-        @Property(comp = @Comp(gte = 0, lte = 1))
+        @Property(comp = @Comp(gte = 0, lte = 1), defaultValue = "1.0F")
         private float chance;
 
         public RecipeBuilder() {
@@ -87,7 +75,7 @@ public class SpecialMiningResult extends VirtualizedRegistry<MiningResult> {
             return this;
         }
 
-        @RecipeBuilderMethodDescription(field = "result", priority = 1001)
+        @RecipeBuilderMethodDescription(field = "result", priority = 2000)
         public RecipeBuilder setResult(ItemStack result) {
             this.result = result;
             return this;

@@ -11,7 +11,7 @@ config.thaumictweaker:wuss_mode.tooltip=Configuration options for difficulty cha
 # GroovyScript
 # -- PECH TRADES
 groovyscript.wiki.thaumictweaker.pech_trades.title=Thaumcraft Pech Trades
-groovyscript.wiki.thaumictweaker.pech_trades.description=Pech Trades are a trading mechanic added by Thaumcraft. Pech trades involve giving a Pech an item and randomly generating a selection of loot based on the value of the item traded. Due to a limitation in Thaumcraft, Pechs must have at least one registered trade for each trade level (1 - 5). Congrega Mystica automatically re-populates any missing trades with scrap items.
+groovyscript.wiki.thaumictweaker.pech_trades.description=Pech Trades are a trading mechanic added by Thaumcraft. Pech trades involve giving a Pech an item and randomly generating a selection of loot based on the value of the item traded. Due to a limitation in Thaumcraft, Pechs must have at least one registered trade for each trade level (1 - 5). ThaumicTweaker automatically re-populates any missing trades with scrap items.
 groovyscript.wiki.thaumictweaker.pech_trades.addTrade=Adds a Pech Trade in the format `pechType`, `tradeLevel`, `stack`. Parameter `pechType` can be 'MINER', 'MAGE', 'ARCHER', or 'COMMON'. Parameter `tradeLevel` must be a value between 1 and 5
 groovyscript.wiki.thaumictweaker.pech_trades.removeTrade=Removes any trades belonging to the Pech variant that match the given item.  Read the tweaker description before using this method
 groovyscript.wiki.thaumictweaker.pech_trades.removeAllTrades1=Removes all trades registered to this Pech variant. Acceptable values are 'MINER', 'MAGE', 'ARCHER', or 'COMMON'. Read the tweaker description before using this method
@@ -41,5 +41,5 @@ groovyscript.wiki.thaumictweaker.special_mining_result.chance.value=The chance t
 # -- UTILS
 groovyscript.wiki.thaumictweaker.utils.title=Thaumic Tweaker Utils
 groovyscript.wiki.thaumictweaker.utils.description=Several utility methods used to make handling some Thaumcraft stuff easier
-groovyscript.wiki.thaumictweaker.utils.getVisCrystal=Returns a Vis crystal with the specified AspectStack
+groovyscript.wiki.thaumictweaker.utils.getVisCrystal=Returns a Vis crystal with the specified AspectStack (includes Aspect amount)
 groovyscript.wiki.thaumictweaker.utils.getAspectPhial=Returns a Essentia Phial filled with the specified aspect

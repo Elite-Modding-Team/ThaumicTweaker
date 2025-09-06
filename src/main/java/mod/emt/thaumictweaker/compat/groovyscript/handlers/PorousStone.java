@@ -26,7 +26,7 @@ public class PorousStone extends NamedRegistry implements IScriptReloadable {
 
     @MethodDescription(
             type = MethodDescription.Type.ADDITION,
-            example = @Example("it")
+            example = @Example("item('minecraft:clay'), 5")
     )
     public void addDrop(ItemStack stack, int weight) {
         GroovyLog.Msg msg = GroovyLog.msg("Failed to add Porous Stone drop.");
@@ -40,8 +40,8 @@ public class PorousStone extends NamedRegistry implements IScriptReloadable {
     @MethodDescription(
             type = MethodDescription.Type.REMOVAL,
             example = {
-                    @Example("thaumcraft:crystal_essence"),
-                    @Example("thaumcraft:cluster:*")
+                    @Example("item('thaumcraft:crystal_essence')"),
+                    @Example("item('thaumcraft:cluster:*')")
             }
     )
     public void removeDrop(IIngredient ingredient) {

@@ -70,9 +70,9 @@ public class PechTrades extends VirtualizedRegistry<PechTrade> {
 
     @MethodDescription(
             type = MethodDescription.Type.REMOVAL,
-            example = @Example("'MINER'"),
-            priority = 1001,
-            description = "groovyscript.wiki.congregamystica.pech_trades.removeAllTrades1"
+            example = @Example(value = "'MINER'", commented = true),
+            description = "groovyscript.wiki.thaumictweaker.pech_trades.removeAllTrades1",
+            priority = 2000
     )
     public void removeAllTrades(String pechType) {
         PechHelper.removeAllPechTrades(PechHelper.getPechType(pechType));
@@ -80,17 +80,15 @@ public class PechTrades extends VirtualizedRegistry<PechTrade> {
 
     @MethodDescription(
             type = MethodDescription.Type.REMOVAL,
-            description = "groovyscript.wiki.congregamystica.pech_trades.removeAllTrades2"
+            example = @Example(commented = true),
+            description = "groovyscript.wiki.thaumictweaker.pech_trades.removeAllTrades2",
+            priority = 2001
     )
     public void removeAllTrades() {
         PechHelper.removeAllPechTrades();
     }
 
-    @RecipeBuilderDescription(
-            example = {
-                    @Example(".setPechType('MINER').setTradeLevel(1).setTradeItem(item('minecraft:diamond'))")
-            }
-    )
+    @RecipeBuilderDescription(example = @Example(".setPechType('MINER').setTradeLevel(1).setTradeItem(item('minecraft:diamond'))"))
     public RecipeBuilder recipeBuilder() {
         return new RecipeBuilder();
     }
