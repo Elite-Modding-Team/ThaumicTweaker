@@ -1,4 +1,11 @@
 # Changelog ThaumicTweaker
+## 1.1.0
+### Added
+- Added fix for Flux Rifts not collapsing when fully consumed by Void Siphons
+
+### Changed
+### Fixed
+
 ## 1.0.1
 ### Fixes
 - Fixed crash caused by unchecked EntityPlayer cast on damage event

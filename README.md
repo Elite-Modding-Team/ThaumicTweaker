@@ -9,6 +9,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 ## Fixes
 - Fixed Boots of the Traveler and Cloud Ring screen shake and damage sound when taking zero fall damage
+- Fixed Flux Rifts not collapsing when fully drained by Void Siphons
 - Fixed FXPollution packet causing a client-side crash when handling large values
 - Fixed Pech trading GUI hovered item tooltip issue (made glowing items turn black)
 - Fixed Primal Crusher re-equipping when repairing

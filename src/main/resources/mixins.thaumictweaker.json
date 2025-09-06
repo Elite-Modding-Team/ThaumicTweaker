@@ -9,6 +9,7 @@
     "blocks.BlockStonePorousMixin" ,
     "containers.ContainerResearchTableMixin" ,
     "entities.EntityEldritchGuardianMixin" ,
+    "entities.EntityFluxRiftMixin" ,
     "entities.EntityFocusMineMixin" ,
     "entities.EntityPechMixin" ,
     "focus.FocusEffectBreakMixin" ,
