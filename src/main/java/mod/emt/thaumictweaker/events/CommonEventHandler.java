@@ -48,8 +48,8 @@ public class CommonEventHandler {
     @SubscribeEvent
     public static void onLivingAttack(LivingAttackEvent event) {
         //Fixes the player being affected by a screen shake when no damage is taken
-        if (event.getSource() == DamageSource.FALL) {
-            EntityLivingBase entity = event.getEntityLiving();
+        EntityLivingBase entity = event.getEntityLiving();
+        if (event.getSource() == DamageSource.FALL && entity instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) entity;
             ItemStack boots = entity.getItemStackFromSlot(EntityEquipmentSlot.FEET);
 
