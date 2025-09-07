@@ -40,7 +40,7 @@ public class SpecialMiningResult extends VirtualizedRegistry<MiningResult> {
         SpecialMiningHelper.removeSpecialMiningResultByInput(harvestDrop.toMcIngredient());
     }
 
-    @MethodDescription(type = MethodDescription.Type.REMOVAL, example = @Example("item('thuamcraft:cluster:0')"), priority = 1001)
+    @MethodDescription(type = MethodDescription.Type.REMOVAL, example = @Example("item('thaumcraft:cluster:0')"), priority = 1001)
     public void removeByOutput(IIngredient output) {
         SpecialMiningHelper.removeSpecialMiningResultByOutput(output.toMcIngredient());
     }
@@ -50,7 +50,7 @@ public class SpecialMiningResult extends VirtualizedRegistry<MiningResult> {
         SpecialMiningHelper.removeAllSpecialMiningResults();
     }
 
-    @RecipeBuilderDescription(example = @Example(".setHarvested(item('minecraft:iron_ore')).setResult(item('thaumcraft:cluster:0')).setChance(1.0)"))
+    @RecipeBuilderDescription(example = @Example(".setHarvestDrop(item('minecraft:iron_ore')).setResult(item('thaumcraft:cluster:0')).setChance(1.0)"))
     public RecipeBuilder recipeBuilder() {
         return new RecipeBuilder();
     }
