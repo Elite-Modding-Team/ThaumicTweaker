@@ -24,6 +24,7 @@
     "focus.FocusMediumCloudMixin" ,
     "focus.FocusMediumMineMixin" ,
     "focus.FocusMediumSpellbatMixin" ,
+    "golems.SealUseMixin" ,
     "items.ItemBaublesMixin" ,
     "items.ItemCutlistRobeArmorMixin" ,
     "items.ItemPrimalCrusherMixin" ,
