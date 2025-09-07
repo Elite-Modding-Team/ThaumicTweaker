@@ -25,6 +25,24 @@ public abstract class HudHandlerMixin {
 
     /**
      * @author Invadermonky
+     * @reason Fixes the Thaumometer hud not binding the Gui texture before drawing the HUD
+     */
+    @Inject(method = "renderThaumometerHud", at = @At(value = "INVOKE", target = "Lorg/lwjgl/opengl/GL11;glColor4f(FFFF)V", shift = At.Shift.AFTER))
+    private void bindTextureThaumometerHudMixin(Minecraft mc, float partialTicks, EntityPlayer player, long time, int ww, int hh, int shifty, CallbackInfo ci) {
+        mc.renderEngine.bindTexture(this.HUD);
+    }
+
+    /**
+     * @author Invadermonky
+     * @reason Fixes the Caster Gui rendering the sprite map instead of the correct Gui after rendering the picked block ItemStack
+     */
+    @Inject(method = "renderSanityHud", at = @At(value = "HEAD"))
+    private void bindTextureSanityHudMixin(Minecraft mc, Float partialTicks, EntityPlayer player, long time, int shifty, CallbackInfo ci) {
+        mc.renderEngine.bindTexture(this.HUD);
+    }
+
+    /**
+     * @author Invadermonky
      * @reason Fixes the Caster Gui icon location when holding the casting gauntlet in the offhand
      */
     @Redirect(method = "renderCastingWandHud", at = @At(value = "INVOKE", target = "Lorg/lwjgl/opengl/GL11;glTranslatef(FFF)V", ordinal = 1))
@@ -33,24 +51,6 @@ public abstract class HudHandlerMixin {
             y = shifty;
         }
         GL11.glTranslatef(x, y, z);
-    }
-
-    /**
-     * @author Invadermonky
-     * @reason Fixes the Caster Gui rendering the sprite map instead of the correct Gui after rendering the focus ItemStack
-     */
-    @Inject(method = "renderCastingWandHud", at = @At("RETURN"))
-    private void rebindGuiTextureMixin(Minecraft mc, float partialTicks, EntityPlayer player, long time, ItemStack wandstack, int shifty, CallbackInfo ci) {
-        mc.renderEngine.bindTexture(this.HUD);
-    }
-
-    /**
-     * @author Invadermonky
-     * @reason Fixes the Caster Gui rendering the sprite map instead of the correct Gui after rendering the picked block ItemStack
-     */
-    @Inject(method = "renderWandTradeHud", at = @At("RETURN"))
-    private void rebindGuiTextureMixin(float partialTicks, EntityPlayer player, long time, ItemStack picked, CallbackInfo ci) {
-        Minecraft.getMinecraft().renderEngine.bindTexture(this.HUD);
     }
 
     /**
