@@ -182,6 +182,16 @@ public class ConfigTweaksTT {
         @Config.Name("Research Item Pulling")
         @Config.Comment("Allows the Research Table to use and consume items from nearby inventories for research. Table will search up to 3 blocks away from the Research Table for inventories.")
         public boolean researchTablePulling = false;
+
+        @Config.RangeInt(min = 1, max = 12)
+        @Config.Name("Research Aid Vertical Search Distance")
+        @Config.Comment("Adjusts the vertical search area when the Research Table scans nearby blocks for Research Aids.")
+        public int aidSearchVertical = 1;
+
+        @Config.RangeInt(min = 1, max = 12)
+        @Config.Name("Research Aid Horizontal Search Distance")
+        @Config.Comment("Adjusts the horizontal search area when the Research Table scans nearby blocks for Research Aids.")
+        public int aidSearchHorizontal = 4;
     }
 
     public static class VisGeneratorCategory {

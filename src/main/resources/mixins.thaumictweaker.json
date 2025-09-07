@@ -35,6 +35,7 @@
     "misc.ThaumcraftCraftingManagerMixin" ,
     "tiles.TileMirrorEssentiaMixin" ,
     "tiles.TileMirrorMixin" ,
+    "tiles.TileResearchTableMixin" ,
     "tiles.TileThaumatoriumTopMixin" ,
     "tiles.TileVisGeneratorMixin" ,
     "tiles.TileVoidSiphonMixin"
