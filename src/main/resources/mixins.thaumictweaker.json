@@ -34,6 +34,7 @@
     "misc.PacketFXPolluteMixin" ,
     "misc.ScanSkyMixin" ,
     "misc.ThaumcraftCraftingManagerMixin" ,
+    "misc.WarpEventsMixin" ,
     "tiles.TileMirrorEssentiaMixin" ,
     "tiles.TileMirrorMixin" ,
     "tiles.TileResearchTableMixin" ,

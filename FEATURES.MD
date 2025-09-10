@@ -45,4 +45,6 @@ Thaumcraft tweaks for tweakers.
 - Requesting items from golems manually sometimes fails
 - Unequiping spells doesn't work if you sneak-focus button in midair or while floating in water.
 - Golem Use seals act weirdly in some cases, for instance I couldn't get a golem to fill up a bucket of water from a water source.
-- 
+- Convert janky mob drops into actual loot tables
+- Add Crucible heat sources
+- Add Tab completion to TC commands (including research)
