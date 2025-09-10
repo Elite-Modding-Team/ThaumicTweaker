@@ -28,4 +28,9 @@ public class ConfigEnhancementsTT {
     @Config.Name("Eldritch Crab Full Death Rotation")
     @Config.Comment("Makes Eldritch Crabs fully rotate on death to match the death animations of spiders, silverfish and endermites.")
     public static boolean eldritchCrabFullDeathRotation = true;
+
+    @Config.RequiresMcRestart
+    @Config.Name("Warding Effect")
+    @Config.Comment("Adds an effect on top of a player's heath bar whenever Runic Warding is active.")
+    public static boolean wardingEffect = true;
 }

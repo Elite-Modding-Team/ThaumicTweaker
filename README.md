@@ -31,8 +31,9 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
     - Revamps the cast sounds of certain focus effects to provide better variety (Break, Earth, Exchange, Frost, Heal, Rift)
     - Adds impact sounds to various focus effects that lack any (Break, Earth, Exchange, Fire, Flux , Frost, Heal, Rift)
     - Makes several focus mediums play additional cast sounds to differentiate them (Bolt, Cloud, Mine, Spellbat)
-- **Gui Adjustments:**
+- **Gui Enhancements:**
     - Adjusted Pech Trade, Arcane Bore, and Advanced/Basic Automated Crossbow Gui position to match other inventories
+    - Add Runic Warding effect over health bar whenever warding is active
 
 ---
 

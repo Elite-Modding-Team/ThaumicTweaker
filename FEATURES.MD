@@ -43,6 +43,6 @@ Thaumcraft tweaks for tweakers.
 - If you put a gauntlet equipped with a Break focus on your offhand with an item infused with Destructive on the main hand, it will actually activate it when mining with the Break focus (doesn't occur in Creative)
 - Golem blacklist and whitelist fails for certain types of blocks (not items), especially ones that are coded in the old way using metadata (like botanias living stone and living wood)
 - Requesting items from golems manually sometimes fails
-- Water frozen by the Frost focus doesn't gradually crack and turn back into water like it should, it tends to get stuck.
 - Unequiping spells doesn't work if you sneak-focus button in midair or while floating in water.
 - Golem Use seals act weirdly in some cases, for instance I couldn't get a golem to fill up a bucket of water from a water source.
+- 
