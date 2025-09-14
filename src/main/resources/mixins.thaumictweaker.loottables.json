@@ -1,0 +1,29 @@
+{
+  "package": "mod.emt.thaumictweaker.mixins.loottables" ,
+  "required": true ,
+  "refmap": "mixins.thaumictweaker.refmap.json" ,
+  "target": "@env(DEFAULT)" ,
+  "minVersion": "0.8.5" ,
+  "compatibilityLevel": "JAVA_8" ,
+  "mixins": [
+    "boss.EntityCultistLeaderMixin" ,
+    "boss.EntityEldritchGolemMixin" ,
+    "boss.EntityEldritchWardenMixin" ,
+    "boss.EntityTaintacleGiantMixin" ,
+    "boss.EntityThaumcraftBossMixin" ,
+    "mobs.EntityEldritchCrabMixin" ,
+    "mobs.EntityEldritchGuardianMixin" ,
+    "mobs.EntityFireBatMixin" ,
+    "mobs.EntityGiantBrainyZombieMixin" ,
+    "mobs.EntityInhabitedZombieMixin" ,
+    "mobs.EntityMindSpiderMixin" ,
+    "tainted.EntityTaintacleMixin" ,
+    "tainted.EntityTaintacleSmallMixin" ,
+    "tainted.EntityTaintCrawlerMixin" ,
+    "tainted.EntityTaintSeedMixin" ,
+    "tainted.EntityTaintSeedPrimeMixin" ,
+    "tainted.EntityTaintSwarmMixin"
+  ] ,
+  "server": [] ,
+  "client": []
+}
