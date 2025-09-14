@@ -1,5 +1,6 @@
 package mod.emt.thaumictweaker.config;
 
+import com.cleanroommc.configanytime.ConfigAnytime;
 import mod.emt.thaumictweaker.ThaumicTweaker;
 import net.minecraftforge.common.config.Config;
 
@@ -47,4 +48,7 @@ public class ConfigWussModeTT {
     @Config.Comment("The Void Siphon no longer needs nearby rifts to create void seeds. It will passively accumulate progress over time.")
     public static boolean wussModeVoidSiphon = false;
 
+    static {
+        ConfigAnytime.register(ConfigWussModeTT.class);
+    }
 }

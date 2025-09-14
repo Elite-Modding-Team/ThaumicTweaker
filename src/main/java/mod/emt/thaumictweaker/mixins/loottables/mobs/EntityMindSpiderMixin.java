@@ -24,7 +24,6 @@ public abstract class EntityMindSpiderMixin extends EntityMob {
 
     @Override
     protected @Nullable ResourceLocation getLootTable() {
-        //TODO: Loot table
-        return LootTablesTT.EMPTY;
+        return LootTablesTT.MIND_SPIDER;
     }
 }

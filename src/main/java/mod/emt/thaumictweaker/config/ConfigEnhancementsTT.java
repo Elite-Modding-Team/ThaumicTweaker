@@ -1,5 +1,6 @@
 package mod.emt.thaumictweaker.config;
 
+import com.cleanroommc.configanytime.ConfigAnytime;
 import mod.emt.thaumictweaker.ThaumicTweaker;
 import net.minecraftforge.common.config.Config;
 
@@ -37,4 +38,8 @@ public class ConfigEnhancementsTT {
     @Config.Name("Warding Effect")
     @Config.Comment("Adds an effect on top of a player's heath bar whenever Runic Warding is active.")
     public static boolean wardingEffect = true;
+
+    static {
+        ConfigAnytime.register(ConfigEnhancementsTT.class);
+    }
 }

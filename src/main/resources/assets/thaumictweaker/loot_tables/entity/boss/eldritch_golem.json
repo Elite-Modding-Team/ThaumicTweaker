@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "loot_table",
-          "name": "thaumictweaker:boss/universal",
+          "name": "thaumictweaker:boss/boss_shared",
           "weight": 1
         }
       ]

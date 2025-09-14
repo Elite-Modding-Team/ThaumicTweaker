@@ -24,7 +24,6 @@ public abstract class EntityTaintSeedPrimeMixin extends EntityMob {
 
     @Override
     protected @Nullable ResourceLocation getLootTable() {
-        //TODO: Loot table
-        return LootTablesTT.EMPTY;
+        return LootTablesTT.TAINT_SEED_GIANT;
     }
 }

@@ -24,7 +24,6 @@ public abstract class EntityInhabitedZombieMixin extends EntityMob {
 
     @Override
     protected @Nullable ResourceLocation getLootTable() {
-        //TODO: Loot table
-        return LootTablesTT.EMPTY;
+        return LootTablesTT.SHAMBLING_HUSK;
     }
 }

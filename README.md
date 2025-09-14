@@ -84,6 +84,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Miscellaneous Tweaks:**
     - Allow Thaumometer sky scanning from non-overworld dimensions
     - Change Alchemical brass recipe to use copper instead of iron
+    - Change Thaumcraft mobs and bosses so they generate loot from Loot Tables instead of hardcoded drops
     - Disable Thaumcraft's item aspect calculation based on item crafting recipe 
     - Restores Legacy Thaumometer scanning functionality from 1.7.10
 
