@@ -9,7 +9,6 @@
     "boss.EntityCultistLeaderMixin" ,
     "boss.EntityEldritchGolemMixin" ,
     "boss.EntityEldritchWardenMixin" ,
-    "boss.EntityTaintacleGiantMixin" ,
     "boss.EntityThaumcraftBossMixin" ,
     "mobs.EntityEldritchCrabMixin" ,
     "mobs.EntityEldritchGuardianMixin" ,
