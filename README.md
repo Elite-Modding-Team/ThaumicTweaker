@@ -13,6 +13,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - Fixed Caster's Gauntlet Gui causing rendering issues when gauntlet is in mainhand and Thaumometer or Sanity Checker is held in the offhand
 - Fixed Flux Rifts not collapsing when fully drained by Void Siphons
 - Fixed FXPollution packet causing a client-side crash when handling large values
+- Fixed Giant Taintacles spawning with reduced health
 - Fixed Golems voiding held items when interacting with Use Seals with "Can use empty hand" enabled
 - Fixed Pech trading GUI hovered item tooltip issue (made glowing items turn black)
 - Fixed Primal Crusher re-equipping when repairing

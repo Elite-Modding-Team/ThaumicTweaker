@@ -13,6 +13,7 @@
     "entities.EntityFocusMineMixin" ,
     "entities.EntityPechMixin" ,
     "entities.EntitySpecialItemMixin" ,
+    "entities.EntityTaintacleGiantMixin" ,
     "focus.FocusEffectBreakMixin" ,
     "focus.FocusEffectEarthMixin" ,
     "focus.FocusEffectExchangeMixin" ,

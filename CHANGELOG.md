@@ -4,6 +4,7 @@
 - Added fix for Caster's Gauntlet causing erroring GUI textures when held in mainhand
 - Added fix for Caster's Gauntlet GUI not shifting correctly when held in offhand
 - Added fix for Flux Rifts not collapsing when fully consumed by Void Siphons
+- Added fix for Giant Taintacles spawning with reduced health
 - Added fix for Golems voiding held items when interacting with Use Seals with "Can use empty hand" enabled
 - Added fix for Primordial Pearls spawned by boss kills maintaining momentum
 - Added fix for Primordial Pearls spawned by boss kills floating 3-4 blocks above kill boss location
