@@ -52,6 +52,7 @@
     "client.gui.GuiArcaneBoreMixin" ,
     "client.gui.GuiPechMixin" ,
     "client.gui.GuiTurretAdvancedMixin" ,
-    "client.gui.GuiTurretBasicMixin"
+    "client.gui.GuiTurretBasicMixin" ,
+    "client.models.ProxyEntitiesMixin"
   ]
 }
