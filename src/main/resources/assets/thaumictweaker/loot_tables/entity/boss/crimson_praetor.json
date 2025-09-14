@@ -1,0 +1,22 @@
+{
+  "type": "entity",
+  "pools": [
+    {
+      "name": "loot_bag",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "thaumcraft:loot_bag",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_data",
+              "data": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "entity",
+  "pools": [
+    {
+      "name": "universal_loot",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "name": "thaumictweaker:boss/universal",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}
