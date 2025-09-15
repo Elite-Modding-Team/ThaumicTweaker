@@ -34,7 +34,7 @@ public class RunicShieldingHudHandler {
                 EntityPlayer player = (EntityPlayer) Minecraft.getMinecraft().getRenderViewEntity();
                 long time = System.currentTimeMillis();
 
-                if (player != null && mc.inGameHasFocus && !player.isCreative() && Minecraft.isGuiEnabled() /*&& PlayerRunicEvents.hasRunicHP(player) && PlayerRunicEvents.getRunicHP(player) > 0*/) {
+                if (player != null && mc.inGameHasFocus && !player.isCreative() && Minecraft.isGuiEnabled() && this.getTotalRunicArmor(player) > 0 && player.getAbsorptionAmount() > 0) {
                     renderRunicArmorBar(mc, event.renderTickTime, player, time);
                 }
             }
