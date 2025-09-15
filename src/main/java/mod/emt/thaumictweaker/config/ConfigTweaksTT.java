@@ -13,6 +13,8 @@ import net.minecraftforge.common.config.Config;
 public class ConfigTweaksTT {
     @Config.Name("Apprentice's Ring Tweaks")
     public static ApprenticesRingCategory apprentices_ring = new ApprenticesRingCategory();
+    @Config.Name("Crucible Tweaks")
+    public static CrucibleCategory crucible = new CrucibleCategory();
     @Config.Name("Crimson Cult Robes Tweaks")
     public static CrimsonCultRobesCategory cult_robes = new CrimsonCultRobesCategory();
     @Config.Name("Curiosity Tweaks")
@@ -65,6 +67,24 @@ public class ConfigTweaksTT {
         @Config.Name("Leggings Vis Discount")
         @Config.Comment("The Vis discount granted when wearing the Crimson Cult Leggings.")
         public int visDiscountLeggings = 1;
+    }
+
+    public static class CrucibleCategory {
+        @Config.Name("Crucible Heat Sources")
+        @Config.Comment
+                ({
+                        "A list of blocks that can be used as Crucible heat sources.",
+                        "Format:",
+                        "  modid:blockid",
+                        "  modid:blockid:meta",
+                        "Example:",
+                        "  minecraft:stone",
+                        "  minecraft:stone:0"
+                })
+        public String[] crucibleHeatSources = new String[] {
+                "minecraft:stone:1",
+                "minecraft:torch"
+        };
     }
 
     public static class CuriosityTweaksCategory {

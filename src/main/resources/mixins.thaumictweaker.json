@@ -38,6 +38,7 @@
     "misc.ScanSkyMixin" ,
     "misc.ThaumcraftCraftingManagerMixin" ,
     "misc.WarpEventsMixin" ,
+    "tiles.TileCrucibleMixin" ,
     "tiles.TileMirrorEssentiaMixin" ,
     "tiles.TileMirrorMixin" ,
     "tiles.TileResearchTableMixin" ,

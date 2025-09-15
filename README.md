@@ -48,6 +48,8 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Apprentice's Ring Tweaks:**
     - Allow the Apprentice's Ring to be looted from some vanilla structures
     - Modify the Vis Discount granted by the Apprentice's Ring
+- **Crucible Tweaks:**
+    - Add additional blocks that can heat the Crucible
 - **Cult Robes Tweaks:**
     - Modify the Vis discount granted by each piece of armor
 - **Curiosity Tweaks:**
