@@ -81,10 +81,7 @@ public class ConfigTweaksTT {
                         "  minecraft:stone",
                         "  minecraft:stone:0"
                 })
-        public String[] crucibleHeatSources = new String[] {
-                "minecraft:stone:1",
-                "minecraft:torch"
-        };
+        public String[] crucibleHeatSources = new String[] {};
     }
 
     public static class CuriosityTweaksCategory {
