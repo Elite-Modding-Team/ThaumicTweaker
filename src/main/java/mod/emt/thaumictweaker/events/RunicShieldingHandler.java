@@ -42,6 +42,7 @@ public class RunicShieldingHandler {
 
     public static double getRunicShielding(EntityPlayer player) {
         if(ENABLE_NEW_RUNIC_SHIELDING) {
+            registerAttribute(player.getAttributeMap(), RUNIC_SHIELDING);
             return player.getEntityAttribute(RUNIC_SHIELDING).getAttributeValue();
         } else {
             return player.getAbsorptionAmount();
@@ -50,6 +51,7 @@ public class RunicShieldingHandler {
 
     public static void setRunicShielding(EntityPlayer player, double shielding) {
         if(ENABLE_NEW_RUNIC_SHIELDING) {
+            registerAttribute(player.getAttributeMap(), RUNIC_SHIELDING);
             IAttributeInstance instance = player.getEntityAttribute(RUNIC_SHIELDING);
             instance.removeModifier(RUNIC_SHIELDING_ID);
             instance.applyModifier(new AttributeModifier(RUNIC_SHIELDING_ID, RUNIC_SHIELDING_NAME, shielding, 0));
