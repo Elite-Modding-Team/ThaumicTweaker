@@ -42,6 +42,19 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 ---
 
+## CraftTweaker/GroovyScript
+**NOTE:** Scripting methods and their uses can be found on the mod [wiki](https://github.com/Elite-Modding-Team/ThaumicTweaker/wiki).
+
+- **Collapsing Flux Rift Drops:**
+    - Add additional items that drop when collapsing Flux Rifts using CraftTweaker or GroovyScript
+- **Pech Trades:**
+    - Add and remove Pech trades using CraftTweaker or GroovyScript
+    - Add Pech valued items using CraftTweaker or GroovyScript
+- **Porous Stone Tweaks:**
+    - Add or remove Porous Stone special item drops using CraftTweaker or GroovyScript
+
+---
+
 ## General Tweaks
 **NOTE:** All tweaks listed in this category are disabled by default or use Thaumcraft default values. 
 
@@ -65,11 +78,8 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Golem Material Tweaks:**
     - Change golem material stats such as armor, health, damage, and crafting material
 - **Pech Trade Tweaks:** 
-    - Add and remove Pech trades using CraftTweaker or GroovyScript
-    - Add Pech valued items using CraftTweaker or GroovyScript
     - Change Pech item value calculation
 - **Porous Stone Tweaks:**
-    - Add or remove Porous Stone special item drops using CraftTweaker or GroovyScript
     - Change the chance special items will drop when harvesting Porous Stone
     - Increase the number of special items that drop when harvesting Porous Stone
 - **Primal Crusher Tweaks:**

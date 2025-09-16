@@ -7,9 +7,10 @@ import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.minecraft.CraftTweakerMC;
 import mod.emt.thaumictweaker.ThaumicTweaker;
 import mod.emt.thaumictweaker.util.helpers.AspectContainerHelper;
+import mod.emt.thaumictweaker.util.helpers.FluxRiftHelper;
 import mod.emt.thaumictweaker.util.libs.ModIds;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.Optional;
+import stanhebben.zenscript.annotations.Optional;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 import thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
@@ -40,7 +41,12 @@ public class TweakerUtilsCT {
         }
     }
 
-    @Optional.Method(modid = ModIds.ConstIds.modtweaker)
+    @ZenMethod
+    public static void addCollapsingRiftDrop(IItemStack item, @Optional int riftSize, @Optional float dropChance) {
+        FluxRiftHelper.addCollapsingRiftDrop(CraftTweakerMC.getItemStack(item), riftSize, dropChance);
+    }
+
+    @net.minecraftforge.fml.common.Optional.Method(modid = ModIds.ConstIds.modtweaker)
     @ZenMethod
     public static IItemStack getVisCrystal(CTAspectStack aspect) {
         if(aspect.getAmount() <= 0) {
@@ -51,7 +57,7 @@ public class TweakerUtilsCT {
         return CraftTweakerMC.getIItemStack(crystalStack);
     }
 
-    @Optional.Method(modid = ModIds.ConstIds.modtweaker)
+    @net.minecraftforge.fml.common.Optional.Method(modid = ModIds.ConstIds.modtweaker)
     @ZenMethod
     public static IItemStack getAspectPhial(CTAspectStack aspect) {
         ItemStack phialStack = AspectContainerHelper.createAspectPhial(aspect.getInternal().getInternal());

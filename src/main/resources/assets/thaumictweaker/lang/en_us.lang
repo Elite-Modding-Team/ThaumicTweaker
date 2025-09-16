@@ -43,3 +43,4 @@ groovyscript.wiki.thaumictweaker.utils.title=Thaumic Tweaker Utils
 groovyscript.wiki.thaumictweaker.utils.description=Several utility methods used to make handling some Thaumcraft stuff easier
 groovyscript.wiki.thaumictweaker.utils.getVisCrystal=Returns a Vis crystal with the specified AspectStack (includes Aspect amount)
 groovyscript.wiki.thaumictweaker.utils.getAspectPhial=Returns a Essentia Phial filled with the specified aspect
+groovyscript.wiki.thaumictweaker.utils.addCollapsingRiftDrop=Adds an additional drop when collapsing a Flux Rift in the format `drop`, `requiredRiftSize`, `chance`
