@@ -46,3 +46,4 @@ Thaumcraft tweaks for tweakers.
 - Add Tab completion to TC commands (including research)
 - Check if `ToolEvents#livingDrops()` is causing a dupe issue with replaced items and Collector infusion enchant (needs event priority LOWEST)
 - Focal Manipulator scan and consume vis crystals from nearby inventories
+- Add tweaker method to add drops to Rift collapse

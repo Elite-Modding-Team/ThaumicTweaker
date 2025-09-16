@@ -12,7 +12,8 @@
 - Added enhancement adding an effect over the player's health bar whenenever runic shielding is active
 - Added enhancement suppressing Warp events while player is in creative mode
 - Added tweak increasing vertical search range when the research table scans for nearby research aids
-- Added tweak supporing additional Crucible heat sources
+- Added tweak supporting additional Crucible heat sources
+- Added tweak allowing mobs to spawn as Champions
 
 ### Changed
 ### Fixed

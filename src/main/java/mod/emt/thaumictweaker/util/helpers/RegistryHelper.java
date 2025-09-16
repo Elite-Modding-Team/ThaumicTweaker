@@ -6,7 +6,9 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import org.jetbrains.annotations.Nullable;
 
 public class RegistryHelper {
     public static ItemStack getConfigStack(String configString) {
@@ -43,5 +45,10 @@ public class RegistryHelper {
     public static Block getRegisteredBlock(ResourceLocation location) {
         Block block = ForgeRegistries.BLOCKS.getValue(location);
         return block != null ? block : Blocks.AIR;
+    }
+
+    @Nullable
+    public static EntityEntry getRegisteredEntity(ResourceLocation location) {
+        return ForgeRegistries.ENTITIES.getValue(location);
     }
 }

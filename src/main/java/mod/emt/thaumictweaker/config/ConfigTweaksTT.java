@@ -13,6 +13,8 @@ import net.minecraftforge.common.config.Config;
 public class ConfigTweaksTT {
     @Config.Name("Apprentice's Ring Tweaks")
     public static ApprenticesRingCategory apprentices_ring = new ApprenticesRingCategory();
+    @Config.Name("Champion Mob Tweaks")
+    public static ChampionMobsCategory champion_mobs = new ChampionMobsCategory();
     @Config.Name("Crucible Tweaks")
     public static CrucibleCategory crucible = new CrucibleCategory();
     @Config.Name("Crimson Cult Robes Tweaks")
@@ -50,6 +52,43 @@ public class ConfigTweaksTT {
         @Config.Name("Apprentice's Ring Vis Discount")
         @Config.Comment("The Vis discount granted by the Apprentice's Ring.")
         public int visDiscount = 5;
+    }
+
+    public static class ChampionMobsCategory {
+        @Config.Name("Champion Bosses")
+        @Config.Comment("Allows boss mobs to transform into champion mobs.")
+        public boolean championBosses = false;
+
+        @Config.Name("Global Champions")
+        @Config.Comment("All mobs have a chance to become champions regardless of whitelist settings.")
+        public boolean globalChampions = false;
+
+        @Config.Name("Champion Whitelist")
+        @Config.Comment
+                ({
+                        "A whitelist of mobs that can spawn as champions. A bonus chance of 0 will give mobs a ~1% chance of becoming a champion.",
+                        "Format:  entityid=bonuschance",
+                        "  entityid - the entity registry name",
+                        "  bonuschance - the bonus chance this mob will spawn as a champion. Must be between 0 and 100",
+                        "Examples:",
+                        "  minecraft:zombie=8",
+                        "  minecraft:skeleton=5",
+                        "  minecraft:enderman=0"
+                })
+        public String[] championWhitelist = new String[] {};
+
+        @Config.Name("Biome Type Modifier")
+        @Config.Comment
+                ({
+                        "Biome types that increase the chance a mob will spawn as a champion.",
+                        "Format:",
+                        "  BIOMETYPE=chanceModifier"
+                })
+        public String[] biomeTypeModifier = new String[] {
+                "SPOOKY=2",
+                "NETHER=2",
+                "END=2"
+        };
     }
 
     public static class CrimsonCultRobesCategory {

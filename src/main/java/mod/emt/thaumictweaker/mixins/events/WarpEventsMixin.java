@@ -1,4 +1,4 @@
-package mod.emt.thaumictweaker.mixins.misc;
+package mod.emt.thaumictweaker.mixins.events;
 
 import mod.emt.thaumictweaker.config.ConfigEnhancementsTT;
 import net.minecraft.entity.player.EntityPlayer;
