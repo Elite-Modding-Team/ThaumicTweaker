@@ -14,6 +14,7 @@
 - Added tweak increasing vertical search range when the research table scans for nearby research aids
 - Added tweak supporting additional Crucible heat sources
 - Added tweak allowing mobs to spawn as Champions
+- Added tweak to use overhauled Runic Shielding system
 - Added scripting method to add addition drops to Collapsing Flux Rifts
 
 ### Changed

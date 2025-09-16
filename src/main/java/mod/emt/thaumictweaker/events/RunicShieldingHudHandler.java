@@ -3,6 +3,7 @@ package mod.emt.thaumictweaker.events;
 import baubles.api.BaublesApi;
 import baubles.api.cap.IBaublesItemHandler;
 import mod.emt.thaumictweaker.ThaumicTweaker;
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.Gui;
@@ -43,9 +44,10 @@ public class RunicShieldingHudHandler {
 
     private void renderRunicArmorBar(Minecraft mc, ScaledResolution scaledResolution, EntityPlayer player) {
         float total = this.getTotalRunicArmor(player);
-        float current = player.getAbsorptionAmount();
+        float current = (float) RunicShieldingHandler.getRunicShielding(player);
+        boolean drawFull = !ConfigTweaksTT.runic_shielding.newRunicShielding;
 
-        if(total > 0) {
+        if(total > 0 && current > 0) {
             GlStateManager.pushMatrix();
             GlStateManager.matrixMode(GL11.GL_PROJECTION);
             GlStateManager.loadIdentity();
@@ -66,19 +68,8 @@ public class RunicShieldingHudHandler {
             mc.renderEngine.bindTexture(ParticleEngine.particleTexture);
             GlStateManager.scale(4.0D, 4.0D, 4.0D);
 
-            float fill = current / total;
-            int a = 0;
-
-            while ((float) a < fill * 10.0f) {
-                GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
-                UtilsFX.drawTexturedQuad((float) (a * 8) / 4, 0, (float) 160 / 4, (float) 16 / 4, (float) 9 / 4, (float) 9 / 4, -90.0);
-                GlStateManager.pushMatrix();
-                GlStateManager.scale(0.5D, 0.5D, 0.5D);
-                GlStateManager.color(1.0f, 0.75f, 0.24f, (MathHelper.sin(((float) player.ticksExisted / 4.0f + (float) a)) * 0.4f + 0.6f));
-                UtilsFX.drawTexturedQuad((float) (a * 16) / 4, 0, (float) (a * 16) / 4, (float) 96 / 4, (float) 16 / 4, (float) 16 / 4, -90.0);
-                GlStateManager.popMatrix();
-                ++a;
-            }
+            float hearts = Math.min(current, 10);
+            this.drawOverlay(player.ticksExisted, drawFull ? 10.0f : hearts);
 
             GlStateManager.enableAlpha();
             GlStateManager.disableBlend();
@@ -88,6 +79,20 @@ public class RunicShieldingHudHandler {
             GlStateManager.popMatrix();
         }
         mc.renderEngine.bindTexture(Gui.ICONS);
+    }
+
+    private void drawOverlay(int ticks, float distance) {
+        int a = 0;
+        while((float) a < distance) {
+            GlStateManager.color(1.0f, 1.0f, 1.0f, 1.0f);
+            UtilsFX.drawTexturedQuad((float) (a * 8) / 4, 0, (float) 160 / 4, (float) 16 / 4, (float) 9 / 4, (float) 9 / 4, -90.0);
+            GlStateManager.pushMatrix();
+            GlStateManager.scale(0.5D, 0.5D, 0.5D);
+            GlStateManager.color(1.0f, 0.75f, 0.24f, (MathHelper.sin(((float) ticks / 4.0f + (float) a)) * 0.4f + 0.6f));
+            UtilsFX.drawTexturedQuad((float) (a * 16) / 4, 0, (float) (a * 16) / 4, (float) 96 / 4, (float) 16 / 4, (float) 16 / 4, -90.0);
+            GlStateManager.popMatrix();
+            ++a;
+        }
     }
 
     private int getTotalRunicArmor(EntityPlayer player) {

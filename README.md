@@ -88,6 +88,8 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Research Table Tweaks:**
     - Research table can use and consume items from nearby inventories for research
     - Increase the vertical search area when the Research Table looks for nearby research aids
+- **Runic Shielding Tweaks:**
+    - Overhauls the Runic Shielding system with a new shield type so it no longer use Minecraft absorption hearts
 - **Special Mining Result Tweaks:** 
     - Add and remove special mining drops using CraftTweaker or GroovyScript
 - **Vis Generator Tweaks:** 

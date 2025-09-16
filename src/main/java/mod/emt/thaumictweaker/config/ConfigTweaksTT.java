@@ -33,8 +33,10 @@ public class ConfigTweaksTT {
     public static PorousStoneCategory porous_stone = new PorousStoneCategory();
     @Config.Name("Primal Crusher Tweaks")
     public static PrimalCrusherCategory primal_crusher = new PrimalCrusherCategory();
-    @Config.Name("Reseearch Table Tweaks")
+    @Config.Name("Research Table Tweaks")
     public static ResearchTableCategory research_table = new ResearchTableCategory();
+    @Config.Name("Runic Shielding Tweaks")
+    public static RunicShieldingCategory runic_shielding = new RunicShieldingCategory();
     @Config.Name("Vis Generator Tweaks")
     public static VisGeneratorCategory vis_generator = new VisGeneratorCategory();
     @Config.Name("Void Thaumaturge Robes Tweaks")
@@ -254,6 +256,13 @@ public class ConfigTweaksTT {
         @Config.Name("Research Aid Horizontal Search Distance")
         @Config.Comment("Adjusts the horizontal search area when the Research Table scans nearby blocks for Research Aids.")
         public int aidSearchHorizontal = 4;
+    }
+
+    public static class RunicShieldingCategory {
+        @Config.RequiresMcRestart
+        @Config.Name("New Runic Shielding")
+        @Config.Comment("Enables Runic Shielding overhaul, replacing absorption hearts with a new shield system.")
+        public boolean newRunicShielding = false;
     }
 
     public static class VisGeneratorCategory {
