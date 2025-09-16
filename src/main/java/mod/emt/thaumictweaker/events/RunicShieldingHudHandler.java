@@ -13,7 +13,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -23,7 +22,6 @@ import thaumcraft.client.lib.UtilsFX;
 import thaumcraft.common.lib.events.PlayerEvents;
 
 @SideOnly(Side.CLIENT)
-@Mod.EventBusSubscriber(modid = ThaumicTweaker.MOD_ID)
 public class RunicShieldingHudHandler {
     @SubscribeEvent
     public void RenderRunicShielding(RenderGameOverlayEvent.Post event) {
