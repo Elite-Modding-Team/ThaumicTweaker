@@ -43,7 +43,7 @@ public class RunicShieldingHudHandler {
     private void renderRunicArmorBar(Minecraft mc, ScaledResolution scaledResolution, EntityPlayer player) {
         float total = this.getTotalRunicArmor(player);
         float current = (float) RunicShieldingHandler.getRunicShielding(player);
-        boolean drawFull = !ConfigTweaksTT.runic_shielding.newRunicShielding;
+        boolean drawFull = !RunicShieldingHandler.ENABLE_NEW_RUNIC_SHIELDING;
 
         if(total > 0 && current > 0) {
             GlStateManager.pushMatrix();

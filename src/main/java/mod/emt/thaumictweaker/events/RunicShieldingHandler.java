@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import java.util.UUID;
 
 public class RunicShieldingHandler {
+    public static final boolean ENABLE_NEW_RUNIC_SHIELDING = ConfigTweaksTT.runic_shielding.newRunicShielding;
     public static final String RUNIC_SHIELDING_NAME = "Runic shielding";
     public static final UUID RUNIC_SHIELDING_ID = UUID.fromString("a9722db2-1256-4788-897f-654386a703f0");
 
@@ -40,7 +41,7 @@ public class RunicShieldingHandler {
     }
 
     public static double getRunicShielding(EntityPlayer player) {
-        if(ConfigTweaksTT.runic_shielding.newRunicShielding) {
+        if(ENABLE_NEW_RUNIC_SHIELDING) {
             return player.getEntityAttribute(RUNIC_SHIELDING).getAttributeValue();
         } else {
             return player.getAbsorptionAmount();
@@ -48,7 +49,7 @@ public class RunicShieldingHandler {
     }
 
     public static void setRunicShielding(EntityPlayer player, double shielding) {
-        if(ConfigTweaksTT.runic_shielding.newRunicShielding) {
+        if(ENABLE_NEW_RUNIC_SHIELDING) {
             IAttributeInstance instance = player.getEntityAttribute(RUNIC_SHIELDING);
             instance.removeModifier(RUNIC_SHIELDING_ID);
             instance.applyModifier(new AttributeModifier(RUNIC_SHIELDING_ID, RUNIC_SHIELDING_NAME, shielding, 0));
