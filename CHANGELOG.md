@@ -15,6 +15,7 @@
 - Added tweak supporting additional Crucible heat sources
 - Added tweak allowing mobs to spawn as Champions
 - Added tweak to use overhauled Runic Shielding system
+- Added tweak allowing increasing or decreasing damage dealt by Liquid Death
 - Added scripting method to add addition drops to Collapsing Flux Rifts
 
 ### Changed

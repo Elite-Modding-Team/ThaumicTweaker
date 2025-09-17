@@ -21,6 +21,8 @@ public class ConfigTweaksTT {
     public static CrimsonCultRobesCategory cult_robes = new CrimsonCultRobesCategory();
     @Config.Name("Curiosity Tweaks")
     public static CuriosityTweaksCategory curiosity_tweaks = new CuriosityTweaksCategory();
+    @Config.Name("Fluid Death Tweaks")
+    public static FluidDeathCategory fluid_death = new FluidDeathCategory();
     @Config.Name("Flux Pollution Tweaks")
     public static FluxPollutionCategory flux_pollution = new FluxPollutionCategory();
     @Config.Name("Golem Tweaks")
@@ -135,6 +137,17 @@ public class ConfigTweaksTT {
         @Config.Name("Giant Taint Seed Curiosity Chance")
         @Config.Comment("The chance for a Giant Taint Seed to drop a Twisted Curiosity.")
         public double curioDropGiantTaintSeed = 0.0D;
+    }
+
+    public static class FluidDeathCategory {
+        @Config.RangeDouble(min = 0, max = 10000)
+        @Config.Name("Damage Modifier")
+        @Config.Comment
+                ({
+                        "A modifier that increases the amount of damage done when an entity is in contact with liquid death. A ",
+                        "value of 1.0 will deal default damage, a value of 2.0 will deal double damage, and so on."
+                })
+        public double damageModifier = 1.0;
     }
 
     public static class FluxPollutionCategory {
