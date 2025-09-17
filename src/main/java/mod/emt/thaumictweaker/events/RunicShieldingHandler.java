@@ -32,7 +32,7 @@ public class RunicShieldingHandler {
             float damage = event.getAmount();
             float shielding = (float) getRunicShielding(player);
             if(shielding > 0) {
-                damage -= shielding;
+                damage = Math.max(0, damage - shielding);
                 shielding = Math.max(0, shielding - event.getAmount());
                 event.setAmount(damage);
                 setRunicShielding(player, shielding);
