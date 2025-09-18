@@ -36,6 +36,14 @@ public class ConfigEnhancementsTT {
                     "for Warp research would be \"research.WARP.title.subtitle\"."
             })
     public static boolean enableResearchSubtitles = true;
+    
+    @Config.Name("Enable Warp Research Subtitles")
+    @Config.Comment
+    ({
+            "Enables support for additional subtitle text for forbidden knowledge research entries.",
+            "The subtitle will display how dangerous the warp for that research is."
+    })
+    public static boolean enableWarpResearchSubtitles = true;
 
     @Config.Name("Eldritch Crab Full Death Rotation")
     @Config.Comment("Makes Eldritch Crabs fully rotate on death to match the death animations of spiders, silverfish and endermites.")

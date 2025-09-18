@@ -45,6 +45,8 @@ groovyscript.wiki.thaumictweaker.utils.getAspectPhial=Returns a Essentia Phial f
 groovyscript.wiki.thaumictweaker.utils.addCollapsingRiftDrop=Adds an additional drop when collapsing a Flux Rift in the format `drop`, `requiredRiftSize`, `chance`
 
 # Subtiles
+subtitle.thaumictweaker.forbidden=Forbidden Knowledge (%s)
+
 # -- THAUMCRAFT - ALCHEMY
 research.ALUMENTUM.title.subtitle=Mystical Energy Source
 research.ARCANESPA.title.subtitle=Relaxing in style

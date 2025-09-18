@@ -13,6 +13,7 @@
 - Added enhancement adding an effect over the player's health bar whenenever runic shielding is active
 - Added enhancement suppressing Warp events while player is in creative mode
 - Added enhancement supporting Research entry subtitles
+- Added enhancement supporting Forbidden Knowledge Research subtitles
 - Added tweak increasing vertical search range when the research table scans for nearby research aids
 - Added tweak supporting additional Crucible heat sources
 - Added tweak allowing mobs to spawn as Champions

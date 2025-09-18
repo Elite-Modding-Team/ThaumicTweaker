@@ -11,7 +11,9 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
 import thaumcraft.api.research.ResearchEntry;
+import thaumcraft.api.research.ResearchStage;
 import thaumcraft.client.gui.GuiResearchBrowser;
 
 import java.util.ArrayList;
@@ -33,8 +35,21 @@ public class GuiResearchBrowserMixin {
     private void addResearchSubtitleMixin(int mx, int my, float par3, int locX, int locY, CallbackInfo ci, @Local(ordinal = 0)ArrayList<String> text) {
         if(ConfigEnhancementsTT.enableResearchSubtitles) {
             String subTitle = this.currentHighlight.getName() + ".subtitle";
-            if (I18n.hasKey(subTitle)) {
+            if(I18n.hasKey(subTitle)) {
                 text.add("@@" + TextFormatting.WHITE + I18n.format(subTitle) + TextFormatting.RESET);
+            }
+        }
+
+        if(ConfigEnhancementsTT.enableWarpResearchSubtitles) {
+            if(currentHighlight.getStages() != null) {
+                int warp = 0;
+                for(ResearchStage stage : currentHighlight.getStages()) {
+                    warp += stage.getWarp();
+                }
+                if(warp > 0) {
+                    String warpStr = "tc.forbidden.level." + Math.min(5, warp);
+                    text.add("@@" + TextFormatting.DARK_PURPLE + I18n.format("subtitle.thaumictweaker.forbidden", I18n.format(warpStr)) + TextFormatting.RESET);
+                }
             }
         }
     }
