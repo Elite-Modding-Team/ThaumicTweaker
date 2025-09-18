@@ -208,3 +208,18 @@ research.INFUSIONENCHANTMENT.title.subtitle=Thaumaturgical Enchantment
 research.PAVINGSTONES.title.subtitle=Keeping things out and easing your journey
 research.RUNICSHIELDING.title.subtitle=Shields up!
 research.VERDANTCHARMS.title.subtitle=Curing what ails you
+
+# -- Thaumic Energistics
+research.arcaneassembler.title.subtitle=Magical Molecule Assembly
+research.arcaneinscriber.title.subtitle=Magical Patterns
+research.arcaneterminal.title.subtitle=Crafting with magic §oand technology§r
+research.base_energistics.title.subtitle=Thaumaturgy enters the Digital Age
+research.digisentia.title.subtitle=Digital Essentia
+research.essentiabuses.title.subtitle=Moving essentia digitally!
+research.essentiastorage1k.title.subtitle=1 Bit
+research.essentiastorage4k.title.subtitle=4 Bits
+research.essentiastorage16k.title.subtitle=16 Bits
+research.essentiastorage64k.title.subtitle=64 Bits
+research.essentiaterminal.title.subtitle=Knowing how much you have
+research.infusionprovider.title.subtitle=Infusion made easier
+research.knowledgecore.title.subtitle=Overseeing Orb
