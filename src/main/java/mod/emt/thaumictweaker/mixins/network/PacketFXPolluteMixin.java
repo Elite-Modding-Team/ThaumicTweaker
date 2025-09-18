@@ -1,4 +1,4 @@
-package mod.emt.thaumictweaker.mixins.misc;
+package mod.emt.thaumictweaker.mixins.network;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import com.llamalad7.mixinextras.sugar.ref.LocalFloatRef;

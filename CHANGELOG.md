@@ -18,6 +18,9 @@
 - Added tweak allowing mobs to spawn as Champions
 - Added tweak to use overhauled Runic Shielding system
 - Added tweak allowing increasing or decreasing damage dealt by Liquid Death
+- Added tweak allowing Fortune to increase Refining infusion cluster drop chance
+- Added tweak to modify Refining infusion cluster drop chance
+- Added tweak to modify Sounding infusion search radius
 - Added scripting method to add addition drops to Collapsing Flux Rifts
 
 ### Changed

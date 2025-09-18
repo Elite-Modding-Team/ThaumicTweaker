@@ -54,6 +54,8 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
     - Add Pech valued items using CraftTweaker or GroovyScript
 - **Porous Stone Tweaks:**
     - Add or remove Porous Stone special item drops using CraftTweaker or GroovyScript
+- **Special Mining Result Tweaks:**
+  - Add and remove special mining drops using CraftTweaker or GroovyScript
 
 ---
 
@@ -81,6 +83,10 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
     - Change golem material stats such as armor, health, damage, and crafting material
 - **Liquid Death Tweaks:**
     - Increase or decrease the amount of damage done by Liquid Death
+- **Infusion Enchantment Tweaks:**
+    - Adjust the chance Refining infusion will drop ore clusters
+    - Allow the Refining infusion cluster drop chance to be affected by Fortune
+    - Change the radius the Sounding infusion will detect ores
 - **Pech Trade Tweaks:** 
     - Change Pech item value calculation
 - **Porous Stone Tweaks:**
@@ -94,8 +100,6 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
     - Increase the vertical search area when the Research Table looks for nearby research aids
 - **Runic Shielding Tweaks:**
     - Overhauls the Runic Shielding system with a new shield type so it no longer use Minecraft absorption hearts
-- **Special Mining Result Tweaks:** 
-    - Add and remove special mining drops using CraftTweaker or GroovyScript
 - **Vis Generator Tweaks:** 
     - Change the amount of RF generated per point of Vis and the RF output per tick
 - **Void Siphon Tweaks:** 

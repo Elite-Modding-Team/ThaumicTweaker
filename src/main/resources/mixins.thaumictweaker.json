@@ -16,6 +16,7 @@
     "entities.EntitySpecialItemMixin" ,
     "entities.EntityTaintacleGiantMixin" ,
     "events.PlayerEventsMixin" ,
+    "events.ToolEventsMixins" ,
     "events.WarpEventsMixin" ,
     "focus.FocusEffectBreakMixin" ,
     "focus.FocusEffectEarthMixin" ,
@@ -37,9 +38,9 @@
     "items.ItemVoidRobeArmorMixin" ,
     "misc.EntityUtilsMixin" ,
     "misc.GolemMaterialMixin" ,
-    "misc.PacketFXPolluteMixin" ,
     "misc.ScanSkyMixin" ,
     "misc.ThaumcraftCraftingManagerMixin" ,
+    "network.PacketFXPolluteMixin" ,
     "tiles.TileCrucibleMixin" ,
     "tiles.TileMirrorEssentiaMixin" ,
     "tiles.TileMirrorMixin" ,
@@ -57,6 +58,7 @@
     "client.gui.GuiResearchBrowserMixin" ,
     "client.gui.GuiTurretAdvancedMixin" ,
     "client.gui.GuiTurretBasicMixin" ,
-    "client.models.ProxyEntitiesMixin"
+    "client.models.ProxyEntitiesMixin" ,
+    "network.PacketFXScanSourceMixin"
   ]
 }

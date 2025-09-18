@@ -27,6 +27,8 @@ public class ConfigTweaksTT {
     public static FluxPollutionCategory flux_pollution = new FluxPollutionCategory();
     @Config.Name("Golem Tweaks")
     public static GolemTweaksCategory golem_tweaks = new GolemTweaksCategory();
+    @Config.Name("Infusion Enchantment Tweaks")
+    public static InfusionEnchantmentCategory infusion_enchantments = new InfusionEnchantmentCategory();
     @Config.Name("Miscellaneous Tweaks")
     public static MiscTweaksCategory misc_tweaks = new MiscTweaksCategory();
     @Config.Name("Pech Tweaks")
@@ -175,6 +177,36 @@ public class ConfigTweaksTT {
         public GolemMaterialCategory matThaumium = new GolemMaterialCategory(24, 10, 4, "thaumcraft:plate:2");
         @Config.Name("Material: Void Metal")
         public GolemMaterialCategory matVoid = new GolemMaterialCategory(20, 6, 4, "thaumcraft:plate:3");
+    }
+
+    public static class InfusionEnchantmentCategory {
+        @Config.RangeInt(min = 1, max = 100)
+        @Config.Name("Refining Base Increase")
+        @Config.Comment
+                ({
+                        "The base increase the Refining infusion enchant has when harvesting ores. The calculation is equal",
+                        "to: chance = (refiningLevel + baseIncrease) * clusterChance"
+                })
+        public int refiningBaseIncrease = 1;
+
+        @Config.RangeDouble(min = 0, max = 1.0)
+        @Config.Name("Refining Purification Chance")
+        @Config.Comment("The chance each level of Refining has to purify ore into its cluster variant.")
+        public double refiningClusterChance = 0.125;
+
+        @Config.RangeDouble(min = 0, max = 1.0)
+        @Config.Name("Refining Fortune Bonus")
+        @Config.Comment("The amount each level of Fortune will increase the chance Refining will purify ore into its cluster variant.")
+        public double refiningFortuneBonus = 0;
+
+        @Config.RangeInt(min = 1, max = 20)
+        @Config.Name("Sounding Radius Modifier")
+        @Config.Comment
+                ({
+                        "The amount each level of the Sounding infusion enchant will increase the search radius when scanning",
+                        "for ores. The calculation of this value is equal to: radius = 4 + (level * modifier)"
+                })
+        public int soundingRadiusModifier = 4;
     }
 
     public static class MiscTweaksCategory {
