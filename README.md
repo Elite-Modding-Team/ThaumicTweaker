@@ -55,7 +55,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Porous Stone Tweaks:**
     - Add or remove Porous Stone special item drops using CraftTweaker or GroovyScript
 - **Special Mining Result Tweaks:**
-  - Add and remove special mining drops using CraftTweaker or GroovyScript
+    - Add and remove special mining drops using CraftTweaker or GroovyScript
 
 ---
 
