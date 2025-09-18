@@ -43,3 +43,168 @@ groovyscript.wiki.thaumictweaker.utils.description=Several utility methods used 
 groovyscript.wiki.thaumictweaker.utils.getVisCrystal=Returns a Vis crystal with the specified AspectStack (includes Aspect amount)
 groovyscript.wiki.thaumictweaker.utils.getAspectPhial=Returns a Essentia Phial filled with the specified aspect
 groovyscript.wiki.thaumictweaker.utils.addCollapsingRiftDrop=Adds an additional drop when collapsing a Flux Rift in the format `drop`, `requiredRiftSize`, `chance`
+
+# Subtiles
+# -- THAUMCRAFT - ALCHEMY
+research.ALUMENTUM.title.subtitle=Mystical Energy Source
+research.ARCANESPA.title.subtitle=Relaxing in style
+research.BASEALCHEMY.title.subtitle=Bubble and Boil
+research.BATHSALTS.title.subtitle=Stress relief for the mind
+research.BOTTLETAINT.title.subtitle=§5Why would you want this?
+research.CENTRIFUGE.title.subtitle=Taking things apart
+research.ESSENTIASMELTER.title.subtitle=Harvesting essentia
+research.ESSENTIASMELTERTHAUMIUM.title.subtitle=Harvesting essentia again
+research.ESSENTIASMELTERVOID.title.subtitle=Harvesting essentia one last time
+research.ESSENTIATRANSPORT.title.subtitle=Aerial Essentia
+research.EVERFULLURN.title.subtitle=A source of infinite water
+//research.HEDGEALCHEMY.title.subtitle=
+research.IMPROVEDSMELTING.title.subtitle=Essentia Harvesting... Improved
+research.IMPROVEDSMELTING2.title.subtitle=Essentia Harvesting... Electric Boogaloo
+research.LIQUIDDEATH.title.subtitle=For external use only
+research.METALLURGY.title.subtitle=Where metals meet magic
+research.METALPURIFICATION.title.subtitle=Purification of metals into native clusters
+//research.POTIONSPRAYER.title.subtitle=
+research.SANESOAP.title.subtitle=Getting rid of dirty thoughts
+research.THAUMATORIUM.title.subtitle=Alchemy for the masses
+research.TUBES.title.subtitle=Transportation of essentia
+research.WARDEDJARS.title.subtitle=Storing and organizing essentia
+
+# -- Thaumcraft - ARTIFICE
+research.ADVANCEDTURRET.title.subtitle=Not so simple defenses
+research.ARCANEBORE.title.subtitle=Mining Evolved
+research.ARCANEEAR.title.subtitle=Shhh, do you hear something?
+research.ARCANELAMP.title.subtitle=Large Source of Light
+research.ARCANEPATTERNCRAFTER.title.subtitle=Automated Pattern Crafting
+research.BASEARTIFICE.title.subtitle=Needful things
+research.BASICTURRET.title.subtitle=Simple defenses
+research.BELLOWS.title.subtitle=Stoking the flames
+research.DIOPTRA.title.subtitle=Revealing the Aura
+research.GRAPPLEGUN.title.subtitle=Woosh!
+research.HUNGRYCHEST.title.subtitle=A chest that doesn't wait to be opened
+research.INFERNALFURNACE.title.subtitle=Hot enough?
+research.LAMPFERTILITY.title.subtitle=Casting a romantic light on things
+research.LAMPGROWTH.title.subtitle=Encouraging things to grow
+research.LEVITATOR.title.subtitle=Next best thing to flying
+research.MIRROR.title.subtitle=Through the looking glass
+research.MIRRORESSENTIA.title.subtitle=Essentia where you need it
+research.MIRRORHAND.title.subtitle=Personal reflection
+research.REDSTONERELAY.title.subtitle=Magical Redstone Interaction
+//research.VISGENERATOR.title.subtitle=
+
+# -- Thaumcraft - AUROMANCY
+research.BASEAUROMANCY.title.subtitle=Aura Manipulation
+//research.FOCUSADVANCED.title.subtitle=
+//research.FOCUSBOLT.title.subtitle=
+//research.FOCUSBREAK.title.subtitle=
+//research.FOCUSCLOUD.title.subtitle=
+//research.FOCUSCURSE.title.subtitle=
+//research.FOCUSELEMENTAL.title.subtitle=
+//research.FOCUSEXCHANGE.title.subtitle=
+//research.FOCUSFLUX.title.subtitle=
+//research.FOCUSGREATER.title.subtitle=
+//research.FOCUSHEAL.title.subtitle=
+//research.FOCUSMINE.title.subtitle=
+//research.FOCUSPLAN.title.subtitle=
+research.FOCUSPOUCH.title.subtitle=Convenient carry container for your foci
+//research.FOCUSPROJECTILE.title.subtitle=
+//research.FOCUSRIFT.title.subtitle=
+//research.FOCUSCATTER.title.subtitle=
+//research.FOCUSSPELLBAT.title.subtitle=
+//research.FOCUSSPLIT.title.subtitle=
+research.RECHARGEPEDESTAL.title.subtitle=Automated Vis Recharging
+research.VISAMULET.title.subtitle=Waste not, Want not
+//research.VISBATTERY.title.subtitle=
+research.WORKBENCHCHARGER.title.subtitle=Vis Magnet
+
+# -- THAUMCRAFT - BASICS
+//research.CELESTIALSCANNING.title.subtitle=
+research.CrimsonRites.title.subtitle=§cA Cautionary Tale
+research.CRYSTALFARMER.title.subtitle=Helping them grow
+research.FIRSTSTEPS.title.subtitle=Journey into Thaumaturgy
+//research.FLUX.title.subtitle=
+//research.FLUXCLEANUP.title.subtitle=
+research.FLUXRIFT.title.subtitle=§5What is this and how do I get rid of it?
+research.KNOWLEDGETYPES.title.subtitle=Knowledge is Power
+research.ORE.title.subtitle=Dig deep
+research.PLANTS.title.subtitle=Magical vegetation
+research.PRIMPEARL.title.subtitle=§5What came before
+//research.RIFTCLOSER.title.subtitle=
+research.THEORYRESEARCH.title.subtitle=Power is Knowledge
+//research.UNLOCKALCHEMY.title.subtitle=
+//research.UNLOCKARTIFICE.title.subtitle=
+//research.UNLOCKAUROMANCY.title.subtitle=
+//research.UNLOCKELDRITCH.title.subtitle=
+//research.UNLOCKGOLEMANCY.title.subtitle=
+//research.UNLOCKINFUSION.title.subtitle=
+research.WARP.title.subtitle=§5Everything has a price
+
+# -- THAUMCRAFT - ELDRITCH
+research.BASEELDRITCH.title.subtitle=§5Strange, it should feel cold...
+research.PRIMALCRUSHER.title.subtitle=§5Breaking all the things
+research.VOIDROBEARMOR.title.subtitle=§5Otherworldly Style
+research.VOIDSEERPEARL.title.subtitle=§5"If you gaze long into the abyss, the abyss also gazes into you."
+research.VOIDSIPHON.title.subtitle=§5Rift Extraction
+
+# -- THAUMCRAFT - ENTITIES
+//entity.BrainyZombie.name.subtitle=
+//entity.EldritchCrab.name.subtitle=
+//entity.EldritchGuardian.name.subtitle=
+entity.Firebat.name.subtitle=Bat outta Hell
+//entity.Taintacle.name.subtitle=
+//entity.TaintCrawler.name.subtitle=
+//entity.TaintSeed.name.subtitle=
+//entity.TaintSwarm.name.subtitle=
+//entity.ThaumSlime.name.subtitle=
+//entity.Wisp.name.subtitle=
+//research.CrimsonCultist.title.subtitle=
+research.Pech.title.subtitle=Strange Creatures
+
+# -- THAUMCRAFT - GOLEMANCY
+research.BASEGOLEMANCY.title.subtitle=Motion Controlled
+research.CONTROLSEALS.title.subtitle=Giving them purpose
+research.GOLEMBREAKER.title.subtitle=Smash and grab
+research.GOLEMCLIMBER.title.subtitle=There ain't no mountains high enough
+research.GOLEMCOMBATADV.title.subtitle=Harder, Better, Faster, Stronger
+research.GOLEMDIRECT.title.subtitle=Taking a direct hand in things
+research.GOLEMFLYER.title.subtitle=Up, Up and Away!
+//research.GOLEMLOGISTICS.title.subtitle=
+research.GOLEMVISION.title.subtitle=Improved visual range 
+research.JARBRAIN.title.subtitle=Sealing in the foulness
+research.MATSTUDBRASS.title.subtitle=Advanced Brass Crafting
+research.MATSTUDCLAY.title.subtitle=Advanced Clay Crafting
+research.MATSTUDIRON.title.subtitle=Advanced Iron Crafting
+research.MATSTUDTHAUMIUM.title.subtitle=Advanced Thaumium Crafting
+research.MATSTUDVOID.title.subtitle=Advanced Void Metal Crafting
+research.MATSTUDWOOD.title.subtitle=Advanced Wood Crafting
+research.MINDBIOTHAUMIC.title.subtitle=I think therefore I am
+research.MINDCLOCKWORK.title.subtitle=Giving them life
+research.SEALBUTCHER.title.subtitle=Gory to the armpits
+research.SEALBREAK.title.subtitle=*Tap* *Tap* *Tap*
+research.SEALCOLLECT.title.subtitle=Picking up what you are putting down
+research.SEALEMPTY.title.subtitle=Making a whole new mess
+research.SEALGUARD.title.subtitle=Protect and Serve
+research.SEALHARVEST.title.subtitle=Green mechanical thumbs
+research.SEALLUMBER.title.subtitle=And I'm ok
+research.SEALPROVIDE.title.subtitle=Getting what is needed
+//research.SEALSTOCK.title.subtitle=
+research.SEALSTORE.title.subtitle=Putting away your mess
+research.SEALUSE.title.subtitle=Clicky click
+
+# -- Thaumcraft - INFUSION
+research.ARMORFORTRESS.title.subtitle=Nothing is getting in
+//research.BASEINFUSION.title.subtitle=
+research.BOOTSTRAVELLER.title.subtitle=These boots were made for walking
+//research.CHARMUNDYING.title.subtitle=
+//research.CLOUDRING.title.subtitle=
+//research.CURIOSITYBAND.title.subtitle=
+research.ELEMENTALTOOLS.title.subtitle=Harnessing the elements
+//research.FORTRESSMASK.title.subtitle=
+research.INFUSION.title.subtitle=Mystical Fusion
+//research.INFUSIONANCIENT.title.subtitle=
+research.INFUSIONBOOST.title.subtitle=Upgraded Mystical Fusion
+//research.INFUSIONELDRITCH.title.subtitle=
+research.INFUSIONENCHANTMENT.title.subtitle=Thaumaturgical Enchantment
+//research.INFUSIONSTABLE.title.subtitle=
+research.PAVINGSTONES.title.subtitle=Keeping things out and easing your journey
+research.RUNICSHIELDING.title.subtitle=Shields up!
+research.VERDANTCHARMS.title.subtitle=Curing what ails you

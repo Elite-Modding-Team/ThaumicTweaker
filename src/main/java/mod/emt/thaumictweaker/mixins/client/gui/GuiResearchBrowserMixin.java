@@ -34,7 +34,7 @@ public class GuiResearchBrowserMixin {
         if(ConfigEnhancementsTT.enableResearchSubtitles) {
             String subTitle = this.currentHighlight.getName() + ".subtitle";
             if (I18n.hasKey(subTitle)) {
-                text.add("@@" + TextFormatting.GOLD + TextFormatting.ITALIC + I18n.format(subTitle) + TextFormatting.RESET);
+                text.add("@@" + TextFormatting.WHITE + I18n.format(subTitle) + TextFormatting.RESET);
             }
         }
     }
