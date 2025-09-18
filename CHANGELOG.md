@@ -9,6 +9,7 @@
 - Added fix for Primordial Pearls spawned by boss kills maintaining momentum
 - Added fix for Primordial Pearls spawned by boss kills floating 3-4 blocks above kill boss location
 - Added fix for Giant Taintacle model render error spam
+- Added fix for Thaumcraft not rewarding exploration research correctly
 - Added enhancement adding an effect over the player's health bar whenenever runic shielding is active
 - Added enhancement suppressing Warp events while player is in creative mode
 - Added tweak increasing vertical search range when the research table scans for nearby research aids
