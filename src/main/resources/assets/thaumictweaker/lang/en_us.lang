@@ -57,7 +57,7 @@ research.ESSENTIASMELTERTHAUMIUM.title.subtitle=Harvesting essentia again
 research.ESSENTIASMELTERVOID.title.subtitle=Harvesting essentia one last time
 research.ESSENTIATRANSPORT.title.subtitle=Aerial Essentia
 research.EVERFULLURN.title.subtitle=A source of infinite water
-//research.HEDGEALCHEMY.title.subtitle=
+research.HEDGEALCHEMY.title.subtitle=Everything alchemical
 research.IMPROVEDSMELTING.title.subtitle=Essentia Harvesting... Improved
 research.IMPROVEDSMELTING2.title.subtitle=Essentia Harvesting... Electric Boogaloo
 research.LIQUIDDEATH.title.subtitle=For external use only
@@ -89,7 +89,7 @@ research.MIRROR.title.subtitle=Through the looking glass
 research.MIRRORESSENTIA.title.subtitle=Essentia where you need it
 research.MIRRORHAND.title.subtitle=Personal reflection
 research.REDSTONERELAY.title.subtitle=Magical Redstone Interaction
-//research.VISGENERATOR.title.subtitle=
+research.VISGENERATOR.title.subtitle=Vis to Energy Conversion
 
 # -- Thaumcraft - AUROMANCY
 research.BASEAUROMANCY.title.subtitle=Aura Manipulation
@@ -128,14 +128,14 @@ research.KNOWLEDGETYPES.title.subtitle=Knowledge is Power
 research.ORE.title.subtitle=Dig deep
 research.PLANTS.title.subtitle=Magical vegetation
 research.PRIMPEARL.title.subtitle=§5What came before
-//research.RIFTCLOSER.title.subtitle=
+research.RIFTCLOSER.title.subtitle=Now I know how to get rid of it!
 research.THEORYRESEARCH.title.subtitle=Power is Knowledge
-//research.UNLOCKALCHEMY.title.subtitle=
-//research.UNLOCKARTIFICE.title.subtitle=
-//research.UNLOCKAUROMANCY.title.subtitle=
-//research.UNLOCKELDRITCH.title.subtitle=
-//research.UNLOCKGOLEMANCY.title.subtitle=
-//research.UNLOCKINFUSION.title.subtitle=
+research.UNLOCKALCHEMY.title.subtitle=Alchemy 101
+research.UNLOCKARTIFICE.title.subtitle=Artifice 101
+research.UNLOCKAUROMANCY.title.subtitle=Auromancy 101
+research.UNLOCKELDRITCH.title.subtitle=First steps into the unknown
+research.UNLOCKGOLEMANCY.title.subtitle=Golemancy 101
+research.UNLOCKINFUSION.title.subtitle=Infusion 101
 research.WARP.title.subtitle=§5Everything has a price
 
 # -- THAUMCRAFT - ELDRITCH
