@@ -26,6 +26,17 @@ public class ConfigEnhancementsTT {
     @Config.Comment("Revamps the spell cast sounds of certain focus effects for better variety.")
     public static boolean enableFocusEffects = true;
 
+    @Config.Name("Enable Research Subtitles")
+    @Config.Comment
+            ({
+                    "Enables support for additional subtitle text located underneath the research name in the Thaumonomicon.",
+                    "If no subtitle text is found nothing will be shown.",
+                    "Should you want to add your own text, you can add the translation key to a .lang file. The translation",
+                    "key is normally the research title key ending with '.subtitle'. For example, the subtitle language key",
+                    "for Warp research would be \"research.WARP.title.subtitle\"."
+            })
+    public static boolean enableResearchSubtitles = true;
+
     @Config.Name("Eldritch Crab Full Death Rotation")
     @Config.Comment("Makes Eldritch Crabs fully rotate on death to match the death animations of spiders, silverfish and endermites.")
     public static boolean eldritchCrabFullDeathRotation = true;

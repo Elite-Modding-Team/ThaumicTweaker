@@ -54,6 +54,7 @@
     "client.events.HudHandlerMixin" ,
     "client.gui.GuiArcaneBoreMixin" ,
     "client.gui.GuiPechMixin" ,
+    "client.gui.GuiResearchBrowserMixin" ,
     "client.gui.GuiTurretAdvancedMixin" ,
     "client.gui.GuiTurretBasicMixin" ,
     "client.models.ProxyEntitiesMixin"

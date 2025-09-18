@@ -38,6 +38,7 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Gui Enhancements:**
     - Adjusted Pech Trade, Arcane Bore, and Advanced/Basic Automated Crossbow Gui position to match other inventories
     - Add Runic Warding effect over health bar whenever warding is active
+    - Added subtitles support to Thaumonomicon research entries
 - **Misc Enhancements:**
     - Suppress Warp Events while player is in Creative mode
 

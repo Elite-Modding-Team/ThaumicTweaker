@@ -2,8 +2,6 @@ package mod.emt.thaumictweaker.events;
 
 import baubles.api.BaublesApi;
 import baubles.api.cap.IBaublesItemHandler;
-import mod.emt.thaumictweaker.ThaumicTweaker;
-import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.Gui;

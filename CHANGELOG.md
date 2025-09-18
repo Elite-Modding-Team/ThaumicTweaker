@@ -12,6 +12,7 @@
 - Added fix for Thaumcraft not rewarding exploration research correctly
 - Added enhancement adding an effect over the player's health bar whenenever runic shielding is active
 - Added enhancement suppressing Warp events while player is in creative mode
+- Added enhancement supporting Research entry subtitles
 - Added tweak increasing vertical search range when the research table scans for nearby research aids
 - Added tweak supporting additional Crucible heat sources
 - Added tweak allowing mobs to spawn as Champions
@@ -23,6 +24,8 @@
 ### Fixed
 - Fixed GroovyScript example generation resulting in invalid SpecialMiningResult code
 - Fixed GroovyScript PechTrade addition methods throwing incorrect error
+
+---
 
 ## 1.0.1
 ### Fixes
