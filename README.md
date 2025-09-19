@@ -140,3 +140,8 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
     - New Infusion recipe that increases Primordial Pearl durability
 - **Void Siphon:**
     - Void siphon no longer requires a nearby rift and will slowly accumulate progress over time
+---
+## Superseded Addons
+These Thaumcraft addons are not compatible with this mod.
+- [Thaumcraft 6 Enhanced](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-6-enhanced)
+- [ThaumTweaks](https://www.curseforge.com/minecraft/mc-mods/thaumtweaks)
