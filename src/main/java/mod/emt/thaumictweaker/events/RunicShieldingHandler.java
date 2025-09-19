@@ -2,8 +2,8 @@ package mod.emt.thaumictweaker.events;
 
 import mod.emt.thaumictweaker.ThaumicTweaker;
 import mod.emt.thaumictweaker.config.ConfigOverhaulsTT;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.attributes.*;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -19,44 +19,44 @@ public class RunicShieldingHandler {
 
     @SubscribeEvent
     public void onEntityConstructed(EntityEvent.EntityConstructing event) {
-        if(event.getEntity() instanceof EntityPlayer) {
-            EntityPlayer player = (EntityPlayer) event.getEntity();
+        if(event.getEntity() instanceof EntityLivingBase) {
+            EntityLivingBase player = (EntityLivingBase) event.getEntity();
             registerAttribute(player.getAttributeMap(), RUNIC_SHIELDING);
         }
     }
 
     @SubscribeEvent
     public void onLivingDamage(LivingDamageEvent event) {
-        if(event.getEntityLiving() instanceof EntityPlayer && event.getEntityLiving().isEntityAlive()) {
-            EntityPlayer player = (EntityPlayer) event.getEntityLiving();
+        if(event.getEntityLiving() instanceof EntityLivingBase && event.getEntityLiving().isEntityAlive()) {
+            EntityLivingBase entityLiving = event.getEntityLiving();
             float damage = event.getAmount();
-            float shielding = (float) getRunicShielding(player);
+            float shielding = (float) getRunicShielding(entityLiving);
             if(shielding > 0) {
                 damage = Math.max(0, damage - shielding);
                 shielding = Math.max(0, shielding - event.getAmount());
                 event.setAmount(damage);
-                setRunicShielding(player, shielding);
+                setRunicShielding(entityLiving, shielding);
             }
         }
     }
 
-    public static double getRunicShielding(EntityPlayer player) {
+    public static double getRunicShielding(EntityLivingBase entityLiving) {
         if(ENABLE_NEW_RUNIC_SHIELDING) {
-            registerAttribute(player.getAttributeMap(), RUNIC_SHIELDING);
-            return player.getEntityAttribute(RUNIC_SHIELDING).getAttributeValue();
+            registerAttribute(entityLiving.getAttributeMap(), RUNIC_SHIELDING);
+            return entityLiving.getEntityAttribute(RUNIC_SHIELDING).getAttributeValue();
         } else {
-            return player.getAbsorptionAmount();
+            return entityLiving.getAbsorptionAmount();
         }
     }
 
-    public static void setRunicShielding(EntityPlayer player, double shielding) {
+    public static void setRunicShielding(EntityLivingBase entityLiving, double shielding) {
         if(ENABLE_NEW_RUNIC_SHIELDING) {
-            registerAttribute(player.getAttributeMap(), RUNIC_SHIELDING);
-            IAttributeInstance instance = player.getEntityAttribute(RUNIC_SHIELDING);
+            registerAttribute(entityLiving.getAttributeMap(), RUNIC_SHIELDING);
+            IAttributeInstance instance = entityLiving.getEntityAttribute(RUNIC_SHIELDING);
             instance.removeModifier(RUNIC_SHIELDING_ID);
             instance.applyModifier(new AttributeModifier(RUNIC_SHIELDING_ID, RUNIC_SHIELDING_NAME, shielding, 0));
         } else {
-            player.setAbsorptionAmount((float) shielding);
+            entityLiving.setAbsorptionAmount((float) shielding);
         }
     }
 
