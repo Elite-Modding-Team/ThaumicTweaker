@@ -1,5 +1,6 @@
 package mod.emt.thaumictweaker.util.libs;
 
+import mod.emt.thaumictweaker.config.ConfigOverhaulsTT;
 import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import mod.emt.thaumictweaker.util.helpers.LogHelper;
 import mod.emt.thaumictweaker.util.helpers.RegistryHelper;
@@ -36,11 +37,11 @@ public class ModTags {
 
     public static int getChampionMobChance(Entity entity) {
         if(entity instanceof EntityCreature && !(entity instanceof EntityOwnedConstruct)) {
-            if(!entity.isNonBoss() && !ConfigTweaksTT.champion_mobs.championBosses) {
+            if(!entity.isNonBoss() && !ConfigOverhaulsTT.championMobSettings.championBosses) {
                 return -1;
             } else if(CHAMPION_MOBS.containsKey(entity.getClass())) {
                 return CHAMPION_MOBS.get(entity.getClass());
-            } else if(ConfigTweaksTT.champion_mobs.globalChampions) {
+            } else if(ConfigOverhaulsTT.championMobSettings.globalChampions) {
                 return 0;
             }
         }
@@ -90,7 +91,7 @@ public class ModTags {
     private static void parseChampionMobWhitelist() {
         CHAMPION_MOBS.clear();
         Pattern pattern = Pattern.compile("^(.+)=(\\d+)$");
-        for(String configStr : ConfigTweaksTT.champion_mobs.championWhitelist) {
+        for(String configStr : ConfigOverhaulsTT.championMobSettings.championWhitelist) {
             try {
                 Matcher matcher = pattern.matcher(configStr);
                 if(matcher.find()) {
@@ -113,7 +114,7 @@ public class ModTags {
     private static void parseChampionBiomeModifiers() {
         CHAMPION_BIOME_MODIFIER.clear();
         Pattern pattern = Pattern.compile("(.+)=(\\d+)");
-        for(String configStr : ConfigTweaksTT.champion_mobs.biomeTypeModifier) {
+        for(String configStr : ConfigOverhaulsTT.championMobSettings.biomeTypeModifier) {
             try {
                 Matcher matcher = pattern.matcher(configStr);
                 if (matcher.find()) {

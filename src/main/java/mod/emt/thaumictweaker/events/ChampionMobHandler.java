@@ -1,6 +1,5 @@
 package mod.emt.thaumictweaker.events;
 
-import mod.emt.thaumictweaker.ThaumicTweaker;
 import mod.emt.thaumictweaker.util.libs.ModTags;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
@@ -9,7 +8,6 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import thaumcraft.api.ThaumcraftApiHelper;
 import thaumcraft.common.config.ModConfig;
@@ -17,10 +15,9 @@ import thaumcraft.common.entities.monster.boss.EntityThaumcraftBoss;
 import thaumcraft.common.entities.monster.mods.ChampionModifier;
 import thaumcraft.common.lib.utils.EntityUtils;
 
-@Mod.EventBusSubscriber(modid = ThaumicTweaker.MOD_ID)
 public class ChampionMobHandler {
     @SubscribeEvent
-    public static void onEntitySpawn(EntityJoinWorldEvent event) {
+    public void onEntitySpawn(EntityJoinWorldEvent event) {
         if(!ModConfig.CONFIG_WORLD.allowChampionMobs || event.getWorld().isRemote) return;
 
         int chance = ModTags.getChampionMobChance(event.getEntity());
