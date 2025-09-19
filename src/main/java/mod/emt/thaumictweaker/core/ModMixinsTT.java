@@ -1,7 +1,7 @@
 package mod.emt.thaumictweaker.core;
 
 import com.google.common.collect.ImmutableMap;
-import mod.emt.thaumictweaker.config.ConfigTweaksTT;
+import mod.emt.thaumictweaker.config.ConfigOverhaulsTT;
 import zone.rong.mixinbooter.ILateMixinLoader;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class ModMixinsTT implements ILateMixinLoader {
     private static final Map<String, BooleanSupplier> mixinConfigs = ImmutableMap.copyOf(new HashMap<String, BooleanSupplier>() {
         {
             put("mixins.thaumictweaker.json", () -> true);
-            put("mixins.thaumictweaker.loottables.json", () -> ConfigTweaksTT.misc_tweaks.lootTableOverhaul);
+            put("mixins.thaumictweaker.loottables.json", () -> ConfigOverhaulsTT.lootTableOverhaul);
         }
     });
 

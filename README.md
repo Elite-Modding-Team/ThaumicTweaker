@@ -60,6 +60,16 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 ---
 
+## Overhauls
+**NOTE:** All overhauls listed in this category are disabled by default.
+
+- **Loot Table Overhaul:**
+    - Changes most hardcoded mob drops into loot tables that can be modified using loot table tweakers. A full list of loot tables can be found [here](https://github.com/Elite-Modding-Team/ThaumicTweaker/tree/main/src/main/resources/assets/thaumictweaker/loot_tables/entity).
+- **Runic Shielding Overhaul:**
+    - Changes Runic Shielding to use its own shielding system instead of using Minecraft's Absorption. This also fixes a few issues where Thaumcraft would reset absorption granted by other effects.
+
+---
+
 ## General Tweaks
 **NOTE:** All tweaks listed in this category are disabled by default or use Thaumcraft default values. 
 
@@ -99,8 +109,6 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Research Table Tweaks:**
     - Research table can use and consume items from nearby inventories for research
     - Increase the vertical search area when the Research Table looks for nearby research aids
-- **Runic Shielding Tweaks:**
-    - Overhauls the Runic Shielding system with a new shield type so it no longer use Minecraft absorption hearts
 - **Vis Generator Tweaks:** 
     - Change the amount of RF generated per point of Vis and the RF output per tick
 - **Void Siphon Tweaks:** 
@@ -111,7 +119,6 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 - **Miscellaneous Tweaks:**
     - Allow Thaumometer sky scanning from non-overworld dimensions
     - Change Alchemical brass recipe to use copper instead of iron
-    - Change Thaumcraft mobs and bosses so they generate loot from Loot Tables instead of hardcoded drops
     - Disable Thaumcraft's item aspect calculation based on item crafting recipe 
     - Restores Legacy Thaumometer scanning functionality from 1.7.10
 

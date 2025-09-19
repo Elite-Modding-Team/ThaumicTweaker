@@ -39,8 +39,6 @@ public class ConfigTweaksTT {
     public static PrimalCrusherCategory primal_crusher = new PrimalCrusherCategory();
     @Config.Name("Research Table Tweaks")
     public static ResearchTableCategory research_table = new ResearchTableCategory();
-    @Config.Name("Runic Shielding Tweaks")
-    public static RunicShieldingCategory runic_shielding = new RunicShieldingCategory();
     @Config.Name("Vis Generator Tweaks")
     public static VisGeneratorCategory vis_generator = new VisGeneratorCategory();
     @Config.Name("Void Thaumaturge Robes Tweaks")
@@ -235,11 +233,6 @@ public class ConfigTweaksTT {
         @Config.Comment("Restores the original scanning functionality from 1.7.10.")
         public boolean legacyThaumometerScanning = false;
 
-        @Config.RequiresMcRestart
-        @Config.Name("Loot Table Overhaul")
-        @Config.Comment("Changes Thaumcraft mobs and bosses so loot is generated from loot tables instead of hardcoded drops.")
-        public boolean lootTableOverhaul = false;
-
         @Config.Name("Sky Scan Dimensions")
         @Config.Comment("A list of dimension ids where the Thaumometer can be used to scan the sky to obtain research notes.")
         public int[] skyDimensions = new int[] {};
@@ -301,13 +294,6 @@ public class ConfigTweaksTT {
         @Config.Name("Research Aid Horizontal Search Distance")
         @Config.Comment("Adjusts the horizontal search area when the Research Table scans nearby blocks for Research Aids.")
         public int aidSearchHorizontal = 4;
-    }
-
-    public static class RunicShieldingCategory {
-        @Config.RequiresMcRestart
-        @Config.Name("New Runic Shielding")
-        @Config.Comment("Enables Runic Shielding overhaul, replacing absorption hearts with a new shield system.")
-        public boolean newRunicShielding = false;
     }
 
     public static class VisGeneratorCategory {

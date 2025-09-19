@@ -2,6 +2,8 @@
 # Config
 config.thaumictweaker:enhancements=Enhancements
 config.thaumictweaker:enhancements.tooltip=Configuration for enhancements added by Thaumic Tweaker. These are enabled by default
+config.thaumictweaker:overhauls=Overhauls
+config.thaumictweaker:overhauls.tooltip=Configuration for feature overhauls offered by Thaumic Tweaker.
 config.thaumictweaker:tweaks=Tweaks
 config.thaumictweaker:tweaks.tooltip=Configuration for tweaks added by Thaumic Tweaker. These are disabled by default.
 config.thaumictweaker:wuss_mode=Wuss Mode

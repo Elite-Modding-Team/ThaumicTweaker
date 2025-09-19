@@ -1,7 +1,7 @@
 package mod.emt.thaumictweaker.events;
 
 import mod.emt.thaumictweaker.ThaumicTweaker;
-import mod.emt.thaumictweaker.config.ConfigTweaksTT;
+import mod.emt.thaumictweaker.config.ConfigOverhaulsTT;
 import net.minecraft.entity.ai.attributes.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.event.entity.EntityEvent;
@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import java.util.UUID;
 
 public class RunicShieldingHandler {
-    public static final boolean ENABLE_NEW_RUNIC_SHIELDING = ConfigTweaksTT.runic_shielding.newRunicShielding;
+    public static final boolean ENABLE_NEW_RUNIC_SHIELDING = ConfigOverhaulsTT.runicShieldingOverhaul;
     public static final String RUNIC_SHIELDING_NAME = "Runic shielding";
     public static final UUID RUNIC_SHIELDING_ID = UUID.fromString("a9722db2-1256-4788-897f-654386a703f0");
 
