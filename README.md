@@ -45,6 +45,16 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
 
 ---
 
+## Overhauls
+**NOTE:** All overhauls listed in this category are disabled by default.
+
+- **Loot Table Overhaul:**
+  - Changes most hardcoded mob drops into loot tables that can be modified using loot table tweakers. A full list of loot tables can be found [here](https://github.com/Elite-Modding-Team/ThaumicTweaker/tree/main/src/main/resources/assets/thaumictweaker/loot_tables/entity).
+- **Runic Shielding Overhaul:**
+  - Changes Runic Shielding to use its own shielding system instead of using Minecraft's Absorption. This also fixes a few issues where Thaumcraft would reset absorption granted by other effects.
+
+---
+
 ## CraftTweaker/GroovyScript
 **NOTE:** Scripting methods and their uses can be found on the mod [wiki](https://github.com/Elite-Modding-Team/ThaumicTweaker/wiki).
 
@@ -57,16 +67,6 @@ Tweaks for Thaumcraft 6. All the thaumcraft tweaks a tweaker could want.
     - Add or remove Porous Stone special item drops using CraftTweaker or GroovyScript
 - **Special Mining Result Tweaks:**
     - Add and remove special mining drops using CraftTweaker or GroovyScript
-
----
-
-## Overhauls
-**NOTE:** All overhauls listed in this category are disabled by default.
-
-- **Loot Table Overhaul:**
-    - Changes most hardcoded mob drops into loot tables that can be modified using loot table tweakers. A full list of loot tables can be found [here](https://github.com/Elite-Modding-Team/ThaumicTweaker/tree/main/src/main/resources/assets/thaumictweaker/loot_tables/entity).
-- **Runic Shielding Overhaul:**
-    - Changes Runic Shielding to use its own shielding system instead of using Minecraft's Absorption. This also fixes a few issues where Thaumcraft would reset absorption granted by other effects.
 
 ---
 
