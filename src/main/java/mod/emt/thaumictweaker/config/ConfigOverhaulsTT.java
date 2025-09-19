@@ -21,6 +21,6 @@ public class ConfigOverhaulsTT {
     public static boolean runicShieldingOverhaul = false;
 
     static {
-        ConfigAnytime.register(ConfigTweaksTT.class);
+        ConfigAnytime.register(ConfigOverhaulsTT.class);
     }
 }
