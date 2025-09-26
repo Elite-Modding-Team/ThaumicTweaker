@@ -45,10 +45,6 @@ public class ConfigEnhancementsTT {
     })
     public static boolean enableWarpResearchSubtitles = true;
 
-    @Config.Name("Eldritch Crab Full Death Rotation")
-    @Config.Comment("Makes Eldritch Crabs fully rotate on death to match the death animations of spiders, silverfish and endermites.")
-    public static boolean eldritchCrabFullDeathRotation = true;
-
     @Config.Name("Suppress Creative Warp Events")
     @Config.Comment("Suppresses Warp Events for players in Creative mode.")
     public static boolean suppressCreativeWarpEvents = true;

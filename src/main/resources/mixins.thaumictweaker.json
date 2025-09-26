@@ -54,7 +54,6 @@
   ] ,
   "server": [] ,
   "client": [
-    "client.entity.RenderEldritchCrabMixin" ,
     "client.events.HudHandlerMixin" ,
     "client.gui.GuiArcaneBoreMixin" ,
     "client.gui.GuiPechMixin" ,

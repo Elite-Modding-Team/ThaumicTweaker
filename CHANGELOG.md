@@ -1,4 +1,14 @@
 # Changelog ThaumicTweaker
+
+## 1.1.1
+### Fixes
+- Fixed mod name
+
+### Removals
+- Removed fix for Eldritch Crab death rotation, it was relocated to Thaumcraft Fix
+
+---
+
 ## 1.1.0
 ### Added
 - Added fix for Caster's Gauntlet causing erroring GUI textures when held in mainhand
