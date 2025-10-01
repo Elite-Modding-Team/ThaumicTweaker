@@ -45,3 +45,26 @@ Thaumcraft tweaks for tweakers.
 - Add Tab completion to TC commands (including research)
 - Check if `ToolEvents#livingDrops()` is causing a dupe issue with replaced items and Collector infusion enchant (needs event priority LOWEST)
 - Focal Manipulator scan and consume vis crystals from nearby inventories
+- Hungry chest nomming animation doesn't play
+- Silverwood leaves don't produce particles like they do in older thaumcraft versions. (Might be intentional to reduce lag)
+- Disable right-clicking items on boiling crucibles
+- Make Thaumcraft's Research Table look for ore dictionaried Bookshelf
+- Thaumonomicon Font - The Thaumonomicon used the unicode font in earlier Thaumcraft versions. This would be great to have as a config option without needing to have force unicode font on
+- Option to disable zooming in and out on the Thaumonomicon
+- Overlay effect when a warp event happens (still exists, you can see it when you have Death Gaze active)
+- More research cards to add variety to the research game
+- "More ways to get fundamental theories - bookshelf research aid gives more fundamentals cards? Additional aids? New cards specifically for fundamentals?"
+- "Research card orders have a habit of being really shitty, you might start in one category and immediately get a bunch of cards that counteract your immediate progress. For example, I started researching alchemy and spent some fairly expensive cards to do so, but then straight after I got a card to discard alchemy research or split the progress with another useless category."
+- "Research cards which require essentia should blacklist essentia the player hasn't discovered (i.e. scanned in an item), to prevent cases where you need stupidly rare essentia from some addon mod and there's no way to get it, so you have to scrap everything and start again."
+- Perhaps make the crimson rites research only require a scanned copy of the book instead of destroying one; better for sharing in multiplayer.
+- "Research aid items could be marked as such in their tooltip, like with Augmentation and Infusion Stabilizer items."
+- "Additionally, could research aid items placed in the world also be given a visual hint when they're accessible by a research table? Perhaps temphis runes floating around them, or maybe the enchanting table bookshelf runes particle effect?"
+- Tweak Thaumometer third-person holding position and animation (latter only if possible/reasonable); make the Thaumometer slightly bigger and with the lens facing the player model, and perhaps make the holding arm stick out too.
+- Additional flair for the Brain in a Jar: in older versions tapping it would make the jar tilt slightly, so if you get some time (ha) you could reimplement that effect.
+- Additional Thaumometer visual tweak to readd from Thaumcraft 4: make it so the player's hands can be seen holding the Thaumometer in first-person view, like with vanilla maps.
+- When using phials on banners to decorate them, the phial gets consumed entirely - it doesn't even give you an empty phial back. Not sure whether essentia should even be consumed at all, since jar labels don't work like that.
+- Flux phage is transmitted by everything, even things like the invisible mob ghosts added by EvilCraft that are left when mobs die, which makes containing the spread of the disease way harder than it needs to be. A blacklist to prevent certain mobs from getting flux phage/flu would make sense here.
+- Tainted Soil always changes back to dirt, even if it was originally sand or some such. I don’t know if this applies to other tainted blocks like tainted logs or not.
+- Taint can corrupt any mob that isn’t undead from what I know (apparently spellbats can be corrupted), so a tweak to ensure certain things can’t get tainted would be good.
+- Tainted Sheep should have their wool coloured purple. Wool placed down that gets tainted should also turn purple.
+- Improve Hollow Hill spawning. For one, when spawning in snowy biomes they don't have snow generated on top of them. Additionally, changing them to spawn using more modern structure blocks instead of hard-coded spawns might also be a good idea. Finally, it could also be good to have the eerie biome appear around them
