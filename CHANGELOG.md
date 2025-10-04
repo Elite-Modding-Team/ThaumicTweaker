@@ -1,10 +1,11 @@
 # Changelog ThaumicTweaker
 
 ## 1.1.1
-### Fixes
+### Fixed
 - Fixed mod name
+- Fixed a crash when loaded with TickCentral
 
-### Removals
+### Removed
 - Removed fix for Eldritch Crab death rotation, it was relocated to Thaumcraft Fix
 
 ---

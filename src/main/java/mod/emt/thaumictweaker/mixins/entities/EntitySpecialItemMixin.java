@@ -4,6 +4,9 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import thaumcraft.common.entities.EntitySpecialItem;
 
 @Mixin(value = EntitySpecialItem.class, remap = false)
@@ -16,12 +19,13 @@ public abstract class EntitySpecialItemMixin extends EntityItem {
      * @author Invadermonky
      * @reason Fixes inconsistent floating behavior for Primordial Pearl when dropped from Thaumcraft bosses.
      */
-    @Overwrite
-    public void onUpdate() {
+    @Inject(method = "onUpdate", at = @At("HEAD"), cancellable = true, remap = true)
+    private void onUpdateOverwriteMixin(CallbackInfo ci) {
         super.onUpdate();
         this.motionX *= 0.9;
         this.motionY *= 0.9;
         this.motionZ *= 0.9;
+        ci.cancel();
     }
 
     @Override
