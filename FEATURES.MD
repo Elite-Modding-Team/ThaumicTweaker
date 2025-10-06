@@ -35,6 +35,10 @@ Thaumcraft tweaks for tweakers.
 - Golems can activate infusion altar
 - Golems have a copy of the placing player's research knowledge
 
+### Wuss Mode
+- Ability to disable research entirely
+- Cheaper recipe for greater foci
+
 ## Feature Requests
 - Don't know what all this does, but E2E:E dev requested these mixins be included
   - https://github.com/Krutoy242/Enigmatica2Expert-Extended/blob/master/scripts/mixin/thaumcraft.zs
