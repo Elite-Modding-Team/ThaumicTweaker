@@ -1,5 +1,11 @@
 # Changelog ThaumicTweaker
 
+## 1.2.0
+### Added
+- Added Arcane Pedestal comparator output enhancement
+
+---
+
 ## 1.1.1
 ### Fixed
 - Fixed mod name

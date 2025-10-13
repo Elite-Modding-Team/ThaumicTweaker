@@ -39,6 +39,7 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
   - Add subtitles support to Thaumonomicon research entries
   - Add subtitles support to Forbidden Knowledge research entries
 - **Misc Enhancements:**
+  - Add comparator output values to Arcane Pedestal
   - Suppress Warp Events while player is in Creative mode
 
 ---

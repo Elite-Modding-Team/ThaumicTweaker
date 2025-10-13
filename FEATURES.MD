@@ -28,9 +28,6 @@ Thaumcraft tweaks for tweakers.
 - Void Robes grant knockback resistance (all = 0.25)
 - Void Robes grant a flat damage and magic resistance
 
-### Mixins Blocks (DONE)
-- Pedestals have comparator output values
-
 ### Mixins Golems (DONE)
 - Golems can activate infusion altar
 - Golems have a copy of the placing player's research knowledge
