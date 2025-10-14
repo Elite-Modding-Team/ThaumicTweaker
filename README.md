@@ -11,6 +11,7 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 - Fixed Boots of the Traveler and Cloud Ring screen shake and damage sound when taking zero fall damage
 - Fixes Caster's Gauntlet Gui rendering in the incorrect location if gauntlet is held in the offhand
 - Fixed Caster's Gauntlet Gui causing rendering issues when gauntlet is in mainhand and Thaumometer or Sanity Checker is held in the offhand
+- Fixed Caster's Gauntlet Gui causing rendering issues when plan focus is equipped and Thaumometer or Sanity Checker is also held
 - Fixed Exploration Research missing or not being granted to players under specific circumstances
 - Fixed Flux Rifts not collapsing when fully drained by Void Siphons
 - Fixed FXPollution packet causing a client-side crash when handling large values

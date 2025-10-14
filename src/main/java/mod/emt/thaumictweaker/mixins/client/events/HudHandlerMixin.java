@@ -41,6 +41,11 @@ public abstract class HudHandlerMixin {
         mc.renderEngine.bindTexture(this.HUD);
     }
 
+    @Inject(method = "renderCastingWandHud", at = @At("HEAD"))
+    private void bindTextureCastingWandHudMixin(Minecraft mc, float partialTicks, EntityPlayer player, long time, ItemStack wandstack, int shifty, CallbackInfo ci) {
+        mc.renderEngine.bindTexture(this.HUD);
+    }
+
     /**
      * @author Invadermonky
      * @reason Fixes the Caster Gui icon location when holding the casting gauntlet in the offhand

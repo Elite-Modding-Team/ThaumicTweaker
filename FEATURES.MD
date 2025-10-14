@@ -69,3 +69,4 @@ Thaumcraft tweaks for tweakers.
 - Taint can corrupt any mob that isn’t undead from what I know (apparently spellbats can be corrupted), so a tweak to ensure certain things can’t get tainted would be good.
 - Tainted Sheep should have their wool coloured purple. Wool placed down that gets tainted should also turn purple.
 - Improve Hollow Hill spawning. For one, when spawning in snowy biomes they don't have snow generated on top of them. Additionally, changing them to spawn using more modern structure blocks instead of hard-coded spawns might also be a good idea. Finally, it could also be good to have the eerie biome appear around them
+- Rework Burrowing infusion to function more like Botania's Terrasteel Axe
