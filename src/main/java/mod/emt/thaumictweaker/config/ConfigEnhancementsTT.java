@@ -30,6 +30,10 @@ public class ConfigEnhancementsTT {
     @Config.Comment("Adds comparator output values to the Arcane Pedestal.")
     public static boolean enablePedestalComparator = true;
 
+    @Config.Name("Enable Research Aid Tooltips")
+    @Config.Comment("Adds tooltips to items that can be used as research aids.")
+    public static boolean enableResearchAidTooltips = true;
+
     @Config.Name("Enable Research Subtitles")
     @Config.Comment
             ({

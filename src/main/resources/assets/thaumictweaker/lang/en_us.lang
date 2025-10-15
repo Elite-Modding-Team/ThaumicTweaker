@@ -9,6 +9,9 @@ config.thaumictweaker:tweaks.tooltip=Configuration for tweaks added by Thaumic T
 config.thaumictweaker:wuss_mode=Wuss Mode
 config.thaumictweaker:wuss_mode.tooltip=Configuration options for difficulty changes added by Thaumic Tweaker. These are disabled by default and do not require Wuss Mode to be active.
 
+# Tooltips
+tooltip.thaumictweaker:research_aid.tooltip=§5Research Aid§r
+
 # GroovyScript
 # -- PECH TRADES
 groovyscript.wiki.thaumictweaker.pech_trades.title=Thaumcraft Pech Trades
