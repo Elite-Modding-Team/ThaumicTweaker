@@ -86,6 +86,10 @@ public class ConfigTweaksTT {
                         "  minecraft:stone:0"
                 })
         public String[] crucibleHeatSources = new String[] {};
+
+        @Config.Name("Disable Item Interaction")
+        @Config.Comment("Disables item interaction when right-clicking on a boiling crucible, preventing items from being consumed.")
+        public boolean disableItemInteraction = false;
     }
 
     public static class CuriosityTweaksCategory {

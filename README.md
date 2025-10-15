@@ -83,6 +83,7 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
   - Define what mobs can become champions as well as the chance specific mobs can become champions
 - **Crucible Tweaks:**
   - Add additional blocks that can heat the Crucible
+  - Add tweak disabling right-click item smelting interaction
 - **Cult Robes Tweaks:**
   - Modify the Vis discount granted by each piece of armor
 - **Curiosity Tweaks:**

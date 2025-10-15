@@ -48,7 +48,6 @@ Thaumcraft tweaks for tweakers.
 - Focal Manipulator scan and consume vis crystals from nearby inventories
 - Hungry chest nomming animation doesn't play
 - Silverwood leaves don't produce particles like they do in older thaumcraft versions. (Might be intentional to reduce lag)
-- Disable right-clicking items on boiling crucibles
 - Make Thaumcraft's Research Table look for ore dictionaried Bookshelf
 - Thaumonomicon Font - The Thaumonomicon used the unicode font in earlier Thaumcraft versions. This would be great to have as a config option without needing to have force unicode font on
 - Option to disable zooming in and out on the Thaumonomicon

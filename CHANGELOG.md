@@ -3,6 +3,7 @@
 ## 1.2.0
 ### Added
 - Added Arcane Pedestal comparator output enhancement
+- Added Crucible tweak disabling item interaction
 
 ---
 
