@@ -3,6 +3,7 @@
 ## 1.2.0
 ### Added
 - Added enhancement adding comparator output to Arcane Pedestals
+- Added fix for plan focus causing errorred GUI textures
 - Added tweak disabling item interaction on boiling Crucibles
 - Added tweak blacklisting entities from spreading Flux Phage
 
