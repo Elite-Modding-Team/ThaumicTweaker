@@ -23,6 +23,7 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 - Fixed Primordial Pearl item movement and spawn location if dropped by bosses
 - Fixed Research Table shift-click interaction for Paper and Scribing Tools
 - Fixed Thaumatorium causing a crash when interacting with some item insertion/extraction methods
+- Fixed Thaumcraft banners consuming Essential Phials when setting aspect image
 - Fixed Thaumometer displaying particles when stored in first hotbar slot
 
 ---
