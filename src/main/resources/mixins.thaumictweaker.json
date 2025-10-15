@@ -12,6 +12,7 @@
     "blocks.BlockPedestalMixin" ,
     "blocks.BlockStonePorousMixin" ,
     "containers.ContainerResearchTableMixin" ,
+    "effects.PotionInfectiousVisExhaustMixin" ,
     "entities.EntityEldritchGuardianMixin" ,
     "entities.EntityEldritchWardenMixin" ,
     "entities.EntityFluxRiftMixin" ,

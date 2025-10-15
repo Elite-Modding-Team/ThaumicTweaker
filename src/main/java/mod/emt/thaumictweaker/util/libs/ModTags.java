@@ -13,12 +13,12 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.fml.common.registry.EntityEntry;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.common.entities.construct.EntityOwnedConstruct;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,6 +26,7 @@ public class ModTags {
     private static final Map<Block, Integer> CRUCIBLE_HEAT_SOURCES = new LinkedHashMap<>();
     private static final Map<Class<? extends EntityCreature>, Integer> CHAMPION_MOBS = new HashMap<>();
     private static final Map<BiomeDictionary.Type, Integer> CHAMPION_BIOME_MODIFIER = new HashMap<>();
+    private static final Set<ResourceLocation> VIS_EXHAUST_BLACKLIST = new HashSet<>();
 
     public static boolean isCrucibleHeatSource(Block block, int meta) {
         if(CRUCIBLE_HEAT_SOURCES.containsKey(block)) {
@@ -58,10 +59,19 @@ public class ModTags {
         return max;
     }
 
+    public static boolean isEntityVisExhaustBlacklisted(Entity entity) {
+        EntityEntry entry = EntityRegistry.getEntry(entity.getClass());
+        if(entry != null && entry.getRegistryName() != null) {
+            return VIS_EXHAUST_BLACKLIST.contains(entry.getRegistryName());
+        }
+        return false;
+    }
+
     public static void syncConfig() {
         parseCrucibleHeatSources();
         parseChampionMobWhitelist();
         parseChampionBiomeModifiers();
+        parseFluxPhageBlacklist();
     }
 
     private static void parseCrucibleHeatSources() {
@@ -130,6 +140,17 @@ public class ModTags {
                 }
             } catch (Exception e) {
                 LogHelper.error("Invalid config string: " + configStr);
+            }
+        }
+    }
+
+    private static void parseFluxPhageBlacklist() {
+        VIS_EXHAUST_BLACKLIST.clear();
+        for(String str : ConfigTweaksTT.flux_phage.blacklistedEntities) {
+            ResourceLocation loc = new ResourceLocation(str);
+            EntityEntry entry = ForgeRegistries.ENTITIES.getValue(loc);
+            if(entry != null && entry.getRegistryName() != null) {
+                VIS_EXHAUST_BLACKLIST.add(entry.getRegistryName());
             }
         }
     }

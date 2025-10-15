@@ -21,6 +21,8 @@ public class ConfigTweaksTT {
     public static CuriosityTweaksCategory curiosity_tweaks = new CuriosityTweaksCategory();
     @Config.Name("Fluid Death Tweaks")
     public static FluidDeathCategory fluid_death = new FluidDeathCategory();
+    @Config.Name("Flux Phage Tweaks")
+    public static FluxPhageCategory flux_phage = new FluxPhageCategory();
     @Config.Name("Flux Pollution Tweaks")
     public static FluxPollutionCategory flux_pollution = new FluxPollutionCategory();
     @Config.Name("Golem Tweaks")
@@ -113,6 +115,12 @@ public class ConfigTweaksTT {
                         "value of 1.0 will deal default damage, a value of 2.0 will deal double damage, and so on."
                 })
         public double damageModifier = 1.0;
+    }
+
+    public static class FluxPhageCategory {
+        @Config.Name("Entity Blacklist")
+        @Config.Comment("A list of entities that will not be infected with Flux Phage. Format: minecraft:zombie")
+        public String[] blacklistedEntities = new String[] {};
     }
 
     public static class FluxPollutionCategory {

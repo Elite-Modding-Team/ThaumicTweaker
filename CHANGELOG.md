@@ -4,6 +4,7 @@
 ### Added
 - Added enhancement adding comparator output to Arcane Pedestals
 - Added tweak disabling item interaction on boiling Crucibles
+- Added tweak blacklisting entities from spreading Flux Phage
 
 ---
 

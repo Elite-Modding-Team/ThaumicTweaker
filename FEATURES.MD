@@ -61,7 +61,6 @@ Thaumcraft tweaks for tweakers.
 - Tweak Thaumometer third-person holding position and animation (latter only if possible/reasonable); make the Thaumometer slightly bigger and with the lens facing the player model, and perhaps make the holding arm stick out too.
 - Additional flair for the Brain in a Jar: in older versions tapping it would make the jar tilt slightly, so if you get some time (ha) you could reimplement that effect.
 - Additional Thaumometer visual tweak to readd from Thaumcraft 4: make it so the player's hands can be seen holding the Thaumometer in first-person view, like with vanilla maps.
-- Flux phage is transmitted by everything, even things like the invisible mob ghosts added by EvilCraft that are left when mobs die, which makes containing the spread of the disease way harder than it needs to be. A blacklist to prevent certain mobs from getting flux phage/flu would make sense here.
 - Tainted Soil always changes back to dirt, even if it was originally sand or some such. I don’t know if this applies to other tainted blocks like tainted logs or not.
 - Taint can corrupt any mob that isn’t undead from what I know (apparently spellbats can be corrupted), so a tweak to ensure certain things can’t get tainted would be good.
 - Tainted Sheep should have their wool coloured purple. Wool placed down that gets tainted should also turn purple.
