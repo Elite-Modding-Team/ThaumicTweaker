@@ -116,6 +116,8 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 - **Research Table Tweaks:**
   - Research table can use and consume items from nearby inventories for research
   - Increase the vertical search area when the Research Table looks for nearby research aids
+- **Thaumonomicon Tweaks:**
+  - Disable zoom while browsing Thamonomicon categories
 - **Vis Generator Tweaks:** 
   - Change the amount of RF generated per point of Vis and the RF output per tick
 - **Void Siphon Tweaks:** 

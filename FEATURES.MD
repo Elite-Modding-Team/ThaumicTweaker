@@ -50,7 +50,6 @@ Thaumcraft tweaks for tweakers.
 - Silverwood leaves don't produce particles like they do in older thaumcraft versions. (Might be intentional to reduce lag)
 - Make Thaumcraft's Research Table look for ore dictionaried Bookshelf
 - Thaumonomicon Font - The Thaumonomicon used the unicode font in earlier Thaumcraft versions. This would be great to have as a config option without needing to have force unicode font on
-- Option to disable zooming in and out on the Thaumonomicon
 - Overlay effect when a warp event happens (still exists, you can see it when you have Death Gaze active)
 - More research cards to add variety to the research game
 - "More ways to get fundamental theories - bookshelf research aid gives more fundamentals cards? Additional aids? New cards specifically for fundamentals?"

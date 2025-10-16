@@ -1,7 +1,9 @@
 package mod.emt.thaumictweaker.mixins.client.gui;
 
+import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
 import mod.emt.thaumictweaker.config.ConfigEnhancementsTT;
+import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.relauncher.Side;
@@ -51,5 +53,18 @@ public class GuiResearchBrowserMixin {
                 }
             }
         }
+    }
+
+    @ModifyExpressionValue(
+            method = "drawScreen",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lorg/lwjgl/input/Mouse;getDWheel()I",
+                    remap = false
+            ),
+            remap = true
+    )
+    private int disableZoomMixin(int original) {
+        return ConfigTweaksTT.thaumonomicon.disableThaumonomiconZoom ? 0 : original;
     }
 }
