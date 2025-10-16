@@ -141,7 +141,7 @@ public class ConfigTweaksTT {
 
     public static class FortressArmorCategory {
         @Config.Name("Enable Knockback Resistance")
-        @Config.Comment("Gives the Fortress Armor knockback resistance. Chest = 0.4, Legs = 0.4, Helm = 0.2")
+        @Config.Comment("Gives the Fortress Armor knockback resistance. Chest = 0.4, Legs = 0.3, Helm = 0.3")
         public boolean enableKnockbackResistance = false;
     }
 
