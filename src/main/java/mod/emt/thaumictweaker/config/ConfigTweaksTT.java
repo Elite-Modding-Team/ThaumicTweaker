@@ -25,6 +25,8 @@ public class ConfigTweaksTT {
     public static FluxPhageCategory flux_phage = new FluxPhageCategory();
     @Config.Name("Flux Pollution Tweaks")
     public static FluxPollutionCategory flux_pollution = new FluxPollutionCategory();
+    @Config.Name("Fortress Armor Tweaks")
+    public static FortressArmorCategory fortress_armor = new FortressArmorCategory();
     @Config.Name("Golem Tweaks")
     public static GolemTweaksCategory golem_tweaks = new GolemTweaksCategory();
     @Config.Name("Infusion Enchantment Tweaks")
@@ -135,6 +137,12 @@ public class ConfigTweaksTT {
         @Config.Name("Mirror Instability Decay Rate")
         @Config.Comment("The time, in ticks, between each instability decay operation of the Mirror. Smaller values will result in less flux.")
         public int mirrorInstabilityDecay = 100;
+    }
+
+    public static class FortressArmorCategory {
+        @Config.Name("Enable Knockback Resistance")
+        @Config.Comment("Gives the Fortress Armor knockback resistance. Chest = 0.4, Legs = 0.4, Helm = 0.2")
+        public boolean enableKnockbackResistance = false;
     }
 
     public static class GolemTweaksCategory {

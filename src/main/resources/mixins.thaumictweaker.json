@@ -39,6 +39,7 @@
     "golems.SealUseMixin" ,
     "items.ItemBaublesMixin" ,
     "items.ItemCutlistRobeArmorMixin" ,
+    "items.ItemFortressArmorMixin" ,
     "items.ItemPrimalCrusherMixin" ,
     "items.ItemThaumometerMixin" ,
     "items.ItemVoidRobeArmorMixin" ,

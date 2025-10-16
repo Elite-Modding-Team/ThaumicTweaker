@@ -14,7 +14,6 @@ Thaumcraft tweaks for tweakers.
 
 ## Features
 ### Mixins Armor (DONE)
-- Fortress armor grants knockback resistance (chest = 0.4, rest = 0.3)
 - Fortress armor set bonus (Strength modifier configurable)
 - Fortress armor has additional armor, armor toughness, and magic damage protection
 - Void Metal Armor repair significantly faster
@@ -41,10 +40,6 @@ Thaumcraft tweaks for tweakers.
   - https://github.com/Wong-Innovations/TC4Research/commit/bbbadaab6a5ed3f0401525ad89ebcb1c14e89c14
 
 ## Feature Requests
-- Don't know what all this does, but E2E:E dev requested these mixins be included
-  - https://github.com/Krutoy242/Enigmatica2Expert-Extended/blob/master/scripts/mixin/thaumcraft.zs
-- If you use a Plan + Break focus on blocks then immediately switch to the Primal Crusher (specifically only happens on this tool), it'll start to take durability from it to the point of breaking it (this ones pretty bad)
-- If you put a gauntlet equipped with a Break focus on your offhand with an item infused with Destructive on the main hand, it will actually activate it when mining with the Break focus (doesn't occur in Creative)
 - Golem blacklist and whitelist fails for certain types of blocks (not items), especially ones that are coded in the old way using metadata (like botanias living stone and living wood)
 - Requesting items from golems manually sometimes fails
 - Add Tab completion to TC commands (including research)
@@ -52,8 +47,6 @@ Thaumcraft tweaks for tweakers.
 - Focal Manipulator scan and consume vis crystals from nearby inventories
 - Hungry chest nomming animation doesn't play
 - Silverwood leaves don't produce particles like they do in older thaumcraft versions. (Might be intentional to reduce lag)
-- Make Thaumcraft's Research Table look for ore dictionaried Bookshelf
-- Thaumonomicon Font - The Thaumonomicon used the unicode font in earlier Thaumcraft versions. This would be great to have as a config option without needing to have force unicode font on
 - Overlay effect when a warp event happens (still exists, you can see it when you have Death Gaze active)
 - More research cards to add variety to the research game
 - "More ways to get fundamental theories - bookshelf research aid gives more fundamentals cards? Additional aids? New cards specifically for fundamentals?"
@@ -67,5 +60,14 @@ Thaumcraft tweaks for tweakers.
 - Tainted Soil always changes back to dirt, even if it was originally sand or some such. I don’t know if this applies to other tainted blocks like tainted logs or not.
 - Taint can corrupt any mob that isn’t undead from what I know (apparently spellbats can be corrupted), so a tweak to ensure certain things can’t get tainted would be good.
 - Tainted Sheep should have their wool coloured purple. Wool placed down that gets tainted should also turn purple.
+
+## Requires Overhaul
+- If you use a Plan + Break focus on blocks then immediately switch to the Primal Crusher (specifically only happens on this tool), it'll start to take durability from it to the point of breaking it (this ones pretty bad)
+- If you put a gauntlet equipped with a Break focus on your offhand with an item infused with Destructive on the main hand, it will actually activate it when mining with the Break focus (doesn't occur in Creative)
+- Make Thaumcraft's Research Table look for ore dictionaried Bookshelf
 - Improve Hollow Hill spawning. For one, when spawning in snowy biomes they don't have snow generated on top of them. Additionally, changing them to spawn using more modern structure blocks instead of hard-coded spawns might also be a good idea. Finally, it could also be good to have the eerie biome appear around them
 - Rework Burrowing infusion to function more like Botania's Terrasteel Axe
+
+## Potential Issues
+- Thaumonomicon Font - The Thaumonomicon used the unicode font in earlier Thaumcraft versions. This would be great to have as a config option without needing to have force unicode font on
+
