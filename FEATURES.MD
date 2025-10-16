@@ -36,6 +36,10 @@ Thaumcraft tweaks for tweakers.
 - Ability to disable research entirely
 - Cheaper recipe for greater foci
 
+### Mod Merging
+- Merge [Thaumic Inventory Scanning](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-inventory-scanning) - TC4 Research Port also has it included and possibly touched up some stuff
+  - https://github.com/Wong-Innovations/TC4Research/commit/bbbadaab6a5ed3f0401525ad89ebcb1c14e89c14
+
 ## Feature Requests
 - Don't know what all this does, but E2E:E dev requested these mixins be included
   - https://github.com/Krutoy242/Enigmatica2Expert-Extended/blob/master/scripts/mixin/thaumcraft.zs
