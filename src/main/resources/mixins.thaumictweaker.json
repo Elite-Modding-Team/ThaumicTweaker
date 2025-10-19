@@ -60,6 +60,7 @@
   "server": [] ,
   "client": [
     "client.events.HudHandlerMixin" ,
+    "client.events.KeyHandlerMixin" ,
     "client.gui.GuiArcaneBoreMixin" ,
     "client.gui.GuiPechMixin" ,
     "client.gui.GuiResearchBrowserMixin" ,
