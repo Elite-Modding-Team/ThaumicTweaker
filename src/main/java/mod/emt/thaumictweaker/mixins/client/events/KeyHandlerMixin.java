@@ -53,7 +53,10 @@ public class KeyHandlerMixin {
                     @Override
                     public boolean isActive() {
                         EntityPlayerSP playerSP = Minecraft.getMinecraft().player;
-                        return playerSP.getHeldItemMainhand().getItem() instanceof ICaster || playerSP.getHeldItemOffhand().getItem() instanceof ICaster;
+                        if(playerSP != null) {
+                            return playerSP.getHeldItemMainhand().getItem() instanceof ICaster || playerSP.getHeldItemOffhand().getItem() instanceof ICaster;
+                        }
+                        return false;
                     }
 
                     @Override
@@ -67,9 +70,11 @@ public class KeyHandlerMixin {
                 new IKeyConflictContext() {
                     @Override
                     public boolean isActive() {
-                        if(FMLClientHandler.instance().getClient().inGameHasFocus) {
+                        if (FMLClientHandler.instance().getClient().inGameHasFocus) {
                             EntityPlayerSP playerSP = Minecraft.getMinecraft().player;
-                            return playerSP.getHeldItemMainhand().getItem() instanceof ICaster || playerSP.getHeldItemOffhand().getItem() instanceof ICaster;
+                            if (playerSP != null) {
+                                return playerSP.getHeldItemMainhand().getItem() instanceof ICaster || playerSP.getHeldItemOffhand().getItem() instanceof ICaster;
+                            }
                         }
                         return false;
                     }
