@@ -58,7 +58,7 @@ public class KeyHandlerMixin {
 
                     @Override
                     public boolean conflicts(IKeyConflictContext other) {
-                        return this.isActive() && other.isActive();
+                        return this.isActive() || other.isActive();
                     }
                 }
         );
@@ -76,7 +76,7 @@ public class KeyHandlerMixin {
 
                     @Override
                     public boolean conflicts(IKeyConflictContext other) {
-                        return this.isActive() && other.isActive();
+                        return this.isActive() || other.isActive();
                     }
                 }
         );
