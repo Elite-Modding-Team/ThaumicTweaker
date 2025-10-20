@@ -11,7 +11,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyConstant;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import thaumcraft.api.casters.ICaster;
 import thaumcraft.common.lib.events.KeyHandler;
@@ -21,6 +23,22 @@ import thaumcraft.common.lib.events.KeyHandler;
 public class KeyHandlerMixin {
     @Shadow public static KeyBinding keyF;
     @Shadow public static KeyBinding keyG;
+
+    @ModifyConstant(
+            method = "<clinit>",
+            constant = @Constant(intValue = 33)
+    )
+    private static int modifyChangeCasterFocusKeyMixin(int constant) {
+        return 34;
+    }
+
+    @ModifyConstant(
+            method = "<clinit>",
+            constant = @Constant(intValue = 34)
+    )
+    private static int modifyCasterToggleKeyMixin(int constant) {
+        return 35;
+    }
 
     /**
      * @author Invadermonky
@@ -40,7 +58,7 @@ public class KeyHandlerMixin {
 
                     @Override
                     public boolean conflicts(IKeyConflictContext other) {
-                        return true;
+                        return this.isActive() && other.isActive();
                     }
                 }
         );
@@ -58,7 +76,7 @@ public class KeyHandlerMixin {
 
                     @Override
                     public boolean conflicts(IKeyConflictContext other) {
-                        return true;
+                        return this.isActive() && other.isActive();
                     }
                 }
         );
