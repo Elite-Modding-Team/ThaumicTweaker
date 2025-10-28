@@ -60,6 +60,7 @@ Thaumcraft tweaks for tweakers.
 - Tainted Soil always changes back to dirt, even if it was originally sand or some such. I don’t know if this applies to other tainted blocks like tainted logs or not.
 - Taint can corrupt any mob that isn’t undead from what I know (apparently spellbats can be corrupted), so a tweak to ensure certain things can’t get tainted would be good.
 - Tainted Sheep should have their wool coloured purple. Wool placed down that gets tainted should also turn purple.
+- Add config option to modify Sounding color for each ore type
 
 ## Requires Overhaul
 - If you use a Plan + Break focus on blocks then immediately switch to the Primal Crusher (specifically only happens on this tool), it'll start to take durability from it to the point of breaking it (this ones pretty bad)
