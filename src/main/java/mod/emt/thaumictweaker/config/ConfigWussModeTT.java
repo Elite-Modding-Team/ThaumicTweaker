@@ -30,6 +30,10 @@ public class ConfigWussModeTT {
     @Config.Comment("Makes the Workbench Charger recipe cheaper.")
     public static boolean cheaperWorkbenchCharger = false;
 
+    @Config.Name("Research Requirements")
+    @Config.Comment("Toggles to enable or disable various research requirements.")
+    public static WussModeResearch disableResearch = new WussModeResearch();
+
     @Config.Name("Prevent Eldritch Guardian Warp Gain")
     @Config.Comment("Prevents the player from gaining warp whenever an Eldritch Guardian spawns nearby in line of sight.")
     public static boolean preventEldritchGuardianWarpGain = false;
@@ -47,6 +51,21 @@ public class ConfigWussModeTT {
     @Config.Name("Void Siphon Wuss Mode")
     @Config.Comment("The Void Siphon no longer needs nearby rifts to create void seeds. It will passively accumulate progress over time.")
     public static boolean wussModeVoidSiphon = false;
+
+    public static class WussModeResearch {
+        @Config.Name("Disable Crafting Requirements")
+        @Config.Comment("Disables all Crafting requirements to progress research.")
+        public boolean disableCraftsRequirements = false;
+        @Config.Name("Disable Item Requirements")
+        @Config.Comment("Disables all Item requirements to progress research.")
+        public boolean disableItemRequirements = false;
+        @Config.Name("Disable Knowledge Requirements")
+        @Config.Comment("Disables all Knowledge/Observation requirements to progress research.")
+        public boolean disableKnowledgeRequirements = false;
+        @Config.Name("Disable Theory Requirements")
+        @Config.Comment("Disables all Theory requirements to progress research.")
+        public boolean disableTheoryRequirements = false;
+    }
 
     static {
         ConfigAnytime.register(ConfigWussModeTT.class);

@@ -137,7 +137,8 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 
 ## Wuss Mode Tweaks
 **NOTE:** All tweaks listed in this category are disabled by default. Wuss Mode Tweaks are designed to reduce the cost of certain recipes or allow players to bypass certain mechanics.
-
+- **Research:**
+  - Disable any or all Crafting, Item, Observation, or Theory research requirements
 - **Recipes:**
   - **Arcane Bore:** Makes the Arcane Bore recipe cheaper
   - **Bath Salts:** Makes the Bath Salts recipe cheaper
