@@ -155,6 +155,9 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 ---
 
 ## Superseded Addons
-These Thaumcraft addons are not compatible with this mod.
+These Thaumcraft addons are either not compatible with ThaumicTweaker or are not recommended because there are already similar features to them already included.
+- [Stable Thaumometer](https://www.curseforge.com/minecraft/mc-mods/stable-thaumometer)
 - [Thaumcraft 6 Enhanced](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-6-enhanced)
+- [Thaumic Mercy](https://www.curseforge.com/minecraft/mc-mods/thaumic-mercy) - Superseded by ThaumicTweaker's `Research Requirements` wuss mode tweak.
+- [Thaumcraft No Research](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-no-research) - Superseded by ThaumicTweaker's `Research Requirements` wuss mode tweak.
 - [ThaumTweaks](https://www.curseforge.com/minecraft/mc-mods/thaumtweaks)
