@@ -27,6 +27,7 @@ public class ModTags {
     private static final Map<Class<? extends EntityCreature>, Integer> CHAMPION_MOBS = new HashMap<>();
     private static final Map<BiomeDictionary.Type, Integer> CHAMPION_BIOME_MODIFIER = new HashMap<>();
     private static final Set<ResourceLocation> VIS_EXHAUST_BLACKLIST = new HashSet<>();
+    private static final Map<String, Integer> SOUNDING_COLOR_OVERRIDES = new HashMap<>();
 
     public static boolean isCrucibleHeatSource(Block block, int meta) {
         if(CRUCIBLE_HEAT_SOURCES.containsKey(block)) {
@@ -67,11 +68,22 @@ public class ModTags {
         return false;
     }
 
+    public static int getSoundingColorOverride(int oreId) {
+        String oreName = OreDictionary.getOreName(oreId);
+        for (String key : SOUNDING_COLOR_OVERRIDES.keySet()) {
+            if (oreName.toLowerCase().endsWith(key.toLowerCase())) {
+                return SOUNDING_COLOR_OVERRIDES.getOrDefault(key, -1);
+            }
+        }
+        return -1;
+    }
+
     public static void syncConfig() {
         parseCrucibleHeatSources();
         parseChampionMobWhitelist();
         parseChampionBiomeModifiers();
         parseFluxPhageBlacklist();
+        parseSoundingColorOverrides();
     }
 
     private static void parseCrucibleHeatSources() {
@@ -151,6 +163,21 @@ public class ModTags {
             EntityEntry entry = ForgeRegistries.ENTITIES.getValue(loc);
             if(entry != null && entry.getRegistryName() != null) {
                 VIS_EXHAUST_BLACKLIST.add(entry.getRegistryName());
+            }
+        }
+    }
+
+    private static void parseSoundingColorOverrides() {
+        SOUNDING_COLOR_OVERRIDES.clear();
+        Pattern pattern = Pattern.compile("^(\\w+)=([\\da-fA-F]{6})$");
+        for(String str : ConfigTweaksTT.infusion_enchantments.soundingColorOverrides) {
+            try {
+                Matcher matcher = pattern.matcher(str);
+                if(matcher.find()) {
+                    SOUNDING_COLOR_OVERRIDES.put(matcher.group(1).toLowerCase(), Integer.parseInt(matcher.group(2), 16));
+                }
+            } catch (Exception e) {
+                LogHelper.warn("Invalid sounding color override string: " + str);
             }
         }
     }

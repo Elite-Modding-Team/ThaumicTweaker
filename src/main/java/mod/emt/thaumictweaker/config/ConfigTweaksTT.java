@@ -180,6 +180,18 @@ public class ConfigTweaksTT {
         @Config.Comment("The amount each level of Fortune will increase the chance Refining will purify ore into its cluster variant.")
         public double refiningFortuneBonus = 0;
 
+        @Config.Name("Sounding Color Overrides")
+        @Config.Comment
+                ({
+                        "Add, remove or modify the particle colors whenever a nearby block is detected with the sounding infusion enchant.",
+                        "Format:",
+                        "  material=hexcolor",
+                        "Examples:",
+                        "  iron=D8AF93",
+                        "  coal=101010"
+                })
+        public String[] soundingColorOverrides = new String[] {};
+
         @Config.RangeInt(min = 1, max = 20)
         @Config.Name("Sounding Radius Modifier")
         @Config.Comment

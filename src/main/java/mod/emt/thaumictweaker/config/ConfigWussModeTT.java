@@ -30,9 +30,9 @@ public class ConfigWussModeTT {
     @Config.Comment("Makes the Workbench Charger recipe cheaper.")
     public static boolean cheaperWorkbenchCharger = false;
 
-    @Config.Name("Research Requirements")
+    @Config.Name("Disable Research Requirements")
     @Config.Comment("Toggles to enable or disable various research requirements.")
-    public static WussModeResearch disableResearch = new WussModeResearch();
+    public static WussModeResearch disableResearchRequirements = new WussModeResearch();
 
     @Config.Name("Prevent Eldritch Guardian Warp Gain")
     @Config.Comment("Prevents the player from gaining warp whenever an Eldritch Guardian spawns nearby in line of sight.")

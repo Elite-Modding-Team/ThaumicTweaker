@@ -26,7 +26,7 @@ public class GuiResearchPageMixin {
             boolean hasKnowledge = true;
             boolean hasTheory = true;
             if (this.hasCraft != null) {
-                if(ConfigWussModeTT.disableResearch.disableCraftsRequirements) {
+                if(ConfigWussModeTT.disableResearchRequirements.disableCraftsRequirements) {
                     Arrays.fill(this.hasCraft, true);
                 } else {
                     for (boolean has : this.hasCraft) {
@@ -38,7 +38,7 @@ public class GuiResearchPageMixin {
                 }
             }
             if (this.hasItem != null) {
-                if(ConfigWussModeTT.disableResearch.disableItemRequirements) {
+                if(ConfigWussModeTT.disableResearchRequirements.disableItemRequirements) {
                     Arrays.fill(this.hasItem, true);
                 } else {
                     for (boolean has : this.hasItem) {
@@ -50,7 +50,7 @@ public class GuiResearchPageMixin {
                 }
             }
             if (this.hasKnow != null) {
-                if(ConfigWussModeTT.disableResearch.disableKnowledgeRequirements) {
+                if(ConfigWussModeTT.disableResearchRequirements.disableKnowledgeRequirements) {
                     Arrays.fill(this.hasKnow, true);
                 } else {
                     for(boolean has : this.hasKnow) {
@@ -62,7 +62,7 @@ public class GuiResearchPageMixin {
                 }
             }
             if (this.hasResearch != null) {
-                if(ConfigWussModeTT.disableResearch.disableTheoryRequirements) {
+                if(ConfigWussModeTT.disableResearchRequirements.disableTheoryRequirements) {
                     Arrays.fill(this.hasResearch, true);
                 } else {
                     for(boolean has : this.hasResearch) {

@@ -8,6 +8,7 @@
 - Added tweak blacklisting entities from spreading Flux Phage
 - Added tweak disabling Thaumonomicon category zoom
 - Added tweak giving the Fortress Armor knockback resistance
+- Added tweak to override or add Sounding Infusion Enchant particle colors
 - Added wuss mode tweak disabling research requirements
 
 ---

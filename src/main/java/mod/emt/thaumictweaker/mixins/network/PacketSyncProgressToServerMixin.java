@@ -18,7 +18,7 @@ public class PacketSyncProgressToServerMixin {
             )
     )
     private Object[] skipItemMixin(ResearchStage instance) {
-        return !ConfigWussModeTT.disableResearch.disableItemRequirements ? instance.getObtain() : null;
+        return !ConfigWussModeTT.disableResearchRequirements.disableItemRequirements ? instance.getObtain() : null;
     }
 
     @Redirect(
@@ -29,7 +29,7 @@ public class PacketSyncProgressToServerMixin {
             )
     )
     private Object[] skipCraftsMixin(ResearchStage instance) {
-        return !ConfigWussModeTT.disableResearch.disableCraftsRequirements ? instance.getCraft() : null;
+        return !ConfigWussModeTT.disableResearchRequirements.disableCraftsRequirements ? instance.getCraft() : null;
     }
 
     @Redirect(
@@ -40,7 +40,7 @@ public class PacketSyncProgressToServerMixin {
             )
     )
     private String[] skipResearchMixin(ResearchStage instance) {
-        return !ConfigWussModeTT.disableResearch.disableTheoryRequirements ? instance.getResearch() : null;
+        return !ConfigWussModeTT.disableResearchRequirements.disableTheoryRequirements ? instance.getResearch() : null;
     }
 
     @Redirect(
@@ -51,6 +51,6 @@ public class PacketSyncProgressToServerMixin {
             )
     )
     private Knowledge[] skipKnowledgeMixin(ResearchStage instance) {
-        return !ConfigWussModeTT.disableResearch.disableKnowledgeRequirements ? instance.getKnow() : null;
+        return !ConfigWussModeTT.disableResearchRequirements.disableKnowledgeRequirements ? instance.getKnow() : null;
     }
 }
