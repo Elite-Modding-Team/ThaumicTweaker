@@ -218,6 +218,7 @@ public class ConfigTweaksTT {
                 "saltpeter=E3E3E3",
                 "sapphire=547DDB",
                 "silicon=6B7786",
+                "solar=E17B29",
                 "sulfur=EFC761",
                 "titanium=3A4E70",
                 "tungsten=3D4047",
