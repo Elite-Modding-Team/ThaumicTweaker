@@ -203,6 +203,7 @@ public class ConfigTweaksTT {
                 "electrotine=0A467A",
                 "firestone=DD731E",
                 "fluorite=9893E0",
+                "ilmenite=3A4E70",
                 "iridium=BDBED1",
                 "mithril=5CD6FF",
                 "nickel=9EA59E",
