@@ -1,17 +1,6 @@
 # Thaumic Tweaker Features
 Thaumcraft tweaks for tweakers.
 
-### Items (DONE)
-- Armor Materials
-  - Thaumium - +1 defence, +4 toughness, 2x durability
-  - Fortress - +1 armor, +3 toughness, Strength II, +100% knockback resistance, better damage reduction ratio, 3x durability
-  - Void Metal - +4 armor, regen effect, 3x durability, 3x repair speed
-  - Void Robe - Regeneration II effect, debuff cleansing, 75% knockback resistance, 4x durability, 4x repairing, better damage reduction ratio
-- Weapon Materials
-  - Elemental - +2 damage
-  - Void Metal - +4 damage
-  - Primal - +2 efficiency, 10x durability
-
 ## Features
 ### Mixins Armor (DONE)
 - Fortress armor set bonus (Strength modifier configurable)
@@ -32,7 +21,6 @@ Thaumcraft tweaks for tweakers.
 - Golems have a copy of the placing player's research knowledge
 
 ### Wuss Mode
-- Ability to disable research entirely
 - Cheaper recipe for greater foci
 
 ### Mod Merging
@@ -45,21 +33,25 @@ Thaumcraft tweaks for tweakers.
 - Add Tab completion to TC commands (including research)
 - Check if `ToolEvents#livingDrops()` is causing a dupe issue with replaced items and Collector infusion enchant (needs event priority LOWEST)
 - Focal Manipulator scan and consume vis crystals from nearby inventories
-- Hungry chest nomming animation doesn't play
-- Silverwood leaves don't produce particles like they do in older thaumcraft versions. (Might be intentional to reduce lag)
-- Overlay effect when a warp event happens (still exists, you can see it when you have Death Gaze active)
-- More research cards to add variety to the research game
-- "More ways to get fundamental theories - bookshelf research aid gives more fundamentals cards? Additional aids? New cards specifically for fundamentals?"
-- "Research card orders have a habit of being really shitty, you might start in one category and immediately get a bunch of cards that counteract your immediate progress. For example, I started researching alchemy and spent some fairly expensive cards to do so, but then straight after I got a card to discard alchemy research or split the progress with another useless category."
-- "Research cards which require essentia should blacklist essentia the player hasn't discovered (i.e. scanned in an item), to prevent cases where you need stupidly rare essentia from some addon mod and there's no way to get it, so you have to scrap everything and start again."
 - Perhaps make the crimson rites research only require a scanned copy of the book instead of destroying one; better for sharing in multiplayer.
-- "Additionally, could research aid items placed in the world also be given a visual hint when they're accessible by a research table? Perhaps temphis runes floating around them, or maybe the enchanting table bookshelf runes particle effect?"
-- Tweak Thaumometer third-person holding position and animation (latter only if possible/reasonable); make the Thaumometer slightly bigger and with the lens facing the player model, and perhaps make the holding arm stick out too.
-- Additional flair for the Brain in a Jar: in older versions tapping it would make the jar tilt slightly, so if you get some time (ha) you could reimplement that effect.
-- Additional Thaumometer visual tweak to readd from Thaumcraft 4: make it so the player's hands can be seen holding the Thaumometer in first-person view, like with vanilla maps.
 - Tainted Soil always changes back to dirt, even if it was originally sand or some such. I don’t know if this applies to other tainted blocks like tainted logs or not.
 - Taint can corrupt any mob that isn’t undead from what I know (apparently spellbats can be corrupted), so a tweak to ensure certain things can’t get tainted would be good.
 - Tainted Sheep should have their wool coloured purple. Wool placed down that gets tainted should also turn purple.
+
+## Animations and Effects
+- Hungry chest nomming animation doesn't play
+- Silverwood leaves don't produce particles like they do in older thaumcraft versions. (Might be intentional to reduce lag)
+- Overlay effect when a warp event happens (still exists, you can see it when you have Death Gaze active)
+- Additionally, could research aid items placed in the world also be given a visual hint when they're accessible by a research table? Perhaps temphis runes floating around them, or maybe the enchanting table bookshelf runes particle effect?
+- Tweak Thaumometer third-person holding position and animation (latter only if possible/reasonable); make the Thaumometer slightly bigger and with the lens facing the player model, and perhaps make the holding arm stick out too.
+- Additional flair for the Brain in a Jar: in older versions tapping it would make the jar tilt slightly, so if you get some time (ha) you could reimplement that effect.
+- Additional Thaumometer visual tweak to readd from Thaumcraft 4: make it so the player's hands can be seen holding the Thaumometer in first-person view, like with vanilla maps.
+
+## Research Changes
+- More research cards to add variety to the research game
+- More ways to get fundamental theories - bookshelf research aid gives more fundamentals cards? Additional aids? New cards specifically for fundamentals?
+- Research card orders have a habit of being really shitty, you might start in one category and immediately get a bunch of cards that counteract your immediate progress. For example, I started researching alchemy and spent some fairly expensive cards to do so, but then straight after I got a card to discard alchemy research or split the progress with another useless category.
+- Research cards which require essentia should blacklist essentia the player hasn't discovered (i.e. scanned in an item), to prevent cases where you need stupidly rare essentia from some addon mod and there's no way to get it, so you have to scrap everything and start again.
 
 ## Requires Overhaul
 - If you use a Plan + Break focus on blocks then immediately switch to the Primal Crusher (specifically only happens on this tool), it'll start to take durability from it to the point of breaking it (this ones pretty bad)
