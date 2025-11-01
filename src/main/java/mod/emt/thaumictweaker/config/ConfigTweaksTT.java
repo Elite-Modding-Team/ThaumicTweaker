@@ -190,7 +190,26 @@ public class ConfigTweaksTT {
                         "  iron=D8AF93",
                         "  coal=101010"
                 })
-        public String[] soundingColorOverrides = new String[] {};
+        public String[] soundingColorOverrides = new String[] {
+                "aluminum=EFEFF1",
+                "amethyst=AD53DA",
+                "ardite=E5B740",
+                "astralStarmetal=003C89",
+                "cobalt=2E7CE6",
+                "iridium=BDBED1",
+                "mithril=5CD6FF",
+                "nickel=9EA59E",
+                "osmium=B5CACC",
+                "peridot=83D951",
+                "platinum=C6D5F2",
+                "quartzCertus=BADBFF",
+                "ruby=D04545",
+                "sapphire=547DDB",
+                "titanium=3A4E70",
+                "tungsten=3D4047",
+                "uranium=57744B",
+                "zinc=B0BCAA"
+        };
 
         @Config.RangeInt(min = 1, max = 20)
         @Config.Name("Sounding Radius Modifier")
