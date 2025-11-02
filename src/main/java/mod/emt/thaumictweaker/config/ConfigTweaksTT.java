@@ -207,6 +207,7 @@ public class ConfigTweaksTT {
                 "fluorite=9893E0",
                 "ilmenite=3A4E70",
                 "iridium=BDBED1",
+                "malachite=70D3C1",
                 "mithril=5CD6FF",
                 "nickel=9EA59E",
                 "osmium=B5CACC",
@@ -220,7 +221,9 @@ public class ConfigTweaksTT {
                 "silicon=6B7786",
                 "solar=E17B29",
                 "sulfur=EFC761",
+                "tanzanite=4800CE",
                 "titanium=3A4E70",
+                "topaz=E85F0B",
                 "tungsten=3D4047",
                 "uranium=57744B",
                 "zinc=B0BCAA"
