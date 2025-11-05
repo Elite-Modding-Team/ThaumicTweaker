@@ -31,6 +31,8 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 ## Enhancements
 **NOTE:** All enhancements listed in this category are enabled by default. 
 
+- **Armor Enhancements:**
+  - Goggles of Revealing can now be attached to Thaumium and Void Metal Helmets with infusion
 - **Focus Effects:** 
   - Revamps the cast sounds of certain focus effects to provide better variety (Break, Earth, Exchange, Frost, Heal, Rift)
   - Adds impact sounds to various focus effects that lack any (Break, Earth, Exchange, Fire, Flux , Frost, Heal, Rift)

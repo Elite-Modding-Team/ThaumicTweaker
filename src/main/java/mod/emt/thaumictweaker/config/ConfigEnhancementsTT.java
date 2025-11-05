@@ -26,6 +26,10 @@ public class ConfigEnhancementsTT {
     @Config.Comment("Revamps the spell cast sounds of certain focus effects for better variety.")
     public static boolean enableFocusEffects = true;
 
+    @Config.Name("Enable Goggled Armor")
+    @Config.Comment("Allows the Goggles of Revealing to be attached to the Thaumium and Void Metal Helmets with infusion.")
+    public static boolean enableGoggledArmor = true;
+
     @Config.Name("Enable Arcane Pedestal Comparator")
     @Config.Comment("Adds comparator output values to the Arcane Pedestal.")
     public static boolean enablePedestalComparator = true;

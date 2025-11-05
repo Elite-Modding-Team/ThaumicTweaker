@@ -1,16 +1,20 @@
 package mod.emt.thaumictweaker.registry;
 
 import mod.emt.thaumictweaker.ThaumicTweaker;
+import mod.emt.thaumictweaker.config.ConfigEnhancementsTT;
 import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import mod.emt.thaumictweaker.config.ConfigWussModeTT;
 import mod.emt.thaumictweaker.util.helpers.ItemHelper;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.nbt.NBTTagByte;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.ThaumcraftApiHelper;
 import thaumcraft.api.aspects.Aspect;
@@ -81,6 +85,28 @@ public class RecipeRegistry {
     }
 
     private static void registerInfusionRecipes() {
+        //Armor Revealing Infusion
+        if(ConfigEnhancementsTT.enableGoggledArmor) {
+            ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicTweaker.MOD_ID, "revealing_thaumium_helmet"), new InfusionRecipe(
+                    "BASEINFUSION",
+                    new Object[]{"goggles", new NBTTagByte((byte)1)},
+                    5,
+                    (new AspectList()).add(Aspect.SENSES, 40).add(Aspect.AURA, 20).add(Aspect.PROTECT, 20),
+                    new ItemStack(ItemsTC.thaumiumHelm, 1, OreDictionary.WILDCARD_VALUE),
+                    new ItemStack(Items.SLIME_BALL),
+                    new ItemStack(ItemsTC.goggles, 1, OreDictionary.WILDCARD_VALUE)
+            ));
+            ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(ThaumicTweaker.MOD_ID, "revealing_void_helmet"), new InfusionRecipe(
+                    "BASEELDRITCH",
+                    new Object[]{"goggles", new NBTTagByte((byte)1)},
+                    5,
+                    (new AspectList()).add(Aspect.SENSES, 40).add(Aspect.AURA, 20).add(Aspect.PROTECT, 20),
+                    new ItemStack(ItemsTC.voidHelm, 1, OreDictionary.WILDCARD_VALUE),
+                    new ItemStack(Items.SLIME_BALL),
+                    new ItemStack(ItemsTC.goggles, 1, OreDictionary.WILDCARD_VALUE)
+            ));
+        }
+
         //Primal Crusher recipe should only be overwritten if the item is modified
         if(ConfigTweaksTT.primal_crusher.unbreakable || ConfigTweaksTT.primal_crusher.refiningLevel > 1) {
             ItemStack crusherStack = new ItemStack(ItemsTC.primalCrusher);
