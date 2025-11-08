@@ -1,5 +1,11 @@
 # Changelog ThaumicTweaker
 
+## 1.2.1
+### Fixed
+- Fixed crash when loading server environments
+
+---
+
 ## 1.2.0
 ### Added
 - Added enhancement adding comparator output to Arcane Pedestals

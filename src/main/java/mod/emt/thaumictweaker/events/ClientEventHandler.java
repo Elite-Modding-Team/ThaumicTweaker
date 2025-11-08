@@ -14,7 +14,7 @@ import thaumcraft.api.research.theorycraft.ITheorycraftAid;
 import thaumcraft.api.research.theorycraft.TheorycraftManager;
 
 @SideOnly(Side.CLIENT)
-@Mod.EventBusSubscriber(modid = ThaumicTweaker.MOD_ID)
+@Mod.EventBusSubscriber(modid = ThaumicTweaker.MOD_ID, value = Side.CLIENT)
 public class ClientEventHandler {
     @SubscribeEvent
     public static void onTooltipEvent(ItemTooltipEvent event) {
