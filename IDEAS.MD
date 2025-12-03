@@ -1,24 +1,5 @@
 # Thaumic Tweaker Features
-Thaumcraft tweaks for tweakers.
-
-## Features
-### Mixins Armor (DONE)
-- Fortress armor set bonus (Strength modifier configurable)
-- Fortress armor has additional armor, armor toughness, and magic damage protection
-- Void Metal Armor repair significantly faster
-- Void Metal Armor set bonus (Regeneration I)
-- Void Robes can be recharged using Vis
-- Void Robes repair significantly faster
-- Void Robes set bonus
-  - Head - drains stored vis to feed the player every 3 seconds
-  - Chest - drains stored vis to heal every second
-  - Legs - drains stored vis to cleanse Poison, Wither or Flux Taint
-- Void Robes grant knockback resistance (all = 0.25)
-- Void Robes grant a flat damage and magic resistance
-
-### Mixins Golems (DONE)
-- Golems can activate infusion altar
-- Golems have a copy of the placing player's research knowledge
+## Features Requests
 
 ### Wuss Mode
 - Cheaper recipe for greater foci
@@ -39,6 +20,7 @@ Thaumcraft tweaks for tweakers.
 - Tainted Soil always changes back to dirt, even if it was originally sand or some such. I don’t know if this applies to other tainted blocks like tainted logs or not.
 - Taint can corrupt any mob that isn’t undead from what I know (apparently spellbats can be corrupted), so a tweak to ensure certain things can’t get tainted would be good.
 - Tainted Sheep should have their wool coloured purple. Wool placed down that gets tainted should also turn purple.
+- Allow Golems to activate Infusion Altar.
 
 ## Animations and Effects
 - Hungry chest nomming animation doesn't play
