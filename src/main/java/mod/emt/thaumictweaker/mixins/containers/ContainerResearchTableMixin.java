@@ -5,13 +5,11 @@ import com.llamalad7.mixinextras.sugar.Local;
 import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import mod.emt.thaumictweaker.util.helpers.InventoryHelper;
 import mod.emt.thaumictweaker.util.helpers.LogHelper;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import thaumcraft.api.research.theorycraft.TheorycraftCard;
 import thaumcraft.common.container.ContainerResearchTable;
 import thaumcraft.common.tiles.crafting.TileResearchTable;
@@ -66,24 +64,5 @@ public abstract class ContainerResearchTableMixin extends Container {
             LogHelper.error(e);
         }
         return original;
-    }
-
-    /**
-     * @author Invadermonky
-     * @reason Fixes the original implementation of the {@link ContainerResearchTable#transferStackInSlot(EntityPlayer, int)}
-     *         method. The unaltered method attempted to insert items into the clicked slot index instead of attempting to insert
-     *         the clicked item into the Research Table slots.
-     */
-    @Redirect(
-            method = "transferStackInSlot",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lthaumcraft/common/tiles/crafting/TileResearchTable;isItemValidForSlot(ILnet/minecraft/item/ItemStack;)Z",
-                    ordinal = 1
-            ),
-            remap = true
-    )
-    private boolean isItemValidForSlotMixin(TileResearchTable instance, int slotIndex, ItemStack stack) {
-        return this.tileEntity.isItemValidForSlot(0, stack) || this.tileEntity.isItemValidForSlot(1, stack);
     }
 }

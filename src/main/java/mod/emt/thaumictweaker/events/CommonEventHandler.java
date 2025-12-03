@@ -6,29 +6,20 @@ import mod.emt.thaumictweaker.config.ConfigTweaksTT;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.text.TextComponentString;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.translation.I18n;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.storage.loot.LootEntryItem;
 import net.minecraft.world.storage.loot.LootPool;
 import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraft.world.storage.loot.conditions.LootCondition;
 import net.minecraft.world.storage.loot.functions.LootFunction;
-import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import thaumcraft.api.capabilities.IPlayerKnowledge;
-import thaumcraft.api.capabilities.ThaumcraftCapabilities;
 import thaumcraft.api.items.ItemsTC;
 import thaumcraft.common.entities.monster.EntityEldritchGuardian;
 import thaumcraft.common.entities.monster.tainted.EntityTaintSeedPrime;
@@ -86,42 +77,6 @@ public class CommonEventHandler {
                     event.getName().equals(LootTableList.CHESTS_STRONGHOLD_CORRIDOR)) {
                 LootPool main = event.getTable().getPool("main");
                 main.addEntry(new LootEntryItem(new ItemStack(ItemsTC.baubles, 1, 3).getItem(), 2, 0, new LootFunction[0], new LootCondition[0], "loottable:apprentices_ring"));
-            }
-        }
-    }
-
-    @SubscribeEvent(priority = EventPriority.LOW)
-    public static void onLivingTickLate(LivingEvent.LivingUpdateEvent event) {
-        if(!event.getEntityLiving().world.isRemote && event.getEntityLiving() instanceof EntityPlayer && event.getEntityLiving().ticksExisted % 200 == 0) {
-            EntityPlayer player = (EntityPlayer) event.getEntityLiving();
-            IPlayerKnowledge knowledge = ThaumcraftCapabilities.getKnowledge(player);
-            Biome biome = player.world.getBiome(player.getPosition());
-
-            //Fixes bug caused when rewarding research with command locking players out of this research.
-            if (knowledge.isResearchKnown("UNLOCKAUROMANCY@1")) {
-                if (player.posY < (double)10.0F && !knowledge.isResearchKnown("m_deepdown")) {
-                    knowledge.addResearch("m_deepdown");
-                    knowledge.sync((EntityPlayerMP)player);
-                    player.sendStatusMessage(new TextComponentString(TextFormatting.DARK_PURPLE + I18n.translateToLocal("got.deepdown")), true);
-                }
-
-                if (player.posY > (double)player.getEntityWorld().getActualHeight() * 0.4 && !knowledge.isResearchKnown("m_uphigh")) {
-                    knowledge.addResearch("m_uphigh");
-                    knowledge.sync((EntityPlayerMP)player);
-                    player.sendStatusMessage(new TextComponentString(TextFormatting.DARK_PURPLE + I18n.translateToLocal("got.uphigh")), true);
-                }
-            }
-
-            //Fixes Thaumcraft not granting players exploration research correctly
-            if (!knowledge.isResearchKnown("m_finddesert") && BiomeDictionary.hasType(biome, BiomeDictionary.Type.HOT)) {
-                knowledge.addResearch("m_finddesert");
-                knowledge.sync((EntityPlayerMP) player);
-                player.sendStatusMessage(new TextComponentString(TextFormatting.DARK_PURPLE + net.minecraft.util.text.translation.I18n.translateToLocal("got.finddesert")), true);
-            }
-            if (!knowledge.isResearchKnown("m_findocean") && BiomeDictionary.hasType(biome, BiomeDictionary.Type.OCEAN)) {
-                knowledge.addResearch("m_findocean");
-                knowledge.sync((EntityPlayerMP) player);
-                player.sendStatusMessage(new TextComponentString(TextFormatting.DARK_PURPLE + net.minecraft.util.text.translation.I18n.translateToLocal("got.findocean")), true);
             }
         }
     }

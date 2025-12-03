@@ -9,21 +9,8 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 
 ## Fixes
 - Fixed Boots of the Traveler and Cloud Ring screen shake and damage sound when taking zero fall damage
-- Fixes Caster's Gauntlet Gui rendering in the incorrect location if gauntlet is held in the offhand
-- Fixed Caster's Gauntlet Gui causing rendering issues when gauntlet is in mainhand and Thaumometer or Sanity Checker is held in the offhand
-- Fixed Caster's Gauntlet Gui causing rendering issues when plan focus is equipped and Thaumometer or Sanity Checker is also held
-- Fixed Exploration Research missing or not being granted to players under specific circumstances
-- Fixed Flux Rifts not collapsing when fully drained by Void Siphons
-- Fixed FXPollution packet causing a client-side crash when handling large values
 - Fixed Giant Taintacles spawning with reduced health
-- Fixed Giant Taintacles spamming errors when being rendered
-- Fixed Golems voiding held items when interacting with Use Seals with "Can use empty hand" enabled
-- Fixed Pech trading GUI hovered item tooltip issue (made glowing items turn black)
 - Fixed Primal Crusher re-equipping when repairing
-- Fixed Primordial Pearl item movement and spawn location if dropped by bosses
-- Fixed Research Table shift-click interaction for Paper and Scribing Tools
-- Fixed Thaumatorium causing a crash when interacting with some item insertion/extraction methods
-- Fixed Thaumcraft banners consuming Essential Phials when setting aspect image
 - Fixed Thaumometer displaying particles when stored in first hotbar slot
 
 ---
@@ -38,7 +25,6 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
   - Adds impact sounds to various focus effects that lack any (Break, Earth, Exchange, Fire, Flux , Frost, Heal, Rift)
   - Makes several focus mediums play additional cast sounds to differentiate them (Bolt, Cloud, Mine, Spellbat)
 - **Gui Enhancements:**
-  - Adjusted Pech Trade, Arcane Bore, and Advanced/Basic Automated Crossbow Gui position to match other inventories
   - Add Runic Warding effect over health bar whenever warding is active
   - Add subtitles support to Thaumonomicon research entries
   - Add subtitles support to Forbidden Knowledge research entries

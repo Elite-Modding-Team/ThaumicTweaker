@@ -6,7 +6,6 @@
   "minVersion": "0.8.5" ,
   "compatibilityLevel": "JAVA_8" ,
   "mixins": [
-    "blocks.BlockBannerTCMixin" ,
     "blocks.BlockCrucibleMixin" ,
     "blocks.BlockFluidDeathMixin" ,
     "blocks.BlockPedestalMixin" ,
@@ -18,7 +17,6 @@
     "entities.EntityFluxRiftMixin" ,
     "entities.EntityFocusMineMixin" ,
     "entities.EntityPechMixin" ,
-    "entities.EntitySpecialItemMixin" ,
     "entities.EntityTaintacleGiantMixin" ,
     "events.EntityEventsMixin" ,
     "events.PlayerEventsMixin" ,
@@ -36,7 +34,6 @@
     "focus.FocusMediumCloudMixin" ,
     "focus.FocusMediumMineMixin" ,
     "focus.FocusMediumSpellbatMixin" ,
-    "golems.SealUseMixin" ,
     "items.ItemBaublesMixin" ,
     "items.ItemCutlistRobeArmorMixin" ,
     "items.ItemFortressArmorMixin" ,
@@ -50,27 +47,18 @@
     "misc.GolemMaterialMixin" ,
     "misc.ScanSkyMixin" ,
     "misc.ThaumcraftCraftingManagerMixin" ,
-    "network.PacketFXPolluteMixin" ,
     "network.PacketSyncProgressToServerMixin" ,
     "tiles.TileCrucibleMixin" ,
     "tiles.TileMirrorEssentiaMixin" ,
     "tiles.TileMirrorMixin" ,
     "tiles.TileResearchTableMixin" ,
-    "tiles.TileThaumatoriumTopMixin" ,
     "tiles.TileVisGeneratorMixin" ,
     "tiles.TileVoidSiphonMixin"
   ] ,
   "server": [] ,
   "client": [
-    "client.events.HudHandlerMixin" ,
-    "client.events.KeyHandlerMixin" ,
-    "client.gui.GuiArcaneBoreMixin" ,
-    "client.gui.GuiPechMixin" ,
     "client.gui.GuiResearchBrowserMixin" ,
     "client.gui.GuiResearchPageMixin" ,
-    "client.gui.GuiTurretAdvancedMixin" ,
-    "client.gui.GuiTurretBasicMixin" ,
-    "client.models.ProxyEntitiesMixin" ,
     "network.PacketFXScanSourceMixin"
   ]
 }

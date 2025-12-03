@@ -1,4 +1,21 @@
 # Changelog ThaumicTweaker
+## 1.2.2
+### Removed
+- Removed GUI position enhancements (merged into Thaumcraft Fix)
+- Removed Pech Trade item render fix (merged into Thaumcraft Fix)
+- Removed Caster's Gauntlet HUD render fixes (merged into Thaumcraft Fix)
+- Removed Caster's Gauntlet keybind fix (merged into Thaumcraft Fix)
+- Removed Control Seal: Use fix (merged into Thaumcraft Fix)
+- Removed Exploration Research fix (merged into Thaumcraft Fix)
+- Removed Flux Rift drain fix (merged into Thaumcraft Fix)
+- Removed FXPollution packet fix (merged into Thaumcraft Fix)
+- Removed Giant Taintacle render fix (merged into Thaumcraft Fix)
+- Removed Primordial Pearl drop fix (merged into Thaumcraft Fix)
+- Removed Research Table shift-click fix (merged into Thaumcraft Fix)
+- Removed Thaumcraft Banner Phial interaction fix (merged into Thaumcraft Fix)
+- Removed Thaumatorium fix (merged into Thaumcraft Fix)
+
+---
 
 ## 1.2.1
 ### Fixed
