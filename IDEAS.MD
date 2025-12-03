@@ -22,10 +22,12 @@ Thaumcraft tweaks for tweakers.
 
 ### Wuss Mode
 - Cheaper recipe for greater foci
+- There might be a few other recipes (?)
 
 ### Mod Merging
 - Merge [Thaumic Inventory Scanning](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-inventory-scanning) - TC4 Research Port also has it included and possibly touched up some stuff
   - https://github.com/Wong-Innovations/TC4Research/commit/bbbadaab6a5ed3f0401525ad89ebcb1c14e89c14
+- Merge [Thaumic JEI](https://www.curseforge.com/minecraft/mc-mods/thaumic-jei) (?) - Either will be merged or rewritten
 
 ## Feature Requests
 - Golem blacklist and whitelist fails for certain types of blocks (not items), especially ones that are coded in the old way using metadata (like botanias living stone and living wood)
