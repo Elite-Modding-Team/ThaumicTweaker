@@ -1,4 +1,10 @@
 # Changelog ThaumicTweaker
+## 1.2.3
+### Fixed
+- Fixed Champion mob effects not matching their name
+
+---
+
 ## 1.2.2
 ### Removed
 - Removed GUI position enhancements (merged into Thaumcraft Fix)

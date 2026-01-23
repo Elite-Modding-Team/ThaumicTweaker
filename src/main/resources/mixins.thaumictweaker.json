@@ -43,6 +43,7 @@
     "items.ItemVoidArmorMixin" ,
     "items.ItemVoidRobeArmorMixin" ,
     "entities.ChampionMobWardedMixin" ,
+    "misc.ChampionModifierMixin" ,
     "misc.EntityUtilsMixin" ,
     "misc.GolemMaterialMixin" ,
     "misc.ScanSkyMixin" ,
