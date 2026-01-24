@@ -34,6 +34,13 @@ public class ConfigEnhancementsTT {
     @Config.Comment("Adds comparator output values to the Arcane Pedestal.")
     public static boolean enablePedestalComparator = true;
 
+    @Config.Name("Enable Improved Commands")
+    @Config.Comment({
+            "Rewrites the `/thaumcraft` and `/tc` commands so they have additional features and support tab",
+            "completion. The commands themselves are unchanged."
+    })
+    public static boolean enableImprovedCommands = true;
+
     @Config.Name("Enable Research Aid Tooltips")
     @Config.Comment("Adds tooltips to items that can be used as research aids.")
     public static boolean enableResearchAidTooltips = true;

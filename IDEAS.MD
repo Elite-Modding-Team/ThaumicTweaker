@@ -13,7 +13,6 @@
 ## Feature Requests
 - Golem blacklist and whitelist fails for certain types of blocks (not items), especially ones that are coded in the old way using metadata (like botanias living stone and living wood)
 - Requesting items from golems manually sometimes fails
-- Add Tab completion to TC commands (including research)
 - Check if `ToolEvents#livingDrops()` is causing a dupe issue with replaced items and Collector infusion enchant (needs event priority LOWEST)
 - Focal Manipulator scan and consume vis crystals from nearby inventories
 - Perhaps make the crimson rites research only require a scanned copy of the book instead of destroying one; better for sharing in multiplayer.

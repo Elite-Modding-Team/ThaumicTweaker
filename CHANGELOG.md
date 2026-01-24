@@ -1,5 +1,7 @@
 # Changelog ThaumicTweaker
 ## 1.2.3
+### Added
+- Added `/thaumcraft` and `/tc` enhancement, adding additional features and tab completion to in-game commands
 ### Fixed
 - Fixed Champion mob effects not matching their name
 

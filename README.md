@@ -31,6 +31,7 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 - **Misc Enhancements:**
   - Add comparator output values to Arcane Pedestal
   - Add tooltip to items that can be used as research aids
+  - Add improved in-game commands with tab completion
   - Suppress Warp Events while player is in Creative mode
 
 ---

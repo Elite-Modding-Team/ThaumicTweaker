@@ -1,5 +1,6 @@
 package mod.emt.thaumictweaker;
 
+import mod.emt.thaumictweaker.commands.CommandBaseTT;
 import mod.emt.thaumictweaker.proxy.CommonProxy;
 import mod.emt.thaumictweaker.util.helpers.LogHelper;
 import net.minecraftforge.fml.common.Mod;
@@ -7,6 +8,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 
 @Mod(
         modid = ThaumicTweaker.MOD_ID,
@@ -50,5 +52,10 @@ public class ThaumicTweaker {
     public void postInit(FMLPostInitializationEvent event) {
         proxy.postInit();
         LogHelper.debug("Finished postInit phase.");
+    }
+
+    @Mod.EventHandler
+    public void serverStarting(FMLServerStartingEvent event) {
+        event.registerServerCommand(new CommandBaseTT());
     }
 }

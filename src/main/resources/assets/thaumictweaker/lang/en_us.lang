@@ -1,3 +1,9 @@
+# Command
+command.thaumictweaker:invalid=Usage: /tc chunkvis, reload, research, warp
+command.thaumictweaker:chunkvis.invalid=Usage: /tc chunkvis <add|remove|set> <amount> <VIS|FLUX> <x> <y> <z>
+command.thaumictweaker:reload.invalid=Usage: "/tc reload"
+command.thaumictweaker:research.invalid=Usage: "/tc research list" or "/tc research reload" or "/tc research <player> <list|reset|all>" or "/tc research <player> <add|remove> <research>"
+command.thaumictweaker:warp.invalid=Usage: /tc warp <player> <add|remove|set> <amount> [PERM|TEMP|NORMAL|ALL]
 
 # Config
 config.thaumictweaker:enhancements=Enhancements

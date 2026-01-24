@@ -48,6 +48,7 @@
     "misc.GolemMaterialMixin" ,
     "misc.ScanSkyMixin" ,
     "misc.ThaumcraftCraftingManagerMixin" ,
+    "misc.ThaumcraftModMixin" ,
     "network.PacketSyncProgressToServerMixin" ,
     "tiles.TileCrucibleMixin" ,
     "tiles.TileMirrorEssentiaMixin" ,
