@@ -12,6 +12,7 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 - Fixed Giant Taintacles spawning with reduced health
 - Fixed Primal Crusher re-equipping when repairing
 - Fixed Thaumometer displaying particles when stored in first hotbar slot
+- Fixed champions potentially having the wrong name in servers
 
 ---
 
