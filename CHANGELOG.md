@@ -2,6 +2,7 @@
 ## 1.2.3
 ### Added
 - Added `/thaumcraft` and `/tc` enhancement, adding additional features and tab completion to in-game commands
+- Added `/tc chunkvis`, this allows you to control the amount of vis on any chunk
 ### Fixed
 - Fixed Champion mob effects not matching their name
 
