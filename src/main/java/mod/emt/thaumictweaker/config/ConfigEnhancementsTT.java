@@ -45,6 +45,12 @@ public class ConfigEnhancementsTT {
     @Config.Comment("Adds tooltips to items that can be used as research aids.")
     public static boolean enableResearchAidTooltips = true;
 
+    //TODO: Request by Icaruss. Kinda has crap handling, so it's up to him.
+    @Config.Ignore
+    @Config.Name("Enable Revealing Tooltip")
+    @Config.Comment("Adds 'Revealing' tooltip to all items that can act as Goggles of Revealing that do not already have the tooltip.")
+    public static boolean enableRevealingTooltip = false;
+
     @Config.Name("Enable Research Subtitles")
     @Config.Comment
             ({
