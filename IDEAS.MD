@@ -11,6 +11,7 @@
 - Merge [Thaumic JEI](https://www.curseforge.com/minecraft/mc-mods/thaumic-jei) (?) - Either will be merged or rewritten
 
 ## Feature Requests
+- Configurable Vis discount for Thaumaturge's Robes
 - Golem blacklist and whitelist fails for certain types of blocks (not items), especially ones that are coded in the old way using metadata (like botanias living stone and living wood)
 - Requesting items from golems manually sometimes fails
 - Check if `ToolEvents#livingDrops()` is causing a dupe issue with replaced items and Collector infusion enchant (needs event priority LOWEST)
