@@ -1,4 +1,10 @@
 # Changelog ThaumicTweaker
+## 1.2.4
+### Fixed
+- Fixed enhanced research command searching for player in the wrong index
+
+---
+
 ## 1.2.3
 ### Added
 - Added `/thaumcraft` and `/tc` enhancement, adding additional features and tab completion to in-game commands

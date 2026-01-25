@@ -82,7 +82,7 @@ public class SubCommandResearch implements ISubCommand {
                 throw new CommandException(new TextComponentTranslation("command.thaumictweaker:research.invalid").getFormattedText());
             }
         } else {
-            EntityPlayer player = CommandBase.getPlayer(server, sender, args[2]);
+            EntityPlayer player = CommandBase.getPlayer(server, sender, args[1]);
             if (args.length == 3) {
                 String arg = args[2];
                 if (arg.equalsIgnoreCase("list")) {
