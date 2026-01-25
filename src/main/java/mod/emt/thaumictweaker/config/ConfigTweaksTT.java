@@ -19,6 +19,12 @@ public class ConfigTweaksTT {
     public static CrimsonCultRobesCategory cult_robes = new CrimsonCultRobesCategory();
     @Config.Name("Curiosity Tweaks")
     public static CuriosityTweaksCategory curiosity_tweaks = new CuriosityTweaksCategory();
+
+    //TODO: Remove this ignore when redoing the configuration.
+    @Config.Ignore
+    @Config.Name("Equipment Tweaks")
+    public static EquipmentTweaksCategory equipment_tweaks = new EquipmentTweaksCategory();
+
     @Config.Name("Fluid Death Tweaks")
     public static FluidDeathCategory fluid_death = new FluidDeathCategory();
     @Config.Name("Flux Phage Tweaks")
@@ -382,6 +388,115 @@ public class ConfigTweaksTT {
         @Config.Name("Rift Power Required")
         @Config.Comment("Modifies the amount of rift power required to generate a Void Seed. Smaller values will increase the speed Void Seeds are created.")
         public int progressRequired = 2000;
+    }
+
+
+
+    //TODO: Intialize this class and remove all duplicate configurations
+    public static class EquipmentTweaksCategory {
+        @Config.Name("Apprentice's Ring Tweaks")
+        public ApprenticesRingCategory apprentices_ring = new ApprenticesRingCategory();
+        @Config.Name("Crimson Cult Robes Tweaks")
+        public CrimsonCultRobesCategory cult_robes = new CrimsonCultRobesCategory();
+        @Config.Name("Fortress Armor Tweaks")
+        public FortressArmorCategory fortress_armor = new FortressArmorCategory();
+        @Config.Name("Goggles of Revealing Tweaks")
+        public GogglesRevealingCategory goggles_revealing = new GogglesRevealingCategory();
+        @Config.Name("Primal Crusher Tweaks")
+        public PrimalCrusherCategory primal_crusher = new PrimalCrusherCategory();
+        @Config.Name("Thaumaturge's Robes Tweaks")
+        public ThaumaturgeRobesCategory thaumaturge_robes = new ThaumaturgeRobesCategory();
+        @Config.Name("Void Thaumaturge Robes Tweaks")
+        public VoidRobesCategory void_robes = new VoidRobesCategory();
+
+        public static class ApprenticesRingCategory {
+            @Config.RequiresMcRestart
+            @Config.Name("Apprentice's Ring Structure Loot")
+            @Config.Comment("Allows the Apprentice's Ring to be rarely found in some vanilla structure chests.")
+            public boolean enableStructureLoot = false;
+
+            @Config.RangeInt(min = 1, max = 100)
+            @Config.Name("Apprentice's Ring Vis Discount")
+            @Config.Comment("The Vis discount granted by the Apprentice's Ring.")
+            public int visDiscount = 5;
+        }
+
+        public static class CrimsonCultRobesCategory {
+            @Config.RangeInt(min = 0, max = 100)
+            @Config.Name("Helm Vis Discount")
+            @Config.Comment("The Vis discount granted when wearing the Crimson Cult Hood.")
+            public int visDiscountHelm = 1;
+
+            @Config.RangeInt(min = 0, max = 100)
+            @Config.Name("Robes Vis Discount")
+            @Config.Comment("The Vis discount granted when wearing the Crimson Cult Robes.")
+            public int visDiscountChest = 1;
+
+            @Config.RangeInt(min = 0, max = 100)
+            @Config.Name("Leggings Vis Discount")
+            @Config.Comment("The Vis discount granted when wearing the Crimson Cult Leggings.")
+            public int visDiscountLeggings = 1;
+        }
+
+        public static class FortressArmorCategory {
+            @Config.Name("Enable Knockback Resistance")
+            @Config.Comment("Gives the Fortress Armor knockback resistance. Chest = 0.4, Legs = 0.3, Helm = 0.3")
+            public boolean enableKnockbackResistance = false;
+        }
+
+        public static class GogglesRevealingCategory {
+            @Config.RangeInt(min = 0, max = 100)
+            @Config.Name("Goggles Vis Discount")
+            @Config.Comment("The Vis discount granted when wearing the Goggles of Revealing.")
+            public int visDiscountGoggles = 1;
+        }
+
+        public static class PrimalCrusherCategory {
+            @Config.RequiresMcRestart
+            @Config.Name("Set Unbreakable")
+            @Config.Comment("Makes the Primal Crusher unbreakable.")
+            public boolean unbreakable = false;
+
+            @Config.RequiresMcRestart
+            @Config.RangeInt(min = 1, max = 4)
+            @Config.Name("Refining Level")
+            @Config.Comment("The Refining infusion enchantment level added to the Primal Crusher by default")
+            public int refiningLevel = 1;
+        }
+
+        public static class ThaumaturgeRobesCategory {
+            @Config.RangeInt(min = 0, max = 100)
+            @Config.Name("Robes Vis Discount")
+            @Config.Comment("The Vis discount granted when wearing the Thaumaturge's Robes.")
+            public int visDiscountChest = 3;
+
+            @Config.RangeInt(min = 0, max = 100)
+            @Config.Name("Leggings Vis Discount")
+            @Config.Comment("The Vis discount granted when wearing the Thaumaturge's Leggings.")
+            public int visDiscountLeggings = 3;
+
+            @Config.RangeInt(min = 0, max = 100)
+            @Config.Name("Boots Vis Discount")
+            @Config.Comment("The Vis discount granted when wearing the Thaumaturge's Boots.")
+            public int visDiscountBoots = 2;
+        }
+
+        public static class VoidRobesCategory {
+            @Config.RangeInt(min = 0, max = 100)
+            @Config.Name("Helm Vis Discount")
+            @Config.Comment("The Vis discount granted when wearing the Void Thaumaturge Hood.")
+            public int visDiscountHelm = 5;
+
+            @Config.RangeInt(min = 0, max = 100)
+            @Config.Name("Robes Vis Discount")
+            @Config.Comment("The Vis discount granted when wearing the Void Thaumaturge Robes.")
+            public int visDiscountChest = 5;
+
+            @Config.RangeInt(min = 0, max = 100)
+            @Config.Name("Leggings Vis Discount")
+            @Config.Comment("The Vis discount granted when wearing the Void Thaumaturge Leggings.")
+            public int visDiscountLeggings = 5;
+        }
     }
 
     static {
