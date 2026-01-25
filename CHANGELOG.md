@@ -1,5 +1,8 @@
 # Changelog ThaumicTweaker
 ## 1.2.4
+### Added
+- Added tweak to adjust Goggles of Revealing vis discount
+- Added tweak to adjust Thaumaturge's Armor vis discounts
 ### Fixed
 - Fixed enhanced research command searching for player in the wrong index
 
