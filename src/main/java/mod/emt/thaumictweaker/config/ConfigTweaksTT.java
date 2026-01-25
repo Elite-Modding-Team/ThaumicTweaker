@@ -19,12 +19,8 @@ public class ConfigTweaksTT {
     public static CrimsonCultRobesCategory cult_robes = new CrimsonCultRobesCategory();
     @Config.Name("Curiosity Tweaks")
     public static CuriosityTweaksCategory curiosity_tweaks = new CuriosityTweaksCategory();
-
-    //TODO: Remove this ignore when redoing the configuration.
-    @Config.Ignore
     @Config.Name("Equipment Tweaks")
     public static EquipmentTweaksCategory equipment_tweaks = new EquipmentTweaksCategory();
-
     @Config.Name("Fluid Death Tweaks")
     public static FluidDeathCategory fluid_death = new FluidDeathCategory();
     @Config.Name("Flux Phage Tweaks")
@@ -392,20 +388,25 @@ public class ConfigTweaksTT {
 
 
 
-    //TODO: Intialize this class and remove all duplicate configurations
     public static class EquipmentTweaksCategory {
+        //TODO: Remove ignore tags when the tweaks config is rewritten
+        @Config.Ignore
         @Config.Name("Apprentice's Ring Tweaks")
         public ApprenticesRingCategory apprentices_ring = new ApprenticesRingCategory();
+        @Config.Ignore
         @Config.Name("Crimson Cult Robes Tweaks")
         public CrimsonCultRobesCategory cult_robes = new CrimsonCultRobesCategory();
+        @Config.Ignore
         @Config.Name("Fortress Armor Tweaks")
         public FortressArmorCategory fortress_armor = new FortressArmorCategory();
         @Config.Name("Goggles of Revealing Tweaks")
         public GogglesRevealingCategory goggles_revealing = new GogglesRevealingCategory();
+        @Config.Ignore
         @Config.Name("Primal Crusher Tweaks")
         public PrimalCrusherCategory primal_crusher = new PrimalCrusherCategory();
         @Config.Name("Thaumaturge's Robes Tweaks")
         public ThaumaturgeRobesCategory thaumaturge_robes = new ThaumaturgeRobesCategory();
+        @Config.Ignore
         @Config.Name("Void Thaumaturge Robes Tweaks")
         public VoidRobesCategory void_robes = new VoidRobesCategory();
 
