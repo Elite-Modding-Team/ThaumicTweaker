@@ -38,6 +38,8 @@
     "items.ItemCutlistRobeArmorMixin" ,
     "items.ItemFortressArmorMixin" ,
     "items.ItemPrimalCrusherMixin" ,
+    "items.ItemRevealingGogglesMixin",
+    "items.ItemThaumaturgeRobesMixin" ,
     "items.ItemThaumiumArmorMixin" ,
     "items.ItemThaumometerMixin" ,
     "items.ItemVoidArmorMixin" ,
