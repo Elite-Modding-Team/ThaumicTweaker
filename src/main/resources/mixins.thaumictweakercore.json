@@ -9,5 +9,7 @@
     "entities.EntityLivingBaseMixin"
   ] ,
   "server": [] ,
-  "client": []
+  "client": [
+    "client.gui.GuiScreenAccessor"
+  ]
 }
