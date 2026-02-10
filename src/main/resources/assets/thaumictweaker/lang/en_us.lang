@@ -15,13 +15,13 @@ config.thaumictweaker:tweaks.tooltip=Configuration for tweaks added by Thaumic T
 config.thaumictweaker:wuss_mode=Wuss Mode
 config.thaumictweaker:wuss_mode.tooltip=Configuration options for difficulty changes added by Thaumic Tweaker. These are disabled by default and do not require Wuss Mode to be active.
 
-# Misc
-misc.thaumictweaker.scanning=Scanning
-misc.thaumictweaker.scanning_available=Inventory Scanning available
-misc.thaumictweaker.scanning_description=Hover over items with the\nThaumometer to scan.
-
 # Tooltips
 tooltip.thaumictweaker:research_aid.tooltip=§5Research Aid§r
+tooltip.thaumictweaker:scanning=Scanning
+tooltip.thaumictweaker:scanning.info=Inventory Scanning available
+tooltip.thaumictweaker:scanning.desc=Hover over items with the\nThaumometer to scan.
+tooltip.thaumictweaker:scanning_available.true=Scanning Available
+tooltip.thaumictweaker:scanning_available.false=Has Been Scanned
 
 # GroovyScript
 # -- PECH TRADES

@@ -29,21 +29,21 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL12;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectHelper;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.items.ItemsTC;
 import thaumcraft.api.research.ScanningManager;
+import thaumcraft.client.lib.UtilsFX;
+import thaumcraft.client.lib.events.RenderEventHandler;
 import thaumcraft.common.lib.SoundsTC;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
+//TODO: Make this entire thing instanced so it can be toggled in the config
 // TODO: Need to clean this up at some point
 @SideOnly(Side.CLIENT)
 @Mod.EventBusSubscriber(modid = ThaumicTweaker.MOD_ID, value = Side.CLIENT)
 public class InventoryScanningHandler {
+    //TODO: Make the time configurable
     private static final int SCAN_TICKS = 25;
     private static final int SOUND_TICKS = 3;
 
@@ -52,22 +52,35 @@ public class InventoryScanningHandler {
     private static final int INVENTORY_PLAYER_WIDTH = 52;
     private static final int INVENTORY_PLAYER_HEIGHT = 70;
 
-    private static boolean missingMessageSent;
-
     private static Slot mouseSlot;
     private static Slot lastScannedSlot;
     private static int ticksHovered;
     private static Object currentScan;
     private static boolean isHoveringPlayer;
 
-    private static boolean isHoldingThaumometer() {
-        Minecraft mc = Minecraft.getMinecraft();
-        if (mc.player == null) {
-            return false;
+    @SubscribeEvent
+    public static void onItemTooltip(ItemTooltipEvent event) {
+        ItemStack hoverStack = event.getItemStack();
+        if (hoverStack.getItem() == ItemsTC.thaumometer) {
+            event.getToolTip().add(TextFormatting.GOLD + I18n.format("tooltip.thaumictweaker:scanning.info"));
+            if (GuiScreen.isShiftKeyDown()) {
+                String[] lines = I18n.format("tooltip.thaumictweaker:scanning.desc").split("\\\\n");
+                for (String line : lines) {
+                    event.getToolTip().add(TextFormatting.DARK_AQUA + line);
+                }
+            }
         }
-
-        ItemStack mouseItem = mc.player.inventory.getItemStack();
-        return !mouseItem.isEmpty() && mouseItem.getItem() == ItemsTC.thaumometer;
+        EntityPlayer player = event.getEntityPlayer();
+        if(player != null && !hoverStack.isEmpty()) {
+            ItemStack heldStack = event.getEntityPlayer().inventory.getItemStack();
+            if(heldStack.getItem() == ItemsTC.thaumometer) {
+                boolean isScannable = ScanningManager.isThingStillScannable(player, hoverStack);
+                event.getToolTip().add(
+                        (isScannable ? TextFormatting.GREEN : TextFormatting.RED) +
+                        I18n.format("tooltip.thaumictweaker:scanning_available." + (isScannable ? "true" : "false"))
+                );
+            }
+        }
     }
 
     @SubscribeEvent
@@ -75,10 +88,6 @@ public class InventoryScanningHandler {
         Minecraft mc = Minecraft.getMinecraft();
         EntityPlayer entityPlayer = mc.player;
         if (entityPlayer != null) {
-            if (!missingMessageSent) {
-                //entityPlayer.sendStatusMessage(new TextComponentTranslation("tcinventoryscan:serverNotInstalled"), false);
-                missingMessageSent = true;
-            }
             return;
         }
 
@@ -118,24 +127,11 @@ public class InventoryScanningHandler {
     }
 
     @SubscribeEvent
-    public static void onTooltip(ItemTooltipEvent event) {
-        if (event.getItemStack().getItem() == ItemsTC.thaumometer) {
-            event.getToolTip().add(TextFormatting.GOLD + I18n.format("misc.thaumictweaker.scanning_available"));
-            if (GuiScreen.isShiftKeyDown()) {
-                String[] lines = I18n.format("misc.thaumictweaker.scanning_description").split("\\\\n");
-                for (String line : lines) {
-                    event.getToolTip().add(TextFormatting.DARK_AQUA + line);
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent
     public static void onTooltipPostText(RenderTooltipEvent.PostText event) {
         if (isHoldingThaumometer() && !GuiScreen.isShiftKeyDown()) {
             Minecraft mc = Minecraft.getMinecraft();
             if (mc.currentScreen instanceof GuiContainer && !ScanningManager.isThingStillScannable(mc.player, event.getStack())) {
-                renderAspectsInGui((GuiContainer) mc.currentScreen, mc.player, event.getStack(), 0, event.getX(), event.getY());
+                RenderEventHandler.hudHandler.renderAspectsInGui((GuiContainer) mc.currentScreen, mc.player, event.getStack(), 0, event.getX(), event.getY());
             }
         }
     }
@@ -184,64 +180,14 @@ public class InventoryScanningHandler {
         }
     }
 
-    private static boolean renderAspectsInGuiHasErrored;
-    private static Object hudHandlerInstance;
-    private static Method renderAspectsInGuiMethod;
-
-    @SuppressWarnings("unchecked")
-    private static void renderAspectsInGui(GuiContainer guiContainer, EntityPlayer player, ItemStack itemStack, int d, int x, int y) {
-        if (renderAspectsInGuiHasErrored) {
-            return;
+    private static boolean isHoldingThaumometer() {
+        Minecraft mc = Minecraft.getMinecraft();
+        if (mc.player == null) {
+            return false;
         }
 
-        if (hudHandlerInstance == null) {
-            try {
-                Class renderEventHandler = Class.forName("thaumcraft.client.lib.events.RenderEventHandler");
-                Object instance = renderEventHandler.getField("INSTANCE").get(null);
-                hudHandlerInstance = renderEventHandler.getField("hudHandler").get(instance);
-                Class hudHandler = Class.forName("thaumcraft.client.lib.events.HudHandler");
-                renderAspectsInGuiMethod = hudHandler.getMethod("renderAspectsInGui", GuiContainer.class, EntityPlayer.class, ItemStack.class, int.class, int.class, int.class);
-            } catch (ClassNotFoundException | IllegalAccessException | NoSuchFieldException | NoSuchMethodException e) {
-                renderAspectsInGuiHasErrored = true;
-                e.printStackTrace();
-                return;
-            }
-        }
-
-        try {
-            renderAspectsInGuiMethod.invoke(hudHandlerInstance, guiContainer, player, itemStack, d, x, y);
-        } catch (IllegalAccessException | InvocationTargetException e) {
-            renderAspectsInGuiHasErrored = true;
-            e.printStackTrace();
-        }
-    }
-
-    private static boolean drawTagHasErrored;
-    private static Method drawTagMethod;
-
-    @SuppressWarnings("unchecked")
-    private static void drawTag(int x, int y, Aspect aspect, float amount, int bonus, double zLevel) {
-        if (drawTagHasErrored) {
-            return;
-        }
-
-        if (drawTagMethod == null) {
-            try {
-                Class utilsFX = Class.forName("thaumcraft.client.lib.UtilsFX");
-                drawTagMethod = utilsFX.getMethod("drawTag", int.class, int.class, Aspect.class, float.class, int.class, double.class);
-            } catch (ClassNotFoundException | NoSuchMethodException e) {
-                drawTagHasErrored = true;
-                e.printStackTrace();
-                return;
-            }
-        }
-
-        try {
-            drawTagMethod.invoke(null, x, y, aspect, amount, bonus, zLevel);
-        } catch (IllegalAccessException | InvocationTargetException e) {
-            drawTagHasErrored = true;
-            e.printStackTrace();
-        }
+        ItemStack mouseItem = mc.player.inventory.getItemStack();
+        return !mouseItem.isEmpty() && mouseItem.getItem() == ItemsTC.thaumometer;
     }
 
     private static void renderPlayerAspects(GuiScreen gui, int mouseX, int mouseY) {
@@ -258,7 +204,7 @@ public class InventoryScanningHandler {
             Aspect[] sortedAspects = aspectList.getAspectsSortedByAmount();
             for (Aspect aspect : sortedAspects) {
                 if (aspect != null) {
-                    drawTag(x, y, aspect, aspectList.getAmount(aspect), 0, gui.zLevel);
+                    UtilsFX.drawTag(x, y, aspect, aspectList.getAmount(aspect), 0, gui.zLevel);
                     x += 18;
                 }
             }
@@ -271,7 +217,7 @@ public class InventoryScanningHandler {
 
     private static void renderScanningProgress(GuiScreen gui, int mouseX, int mouseY, float progress) {
         StringBuilder sb = new StringBuilder("\u00a76");
-        sb.append(I18n.format("misc.thaumictweaker.scanning"));
+        sb.append(I18n.format("tooltip.thaumictweaker:scanning"));
         if (progress >= 0.75f) {
             sb.append("...");
         } else if (progress >= 0.5f) {
@@ -279,21 +225,25 @@ public class InventoryScanningHandler {
         } else if (progress >= 0.25f) {
             sb.append(".");
         }
-        GL11.glDisable(GL12.GL_RESCALE_NORMAL);
+        GlStateManager.disableRescaleNormal();
         RenderHelper.disableStandardItemLighting();
-        GL11.glDisable(GL11.GL_LIGHTING);
-        GL11.glDisable(GL11.GL_DEPTH_TEST);
+        GlStateManager.disableLighting();
+        GlStateManager.disableDepth();
         float oldZLevel = gui.zLevel;
         gui.zLevel = 300;
         Minecraft.getMinecraft().fontRenderer.drawStringWithShadow(sb.toString(), mouseX, mouseY - 30, 0xFFFFFFFF);
         gui.zLevel = oldZLevel;
-        GL11.glEnable(GL11.GL_LIGHTING);
-        GL11.glEnable(GL11.GL_DEPTH_TEST);
+        GlStateManager.enableLighting();
+        GlStateManager.enableDepth();
         RenderHelper.enableStandardItemLighting();
-        GL11.glEnable(GL12.GL_RESCALE_NORMAL);
+        GlStateManager.enableRescaleNormal();
     }
 
     private static boolean isHoveringPlayer(GuiContainer gui, int mouseX, int mouseY) {
-        return gui instanceof GuiInventory && mouseX >= gui.getGuiLeft() + INVENTORY_PLAYER_X && mouseX < gui.getGuiLeft() + INVENTORY_PLAYER_X + INVENTORY_PLAYER_WIDTH && mouseY >= gui.getGuiTop() + INVENTORY_PLAYER_Y && mouseY < gui.getGuiTop() + INVENTORY_PLAYER_Y + INVENTORY_PLAYER_HEIGHT;
+        return gui instanceof GuiInventory
+                && mouseX >= gui.getGuiLeft() + INVENTORY_PLAYER_X
+                && mouseX < gui.getGuiLeft() + INVENTORY_PLAYER_X + INVENTORY_PLAYER_WIDTH
+                && mouseY >= gui.getGuiTop() + INVENTORY_PLAYER_Y
+                && mouseY < gui.getGuiTop() + INVENTORY_PLAYER_Y + INVENTORY_PLAYER_HEIGHT;
     }
 }
