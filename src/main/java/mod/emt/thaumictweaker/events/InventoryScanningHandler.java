@@ -1,6 +1,6 @@
 package mod.emt.thaumictweaker.events;
 
-import mod.emt.thaumictweaker.ThaumicTweaker;
+import mod.emt.thaumictweaker.config.ConfigEnhancementsTT;
 import mod.emt.thaumictweaker.mixins.client.gui.GuiScreenAccessor;
 import mod.emt.thaumictweaker.network.PacketHandlerTT;
 import mod.emt.thaumictweaker.network.packets.MessageScanSelf;
@@ -23,12 +23,11 @@ import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.client.event.RenderTooltipEvent;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.client.FMLClientHandler;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import org.lwjgl.opengl.GL11;
+import org.jetbrains.annotations.NotNull;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectHelper;
 import thaumcraft.api.aspects.AspectList;
@@ -38,47 +37,48 @@ import thaumcraft.client.lib.UtilsFX;
 import thaumcraft.client.lib.events.RenderEventHandler;
 import thaumcraft.common.lib.SoundsTC;
 
-//TODO: Make this entire thing instanced so it can be toggled in the config
-// TODO: Need to clean this up at some point
 @SideOnly(Side.CLIENT)
-@Mod.EventBusSubscriber(modid = ThaumicTweaker.MOD_ID, value = Side.CLIENT)
 public class InventoryScanningHandler {
-    //TODO: Make the time configurable
-    private static final int SCAN_TICKS = 25;
-    private static final int SOUND_TICKS = 3;
-
     private static final int INVENTORY_PLAYER_X = 26;
     private static final int INVENTORY_PLAYER_Y = 8;
     private static final int INVENTORY_PLAYER_WIDTH = 52;
     private static final int INVENTORY_PLAYER_HEIGHT = 70;
 
     private static Slot mouseSlot;
-    private static Slot lastScannedSlot;
     private static int ticksHovered;
     private static Object currentScan;
     private static boolean isHoveringPlayer;
 
     @SubscribeEvent
     public static void onItemTooltip(ItemTooltipEvent event) {
+        EntityPlayer player = event.getEntityPlayer();
         ItemStack hoverStack = event.getItemStack();
-        if (hoverStack.getItem() == ItemsTC.thaumometer) {
-            event.getToolTip().add(TextFormatting.GOLD + I18n.format("tooltip.thaumictweaker:scanning.info"));
-            if (GuiScreen.isShiftKeyDown()) {
-                String[] lines = I18n.format("tooltip.thaumictweaker:scanning.desc").split("\\\\n");
-                for (String line : lines) {
-                    event.getToolTip().add(TextFormatting.DARK_AQUA + line);
+        if(player != null && !hoverStack.isEmpty()) {
+            ItemStack cursorStack = player.inventory.getItemStack();
+            if(cursorStack.isEmpty() && hoverStack.getItem() == ItemsTC.thaumometer) {
+                event.getToolTip().add(TextFormatting.GOLD + I18n.format("tooltip.thaumictweaker:scanning.info"));
+                if (GuiScreen.isShiftKeyDown()) {
+                    String[] lines = I18n.format("tooltip.thaumictweaker:scanning.desc").split("\\\\n");
+                    for (String line : lines) {
+                        event.getToolTip().add(TextFormatting.DARK_AQUA + line);
+                    }
                 }
+            } else if(isHoldingThaumometer(player)) {
+                boolean isScannable = ScanningManager.isThingStillScannable(player, hoverStack);
+                TextFormatting color = isScannable ? TextFormatting.GREEN : TextFormatting.RED;
+                String text = I18n.format("tooltip.thaumictweaker:scanning_available." + (isScannable ? "true" : "false"));
+                event.getToolTip().add(color + text);
             }
         }
-        EntityPlayer player = event.getEntityPlayer();
-        if(player != null && !hoverStack.isEmpty()) {
-            ItemStack heldStack = event.getEntityPlayer().inventory.getItemStack();
-            if(heldStack.getItem() == ItemsTC.thaumometer) {
-                boolean isScannable = ScanningManager.isThingStillScannable(player, hoverStack);
-                event.getToolTip().add(
-                        (isScannable ? TextFormatting.GREEN : TextFormatting.RED) +
-                        I18n.format("tooltip.thaumictweaker:scanning_available." + (isScannable ? "true" : "false"))
-                );
+    }
+
+    @SubscribeEvent
+    public static void onTooltipPostText(RenderTooltipEvent.PostText event) {
+        Minecraft mc = Minecraft.getMinecraft();
+        EntityPlayer player = mc.player;
+        if (ConfigEnhancementsTT.inventoryScanning.renderAspects && isHoldingThaumometer(player) && !GuiScreen.isShiftKeyDown()) {
+            if (mc.currentScreen instanceof GuiContainer && !ScanningManager.isThingStillScannable(player, event.getStack())) {
+                RenderEventHandler.hudHandler.renderAspectsInGui((GuiContainer) mc.currentScreen, player, event.getStack(), 0, event.getX(), event.getY());
             }
         }
     }
@@ -86,52 +86,21 @@ public class InventoryScanningHandler {
     @SubscribeEvent
     public static void clientTick(TickEvent.ClientTickEvent event) {
         Minecraft mc = Minecraft.getMinecraft();
-        EntityPlayer entityPlayer = mc.player;
-        if (entityPlayer != null) {
-            return;
-        }
-
-        if (isHoldingThaumometer()) {
-            if ((isHoveringPlayer && currentScan != null) || (mouseSlot != null && !mouseSlot.getStack().isEmpty() && mouseSlot.canTakeStack(entityPlayer) && mouseSlot != lastScannedSlot && !(mouseSlot instanceof SlotCrafting))) {
+        EntityPlayer player = mc.player;
+        if(isHoldingThaumometer(player)) {
+            if(currentScan != null && ScanningManager.isThingStillScannable(player, currentScan)) {
                 ticksHovered++;
-
-                if (currentScan == null) {
-                    currentScan = mouseSlot.getStack();
-                }
-
-                if (ScanningManager.isThingStillScannable(entityPlayer, currentScan)) {
-                    if (ticksHovered > SOUND_TICKS && ticksHovered % 4 == 0) {
-                        entityPlayer.world.playSound(entityPlayer.posX, entityPlayer.posY, entityPlayer.posZ, SoundsTC.scan, SoundCategory.NEUTRAL, 0.2f, 0.45f + entityPlayer.world.rand.nextFloat() * 0.1f, false);
+                if (ticksHovered >= ConfigEnhancementsTT.inventoryScanning.timeToScan) {
+                    player.world.playSound(player.posX, player.posY, player.posZ, SoundsTC.scan, SoundCategory.NEUTRAL, 0.2f, 0.45f + player.world.rand.nextFloat() * 0.1f, false);
+                    if (currentScan instanceof EntityPlayer) {
+                        PacketHandlerTT.INSTANCE.sendToServer(new MessageScanSelf());
+                    } else {
+                        PacketHandlerTT.INSTANCE.sendToServer(new MessageScanSlot(mouseSlot.slotNumber));
                     }
-
-                    if (ticksHovered >= SCAN_TICKS) {
-                        if (currentScan instanceof EntityPlayer) {
-                            PacketHandlerTT.INSTANCE.sendToServer(new MessageScanSelf());
-                        } else {
-                            PacketHandlerTT.INSTANCE.sendToServer(new MessageScanSlot(mouseSlot.slotNumber));
-                        }
-                        ticksHovered = 0;
-                        lastScannedSlot = mouseSlot;
-                        currentScan = null;
-                    }
-                } else {
-                    currentScan = null;
-                    lastScannedSlot = mouseSlot;
+                    resetScan();
                 }
-            }
-        } else {
-            ticksHovered = 0;
-            currentScan = null;
-            lastScannedSlot = null;
-        }
-    }
-
-    @SubscribeEvent
-    public static void onTooltipPostText(RenderTooltipEvent.PostText event) {
-        if (isHoldingThaumometer() && !GuiScreen.isShiftKeyDown()) {
-            Minecraft mc = Minecraft.getMinecraft();
-            if (mc.currentScreen instanceof GuiContainer && !ScanningManager.isThingStillScannable(mc.player, event.getStack())) {
-                RenderEventHandler.hudHandler.renderAspectsInGui((GuiContainer) mc.currentScreen, mc.player, event.getStack(), 0, event.getX(), event.getY());
+            } else {
+                resetScan();
             }
         }
     }
@@ -140,60 +109,70 @@ public class InventoryScanningHandler {
     public static void onDrawScreen(GuiScreenEvent.DrawScreenEvent.Post event) {
         if (event.getGui() instanceof GuiContainer && !(event.getGui() instanceof GuiContainerCreative)) {
             Minecraft mc = Minecraft.getMinecraft();
-            EntityPlayer entityPlayer = mc.player;
-            boolean oldHoveringPlayer = isHoveringPlayer;
-            isHoveringPlayer = isHoveringPlayer((GuiContainer) event.getGui(), event.getMouseX(), event.getMouseY());
-            if (!isHoveringPlayer) {
-                Slot oldMouseSlot = mouseSlot;
-                mouseSlot = ((GuiContainer) event.getGui()).getSlotUnderMouse();
-                if (oldMouseSlot != mouseSlot) {
-                    ticksHovered = 0;
-                    currentScan = null;
-                }
-            }
-            if (oldHoveringPlayer != isHoveringPlayer) {
-                ticksHovered = 0;
-                if (isHoveringPlayer) {
-                    currentScan = entityPlayer;
-                    if (!ScanningManager.isThingStillScannable(entityPlayer, currentScan)) {
-                        currentScan = null;
-                    }
-                }
-            }
+            EntityPlayer player = mc.player;
+            GuiContainer gui = (GuiContainer) event.getGui();
+            if(isHoldingThaumometer(player)) {
+                Slot newSlot = gui.getSlotUnderMouse();
+                boolean newIsHoveringPlayer = isHoveringPlayer((GuiContainer) event.getGui(), event.getMouseX(), event.getMouseY());
 
-            ItemStack mouseItem = entityPlayer.inventory.getItemStack();
-            if (!mouseItem.isEmpty() && mouseItem.getItem() == ItemsTC.thaumometer) {
-                if (mouseSlot != null && !mouseSlot.getStack().isEmpty()) {
-                    if (currentScan != null) {
-                        renderScanningProgress(event.getGui(), event.getMouseX(), event.getMouseY(), ticksHovered / (float) SCAN_TICKS);
-                    }
-                    ((GuiScreenAccessor) event.getGui()).invokeRenderToolTip(mouseSlot.getStack(), event.getMouseX(), event.getMouseY());
-                } else if (isHoveringPlayer) {
-                    if (currentScan != null) {
-                        renderScanningProgress(event.getGui(), event.getMouseX(), event.getMouseY(), ticksHovered / (float) SCAN_TICKS);
-                    }
-                    if (!ScanningManager.isThingStillScannable(entityPlayer, entityPlayer)) {
-                        renderPlayerAspects(event.getGui(), event.getMouseX(), event.getMouseY());
-                    }
+                //Rendering Tooltips and aspects
+                if(newSlot != null && newSlot.getHasStack()) {
+                    ((GuiScreenAccessor) event.getGui()).invokeRenderToolTip(newSlot.getStack(), event.getMouseX(), event.getMouseY());
+                } else if(newIsHoveringPlayer && !ScanningManager.isThingStillScannable(player, player)) {
+                    renderPlayerAspects(event.getGui(), event.getMouseX(), event.getMouseY());
                 }
+
+                updateScannable(player, gui, event.getMouseX(), event.getMouseY());
+
+                if (currentScan != null && ticksHovered < ConfigEnhancementsTT.inventoryScanning.timeToScan && ScanningManager.isThingStillScannable(player, currentScan)) {
+                    renderScanningProgress(gui, event.getMouseX(), event.getMouseY());
+                }
+            } else {
+                resetScan();
             }
         }
     }
 
-    private static boolean isHoldingThaumometer() {
-        Minecraft mc = Minecraft.getMinecraft();
-        if (mc.player == null) {
-            return false;
+    private static void updateScannable(@NotNull EntityPlayer player, GuiContainer gui, int mouseX, int mouseY) {
+        Slot newSlot = gui.getSlotUnderMouse();
+        boolean newIsHoveringPlayer = isHoveringPlayer(gui, mouseX, mouseY);
+        if(newIsHoveringPlayer) {
+            if (!isHoveringPlayer)
+                resetScan();
+            isHoveringPlayer = true;
+            currentScan = player;
+        } else if(validateSlot(player, newSlot)) {
+            if(newSlot != mouseSlot)
+                resetScan();
+            mouseSlot = newSlot;
+            currentScan = newSlot.getStack();
+        } else {
+            resetScan();
         }
+    }
 
-        ItemStack mouseItem = mc.player.inventory.getItemStack();
-        return !mouseItem.isEmpty() && mouseItem.getItem() == ItemsTC.thaumometer;
+    private static boolean isHoveringPlayer(GuiContainer gui, int mouseX, int mouseY) {
+        return gui instanceof GuiInventory
+                && mouseX >= gui.getGuiLeft() + INVENTORY_PLAYER_X
+                && mouseX < gui.getGuiLeft() + INVENTORY_PLAYER_X + INVENTORY_PLAYER_WIDTH
+                && mouseY >= gui.getGuiTop() + INVENTORY_PLAYER_Y
+                && mouseY < gui.getGuiTop() + INVENTORY_PLAYER_Y + INVENTORY_PLAYER_HEIGHT;
+    }
+
+    private static boolean validateSlot(@NotNull EntityPlayer player, Slot slot) {
+        return slot != null && slot.getHasStack() && slot.canTakeStack(player) && !(slot instanceof SlotCrafting);
+    }
+
+    private static void resetScan() {
+        ticksHovered = 0;
+        currentScan = null;
+        mouseSlot = null;
+        isHoveringPlayer = false;
     }
 
     private static void renderPlayerAspects(GuiScreen gui, int mouseX, int mouseY) {
         GlStateManager.pushMatrix();
         GlStateManager.color(1f, 1f, 1f, 1f);
-        GL11.glPushAttrib(1048575);
         GlStateManager.disableLighting();
         int x = mouseX + 17;
         int y = mouseY + 7 - 33;
@@ -211,19 +190,18 @@ public class InventoryScanningHandler {
             GlStateManager.enableLighting();
             GlStateManager.enableDepth();
         }
-        GL11.glPopAttrib();
         GlStateManager.popMatrix();
     }
 
-    private static void renderScanningProgress(GuiScreen gui, int mouseX, int mouseY, float progress) {
-        StringBuilder sb = new StringBuilder("\u00a76");
-        sb.append(I18n.format("tooltip.thaumictweaker:scanning"));
+    private static void renderScanningProgress(GuiScreen gui, int mouseX, int mouseY) {
+        String text = TextFormatting.GOLD + I18n.format("tooltip.thaumictweaker:scanning");
+        float progress = (ticksHovered / (float) ConfigEnhancementsTT.inventoryScanning.timeToScan);
         if (progress >= 0.75f) {
-            sb.append("...");
+            text += "...";
         } else if (progress >= 0.5f) {
-            sb.append("..");
+            text += "..";
         } else if (progress >= 0.25f) {
-            sb.append(".");
+            text += ".";
         }
         GlStateManager.disableRescaleNormal();
         RenderHelper.disableStandardItemLighting();
@@ -231,7 +209,7 @@ public class InventoryScanningHandler {
         GlStateManager.disableDepth();
         float oldZLevel = gui.zLevel;
         gui.zLevel = 300;
-        Minecraft.getMinecraft().fontRenderer.drawStringWithShadow(sb.toString(), mouseX, mouseY - 30, 0xFFFFFFFF);
+        Minecraft.getMinecraft().fontRenderer.drawStringWithShadow(text, mouseX, mouseY - 30, 0xFFFFFFFF);
         gui.zLevel = oldZLevel;
         GlStateManager.enableLighting();
         GlStateManager.enableDepth();
@@ -239,11 +217,8 @@ public class InventoryScanningHandler {
         GlStateManager.enableRescaleNormal();
     }
 
-    private static boolean isHoveringPlayer(GuiContainer gui, int mouseX, int mouseY) {
-        return gui instanceof GuiInventory
-                && mouseX >= gui.getGuiLeft() + INVENTORY_PLAYER_X
-                && mouseX < gui.getGuiLeft() + INVENTORY_PLAYER_X + INVENTORY_PLAYER_WIDTH
-                && mouseY >= gui.getGuiTop() + INVENTORY_PLAYER_Y
-                && mouseY < gui.getGuiTop() + INVENTORY_PLAYER_Y + INVENTORY_PLAYER_HEIGHT;
+    private static boolean isHoldingThaumometer(EntityPlayer player) {
+        return player != null && !player.inventory.getItemStack().isEmpty() && player.inventory.getItemStack().getItem() == ItemsTC.thaumometer;
     }
+
 }

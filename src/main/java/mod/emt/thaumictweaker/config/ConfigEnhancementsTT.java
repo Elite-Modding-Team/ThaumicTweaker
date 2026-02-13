@@ -52,6 +52,9 @@ public class ConfigEnhancementsTT {
     })
     public static boolean enableWarpResearchSubtitles = true;
 
+    @Config.Name("Inventory Scanning")
+    public static InventoryScanningCategory inventoryScanning = new InventoryScanningCategory();
+
     @Config.Name("Suppress Creative Warp Events")
     @Config.Comment("Suppresses Warp Events for players in Creative mode.")
     public static boolean suppressCreativeWarpEvents = true;
@@ -60,6 +63,26 @@ public class ConfigEnhancementsTT {
     @Config.Name("Warding Effect")
     @Config.Comment("Adds an effect on top of a player's heath bar whenever Runic Warding is active.")
     public static boolean wardingEffect = true;
+
+    public static class InventoryScanningCategory {
+        @Config.RequiresMcRestart
+        @Config.Name("Enable Inventory Scanning")
+        @Config.Comment({
+                "Enables Thaumcraft inventory scanning when hovering over an inventory item while holding a Thaumometer",
+                "in the cursor. This feature will automatically disable itself when the Thaumic Inventory Scanning mod",
+                "is loaded."
+        })
+        public boolean enableInventoryScanning = true;
+
+        @Config.Name("Render Aspects")
+        @Config.Comment("Renders item aspects when hovering over previously scanned items with the Thaumometer in the cursor.")
+        public boolean renderAspects = true;
+
+        @Config.RangeInt(min = 1, max = 100)
+        @Config.Name("Scan Time")
+        @Config.Comment("The amount of time, in ticks, it takes to scan an item with inventory scanning.")
+        public int timeToScan = 30;
+    }
 
     static {
         ConfigAnytime.register(ConfigEnhancementsTT.class);
