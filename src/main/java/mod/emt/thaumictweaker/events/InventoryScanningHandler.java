@@ -44,10 +44,10 @@ public class InventoryScanningHandler {
     private static final int INVENTORY_PLAYER_WIDTH = 52;
     private static final int INVENTORY_PLAYER_HEIGHT = 70;
 
-    private static Slot mouseSlot;
-    private static int ticksHovered;
     private static Object currentScan;
+    private static int ticksHovered;
     private static boolean isHoveringPlayer;
+    private static Slot mouseSlot;
 
     @SubscribeEvent
     public static void onItemTooltip(ItemTooltipEvent event) {
@@ -87,7 +87,7 @@ public class InventoryScanningHandler {
     public static void clientTick(TickEvent.ClientTickEvent event) {
         Minecraft mc = Minecraft.getMinecraft();
         EntityPlayer player = mc.player;
-        if(isHoldingThaumometer(player)) {
+        if(event.phase == TickEvent.Phase.END && isHoldingThaumometer(player)) {
             if(currentScan != null && ScanningManager.isThingStillScannable(player, currentScan)) {
                 ticksHovered++;
                 if (ticksHovered >= ConfigEnhancementsTT.inventoryScanning.timeToScan) {
@@ -122,7 +122,7 @@ public class InventoryScanningHandler {
                     renderPlayerAspects(event.getGui(), event.getMouseX(), event.getMouseY());
                 }
 
-                updateScannable(player, gui, event.getMouseX(), event.getMouseY());
+                updateScannable(player, newSlot, newIsHoveringPlayer);
 
                 if (currentScan != null && ticksHovered < ConfigEnhancementsTT.inventoryScanning.timeToScan && ScanningManager.isThingStillScannable(player, currentScan)) {
                     renderScanningProgress(gui, event.getMouseX(), event.getMouseY());
@@ -133,22 +133,8 @@ public class InventoryScanningHandler {
         }
     }
 
-    private static void updateScannable(@NotNull EntityPlayer player, GuiContainer gui, int mouseX, int mouseY) {
-        Slot newSlot = gui.getSlotUnderMouse();
-        boolean newIsHoveringPlayer = isHoveringPlayer(gui, mouseX, mouseY);
-        if(newIsHoveringPlayer) {
-            if (!isHoveringPlayer)
-                resetScan();
-            isHoveringPlayer = true;
-            currentScan = player;
-        } else if(validateSlot(player, newSlot)) {
-            if(newSlot != mouseSlot)
-                resetScan();
-            mouseSlot = newSlot;
-            currentScan = newSlot.getStack();
-        } else {
-            resetScan();
-        }
+    private static boolean isHoldingThaumometer(EntityPlayer player) {
+        return player != null && !player.inventory.getItemStack().isEmpty() && player.inventory.getItemStack().getItem() == ItemsTC.thaumometer;
     }
 
     private static boolean isHoveringPlayer(GuiContainer gui, int mouseX, int mouseY) {
@@ -161,6 +147,22 @@ public class InventoryScanningHandler {
 
     private static boolean validateSlot(@NotNull EntityPlayer player, Slot slot) {
         return slot != null && slot.getHasStack() && slot.canTakeStack(player) && !(slot instanceof SlotCrafting);
+    }
+
+    private static void updateScannable(@NotNull EntityPlayer player, Slot hoveredSlot, boolean isMouseOverPlayer) {
+        if(isMouseOverPlayer) {
+            if (!isHoveringPlayer)
+                resetScan();
+            isHoveringPlayer = true;
+            currentScan = player;
+        } else if(validateSlot(player, hoveredSlot)) {
+            if(hoveredSlot != mouseSlot)
+                resetScan();
+            mouseSlot = hoveredSlot;
+            currentScan = hoveredSlot.getStack();
+        } else {
+            resetScan();
+        }
     }
 
     private static void resetScan() {
@@ -215,10 +217,6 @@ public class InventoryScanningHandler {
         GlStateManager.enableDepth();
         RenderHelper.enableStandardItemLighting();
         GlStateManager.enableRescaleNormal();
-    }
-
-    private static boolean isHoldingThaumometer(EntityPlayer player) {
-        return player != null && !player.inventory.getItemStack().isEmpty() && player.inventory.getItemStack().getItem() == ItemsTC.thaumometer;
     }
 
 }
