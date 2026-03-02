@@ -20,8 +20,14 @@ import java.util.List;
 public class TileVoidSiphonMixin {
     @Shadow public int progress;
 
+
     @ModifyConstant(method = "update", constant = @Constant(intValue = 2000), remap = true)
     private int modifyProgressRequired(int constant) {
+        return ConfigTweaksTT.void_siphon.progressRequired;
+    }
+
+    @ModifyConstant(method = "<init>", constant = @Constant(intValue = 2000))
+    private int modifyProgReq(int constant) {
         return ConfigTweaksTT.void_siphon.progressRequired;
     }
 

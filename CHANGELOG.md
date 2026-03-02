@@ -1,4 +1,10 @@
 # Changelog ThaumicTweaker
+## 1.2.5
+### Changed
+- Modified `TileVoidSiphonMixin` to support upcoming ThaumicAPI handling
+
+---
+
 ## 1.2.4
 ### Added
 - Added tweak to adjust Goggles of Revealing vis discount

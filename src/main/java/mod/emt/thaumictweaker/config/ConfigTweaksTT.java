@@ -380,6 +380,7 @@ public class ConfigTweaksTT {
     }
 
     public static class VoidSiphonCategory {
+        @Config.RequiresMcRestart
         @Config.RangeInt(min = 1, max = 100000)
         @Config.Name("Rift Power Required")
         @Config.Comment("Modifies the amount of rift power required to generate a Void Seed. Smaller values will increase the speed Void Seeds are created.")
