@@ -1,0 +1,322 @@
+# Command
+command.thaumictweaker:invalid=用法：/tc chunkvis, reload, research, warp
+command.thaumictweaker:chunkvis.invalid=用法：/tc chunkvis <add|remove|set> <数值> <VIS|FLUX> <x> <y> <z>
+command.thaumictweaker:reload.invalid=用法："/tc reload"
+command.thaumictweaker:research.invalid=用法："/tc research list" 或 "/tc research reload" 或 "/tc research <玩家名称> <list|reset|all>" 或 "/tc research <玩家名称> <add|remove> <研究条目>"
+command.thaumictweaker:warp.invalid=用法：/tc warp <玩家名称> <add|remove|set> <数值> [PERM|TEMP|NORMAL|ALL]
+
+# Config
+config.thaumictweaker:enhancements=魔咒
+config.thaumictweaker:enhancements.tooltip=Thaumic Tweaker添加的魔咒配置。默认启用。
+config.thaumictweaker:overhauls=大修
+config.thaumictweaker:overhauls.tooltip=Thaumic Tweaker提供的特性大修配置。
+config.thaumictweaker:tweaks=微调
+config.thaumictweaker:tweaks.tooltip=Thaumic Tweaker添加的微调配置。默认禁用。
+config.thaumictweaker:wuss_mode=懦夫模式
+config.thaumictweaker:wuss_mode.tooltip=Thaumic Tweaker添加的难度调整选项。默认禁用，无需开启懦夫模式（Wuss Mode）即可使用。
+
+# Tooltips
+tooltip.thaumictweaker:research_aid.tooltip=§5研究辅助§r
+tooltip.thaumictweaker:scanning=扫描中
+tooltip.thaumictweaker:scanning.info=可使用物品栏扫描
+tooltip.thaumictweaker:scanning.desc=拿起魔导透镜\n悬停在物品上即可扫描。
+tooltip.thaumictweaker:scanning_available.true=可扫描
+tooltip.thaumictweaker:scanning_available.false=已扫描
+
+# GroovyScript
+# -- PECH TRADES
+groovyscript.wiki.thaumictweaker.pech_trades.title=神秘时代岩精交易
+groovyscript.wiki.thaumictweaker.pech_trades.description=岩精交易是神秘时代添加的一种交易机制。向岩精提供物品后，会根据物品价值随机生成战利品。受神秘时代机制限制，每个交易等级（1–5）的岩精必须至少拥有一条交易配方。Thaumic Tweaker会自动用低价值物品补充缺失的交易。
+groovyscript.wiki.thaumictweaker.pech_trades.addTrade=以`岩精类型`, `交易等级`, `物品`的格式添加一条岩精交易。参数`岩精类型`可为'MINER', 'MAGE', 'ARCHER', 'COMMON'。参数`交易等级`必须为1–5之间的数值
+groovyscript.wiki.thaumictweaker.pech_trades.removeTrade=移除该类型岩精中匹配指定物品的所有交易。使用前请阅读说明
+groovyscript.wiki.thaumictweaker.pech_trades.removeAllTrades1=移除该类型岩精的所有交易。有效值：'MINER', 'MAGE', 'ARCHER', 'COMMON'。使用前请阅读说明
+groovyscript.wiki.thaumictweaker.pech_trades.removeAllTrades2=移除所有已注册的岩精交易。使用前请阅读说明
+groovyscript.wiki.thaumictweaker.pech_trades.pechType.value=岩精类型
+groovyscript.wiki.thaumictweaker.pech_trades.tradeItem.value=用于交易的物品
+groovyscript.wiki.thaumictweaker.pech_trades.tradeLevel.value=交易等级
+
+# -- POROUS STONE DROPS
+groovyscript.wiki.thaumictweaker.porous_stone.title=多孔雾石特殊掉落
+groovyscript.wiki.thaumictweaker.porous_stone.description=添加或移除非砂砾类的多孔雾石的特殊物品掉落
+groovyscript.wiki.thaumictweaker.porous_stone.addDrop=以'掉落物', '权重'的格式添加一个多孔雾石掉落物
+groovyscript.wiki.thaumictweaker.porous_stone.removeDrop=移除匹配指定IIngredient的所有掉落物
+groovyscript.wiki.thaumictweaker.porous_stone.streamDrops=遍历所有多孔雾石特殊掉落物
+
+# -- SPECIAL MINING RESULTS
+groovyscript.wiki.thaumictweaker.special_mining_result.title=特殊挖掘奖励
+groovyscript.wiki.thaumictweaker.special_mining_result.description=使用带有炽心注魔魔咒的工具挖掘矿石时获得的特殊掉落物奖励。
+groovyscript.wiki.thaumictweaker.special_mining_result.add=以`挖掘掉落物`, `奖励物品`, `概率`的格式添加一个特殊挖掘奖励
+groovyscript.wiki.thaumictweaker.pech_trades.addValuedItem=以`物品`, `物品价值`的格式为岩精交易添加具有价值的物品。具有价值的物品不支持物品元数据或标签数据
+groovyscript.wiki.thaumictweaker.special_mining_result.removeByHarvestDrop=移除匹配掉落物品的特殊挖掘奖励
+groovyscript.wiki.thaumictweaker.special_mining_result.removeByOutput=移除匹配输出结果物品的特殊挖掘奖励
+groovyscript.wiki.thaumictweaker.special_mining_result.harvestDrop.value=挖掘方块时掉落的物品
+groovyscript.wiki.thaumictweaker.special_mining_result.result.value=特殊挖掘成功时获得的物品
+groovyscript.wiki.thaumictweaker.special_mining_result.chance.value=该奖励触发概率
+
+# -- UTILS
+groovyscript.wiki.thaumictweaker.utils.title=Thaumic Tweaker工具
+groovyscript.wiki.thaumictweaker.utils.description=用于简化部分神秘时代内容处理的实用方法
+groovyscript.wiki.thaumictweaker.utils.getVisCrystal=返回带有指定AspectStack（含源质数量）的魔力水晶碎片
+groovyscript.wiki.thaumictweaker.utils.getAspectPhial=返回装有指定源质的源质安瓿瓶
+groovyscript.wiki.thaumictweaker.utils.addCollapsingRiftDrop=以`掉落物`, `所需裂隙尺寸`, `概率`的格式为咒波裂隙坍缩添加额外掉落物
+
+# Subtiles
+subtitle.thaumictweaker.forbidden=禁忌知识（%s）
+
+# -- THAUMCRAFT - ALCHEMY
+research.ALUMENTUM.title.subtitle=神秘能量源
+research.ARCANESPA.title.subtitle=享受格调休闲
+research.BASEALCHEMY.title.subtitle=气泡与沸腾
+research.BATHSALTS.title.subtitle=心灵减压
+research.BOTTLETAINT.title.subtitle=§5你怎么会想要这个？
+research.CENTRIFUGE.title.subtitle=分离万物
+research.ESSENTIASMELTER.title.subtitle=提炼源质
+research.ESSENTIASMELTERTHAUMIUM.title.subtitle=再度提炼源质
+research.ESSENTIASMELTERVOID.title.subtitle=最后一次提炼源质
+research.ESSENTIATRANSPORT.title.subtitle=源质空运
+research.EVERFULLURN.title.subtitle=无尽水源
+research.HEDGEALCHEMY.title.subtitle=炼金万象
+research.IMPROVEDSMELTING.title.subtitle=源质提炼……改良版
+research.IMPROVEDSMELTING2.title.subtitle=源质提炼……梅开二度
+research.LIQUIDDEATH.title.subtitle=只供外用
+research.METALLURGY.title.subtitle=金属与魔法交汇
+research.METALPURIFICATION.title.subtitle=把金属纯化为原矿簇
+//research.POTIONSPRAYER.title.subtitle=
+research.SANESOAP.title.subtitle=涤净污秽杂念
+research.THAUMATORIUM.title.subtitle=大批量炼金术
+research.TUBES.title.subtitle=源质传输
+research.WARDEDJARS.title.subtitle=源质存储与管理
+
+# -- Thaumcraft - ARTIFICE
+research.ADVANCEDTURRET.title.subtitle=防备别弄得太简单
+research.ARCANEBORE.title.subtitle=挖掘技术革新
+research.ARCANEEAR.title.subtitle=嘘，你听到什么了吗？
+research.ARCANELAMP.title.subtitle=大型光源
+research.ARCANEPATTERNCRAFTER.title.subtitle=自动化样板合成
+research.BASEARTIFICE.title.subtitle=必备事项
+research.BASICTURRET.title.subtitle=简易防御
+research.BELLOWS.title.subtitle=助燃火焰
+research.DIOPTRA.title.subtitle=显露灵气
+research.GRAPPLEGUN.title.subtitle=咻！
+research.HUNGRYCHEST.title.subtitle=不等自开的箱子
+research.INFERNALFURNACE.title.subtitle=够热了吗？
+research.LAMPFERTILITY.title.subtitle=赋予生机之光
+research.LAMPGROWTH.title.subtitle=促进万物生长
+research.LEVITATOR.title.subtitle=飞行的绝佳替代
+research.MIRROR.title.subtitle=穿越镜面
+research.MIRRORESSENTIA.title.subtitle=源质随心所至
+research.MIRRORHAND.title.subtitle=私人镜像
+research.REDSTONERELAY.title.subtitle=魔法红石交互
+research.VISGENERATOR.title.subtitle=魔能转换
+
+# -- Thaumcraft - AUROMANCY
+research.BASEAUROMANCY.title.subtitle=灵气操纵
+//research.FOCUSADVANCED.title.subtitle=
+//research.FOCUSBOLT.title.subtitle=
+//research.FOCUSBREAK.title.subtitle=
+//research.FOCUSCLOUD.title.subtitle=
+//research.FOCUSCURSE.title.subtitle=
+//research.FOCUSELEMENTAL.title.subtitle=
+//research.FOCUSEXCHANGE.title.subtitle=
+//research.FOCUSFLUX.title.subtitle=
+//research.FOCUSGREATER.title.subtitle=
+//research.FOCUSHEAL.title.subtitle=
+//research.FOCUSMINE.title.subtitle=
+//research.FOCUSPLAN.title.subtitle=
+research.FOCUSPOUCH.title.subtitle=便携核心收纳
+//research.FOCUSPROJECTILE.title.subtitle=
+//research.FOCUSRIFT.title.subtitle=
+//research.FOCUSCATTER.title.subtitle=
+//research.FOCUSSPELLBAT.title.subtitle=
+//research.FOCUSSPLIT.title.subtitle=
+research.RECHARGEPEDESTAL.title.subtitle=自动补魔
+research.VISAMULET.title.subtitle=勤俭节约，吃穿不缺
+//research.VISBATTERY.title.subtitle=
+research.WORKBENCHCHARGER.title.subtitle=魔力磁铁
+
+# -- THAUMCRAFT - BASICS
+//research.CELESTIALSCANNING.title.subtitle=
+research.CrimsonRites.title.subtitle=§c警示故事
+research.CRYSTALFARMER.title.subtitle=催生
+research.FIRSTSTEPS.title.subtitle=步入神秘学之旅
+//research.FLUX.title.subtitle=
+//research.FLUXCLEANUP.title.subtitle=
+research.FLUXRIFT.title.subtitle=§5这是什么，我该怎么弄走它？
+research.KNOWLEDGETYPES.title.subtitle=知识就是力量
+research.ORE.title.subtitle=深入挖掘
+research.PLANTS.title.subtitle=魔法植物
+research.PRIMPEARL.title.subtitle=§5前尘往事
+research.RIFTCLOSER.title.subtitle=现在我知道怎么弄走它了！
+research.THEORYRESEARCH.title.subtitle=力量就是知识
+research.UNLOCKALCHEMY.title.subtitle=炼金术入门
+research.UNLOCKARTIFICE.title.subtitle=炼化学入门
+research.UNLOCKAUROMANCY.title.subtitle=神秘学入门
+research.UNLOCKELDRITCH.title.subtitle=初探未知
+research.UNLOCKGOLEMANCY.title.subtitle=傀儡学入门
+research.UNLOCKINFUSION.title.subtitle=奥术注魔入门
+research.WARP.title.subtitle=§5凡事都有代价
+
+# -- THAUMCRAFT - ELDRITCH
+research.BASEELDRITCH.title.subtitle=§5奇怪，应该是冷的才对……
+research.PRIMALCRUSHER.title.subtitle=§5粉碎一切
+research.VOIDROBEARMOR.title.subtitle=§5异界风格
+research.VOIDSEERPEARL.title.subtitle=§5“当你凝视深渊时，深渊也在凝视你。”
+research.VOIDSIPHON.title.subtitle=§5裂隙汲取
+
+# -- THAUMCRAFT - ENTITIES
+//entity.BrainyZombie.name.subtitle=
+//entity.EldritchCrab.name.subtitle=
+//entity.EldritchGuardian.name.subtitle=
+entity.Firebat.name.subtitle=地狱飞蝠
+//entity.Taintacle.name.subtitle=
+//entity.TaintCrawler.name.subtitle=
+//entity.TaintSeed.name.subtitle=
+//entity.TaintSwarm.name.subtitle=
+//entity.ThaumSlime.name.subtitle=
+//entity.Wisp.name.subtitle=
+//research.CrimsonCultist.title.subtitle=
+research.Pech.title.subtitle=奇特生物
+
+# -- THAUMCRAFT - GOLEMANCY
+research.BASEGOLEMANCY.title.subtitle=动作操控
+research.CONTROLSEALS.title.subtitle=赋予使命
+research.GOLEMBREAKER.title.subtitle=粉碎攫取
+research.GOLEMCLIMBER.title.subtitle=没有翻不过的高山
+research.GOLEMCOMBATADV.title.subtitle=更强、更快、更硬、更稳
+research.GOLEMDIRECT.title.subtitle=亲自掌控
+research.GOLEMFLYER.title.subtitle=一飞冲天！
+//research.GOLEMLOGISTICS.title.subtitle=
+research.GOLEMVISION.title.subtitle=视野强化 
+research.JARBRAIN.title.subtitle=封印邪秽
+research.MATSTUDBRASS.title.subtitle=进阶黄铜工艺
+research.MATSTUDCLAY.title.subtitle=进阶粘土工艺
+research.MATSTUDIRON.title.subtitle=进阶铁工艺
+research.MATSTUDTHAUMIUM.title.subtitle=进阶神秘工艺
+research.MATSTUDVOID.title.subtitle=进阶虚空金属工艺
+research.MATSTUDWOOD.title.subtitle=进阶木头工艺
+research.MINDBIOTHAUMIC.title.subtitle=我思故我在
+research.MINDCLOCKWORK.title.subtitle=赋予声明
+research.SEALBUTCHER.title.subtitle=浴血屠戮
+research.SEALBREAK.title.subtitle=*敲* *敲* *敲*
+research.SEALCOLLECT.title.subtitle=把丢出去的捡起来
+research.SEALEMPTY.title.subtitle=越帮越忙
+research.SEALGUARD.title.subtitle=守护与侍奉
+research.SEALHARVEST.title.subtitle=机械绿手指
+research.SEALLUMBER.title.subtitle=伐伐伐伐伐木工
+research.SEALPROVIDE.title.subtitle=获取所需
+//research.SEALSTOCK.title.subtitle=
+research.SEALSTORE.title.subtitle=收纳杂物
+research.SEALUSE.title.subtitle=点来点去
+
+# -- Thaumcraft - INFUSION
+research.ARMORFORTRESS.title.subtitle=外邪不侵
+//research.BASEINFUSION.title.subtitle=
+research.BOOTSTRAVELLER.title.subtitle=为远行而生
+//research.CHARMUNDYING.title.subtitle=
+//research.CLOUDRING.title.subtitle=
+//research.CURIOSITYBAND.title.subtitle=
+research.ELEMENTALTOOLS.title.subtitle=驭使元素
+//research.FORTRESSMASK.title.subtitle=
+research.INFUSION.title.subtitle=神秘融合
+//research.INFUSIONANCIENT.title.subtitle=
+research.INFUSIONBOOST.title.subtitle=进阶神秘融合
+//research.INFUSIONELDRITCH.title.subtitle=
+research.INFUSIONENCHANTMENT.title.subtitle=神秘学魔咒
+//research.INFUSIONSTABLE.title.subtitle=
+research.PAVINGSTONES.title.subtitle=排除干扰，步履轻盈
+research.RUNICSHIELDING.title.subtitle=护盾展开！
+research.VERDANTCHARMS.title.subtitle=疗愈一切伤痛
+
+# -- Thaumic Augmentation
+//thaumicaugmentation.research.arcane_door.title.subtitle=
+//thaumicaugmentation.research.arcane_terraformer.title.subtitle=
+//thaumicaugmentation.research.autocaster.title.subtitle=
+//thaumicaugmentation.research.boots_void.title.subtitle=
+//thaumicaugmentation.research.celestial_observer.title.subtitle=
+//thaumicaugmentation.research.dimensional_modifiers.title.subtitle=
+//thaumicaugmentation.research.emptiness_modifier.title.subtitle=
+//thaumicaugmentation.research.eldritch_epiphany.title.subtitle=
+//thaumicaugmentation.research.eldritch_spire.title.subtitle=
+//thaumicaugmentation.research.elytra_booster.title.subtitle=
+//thaumicaugmentation.research.elytra_harness.title.subtitle=
+//thaumicaugmentation.research.entering_fracture.title.subtitle=
+//thaumicaugmentation.research.experience_modifier.title.subtitle=
+//thaumicaugmentation.research.fortified_glass.title.subtitle=
+//thaumicaugmentation.research.fortified_glass_fracture.title.subtitle=
+//thaumicaugmentation.research.fortified_glass_mirror.title.subtitle=
+//thaumicaugmentation.research.fortified_glass_rift.title.subtitle=
+//thaumicaugmentation.research.focus_light.title.subtitle=
+//thaumicaugmentation.research.focus_shield.title.subtitle=
+//thaumicaugmentation.research.focus_ward_coremod.title.subtitle=
+//thaumicaugmentation.research.focus_ward_no_coremod.title.subtitle=
+//thaumicaugmentation.research.focus_water.title.subtitle=
+//thaumicaugmentation.research.fracture_theory.title.subtitle=
+//thaumicaugmentation.research.frenzy_modifier.title.subtitle=
+//thaumicaugmentation.research.gauntlet_augmentation.title.subtitle=
+//thaumicaugmentation.research.gauntlet_thaumium.title.subtitle=
+//thaumicaugmentation.research.gauntlet_void.title.subtitle=
+//thaumicaugmentation.research.glass_tube.title.subtitle=
+//thaumicaugmentation.research.harness_base.title.subtitle=
+//thaumicaugmentation.research.impetus.title.subtitle=
+//thaumicaugmentation.research.impetus_gate.title.subtitle=
+//thaumicaugmentation.research.impetus_generator.title.subtitle=
+//thaumicaugmentation.research.impetus_matrix.title.subtitle=
+//thaumicaugmentation.research.impetus_mirror.title.subtitle=
+//thaumicaugmentation.research.impulse_cannon.title.subtitle=
+//thaumicaugmentation.research.impulse_cannon_augment_burst.title.subtitle=
+//thaumicaugmentation.research.impulse_cannon_augment_railgun.title.subtitle=
+//thaumicaugmentation.research.item_grate.title.subtitle=
+//thaumicaugmentation.research.more_mechanisms.title.subtitle=
+//thaumicaugmentation.research.morphic_armor.title.subtitle=
+//thaumicaugmentation.research.morphic_tool.title.subtitle=
+//thaumicaugmentation.research.more_auromancy.title.subtitle=
+//thaumicaugmentation.research.more_golemancy.title.subtitle=
+//thaumicaugmentation.research.more_infusion.title.subtitle=
+//thaumicaugmentation.research.primal_cutter.title.subtitle=
+//thaumicaugmentation.research.primordial_wisp.title.subtitle=
+//thaumicaugmentation.research.rift_feeder.title.subtitle=
+//thaumicaugmentation.research.rift_management.title.subtitle=
+//thaumicaugmentation.research.rift_monitor.title.subtitle=
+//thaumicaugmentation.research.rift_moving.title.subtitle=
+//thaumicaugmentation.research.rift_power.title.subtitle=
+//thaumicaugmentation.research.rift_studies.title.subtitle=
+//thaumicaugmentation.research.seal_copier.title.subtitle=
+//thaumicaugmentation.research.seal_secure.title.subtitle=
+//thaumicaugmentation.research.stability_field_generator.title.subtitle=
+//thaumicaugmentation.research.thaumic_augmentation_base.title.subtitle=
+//thaumicaugmentation.research.thaumium_robes.title.subtitle=
+//thaumicaugmentation.research.thaumostatic_girdle.title.subtitle=
+//thaumicaugmentation.research.thaumostatic_gyroscope.title.subtitle=
+//thaumicaugmentation.research.thaumostatic_harness.title.subtitle=
+//thaumicaugmentation.research.void_recharge_pedestal.title.subtitle=
+//thaumicaugmentation.research.vis_battery_augment.title.subtitle=
+//thaumicaugmentation.research.vis_regenerator.title.subtitle=
+//thaumicaugmentation.research.void_stone.title.subtitle=
+//thaumicaugmentation.research.void_stone_usage.title.subtitle=
+//thaumicaugmentation.research.warded_arcana.title.subtitle=
+//thaumicaugmentation.research.ward_keys.title.subtitle=
+//thaumicaugmentation.research.ward_openers.title.subtitle=
+
+# -- Thaumic Energistics
+research.arcaneassembler.title.subtitle=魔法分子装配室
+research.arcaneinscriber.title.subtitle=魔法样板
+research.arcaneterminal.title.subtitle=使用魔法§o和科技§r合成
+research.base_energistics.title.subtitle=神秘学：步入数字时代
+research.digisentia.title.subtitle=数字化源质
+research.essentiabuses.title.subtitle=数字化转移源质！
+research.essentiastorage1k.title.subtitle=1位
+research.essentiastorage4k.title.subtitle=4位
+research.essentiastorage16k.title.subtitle=16位
+research.essentiastorage64k.title.subtitle=64位
+research.essentiaterminal.title.subtitle=知晓你拥有的数量
+research.infusionprovider.title.subtitle=让注魔更轻松
+research.knowledgecore.title.subtitle=监视宝珠
+
+# -- Thaumic Periphery
+research.BASEPERIPHERY.title.subtitle=极限边界
+//research.CASTEREMBER.title.subtitle=
+//research.CASTERELEMENTIUM.title.subtitle=
+research.MALIGNANTHEART.title.subtitle=嗨起来！
+research.MAGICQUIVER.title.subtitle=无尽弹药
+research.PAULDRONREPULSION.title.subtitle=个人空间
+research.VISPHYLACTERY.title.subtitle=全归我了
