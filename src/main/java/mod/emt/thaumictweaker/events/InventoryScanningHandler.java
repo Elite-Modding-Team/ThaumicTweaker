@@ -36,6 +36,7 @@ import thaumcraft.api.research.ScanningManager;
 import thaumcraft.client.lib.UtilsFX;
 import thaumcraft.client.lib.events.RenderEventHandler;
 import thaumcraft.common.lib.SoundsTC;
+import thaumcraft.common.lib.crafting.ThaumcraftCraftingManager;
 
 @SideOnly(Side.CLIENT)
 public class InventoryScanningHandler {
@@ -64,10 +65,17 @@ public class InventoryScanningHandler {
                     }
                 }
             } else if(isHoldingThaumometer(player)) {
+                AspectList aspects = ThaumcraftCraftingManager.getObjectTags(hoverStack);
+                boolean hasNoAspects = (aspects == null || aspects.size() == 0);
                 boolean isScannable = ScanningManager.isThingStillScannable(player, hoverStack);
                 TextFormatting color = isScannable ? TextFormatting.GREEN : TextFormatting.RED;
-                String text = I18n.format("tooltip.thaumictweaker:scanning_available." + (isScannable ? "true" : "false"));
-                event.getToolTip().add(color + text);
+                if (hasNoAspects) {
+                    String text = I18n.format("tooltip.thaumictweaker:scanning_available.no_aspects");
+                    event.getToolTip().add(TextFormatting.GRAY + text);
+                } else {
+                    String text = I18n.format("tooltip.thaumictweaker:scanning_available." + (isScannable ? "true" : "false"));
+                    event.getToolTip().add(color + text);
+                }
             }
         }
     }

@@ -20,8 +20,9 @@ tooltip.thaumictweaker:research_aid.tooltip=§5Research Aid§r
 tooltip.thaumictweaker:scanning=Scanning
 tooltip.thaumictweaker:scanning.info=Inventory Scanning available
 tooltip.thaumictweaker:scanning.desc=Hover over items with the\nThaumometer to scan.
+tooltip.thaumictweaker:scanning_available.no_aspects=Aspects not found.
 tooltip.thaumictweaker:scanning_available.true=Scanning Available
-tooltip.thaumictweaker:scanning_available.false=Has Been Scanned
+tooltip.thaumictweaker:scanning_available.false=Has been scanned.
 
 # GroovyScript
 # -- PECH TRADES
