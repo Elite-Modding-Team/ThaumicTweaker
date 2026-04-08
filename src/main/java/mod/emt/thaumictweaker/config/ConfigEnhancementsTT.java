@@ -78,6 +78,10 @@ public class ConfigEnhancementsTT {
         @Config.Comment("Renders item aspects when hovering over previously scanned items with the Thaumometer in the cursor.")
         public boolean renderAspects = true;
 
+        @Config.Name("Scanning Progress Sound")
+        @Config.Comment("Continuously plays a sound while scanning is in progress, similar to the scanning functionality from 1.7.10.")
+        public boolean scanningProgressSound = false;
+
         @Config.RangeInt(min = 1, max = 100)
         @Config.Name("Scan Time")
         @Config.Comment("The amount of time, in ticks, it takes to scan an item with inventory scanning.")

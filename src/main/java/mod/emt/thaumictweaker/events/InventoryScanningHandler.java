@@ -90,8 +90,9 @@ public class InventoryScanningHandler {
         if(event.phase == TickEvent.Phase.END && isHoldingThaumometer(player)) {
             if(currentScan != null && ScanningManager.isThingStillScannable(player, currentScan)) {
                 ticksHovered++;
+                if (ticksHovered >= 2 && ConfigEnhancementsTT.inventoryScanning.scanningProgressSound) player.world.playSound(player.posX, player.posY, player.posZ, SoundsTC.ticks, SoundCategory.NEUTRAL, 0.2f, 0.45f + player.world.rand.nextFloat() * 0.1f, false);
                 if (ticksHovered >= ConfigEnhancementsTT.inventoryScanning.timeToScan) {
-                    player.world.playSound(player.posX, player.posY, player.posZ, SoundsTC.scan, SoundCategory.NEUTRAL, 0.2f, 0.45f + player.world.rand.nextFloat() * 0.1f, false);
+                    player.world.playSound(player.posX, player.posY, player.posZ, SoundsTC.scan, SoundCategory.NEUTRAL, 1.0f, 1.0f, false);
                     if (currentScan instanceof EntityPlayer) {
                         PacketHandlerTT.INSTANCE.sendToServer(new MessageScanSelf());
                     } else {
