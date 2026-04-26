@@ -155,7 +155,7 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 These Thaumcraft addons are either not compatible with ThaumicTweaker or are not recommended because there are already similar features to them already included.
 
 - **Incompatible:**
-  - [Thaumic Forever](https://www.curseforge.com/minecraft/mc-mods/thaumic-forever) - Incompatible. Most of ThaumicTweaker's features will break alongside this mod.
+  - [Thaumic Forever](https://www.curseforge.com/minecraft/mc-mods/thaumic-forever) - Incompatible. Most of ThaumicTweaker's features will break alongside this addon.
   - [Thaumic Staff](https://www.curseforge.com/minecraft/mc-mods/thaumic-staff) - Breaks all of ThaumicTweaker's research table tweaks.
   - [Thaumic Wands](https://www.curseforge.com/minecraft/mc-mods/thaumic-wands) - Breaks all of ThaumicTweaker's research table tweaks.
 - **Superseded:**
