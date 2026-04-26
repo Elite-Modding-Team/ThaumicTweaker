@@ -153,7 +153,7 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 
 ## Incompatible/Superseded Addons
 These Thaumcraft addons are either not compatible with ThaumicTweaker or are not recommended because there are already similar features to them already included.
-- [Stable Thaumometer](https://www.curseforge.com/minecraft/mc-mods/stable-thaumometer) - Fix included in ThaumicTweaker.
+- [Stable Thaumometer](https://www.curseforge.com/minecraft/mc-mods/stable-thaumometer) - Fix already included in ThaumicTweaker.
 - [Thaumcraft 6 Enhanced](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-6-enhanced) - Incompatible and superseded by ThaumicTweaker's `Runic Shielding Overhaul` tweak in `ThaumicTweaker - Overhauls.cfg`.
 - [Thaumic Forever](https://www.curseforge.com/minecraft/mc-mods/thaumic-forever) - Incompatible. Most of ThaumicTweaker's features will break alongside this mod.
 - [Thaumic Meme](https://www.curseforge.com/minecraft/mc-mods/thaumic-meme) - Superseded by ThaumicTweaker's `Enable Research Subtitles` tweak in `ThaumicTweaker - Enhancements.cfg`.
