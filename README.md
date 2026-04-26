@@ -153,13 +153,16 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 
 ## Incompatible/Superseded Addons
 These Thaumcraft addons are either not compatible with ThaumicTweaker or are not recommended because there are already similar features to them already included.
-- [Stable Thaumometer](https://www.curseforge.com/minecraft/mc-mods/stable-thaumometer) - Fix already included in ThaumicTweaker.
-- [Thaumcraft 6 Enhanced](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-6-enhanced) - Incompatible and superseded by ThaumicTweaker's `Runic Shielding Overhaul` tweak in `ThaumicTweaker - Overhauls.cfg`.
-- [Thaumic Forever](https://www.curseforge.com/minecraft/mc-mods/thaumic-forever) - Incompatible. Most of ThaumicTweaker's features will break alongside this mod.
-- [Thaumic Inventory Scanning](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-inventory-scanning) - Fully merged into ThaumicTweaker and improved.
-- [Thaumic Meme](https://www.curseforge.com/minecraft/mc-mods/thaumic-meme) - Superseded by ThaumicTweaker's `Enable Research Subtitles` tweak in `ThaumicTweaker - Enhancements.cfg`.
-- [Thaumic Mercy](https://www.curseforge.com/minecraft/mc-mods/thaumic-mercy) - Superseded by ThaumicTweaker's `Disable Research Requirements` tweak in `ThaumicTweaker - Wuss Mode.cfg`.
-- [Thaumic Staff](https://www.curseforge.com/minecraft/mc-mods/thaumic-staff) - Breaks all of ThaumicTweaker's research table tweaks.
-- [Thaumic Wands](https://www.curseforge.com/minecraft/mc-mods/thaumic-wands) - Breaks all of ThaumicTweaker's research table tweaks.
-- [Thaumcraft No Research](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-no-research) - Superseded by ThaumicTweaker's `Disable Research Requirements` tweak in `ThaumicTweaker - Wuss Mode.cfg`.
-- [ThaumTweaks](https://www.curseforge.com/minecraft/mc-mods/thaumtweaks) - Incompatible. The majority of its features have been rewritten and improved in ThaumicTweaker.
+
+- **Incompatible:**
+  - [Thaumic Forever](https://www.curseforge.com/minecraft/mc-mods/thaumic-forever) - Incompatible. Most of ThaumicTweaker's features will break alongside this mod.
+  - [Thaumic Staff](https://www.curseforge.com/minecraft/mc-mods/thaumic-staff) - Breaks all of ThaumicTweaker's research table tweaks.
+  - [Thaumic Wands](https://www.curseforge.com/minecraft/mc-mods/thaumic-wands) - Breaks all of ThaumicTweaker's research table tweaks.
+- **Superseded:**
+  - [Stable Thaumometer](https://www.curseforge.com/minecraft/mc-mods/stable-thaumometer) - Fix already included in ThaumicTweaker.
+  - [Thaumcraft 6 Enhanced](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-6-enhanced) - Incompatible and superseded by ThaumicTweaker's `Runic Shielding Overhaul` tweak in `ThaumicTweaker - Overhauls.cfg`.
+  - [Thaumic Inventory Scanning](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-inventory-scanning) - Fully merged into ThaumicTweaker and improved.
+  - [Thaumic Meme](https://www.curseforge.com/minecraft/mc-mods/thaumic-meme) - Superseded by ThaumicTweaker's `Enable Research Subtitles` tweak in `ThaumicTweaker - Enhancements.cfg`.
+  - [Thaumic Mercy](https://www.curseforge.com/minecraft/mc-mods/thaumic-mercy) - Superseded by ThaumicTweaker's `Disable Research Requirements` tweak in `ThaumicTweaker - Wuss Mode.cfg`.
+  - [Thaumcraft No Research](https://www.curseforge.com/minecraft/mc-mods/thaumcraft-no-research) - Superseded by ThaumicTweaker's `Disable Research Requirements` tweak in `ThaumicTweaker - Wuss Mode.cfg`.
+  - [ThaumTweaks](https://www.curseforge.com/minecraft/mc-mods/thaumtweaks) - Incompatible. The majority of its features have been rewritten and improved in ThaumicTweaker.
