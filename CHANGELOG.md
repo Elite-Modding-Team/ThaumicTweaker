@@ -1,5 +1,8 @@
 # Changelog ThaumicTweaker
 ## 1.2.5
+### Added
+- Fully merged Thaumic Inventory Scanning into the mod with major improvements
+- Restored Flux Rift drain fix, it has been removed from Thaumcraft Fix since v1.1.10
 ### Changed
 - Modified `TileVoidSiphonMixin` to support upcoming ThaumicAPI handling
 

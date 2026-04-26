@@ -41,7 +41,7 @@ public class GuiResearchBrowserMixin {
             }
         }
 
-        if(ConfigEnhancementsTT.enableWarpResearchSubtitles) {
+        if(ConfigEnhancementsTT.enableResearchWarpSubtitles) {
             if(currentHighlight.getStages() != null) {
                 int warp = 0;
                 for(ResearchStage stage : currentHighlight.getStages()) {

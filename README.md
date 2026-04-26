@@ -13,6 +13,7 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 - Fixed Primal Crusher re-equipping when repairing
 - Fixed Thaumometer displaying particles when stored in first hotbar slot
 - Fixed champions potentially having the wrong name in servers
+- Fixed Flux Fifts not collapsing when completely being drained by machines and devices such as Void Siphons
 
 ---
 

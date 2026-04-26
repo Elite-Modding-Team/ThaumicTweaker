@@ -14,6 +14,13 @@ public class ConfigEnhancementsTT {
     @Config.Comment("Revamps the spell cast sounds of certain focus effects for better variety.")
     public static boolean enableFocusEffects = true;
 
+    @Config.Name("Enable Flux Rift Collapsing Fix")
+    @Config.Comment({
+            "Fixes Flux Rifts not collapsing when drained entirely by Void Siphon or other similar effects.",
+            "Disable this if you really need size 1 rifts for whatever reason."
+    })
+    public static boolean enableFluxRiftCollapsingFix = true;
+
     @Config.Name("Enable Goggled Armor")
     @Config.Comment("Allows the Goggles of Revealing to be attached to the Thaumium and Void Metal Helmets with infusion.")
     public static boolean enableGoggledArmor = true;
@@ -50,7 +57,7 @@ public class ConfigEnhancementsTT {
             "Enables support for additional subtitle text for forbidden knowledge research entries.",
             "The subtitle will display how dangerous the warp for that research is."
     })
-    public static boolean enableWarpResearchSubtitles = true;
+    public static boolean enableResearchWarpSubtitles = true;
 
     @Config.Name("Inventory Scanning")
     public static InventoryScanningCategory inventoryScanning = new InventoryScanningCategory();
@@ -79,7 +86,7 @@ public class ConfigEnhancementsTT {
         public boolean renderAspects = true;
 
         @Config.Name("Scanning Progress Sound")
-        @Config.Comment("Continuously plays a sound while scanning is in progress, similar to the scanning functionality from 1.7.10.")
+        @Config.Comment("Continuously plays a sound while scanning is in progress, similar to the scanning functionality from 1.7.10 (Thaumcraft 4).")
         public boolean scanningProgressSound = false;
 
         @Config.RangeInt(min = 1, max = 100)

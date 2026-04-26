@@ -278,7 +278,7 @@ public class ConfigTweaksTT {
 
         @Config.RequiresMcRestart
         @Config.Name("Legacy Thaumometer Scanning")
-        @Config.Comment("Restores the original scanning functionality from 1.7.10.")
+        @Config.Comment("Restores the original scanning functionality from 1.7.10 (Thaumcraft 4).")
         public boolean legacyThaumometerScanning = false;
 
         @Config.Name("Sky Scan Dimensions")
