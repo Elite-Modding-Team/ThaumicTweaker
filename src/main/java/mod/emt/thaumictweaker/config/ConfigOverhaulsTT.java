@@ -24,6 +24,14 @@ public class ConfigOverhaulsTT {
     public static boolean lootTableOverhaul = false;
 
     @Config.RequiresMcRestart
+    @Config.Name("Nerfed Heal Focus Effect")
+    @Config.Comment({
+            "Nerfs the Heal Focus Effect to instead apply Regeneration III (1 second + 1 per Healing Power) rather than healing you by 1 per Healing Power directly.",
+            "This also prevents Heal + Cloud from making you nearly invincible due to how fast it would heal you."
+    })
+    public static boolean nerfedHealFocus = true;
+
+    @Config.RequiresMcRestart
     @Config.Name("Runic Shielding Overhaul")
     @Config.Comment("Enables Runic Shielding overhaul, replacing absorption hearts with a new shield system.")
     public static boolean runicShieldingOverhaul = false;

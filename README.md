@@ -44,6 +44,8 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 
 - **Champion Mob Overhaul:**
   - Enables the Champion Mob system from previous Thaumcraft versions
+- **Nerfed Heal Focus Effect**
+  - Replaces the direct healing from Focus Effect: Heal with Regeneration III 
 - **Loot Table Overhaul:**
   - Changes most hardcoded mob drops into loot tables that can be modified using loot table tweakers. A full list of loot tables can be found [here](https://github.com/Elite-Modding-Team/ThaumicTweaker/tree/main/src/main/resources/assets/thaumictweaker/loot_tables/entity).
 - **Runic Shielding Overhaul:**
