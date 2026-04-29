@@ -4,6 +4,9 @@
 - Fully merged Thaumic Inventory Scanning into the mod with major improvements
 - Restored Flux Rift drain fix, it has been removed from Thaumcraft Fix since v1.1.10
 - Added Nerfed Heal Focus Effect overhaul to prevent the Heal Focus Effect from being too overpowered
+### Fixed
+- Fixed all void tools re-equipping when repairing
+- Fixed most void tools not having `Lesser Sapping` on their tooltips
 ### Changed
 - Modified `TileVoidSiphonMixin` to support upcoming ThaumicAPI handling
 

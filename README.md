@@ -10,7 +10,8 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 ## Fixes
 - Fixed Boots of the Traveler and Cloud Ring screen shake and damage sound when taking zero fall damage
 - Fixed Giant Taintacles spawning with reduced health
-- Fixed Primal Crusher re-equipping when repairing
+- Fixed Primal Crusher and all void tools re-equipping when repairing
+- Fixed most void tools not having `Lesser Sapping` on their tooltips
 - Fixed Thaumometer displaying particles when stored in first hotbar slot
 - Fixed champions potentially having the wrong name in servers
 - Fixed Flux Fifts not collapsing when completely being drained by machines and devices such as Void Siphons
