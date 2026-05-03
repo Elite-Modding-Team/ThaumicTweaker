@@ -2,6 +2,7 @@ package mod.emt.thaumictweaker.core;
 
 import com.google.common.collect.ImmutableMap;
 import mod.emt.thaumictweaker.config.ConfigOverhaulsTT;
+import mod.emt.thaumictweaker.util.libs.ModIds;
 import zone.rong.mixinbooter.ILateMixinLoader;
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ public class ModMixinsTT implements ILateMixinLoader {
         {
             put("mixins.thaumictweaker.json", () -> true);
             put("mixins.thaumictweaker.loottables.json", () -> ConfigOverhaulsTT.lootTableOverhaul);
+            put("mixins.thaumictweaker.thaumicaugmentation.json", () -> ModIds.thaumic_augmentation.isLoaded);
         }
     });
 
