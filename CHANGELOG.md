@@ -7,6 +7,8 @@
 ### Fixed
 - Fixed all void tools re-equipping when repairing
 - Fixed most void tools not having `Lesser Sapping` on their tooltips
+- Fixed Thaumic Augmentation Impetus Diffuser not being affected by ThaumicTweaker Void Siphon tweaks
+- Fixed Thaumic Augmentation rift jar being unable to capture rifts when Flux Rift drain fix is active
 ### Changed
 - Modified `TileVoidSiphonMixin` to support upcoming ThaumicAPI handling
 
