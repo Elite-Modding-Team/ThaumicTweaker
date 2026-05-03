@@ -15,6 +15,7 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
 - Fixed Thaumometer displaying particles when stored in first hotbar slot
 - Fixed champions potentially having the wrong name in servers
 - Fixed Flux Fifts not collapsing when completely being drained by machines and devices such as Void Siphons
+- Fixed Sword of Zephyr being interrupted when durability is lost during its whirlwind ability
 
 ---
 

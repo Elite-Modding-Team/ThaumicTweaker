@@ -37,6 +37,7 @@
     "items.ItemBaublesMixin" ,
     "items.ItemCrimsonBladeMixin" ,
     "items.ItemCutlistRobeArmorMixin" ,
+    "items.ItemElementalSwordMixin" ,
     "items.ItemFortressArmorMixin" ,
     "items.ItemPrimalCrusherMixin" ,
     "items.ItemRevealingGogglesMixin",
