@@ -44,8 +44,8 @@ public class TileRiftMoverInputMixin {
             method = "update",
             at = @At(
                     value = "INVOKE",
-                    target = "Lnet/minecraft/tileentity/TileEntity;getCapability(Lnet/minecraftforge/common/capabilities/Capability;Lnet/minecraft/util/EnumFacing;)Ljava/lang/Object;",
-                    ordinal = 1,
+                    target = "Lthecodex6824/thaumicaugmentation/api/tile/IRiftJar;setRift(Lthecodex6824/thaumicaugmentation/api/util/FluxRiftReconstructor;)V",
+                    shift = At.Shift.AFTER,
                     remap = false
             ),
             remap = true
