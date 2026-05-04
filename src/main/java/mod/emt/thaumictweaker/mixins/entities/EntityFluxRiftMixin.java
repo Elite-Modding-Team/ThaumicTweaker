@@ -46,17 +46,15 @@ public abstract class EntityFluxRiftMixin extends Entity {
      */
     @Inject(method = "setRiftSize", at = @At("RETURN"))
     private void handleRiftCollapse(int size, CallbackInfo ci) {
-        if (ConfigEnhancementsTT.enableFluxRiftCollapsingFix) {
-            if (size <= 1 && !this.getCollapse()) {
-                if (this.rand.nextBoolean()) {
-                    AuraHelper.addVis(this.world, this.getPosition(), 1.0F);
-                } else {
-                    AuraHelper.polluteAura(this.world, this.getPosition(), 1.0F, false);
-                }
-
-                this.world.createExplosion(this, this.posX + this.rand.nextGaussian() * 2.0F, this.posY + this.rand.nextGaussian() * 2.0F, this.posZ + this.rand.nextGaussian() * 2.0F, this.rand.nextFloat() / 2.0F, false);
-                this.completeCollapse();
+        if(size <= 1 && !this.getCollapse()) {
+            if(this.rand.nextBoolean()) {
+                AuraHelper.addVis(this.world, this.getPosition(), 1.0F);
+            } else {
+                AuraHelper.polluteAura(this.world, this.getPosition(), 1.0F, false);
             }
+
+            this.world.createExplosion(this, this.posX + this.rand.nextGaussian() * 2.0F, this.posY + this.rand.nextGaussian() * 2.0F, this.posZ + this.rand.nextGaussian() * 2.0F, this.rand.nextFloat() / 2.0F, false);
+            this.completeCollapse();
         }
     }
 }

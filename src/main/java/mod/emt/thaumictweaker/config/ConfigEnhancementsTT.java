@@ -14,13 +14,6 @@ public class ConfigEnhancementsTT {
     @Config.Comment("Revamps the spell cast sounds of certain focus effects for better variety.")
     public static boolean enableFocusEffects = true;
 
-    @Config.Name("Enable Flux Rift Collapsing Fix")
-    @Config.Comment({
-            "Fixes Flux Rifts not collapsing when drained entirely by Void Siphon or other similar effects.",
-            "Disable this if you really need size 1 rifts for whatever reason."
-    })
-    public static boolean enableFluxRiftCollapsingFix = true;
-
     @Config.Name("Enable Goggled Armor")
     @Config.Comment("Allows the Goggles of Revealing to be attached to the Thaumium and Void Metal Helmets with infusion.")
     public static boolean enableGoggledArmor = true;
