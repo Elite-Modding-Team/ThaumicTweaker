@@ -38,6 +38,8 @@ Tweaks for Thaumcraft 6. All the Thaumcraft tweaks a tweaker could want.
   - Add improved in-game commands with tab completion'
   - Add `/tc chunkvis`, this allows you to control the amount of vis on any chunk
   - Suppress Warp Events while player is in Creative mode
+- **Thaumometer Enhancements:**
+  - Add inventory scanning support for Thaumometers
 
 ---
 
